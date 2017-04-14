@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{078BF1FA-B920-4F06-876B-A18E79C5077E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vns.Erp.Core.Accounting.CsReportGUI</RootNamespace>
+    <AssemblyName>Vns.Erp.Core.Accounting.CsReportGUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\frmBaoCaoKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmBaoCaoKhachHang.Designer.cs">
+      <DependentUpon>frmBaoCaoKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\frmBaoCaoKhachHang.resx">
+      <DependentUpon>frmBaoCaoKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Controls\Vns.Erp.Core.Controls\Vns.Erp.Core.Controls.csproj">
+      <Project>{FBC6EDB3-9A36-4E9D-9BEF-7498631CD479}</Project>
+      <Name>Vns.Erp.Core.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Core.Admin.Dao\Vns.Erp.Core.Admin.Dao.csproj">
+      <Project>{BD3B9C3B-64F2-4046-B1A0-6C113B5E6025}</Project>
+      <Name>Vns.Erp.Core.Admin.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Core.Admin.NHibernate\Vns.Erp.Core.Admin.Dao.NHibernate.csproj">
+      <Project>{796175DC-C46A-47D7-9B3E-A80779B2330C}</Project>
+      <Name>Vns.Erp.Core.Admin.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Core.Admin.Service\Vns.Erp.Core.Admin.Service.csproj">
+      <Project>{B1C4C1BD-E65B-4F2D-B300-0A670E1F57C6}</Project>
+      <Name>Vns.Erp.Core.Admin.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Erp.Core.Admin.Domain\Vns.Erp.Core.Admin.Domain.csproj">
+      <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
+      <Name>Vns.Erp.Core.Admin.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
+      <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
+      <Name>Vns.Erp.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Service\Vns.Erp.Core.Service.csproj">
+      <Project>{F213FDB0-2CE0-41E6-8680-050276412F38}</Project>
+      <Name>Vns.Erp.Core.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core\Vns.Erp.Core.vbproj">
+      <Project>{6903B6FB-C64B-47C1-807D-ABF526B1A9C3}</Project>
+      <Name>Vns.Erp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Accounting.Report.Domain\Vns.Erp.Core.Accounting.Report.Domain.csproj">
+      <Project>{72e457b3-cc29-4b80-9103-efca78c2e309}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Accounting.Report.Service\Vns.Erp.Core.Accounting.Report.Service.csproj">
+      <Project>{7f4a409f-ed34-45d8-98af-e4659a7dfb0d}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.KtKhoasoThang, Vns.Erp.Core.Admin.Domain" table="KT_KHOASO_THANG" lazy="false">
+		<id name="Id" column="KT_KHOASO_ID">
+			<generator class="guid" />
+		</id>
+		<property name="Thang1" column="THANG_1" />
+		<property name="Thang2" column="THANG_2" />
+		<property name="Thang3" column="THANG_3" />
+		<property name="Thang4" column="THANG_4" />
+		<property name="Thang5" column="THANG_5" />
+		<property name="Thang6" column="THANG_6" />
+		<property name="Thang7" column="THANG_7" />
+		<property name="Thang8" column="THANG_8" />
+		<property name="Thang9" column="THANG_9" />
+		<property name="Thang10" column="THANG_10" />
+		<property name="Thang11" column="THANG_11" />
+		<property name="Thang12" column="THANG_12" />
+		<property name="Nam" column="NAM" />
+		<property name="DonviId" column="DONVI_ID" />
+	</class>
+</hibernate-mapping>

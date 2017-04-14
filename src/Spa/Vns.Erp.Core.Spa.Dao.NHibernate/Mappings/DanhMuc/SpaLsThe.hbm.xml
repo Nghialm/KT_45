@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Spa.Domain" assembly="Vns.Erp.Core.Spa.Domain">
+	<class name="Vns.Erp.Core.Spa.Domain.SpaLsThe, Vns.Erp.Core.Spa.Domain" table="SPA_LS_The" lazy="true">
+		<composite-id>
+			<key-property name="Theid" column="TheID" type="Guid" /> 
+			<key-property name="Mphieuid" column="MPhieuID" type="Guid" /> 
+		</composite-id>
+		<property name="Mathe" column="MaThe" type="String" length="64" />
+		<property name="Tenkhachhang" column="TenKhachHang" type="String" length="64" />
+		<property name="Ngaythanhtoan" column="NgayThanhToan" type="DateTime" />
+		<property name="Sotien" column="SoTien" type="Decimal" precision="18" scale="0" />
+		<property name="Noidung" column="NoiDung" type="String" length="512" />
+    <property name="TienThe" column="Tien_The" type="Decimal" precision="18" scale="0" />
+    <property name="TienKhuyenMai" column="Tien_Khuyen_Mai" type="Decimal" precision="18" scale="0" />
+  </class>
+</hibernate-mapping>

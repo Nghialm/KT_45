@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="$this.DataSourceSchema" xml:space="preserve">
+    <value>&lt;?xml version="1.0"?&gt;
+&lt;xs:schema id="dsCtTscd" targetNamespace="http://tempuri.org/dsCtTscd.xsd" xmlns:mstns="http://tempuri.org/dsCtTscd.xsd" xmlns="http://tempuri.org/dsCtTscd.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified"&gt;
+  &lt;xs:element name="dsCtTscd" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:Generator_DataSetName="dsCtTscd" msprop:Generator_UserDSName="dsCtTscd" msprop:EnableTableAdapterManager="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="CtTscd" msprop:Generator_UserTableName="CtTscd" msprop:Generator_RowDeletedName="CtTscdRowDeleted" msprop:Generator_TableClassName="CtTscdDataTable" msprop:Generator_RowChangedName="CtTscdRowChanged" msprop:Generator_RowDeletingName="CtTscdRowDeleting" msprop:Generator_RowChangingName="CtTscdRowChanging" msprop:Generator_RowEvArgName="CtTscdRowChangeEvent" msprop:Generator_RowClassName="CtTscdRow" msprop:Generator_RowEvHandlerName="CtTscdRowChangeEventHandler" msprop:Generator_TablePropName="CtTscd" msprop:Generator_TableVarName="tableCtTscd"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="SoCtTang" msprop:Generator_UserColumnName="SoCtTang" msprop:Generator_ColumnPropNameInRow="SoCtTang" msprop:Generator_ColumnVarNameInTable="columnSoCtTang" msprop:Generator_ColumnPropNameInTable="SoCtTangColumn" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="NgayCtTang" msprop:Generator_UserColumnName="NgayCtTang" msprop:Generator_ColumnPropNameInRow="NgayCtTang" msprop:Generator_ColumnVarNameInTable="columnNgayCtTang" msprop:Generator_ColumnPropNameInTable="NgayCtTangColumn" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="DmTscdId" msprop:Generator_UserColumnName="DmTscdId" msprop:Generator_ColumnPropNameInRow="DmTscdId" msprop:Generator_ColumnVarNameInTable="columnDmTscdId" msprop:Generator_ColumnPropNameInTable="DmTscdIdColumn" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="TenTscd" msprop:Generator_UserColumnName="TenTscd" msprop:Generator_ColumnPropNameInRow="TenTscd" msprop:Generator_ColumnVarNameInTable="columnTenTscd" msprop:Generator_ColumnPropNameInTable="TenTscdColumn" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="KyHieuTscd" msprop:Generator_UserColumnName="KyHieuTscd" msprop:Generator_ColumnPropNameInRow="KyHieuTscd" msprop:Generator_ColumnVarNameInTable="columnKyHieuTscd" msprop:Generator_ColumnPropNameInTable="KyHieuTscdColumn" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="NuocSx" msprop:Generator_UserColumnName="NuocSx" msprop:Generator_ColumnPropNameInRow="NuocSx" msprop:Generator_ColumnVarNameInTable="columnNuocSx" msprop:Generator_ColumnPropNameInTable="NuocSxColumn" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="NgayBdKh" msprop:Generator_UserColumnName="NgayBdKh" msprop:Generator_ColumnPropNameInRow="NgayBdKh" msprop:Generator_ColumnVarNameInTable="columnNgayBdKh" msprop:Generator_ColumnPropNameInTable="NgayBdKhColumn" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="NguyenGia" msprop:Generator_UserColumnName="NguyenGia" msprop:Generator_ColumnPropNameInRow="NguyenGia" msprop:Generator_ColumnVarNameInTable="columnNguyenGia" msprop:Generator_ColumnPropNameInTable="NguyenGiaColumn" type="xs:decimal" minOccurs="0" /&gt;
+              &lt;xs:element name="TyLeHaoMon" msprop:Generator_UserColumnName="TyLeHaoMon" msprop:Generator_ColumnPropNameInRow="TyLeHaoMon" msprop:Generator_ColumnVarNameInTable="columnTyLeHaoMon" msprop:Generator_ColumnPropNameInTable="TyLeHaoMonColumn" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="MucKhauHao" msprop:Generator_UserColumnName="MucKhauHao" msprop:Generator_ColumnPropNameInRow="MucKhauHao" msprop:Generator_ColumnVarNameInTable="columnMucKhauHao" msprop:Generator_ColumnPropNameInTable="MucKhauHaoColumn" type="xs:decimal" minOccurs="0" /&gt;
+              &lt;xs:element name="SoCtGiam" msprop:Generator_UserColumnName="SoCtGiam" msprop:Generator_ColumnPropNameInRow="SoCtGiam" msprop:Generator_ColumnVarNameInTable="columnSoCtGiam" msprop:Generator_ColumnPropNameInTable="SoCtGiamColumn" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="NgayCtGiam" msprop:Generator_UserColumnName="NgayCtGiam" msprop:Generator_ColumnPropNameInRow="NgayCtGiam" msprop:Generator_ColumnVarNameInTable="columnNgayCtGiam" msprop:Generator_ColumnPropNameInTable="NgayCtGiamColumn" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="TenLydoTanggiam" msprop:Generator_UserColumnName="TenLydoTanggiam" msprop:Generator_ColumnPropNameInRow="TenLydoTanggiam" msprop:Generator_ColumnVarNameInTable="columnTenLydoTanggiam" msprop:Generator_ColumnPropNameInTable="TenLydoTanggiamColumn" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="HaoMonLk" msprop:Generator_UserColumnName="HaoMonLk" msprop:Generator_ColumnPropNameInRow="HaoMonLk" msprop:Generator_ColumnVarNameInTable="columnHaoMonLk" msprop:Generator_ColumnPropNameInTable="HaoMonLkColumn" type="xs:decimal" minOccurs="0" /&gt;
+              &lt;xs:element name="SoCt" msprop:Generator_UserColumnName="SoCt" msprop:Generator_ColumnPropNameInRow="SoCt" msprop:Generator_ColumnVarNameInTable="columnSoCt" msprop:Generator_ColumnPropNameInTable="SoCtColumn" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="NgayCt" msprop:Generator_UserColumnName="NgayCt" msprop:Generator_ColumnPropNameInRow="NgayCt" msprop:Generator_ColumnVarNameInTable="columnNgayCt" msprop:Generator_ColumnPropNameInTable="NgayCtColumn" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="Nam" msprop:Generator_UserColumnName="Nam" msprop:Generator_ColumnPropNameInRow="Nam" msprop:Generator_ColumnVarNameInTable="columnNam" msprop:Generator_ColumnPropNameInTable="NamColumn" type="xs:string" minOccurs="0" /&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</value>
+  </data>
+</root>

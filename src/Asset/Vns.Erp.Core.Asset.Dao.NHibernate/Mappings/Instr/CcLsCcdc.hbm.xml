@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Asset.Domain" assembly="Vns.Erp.Core.Asset.Domain">
+	<class name="Vns.Erp.Core.Asset.Domain.CcLsCcdc, Vns.Erp.Core.Asset.Domain" table="CC_LS_CCDC" lazy="true">
+		<id name="Id" column="LS_CCDC_ID">
+			<generator class="guid" />
+		</id>
+    <property name="NgayBiendoi" column="NGAY_BIENDOI" type="DateTime"  />
+    <property name="CcdcId" column="CCDC_ID" type="Guid"  />
+    <property name="MaCcdc" column="MA_CCDC" type="String" length="64" />
+    <property name="KyHieuCcdc" column="KY_HIEU_CCDC" type="String" length="255" />
+    <property name="TenCcdc" column="TEN_CCDC" type="String" length="255" />
+    <property name="NguyenGia" column="NGUYEN_GIA" type="Decimal" precision="18" scale="0" />
+    <property name="NgayBdSd" column="NGAY_BD_SD" type="DateTime"  />
+    <property name="NgayBdKh" column="NGAY_BD_KH" type="DateTime"  />
+    <property name="NgayKtKh" column="NGAY_KT_KH" type="DateTime"  />
+    <property name="SoKyPhanbo" column="SO_KY_PHANBO" type="Decimal" precision="4" scale="0" />
+    <property name="SoTienDaPhanbo" column="SO_TIEN_DA_PHANBO" type="Decimal" precision="18" scale="0" />
+    <property name="GiaTriCl" column="GIA_TRI_CL" type="Decimal" precision="18" scale="0" />
+    <property name="DvtId" column="DVT_ID" type="Guid"  />
+    <property name="MaDvt" column="MA_DVT" type="String" length="255" />
+    <property name="TenDvt" column="TEN_DVT" type="String" length="255" />
+    <property name="PhongbanId" column="PHONGBAN_ID" type="Guid"  />
+    <property name="MaPhongban" column="MA_PHONGBAN" type="String" length="255" />
+    <property name="LoaitaisanId" column="LOAITAISAN_ID" type="Guid"  />
+    <property name="LoaiPhanbo" column="LOAI_PHANBO" type="Decimal" precision="4" scale="0" />
+    <property name="TenLoaiPhanbo" column="TEN_LOAI_PHANBO" type="String" length="255" />
+    <property name="ThuTu" column="THU_TU" type="Decimal" precision="4" scale="0" />
+	</class>
+</hibernate-mapping>

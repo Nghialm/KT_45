@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Domain" assembly="Vns.Erp.Core.Accounting.Domain">
+	<class name="Vns.Erp.Core.Accounting.Domain.KtCtDKhac, Vns.Erp.Core.Accounting.Domain" table="KT_CT_D_KHAC" lazy="true">
+		<id name="Id" column="CTD_ID">
+			<generator class="guid" />
+		</id>
+		<property name="CthId" column="CTH_ID" type="System.Guid" />
+		<property name="TkId" column="TK_ID" type="System.Guid" />
+		<property name="MaTk" column="MA_TK" type="string" />
+		<property name="TenTk" column="TEN_TK" type="string" />
+		<property name="PsNo" column="PS_NO" type="decimal" precision="18" scale="0"/>
+		<property name="PsCo" column="PS_CO" type="decimal" precision="18" scale="0"/>
+		<property name="PsNoNt" column="PS_NO_NT" type="decimal" precision="18" scale="2"/>
+		<property name="PsCoNt" column="PS_CO_NT" type="decimal" precision="18" scale="2"/>
+		<property name="NoiDung" column="NOI_DUNG" type="string" />
+		<property name="IdDmHopdong" column="ID_DM_HOPDONG" type="System.Guid" />
+		<property name="MaHopdong" column="MA_HOPDONG" type="string" />
+		<property name="KyHieuHopdong" column="KY_HIEU_HOPDONG" type="string" />
+		<property name="TenHopdong" column="TEN_HOPDONG" type="string" />
+		<property name="IdDmPtqt" column="ID_DM_PTQT" type="System.Guid" />
+		<property name="IdDmPhongban" column="ID_DM_PHONGBAN" type="System.Guid" />
+		<property name="IdCtGhiso" column="ID_CT_GHISO" type="System.Guid" />
+		<property name="MaCtGhisoSo" column="MA_CT_GHISO_SO" type="string" />
+		<property name="CtGhisoTrichyeu" column="CT_GHISO_TRICHYEU" type="string" />
+		<property name="CtGhisoNgay" column="CT_GHISO_NGAY" type="System.DateTime" />
+		<property name="DaGhiso" column="DA_GHISO" type="decimal" precision="4" scale="0"/>
+		<property name="IdDmVuviec" column="ID_DM_VUVIEC" type="System.Guid" />
+		<property name="MaVuviec" column="MA_VUVIEC" type="string" />
+		<property name="KyHieuVuviec" column="KY_HIEU_VUVIEC" type="string" />
+		<property name="IdDmTudo1" column="ID_DM_TUDO_1" type="System.Guid" />
+		<property name="IdDmTudo2" column="ID_DM_TUDO_2" type="System.Guid" />
+		<property name="IdDmTudo3" column="ID_DM_TUDO_3" type="System.Guid" />
+		<property name="IdDmTudo4" column="ID_DM_TUDO_4" type="System.Guid" />
+		<property name="IdDmTudo5" column="ID_DM_TUDO_5" type="System.Guid" />
+		<property name="LoaiNghiepVu" column="LOAI_NGHIEP_VU" type="decimal" precision="4" scale="0"/>
+		<property name="IdKhang" column="ID_KHANG" type="System.Guid" />
+		<property name="MaKhang" column="MA_KHANG" type="string" />
+		<property name="IdDoituong1" column="ID_DOITUONG_1" type="System.Guid" />
+		<property name="MaDoituong1" column="MA_DOITUONG_1" type="string" />
+		<property name="TenDoituong1" column="TEN_DOITUONG_1" type="string" />
+		<property name="IdDoituong2" column="ID_DOITUONG_2" type="System.Guid" />
+		<property name="MaDoituong2" column="MA_DOITUONG_2" type="string" />
+		<property name="TenDoituong2" column="TEN_DOITUONG_2" type="string" />
+		<property name="IdDoituong3" column="ID_DOITUONG_3" type="System.Guid" />
+		<property name="MaDoituong3" column="MA_DOITUONG_3" type="string" />
+		<property name="TenDoituong3" column="TEN_DOITUONG_3" type="string" />
+		<property name="IdDmKhoanphi" column="ID_DM_KHOANPHI" type="System.Guid" />
+		<property name="TyGiaChenhlech" column="TY_GIA_CHENHLECH" type="decimal" />
+		<property name="NHOM" column="NHOM" type="decimal" precision="4" scale="0"/>
+		<property name="SoDu" column="SO_DU" type="decimal" precision="4" scale="0"/>
+		<property name="IdDoituongHoadon" column="ID_DOITUONG_HOADON" type="System.Guid" />
+		<property name="MaHoadon" column="MA_HOADON" type="string" />
+		<property name="KyHieuHoadon" column="KY_HIEU_HOADON" type="string" />
+		<property name="MaRo" column="MA_RO" type="string" />
+		<property name="TenRo" column="TEN_RO" type="string" />
+		<property name="KyHieuKhang" column="KY_HIEU_KHANG" type="string" />
+		<property name="TenKhang" column="TEN_KHANG" type="string" />
+		<property name="PhanHe" column="PHAN_HE" type="decimal" precision="4" scale="0"/>
+		<property name="Bx1" column="BX_1" type="string" />
+		<property name="Bx2" column="BX_2" type="string" />
+		<property name="Bx3" column="BX_3" type="string" />
+	</class>
+</hibernate-mapping>

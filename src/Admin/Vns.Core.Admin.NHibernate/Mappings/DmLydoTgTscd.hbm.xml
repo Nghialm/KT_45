@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.Erp.Core.Admin.Domain.DmLydoTgTscd,Vns.Erp.Core.Admin.Domain" table="DM_LYDO_TG_TSCD" lazy="false">
+
+		<id name="Id" column="LYDO_TG_TSCD_ID" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="MA_LYDO_TG_TSCD" type="String" name="MaLydoTgTscd" length="32" />
+		<property column="KY_HIEU" type="String" name="KyHieu" length="64" />
+		<property column="TEN_LYDO_TG_TSCD" type="String" name="TenLydoTgTscd" length="128" />
+		<property column="LOAI_LG" type="Decimal" name="LoaiLg" />
+		<property column="GIA_TRI" type="Decimal" name="GiaTri" />
+		<property column="DONVI_ID" type="Guid" name="DonviId" />
+		<property column="MA_DONVI" type="String" name="MaDonvi" length="32" />
+		<property column="CHO_PHEP_SUA" type="Decimal" name="ChoPhepSua" />
+		<property column="CO_SU_DUNG" type="Decimal" name="CoSuDung" />
+		
+	</class>
+</hibernate-mapping>

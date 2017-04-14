@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Asset.Domain" assembly="Vns.Erp.Core.Asset.Domain">
+	<class name="Vns.Erp.Core.Asset.Domain.CcCtCcdc, Vns.Erp.Core.Asset.Domain" table="CC_CT_CCDC" lazy="true">
+		<id name="Id" column="CC_CT_CCDC_ID">
+			<generator class="guid" />
+		</id>
+    <property name="CcdcId" column="CCDC_ID" type="Guid"  />
+    <property name="MaCcdc" column="MA_CCDC" type="String" length="64" />
+    <property name="KyHieu" column="KY_HIEU" type="String" length="128" />
+    <property name="TenCcdc" column="TEN_CCDC" type="String" length="255" />
+    <property name="NuocSx" column="NUOC_SX" type="String" length="255" />
+    <property name="NamSx" column="NAM_SX" type="Decimal" precision="4" scale="0" />
+    <property name="ThongsoKythuat" column="THONGSO_KYTHUAT" type="String" length="255" />
+    <property name="NgayMua" column="NGAY_MUA" type="DateTime"  />
+    <property name="NgayBdsd" column="NGAY_BDSD" type="DateTime"  />
+    <property name="NgayBdpb" column="NGAY_BDPB" type="DateTime"  />
+    <property name="NgayKtpb" column="NGAY_KTPB" type="DateTime"  />
+    <property name="SoKyPhanbo" column="SO_KY_PHANBO" type="Decimal" precision="4" scale="0" />
+    <property name="SoTienDaPhanbo" column="SO_TIEN_DA_PHANBO" type="Decimal" precision="18" scale="0" />
+    <property name="GiaTriCl" column="GIA_TRI_CL" type="Decimal" precision="18" scale="0" />
+    <property name="PhongbanId" column="PHONGBAN_ID" type="Guid"  />
+    <property name="MaPhongban" column="MA_PHONGBAN" type="String" length="255" />
+    <property name="TenPhongban" column="TEN_PHONGBAN" type="String" length="255" />
+    <property name="LoaiPhanbo" column="LOAI_PHANBO" type="Decimal" precision="4" scale="0" />
+    <property name="TenLoaiPhanbo" column="TEN_LOAI_PHANBO" type="String" length="255" />
+    <property name="DvtId" column="DVT_ID" type="Guid"  />
+    <property name="MaDvt" column="MA_DVT" type="String" length="2455" />
+    <property name="TenDvt" column="TEN_DVT" type="String" length="128" />
+    <property name="DonviId" column="DONVI_ID" type="Guid"  />
+    <property name="MaDonvi" column="MA_DONVI" type="String" length="64" />
+    <property name="ChoPhepSua" column="CHO_PHEP_SUA" type="Decimal" precision="4" scale="0" />
+    <property name="CoSuDung" column="CO_SU_DUNG" type="Decimal" precision="4" scale="0" />
+    <property name="MdTkCcdc" column="MD_TK_CCDC" type="String" length="64" />
+    <property name="MdTkPhanbo" column="MD_TK_PHANBO" type="String" length="64" />
+    <property name="MdTkChiphi" column="MD_TK_CHIPHI" type="String" length="64" />
+    <property name="GiamCcdc" column="GIAM_CCDC" type="Decimal" precision="4" scale="0" />
+    <property name="Nhom1" column="NHOM_1" type="Guid"  />
+    <property name="Nhom2" column="NHOM_2" type="Guid"  />
+    <property name="Nhom3" column="NHOM_3" type="Guid"  />
+    <property name="SoLuong" column="SO_LUONG" type="Decimal" precision="18" scale="2" />
+    <property name="NgayTang" column="NGAY_TANG" type="DateTime"  />
+    <property name="ChiphiMua" column="CHIPHI_MUA" type="Decimal" precision="18" scale="0" />
+    <property name="ChiphiDvSd" column="CHIPHI_DV_SD" type="Decimal" precision="18" scale="0" />
+    <property name="NgayGiam" column="NGAY_GIAM" type="DateTime"  />
+    <property name="NguyenGia" column="NGUYEN_GIA" type="Decimal" precision="18" scale="0" />
+    <property name="ThuTu" column="THU_TU" type="Decimal" precision="4" scale="0" />
+    <property name="LyDoTangGiamId" column="LY_DO_TANG_GIAM_ID" type="Guid"  />
+    <property name="TenLyDoTangGiam" column="TEN_LY_DO_TANG_GIAM" type="String" length="255" />
+    <property name="GhiChu" column="GHI_CHU" type="String" length="255" />
+    <property name="CthId" column="CTH_ID" type="Guid"  />
+    <property name="SoCt" column="SO_CT" type="String" length="255" />
+	</class>
+</hibernate-mapping>

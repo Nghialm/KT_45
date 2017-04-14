@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Spa.Domain" assembly="Vns.Erp.Core.Spa.Domain">
+	<class name="Vns.Erp.Core.Spa.Domain.SpaDmDichVu, Vns.Erp.Core.Spa.Domain" table="SPA_DM_Dich_Vu" lazy="true">
+		<id name="Id" column="ID_DichVu">
+			<generator class="guid" />
+		</id>
+		<property name="Ma" column="Ma" type="String" length="64" />
+		<property name="Kyhieu" column="KyHieu" type="String" length="64" />
+		<property name="Ten" column="Ten" type="String" length="128" />
+		<property name="Ten2" column="Ten_2" type="String" length="128" />
+		<property name="MoTa" column="Mo_Ta" type="String" length="512" />
+		<property name="DonGia" column="Don_Gia" type="Decimal" precision="18" scale="0" />
+		<property name="CoSuDung" column="Co_Su_Dung" type="bool" />
+		<property name="NgayTao" column="Ngay_Tao" type="DateTime" />
+		<property name="NguoiTao" column="Nguoi_Tao" type="Guid" />
+		<property name="DonviId" column="DonVi_ID" type="Guid" />
+		<property name="DichvuIdCha" column="DichVu_ID_Cha" type="Guid" />
+		<property name="ChiTiet" column="Chi_Tiet" type="bool" />
+		<property name="Cap" column="Cap" type="int" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,2 @@
+Can xem lai 1 so truong IDENTITY cu the :
+Bang [APP_DV_GROUP]

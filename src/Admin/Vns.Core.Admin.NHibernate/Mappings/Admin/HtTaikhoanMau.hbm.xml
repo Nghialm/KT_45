@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.HtTaikhoanMau, Vns.Erp.Core.Admin.Domain" table="HT_TAIKHOAN_MAU" lazy="true">
+		<id name="Id" column="TAIKHOAN_ID">
+			<generator class="assigned" />
+		</id>
+		<property name="MaTaikhoan" column="MA_TAIKHOAN" type="String" not-null="true" length="32"/>
+		<property name="TenTaikhoan" column="TEN_TAIKHOAN" type="String" not-null="true" length="128" />
+		<property name="MoTa" column="MO_TA" type="String" length="256"/>
+		<property name="TinhChat" column="TINH_CHAT" type="String" length="1" />
+		<property name="TaikhoanIdCha" column="TAIKHOAN_ID_CHA" type="Guid" />
+		<property name="ChiTiet" column="CHI_TIET" type="Decimal" precision="2" scale="0" />
+		<property name="InBcd" column="IN_BCD" type="Decimal" precision="2" scale="0" />
+		<property name="TkNb" column="TK_NB" type="Decimal" precision="2" scale="0" />
+		<property name="ChoPhepSua" column="CHO_PHEP_SUA" type="Decimal" precision="2" scale="0" />
+		<property name="CoSuDung" column="CO_SU_DUNG" type="Decimal" precision="2" scale="0" />
+		<property name="Cap" column="CAP" type="Decimal" precision="2" scale="0" />
+		<property name="Loai" column="LOAI" type="Decimal" precision="2" scale="0" />
+	</class>
+</hibernate-mapping>

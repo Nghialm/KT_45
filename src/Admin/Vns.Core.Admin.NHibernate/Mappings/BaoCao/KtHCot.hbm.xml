@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.KtHCot, Vns.Erp.Core.Admin.Domain" table="KT_H_COT" lazy="false">
+		<id name="Id" column="ID_COT">
+			<generator class="guid" />
+		</id>
+		<property name="MaCot" column="MA_COT" />
+		<property name="TenCot" column="TEN_COT" />
+		<property name="ThuTu" column="THU_TU" />
+		<property name="TenCot2" column="TEN_COT_2" />
+		<property name="GiaTri" column="GIA_TRI" />
+		<property name="BaocaoId" column="BAOCAO_ID" />
+		<property name="CachTinh" column="CACH_TINH" />
+		<property name="HamTinh" column="HAM_TINH" />
+		<property name="TsThoigian" column="TS_THOIGIAN" />
+		<property name="TsKhac" column="TS_KHAC" />
+		<property name="DkMaTk" column="DK_MA_TK" />
+		<property name="DkMaTkDu" column="DK_MA_TK_DU" />
+		<property name="DkMaHopdong" column="DK_MA_HOPDONG" />
+		<property name="DkMaHopdongDu" column="DK_MA_HOPDONG_DU" />
+		<property name="DkMaPtqt" column="DK_MA_PTQT" />
+		<property name="DkMaDmPtqtDu" column="DK_MA_DM_PTQT_DU" />
+		<property name="DkMaDmPhongban" column="DK_MA_DM_PHONGBAN" />
+		<property name="DkMaDmPhongbanDu" column="DK_MA_DM_PHONGBAN_DU" />
+		<property name="DkMaDmVuviec" column="DK_MA_DM_VUVIEC" />
+		<property name="DkMaDmVuviecDu" column="DK_MA_DM_VUVIEC_DU" />
+		<property name="DkMaDmTudo1" column="DK_MA_DM_TUDO_1" />
+		<property name="DkMaDmTudo1Du" column="DK_MA_DM_TUDO_1_DU" />
+		<property name="DkMaDmTudo2" column="DK_MA_DM_TUDO_2" />
+		<property name="DkMaDmTudo2Du" column="DK_MA_DM_TUDO_2_DU" />
+		<property name="DkMaDmTudo3" column="DK_MA_DM_TUDO_3" />
+		<property name="DkMaDmTudo3Du" column="DK_MA_DM_TUDO_3_DU" />
+		<property name="DkMaDmTudo4" column="DK_MA_DM_TUDO_4" />
+		<property name="DkMaDmTudo4Du" column="DK_MA_DM_TUDO_4_DU" />
+		<property name="DkMaDmTudo5" column="DK_MA_DM_TUDO_5" />
+		<property name="DkMaDmTudo5Du" column="DK_MA_DM_TUDO_5_DU" />
+		<property name="DkMaKhang" column="DK_MA_KHANG" />
+		<property name="DkMaKhangDu" column="DK_MA_KHANG_DU" />
+		<property name="DkMaDmKhoanphi" column="DK_MA_DM_KHOANPHI" />
+		<property name="DkMaDmKhoanphiDu" column="DK_MA_DM_KHOANPHI_DU" />
+	</class>
+</hibernate-mapping>

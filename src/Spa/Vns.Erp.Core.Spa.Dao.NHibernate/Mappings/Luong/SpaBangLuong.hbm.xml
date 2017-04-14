@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Spa.Domain" assembly="Vns.Erp.Core.Spa.Domain">
+	<class name="Vns.Erp.Core.Spa.Domain.SpaBangLuong, Vns.Erp.Core.Spa.Domain" table="SPA_BANG_LUONG" lazy="true">
+		<composite-id>
+			<key-property name="NhanVienId" column="Nhan_Vien_Id" type="Guid" /> 
+			<key-property name="ThangLuong" column="Thang_Luong" type="Guid" /> 
+		</composite-id>
+		<property name="SoTienLuong" column="So_Tien_Luong" type="Decimal" precision="18" scale="0" />
+		<property name="SoTienThuong" column="So_Tien_Thuong" precision="18" scale="0" />
+		<property name="SoTienHoaHong" column="So_Tien_Hoa_Hong" precision="18" scale="0" />
+		<property name="SoTienPhat" column="So_Tien_Phat" precision="18" scale="0" />
+		<property name="DonViId" column="Don_Vi_Id" type="Guid" />
+	</class>
+</hibernate-mapping>

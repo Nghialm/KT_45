@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Produce.Domain" assembly="Vns.Erp.Core.Produce.Domain">
+	<class name="Vns.Erp.Core.Produce.Domain.SxDmQuytrinh, Vns.Erp.Core.Produce.Domain" table="SX_Dm_QuyTrinh" lazy="false">
+		<id name="Id" column="QuyTrinh_Sx_Id">
+			<generator class="guid" />
+		</id>
+		<property name="MaQuytrinh" column="Ma_QuyTrinh" type="string" />
+		<property name="KyHieu" column="Ky_Hieu" type="string" />
+		<property name="TenQuytrinh" column="Ten_QuyTrinh" type="string" />
+		<property name="MoTa" column="Mo_Ta" type="string" />
+		<property name="CoSuDung" column="Co_Su_Dung" type="int" />
+		<property name="ChoPhepSua" column="Cho_Phep_Sua" type="int" />
+		<property name="DonviId" column="Donvi_Id" type="System.Guid" />
+		<property name="MaDonvi" column="Ma_Donvi" type="string" />
+
+		<bag name="LstDinhMuc" cascade="delete-orphan" table="SX_QuyTrinh_DinhMuc" inverse="false" lazy="false">
+			<key column="QuyTrinh_Id"></key>
+			<one-to-many class="Vns.Erp.Core.Produce.Domain.SxQuytrinhDinhmuc" not-found="ignore"/>
+		</bag>
+	</class>
+</hibernate-mapping>

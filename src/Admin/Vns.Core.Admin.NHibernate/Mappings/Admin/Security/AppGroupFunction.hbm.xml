@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.AppGroupFunction, Vns.Erp.Core.Admin.Domain" table="APP_GROUP_FUNCTION" lazy="false">
+    <!--
+		<id name="Id" column="GROUP_ID">
+			<generator class="native" />
+		</id>
+    -->
+    <id name="Id" column="GROUPID">
+      <generator class="guid" />
+    </id>
+    <property name="GroupKyhieu" column="GROUP_KYHIEU" />
+		<property name="GroupTen" column="GROUP_TEN" />
+		<property name="ParentId" column="PARENT_ID" />
+		<property name="GroupOrder" column="GROUP_ORDER" />
+		<property name="GroupClass" column="GROUP_CLASS" />
+		<property name="ResourceName" column="RESOURCE_NAME" />
+		<property name="ShortcutKey" column="SHORTCUT_KEY" />
+		<property name="Description" column="DESCRIPTION" />
+	</class>
+</hibernate-mapping>

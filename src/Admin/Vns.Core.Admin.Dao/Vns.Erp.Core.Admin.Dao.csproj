@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD3B9C3B-64F2-4046-B1A0-6C113B5E6025}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vns.Core.Admin.Dao</RootNamespace>
+    <AssemblyName>Vns.Core.Admin.Dao</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\IHtSoChungtuMaxDao.cs" />
+    <Compile Include="Admin\IHtTaikhoanMauDao.cs" />
+    <Compile Include="Admin\IKtKhoaSoNgayDao.cs" />
+    <Compile Include="Admin\IKtKhoasoThangDao.cs" />
+    <Compile Include="Admin\IKtStatusCtDao.cs" />
+    <Compile Include="BaoCao\IKtDieukienBcDao.cs" />
+    <Compile Include="BaoCao\IKtHBaocaoDao.cs" />
+    <Compile Include="BaoCao\IKtHCotDao.cs" />
+    <Compile Include="BaoCao\IKtHDongDao.cs" />
+    <Compile Include="DanhMuc\IDmTudo2Dao.cs" />
+    <Compile Include="DanhMuc\IDmTudo3Dao.cs" />
+    <Compile Include="DanhMuc\IDmTudo4Dao.cs" />
+    <Compile Include="DanhMuc\IDmTudo5Dao.cs" />
+    <Compile Include="Admin\Security\IAppCtStatusDao.cs" />
+    <Compile Include="Admin\Security\IAppDvBcDao.cs" />
+    <Compile Include="Admin\Security\IAppDvFormDao.cs" />
+    <Compile Include="Admin\Security\IAppDvGroupBcDao.cs" />
+    <Compile Include="Admin\Security\IAppDvGroupDao.cs" />
+    <Compile Include="Admin\Security\IAppDvGroupFormDao.cs" />
+    <Compile Include="Admin\Security\IAppDvGroupUserDao.cs" />
+    <Compile Include="Admin\Security\IAppFormsDao.cs" />
+    <Compile Include="Admin\Security\IAppGroupFormsDao.cs" />
+    <Compile Include="Admin\Security\IAppGroupFunctionDao.cs" />
+    <Compile Include="Admin\Security\IAppGroupsDao.cs" />
+    <Compile Include="Admin\Security\IAppHGroupFormDao.cs" />
+    <Compile Include="Admin\Security\IAppHGroupFunctDao.cs" />
+    <Compile Include="Admin\Security\IAppLogbookDao.cs" />
+    <Compile Include="Admin\Security\IAppUgFormDao.cs" />
+    <Compile Include="Admin\Security\IAppUsergroupDao.cs" />
+    <Compile Include="Admin\Security\IAppUsersDao.cs" />
+    <Compile Include="IDmBtKetchuyenDao.cs" />
+    <Compile Include="IDmDonviDao.cs" />
+    <Compile Include="IDmDvtDao.cs" />
+    <Compile Include="IDmHanghoaDao.cs" />
+    <Compile Include="IDmHopdongDao.cs" />
+    <Compile Include="IDmKhangDao.cs" />
+    <Compile Include="IDmKhoanphiDao.cs" />
+    <Compile Include="IDmKhoDao.cs" />
+    <Compile Include="IDmNgoaiteDao.cs" />
+    <Compile Include="IDmNhomKhangDao.cs" />
+    <Compile Include="IDmNhomvattu1Dao.cs" />
+    <Compile Include="IDmPhongbanDao.cs" />
+    <Compile Include="IDmPtqtDao.cs" />
+    <Compile Include="IDmTaikhoanDao.cs" />
+    <Compile Include="IDmThueDao.cs" />
+    <Compile Include="IDmTkChitietDao.cs" />
+    <Compile Include="IDmTudo1Dao.cs" />
+    <Compile Include="IDmVuviecDao.cs" />
+    <Compile Include="Admin\IHtBaocaoDao.cs" />
+    <Compile Include="Admin\IHtBienBaocaoDao.cs" />
+    <Compile Include="IHtDanhmucDao.cs" />
+    <Compile Include="Admin\IHtFileBaocaoDao.cs" />
+    <Compile Include="IHtLoaichungtuDao.cs" />
+    <Compile Include="IHtThamsoDao.cs" />
+    <Compile Include="ILsTygiaDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vns.Erp.Core.Admin.Domain\Vns.Erp.Core.Admin.Domain.csproj">
+      <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
+      <Name>Vns.Erp.Core.Admin.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
+      <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
+      <Name>Vns.Erp.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Dao\Vns.Erp.Core.Dao.csproj">
+      <Project>{4954B581-A0CA-43C7-B3FD-274B05148BEF}</Project>
+      <Name>Vns.Erp.Core.Dao</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Asset\" />
+    <Folder Include="Instr\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

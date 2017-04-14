@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.AppDvForm, Vns.Erp.Core.Admin.Domain" table="APP_DV_FORM" lazy="false">
+		<id name="Id" column="DVF_ID">
+			<generator class="guid" />
+		</id>
+		<property name="DvId" column="DV_ID" />
+		<property name="FormId" column="FORM_ID" />
+		<property name="FormOrder" column="FORM_ORDER" />
+    
+    <many-to-one name="AppGroupForms" column="FORM_ID" class="AppGroupForms" insert="false" update="false" lazy="false" not-found="ignore" />
+  </class>
+</hibernate-mapping>

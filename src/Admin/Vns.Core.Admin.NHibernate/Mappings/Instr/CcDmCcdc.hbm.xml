@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.CcDmCcdc, Vns.Erp.Core.Admin.Domain" table="CC_DM_CCDC" lazy="true">
+		<id name="Id" column="CCDC_ID">
+			<generator class="guid" />
+		</id>
+		<property name="MaCcdc" column="MA_CCDC" />
+		<property name="KyHieu" column="KY_HIEU" />
+		<property name="TenCcdc" column="TEN_CCDC" />
+		<property name="NuocSx" column="NUOC_SX" />
+		<property name="NamSx" column="NAM_SX" />
+		<property name="ThongsoKythuat" column="THONGSO_KYTHUAT" />
+		<property name="NgayMua" column="NGAY_MUA" />
+		<property name="NgayBdsd" column="NGAY_BDSD" />
+		<property name="NgayBdpb" column="NGAY_BDPB" />
+		<property name="NgayKtpb" column="NGAY_KTPB" />
+		<property name="SoKyPhanbo" column="SO_KY_PHANBO" />
+		<property name="SoTienDaPhanbo" column="SO_TIEN_DA_PHANBO" />
+		<property name="GiaTriCl" column="GIA_TRI_CL" />
+		<property name="PhongbanId" column="PHONGBAN_ID" />
+		<property name="MaPhongban" column="MA_PHONGBAN" />
+		<property name="TenPhongban" column="TEN_PHONGBAN" />
+		<property name="LoaiPhanbo" column="LOAI_PHANBO" />
+		<property name="TenLoaiPhanbo" column="TEN_LOAI_PHANBO" />
+		<property name="DvtId" column="DVT_ID" />
+		<property name="MaDvt" column="MA_DVT" />
+		<property name="TenDvt" column="TEN_DVT" />
+		<property name="DonviId" column="DONVI_ID" />
+		<property name="MaDonvi" column="MA_DONVI" />
+		<property name="ChoPhepSua" column="CHO_PHEP_SUA" />
+		<property name="CoSuDung" column="CO_SU_DUNG" />
+		<property name="MdTkCcdc" column="MD_TK_CCDC" />
+		<property name="MdTkPhanbo" column="MD_TK_PHANBO" />
+		<property name="MdTkChiphi" column="MD_TK_CHIPHI" />
+		<property name="GiamCcdc" column="GIAM_CCDC" />
+		<property name="Nhom1" column="NHOM_1" />
+		<property name="Nhom2" column="NHOM_2" />
+		<property name="Nhom3" column="NHOM_3" />
+		<property name="SoLuong" column="SO_LUONG" />
+		<property name="NgayTang" column="NGAY_TANG" />
+		<property name="ChiphiMua" column="CHIPHI_MUA" />
+		<property name="ChiphiDvSd" column="CHIPHI_DV_SD" />
+		<property name="NgayGiam" column="NGAY_GIAM" />
+		<property name="NguyenGia" column="NGUYEN_GIA" />
+	</class>
+</hibernate-mapping>

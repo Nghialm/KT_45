@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.TsTscdPtung, Vns.Erp.Core.Admin.Domain" table="TS_TSCD_PTUNG" lazy="false">
+		<id name="Id" column="TS_TSCD_PTUNG_ID">
+			<generator class="guid" />
+		</id>
+		<property name="TenPtung" column="TEN_PTUNG" />
+		<property name="TenDvt" column="TEN_DVT" />
+		<property name="SoLuong" column="SO_LUONG" />
+		<property name="SoTien" column="SO_TIEN" />
+		<property name="SoTienNte" column="SO_TIEN_NTE" />
+		<property name="QuyCach" column="QUY_CACH" />
+		<property name="DienGiai" column="DIEN_GIAI" />
+		<property name="DonviId" column="DONVI_ID" />
+		<property name="MaDonvi" column="MA_DONVI" />
+		<property name="DmTscdId" column="DM_TSCD_ID" />
+	</class>
+</hibernate-mapping>

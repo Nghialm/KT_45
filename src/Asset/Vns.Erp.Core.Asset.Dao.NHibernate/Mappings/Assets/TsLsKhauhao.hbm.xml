@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Asset.Domain" assembly="Vns.Erp.Core.Asset.Domain">
+	<class name="Vns.Erp.Core.Asset.Domain.TsLsKhauhao, Vns.Erp.Core.Asset.Domain" table="TS_LS_KHAUHAO" lazy="false">
+		<id name="Id" column="TS_LS_KHAUHAO_ID">
+			<generator class="assigned" />
+		</id>
+    <property name="DmTscdId" column="DM_TSCD_ID" type="Guid"  />
+    <property name="CtTscdId" column="CT_TSCD_ID" type="Guid"  />
+    <property name="HaoMonLk" column="HAO_MON_LK" type="Decimal" precision="18" scale="0" />
+    <property name="HaoMonThang" column="HAO_MON_THANG" type="Decimal" precision="18" scale="0" />
+    <property name="HaoMonNam" column="HAO_MON_NAM" type="Decimal" precision="18" scale="0" />
+    <property name="NguyenGia" column="NGUYEN_GIA" type="Decimal" precision="18" scale="0" />
+    <property name="GiaTriCl" column="GIA_TRI_CL" type="Decimal" precision="18" scale="0" />
+    <property name="Thang" column="THANG" type="Decimal" precision="4" scale="0" />
+    <property name="Nam" column="NAM" type="Decimal" precision="5" scale="2" />
+    <property name="DonviId" column="DONVI_ID" type="Guid"  />
+    <property name="MaDonvi" column="MA_DONVI" type="String" length="64" />
+    <property name="CtdId" column="CTD_ID" type="Guid"  />
+    <property name="NgayTao" column="NGAY_TAO" type="DateTime"  />
+    <property name="NguoiTao" column="NGUOI_TAO" type="Guid"  />
+    <property name="NgaySua" column="NGAY_SUA" type="DateTime"  />
+    <property name="NguoiSua" column="NGUOI_SUA" type="Guid"  />
+    <property name="CthId" column="CTH_ID" type="Guid"  />
+    <property name="IdCha" column="ID_CHA" type="Guid"  />
+    <property name="BaoCao" column="BAO_CAO" type="Decimal" precision="4" scale="0" />
+    <property name="ChiTiet" column="CHI_TIET" type="Decimal" precision="4" scale="0" />
+    <property name="HeSo" column="HE_SO" type="Decimal" precision="5" scale="0" />
+    <property name="NguonVonId" column="NGUON_VON_ID" type="Guid"  />
+    <property name="NgayKhauHao" column="NGAY_KHAU_HAO" type="DateTime"  />
+	</class>
+</hibernate-mapping>

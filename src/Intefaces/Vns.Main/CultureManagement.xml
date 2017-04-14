@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<Cultures>
+		<Culture>
+			<Name>Việt Nam</Name>
+			<Code>vi-VN</Code>
+			<Example>10.234,567</Example>
+			<IsUsed>1</IsUsed>
+			<IconIndex>0</IconIndex>
+			<Description>Văn hóa Việt, Đức, Tây Ban Nha, v.v...</Description>
+		</Culture>
+		<Culture>
+			<Name>Anh Mỹ</Name>
+			<Code>en-US</Code>
+			<Example>10,234.567</Example>
+			<IsUsed>0</IsUsed>
+			<IconIndex>1</IconIndex>
+			<Description>Văn hóa Anh, Mỹ, China, v.v...</Description>
+		</Culture>
+		<Culture>
+			<Name>Pháp</Name>
+			<Code>fr-FR</Code>
+			<Example>10 234,567</Example>
+			<IsUsed>0</IsUsed>
+			<IconIndex>2</IconIndex>
+			<Description>Văn hóa Pháp, v.v...</Description>
+		</Culture>
+	</Cultures>
+</root>

@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    The Northwind object definitions for the Data Access Objects.
+  </description>
+
+  <!-- Property placeholder configurer for database settings -->
+  <object type="Spring.Objects.Factory.Config.PropertyPlaceholderConfigurer, Spring.Core">
+    <property name="ConfigSections" value="databaseSettings"/>
+  </object>
+
+  <!-- Database SQLite Configuration 
+<db:provider id="DbProvider"
+                 provider="System.Data.SQLite"
+                 connectionString="Data Source=App_Data/Northwind.db;Version=3;FailIfMissing=True;"/>
+-->
+  <!-- Database SQL Server Configuration -->
+  <object id="DbProvider" type="Spring.Data.Common.UserCredentialsDbProvider, Spring.Data">
+    <property name="TargetDbProvider" ref="targetDbProvider"/>
+    <property name="Username" value="User ID=vinastar"/>
+    <property name="Password" value="Password=saodatviet"/>
+  </object>
+  <db:provider id="targetDbProvider" provider="SqlServer-2.0" connectionString="Data Source=demo.wru.edu.vn;Database=ketoan;Trusted_Connection=False;uid=vinastar;pwd=saodatviet;"/>
+
+  <!-- NHibernate Configuration -->
+  <object id="NHibernateSessionFactory" type="Vns.Erp.Core.Dao.NHibernate.CustomLocalSessionFactoryObject, Vns.Erp.Core.Dao.NHibernate">
+    <property name="DbProvider" ref="DbProvider"/>
+    <property name="MappingAssemblies">
+      <list>
+        <value>Vns.Erp.Core.Dao.NHibernate</value>
+        <value>Vns.Erp.Core.Admin.Dao.NHibernate</value>
+      </list>
+    </property>
+    <property name="HibernateProperties">
+      <dictionary>
+        <entry key="hibernate.connection.provider" value="NHibernate.Connection.DriverConnectionProvider"/>
+        <!--
+        <entry key="dialect" value="NHibernate.Dialect.SQLiteDialect"/>
+        <entry key="connection.driver_class" value="NHibernate.Driver.SQLite20Driver"/>
+        -->
+        <entry key="dialect" value="NHibernate.Dialect.MsSql2000Dialect"/>
+        <entry key="connection.driver_class" value="NHibernate.Driver.SqlClientDriver"/>
+
+        <entry key="use_proxy_validator" value="false" />
+      </dictionary>
+    </property>
+
+    <!-- provides integation with Spring's declarative transaction management features -->
+    <property name="ExposeTransactionAwareSessionFactory" value="true" />
+
+  </object>
+
+  <!-- Transaction Management Strategy - local database transactions -->
+  <object id="transactionManager"
+        type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate32">
+
+    <property name="DbProvider" ref="DbProvider"/>
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+
+  </object>
+
+  <!-- Exception translation object post processor 
+  <object type="Spring.Dao.Attributes.PersistenceExceptionTranslationPostProcessor, Spring.Data"/>
+-->
+  <!-- Hibernate Template -->
+  <object id="HibernateTemplate" type="Spring.Data.NHibernate.Generic.HibernateTemplate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory" />
+    <property name="TemplateFlushMode" value="Auto" />
+    <property name="CacheQueries" value="true" />
+  </object>
+  <!-- Data Access Objects -->
+  <object id="AppGroupsDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppGroupsDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppUsersDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppUsersDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="DmDonviDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.DmDonviDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppDvGroupUserDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppDvGroupUserDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="HtThamsoDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.HtThamsoDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppFormsDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppFormsDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppUsergroupDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppUsergroupDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppDvFormDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppDvFormDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppHGroupFormDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppHGroupFormDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppUgFormDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppUgFormDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppHGroupFunctDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppHGroupFunctDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppGroupFormsDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppGroupFormsDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppDvGroupFormDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppDvGroupFormDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppGroupFunctionDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppGroupFunctionDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppLogbookDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppLogbookDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppDvBcDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppDvBcDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="AppDvGroupBcDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.AppDvGroupBcDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="HtBaocaoDao" type="Vns.Erp.Core.Admin.Dao.NHibernate.HtBaocaoDao, Vns.Erp.Core.Admin.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+</objects>

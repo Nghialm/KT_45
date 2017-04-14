@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.Erp.Core.Asset.Domain.DmLoaitaisan,Vns.Erp.Core.Asset.Domain" table="DM_LOAITAISAN" lazy="false">
+
+		<id name="Id" column="LOAITAISAN_ID" type="Guid">
+			<generator class="guid"/>
+		</id>
+    <property name="MaLoaitaisan" column="MA_LOAITAISAN" type="String" length="32" />
+    <property name="KyHieu" column="KY_HIEU" type="String" length="32" />
+    <property name="TenLoaitaisan" column="TEN_LOAITAISAN" type="String" length="256" />
+    <property name="KhungTgsd" column="KHUNG_TGSD" type="Decimal" precision="5" scale="2" />
+    <property name="LoaitaisanIdCha" column="LOAITAISAN_ID_CHA" type="Guid"  />
+    <property name="ChiTiet" column="CHI_TIET" type="Decimal" precision="4" scale="0" />
+    <property name="ChoPhepSua" column="CHO_PHEP_SUA" type="Decimal" precision="4" scale="0" />
+    <property name="CoSuDung" column="CO_SU_DUNG" type="Decimal" precision="4" scale="0" />
+    <property name="Cap" column="CAP" type="Decimal" precision="4" scale="0" />
+		
+	</class>
+</hibernate-mapping>

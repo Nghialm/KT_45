@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.AppLogbook, Vns.Erp.Core.Admin.Domain" table="APP_LOGBOOK" lazy="false">
+		<id name="Id" column="LOG_ID">
+			<generator class="guid" />
+		</id>
+		<property name="ComputerName" column="COMPUTER_NAME" />
+		<property name="WindowsUser" column="WINDOWS_USER" />
+		<property name="LogAction" column="LOG_ACTION" />
+		<property name="LogDescription" column="LOG_DESCRIPTION" />
+		<property name="FormName" column="FORM_NAME" />
+		<property name="UserId" column="USER_ID" />
+		<property name="UserName" column="USER_NAME" />
+		<property name="LogTime" column="LOG_TIME" />
+	</class>
+</hibernate-mapping>

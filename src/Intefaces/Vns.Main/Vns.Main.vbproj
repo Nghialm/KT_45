@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4079E120-AC97-498C-B9F2-2D00F7DAF633}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Vns.Main.My.MyApplication</StartupObject>
+    <RootNamespace>Vns.Main</RootNamespace>
+    <AssemblyName>VKetoan</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VKetoan.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VKetoan.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Tourtle.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=2.1.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net">
+      <HintPath>..\..\..\References\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.BonusSkins.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.Data.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.OfficeSkins.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.Utils.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraBars.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraEditors.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraGrid.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraLayout.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraNavBar.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraPrinting.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraReports.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraRichEdit.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.2.Core, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraTreeList.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraVerticalGrid.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MacroScope, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\MacroScope.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\References\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Nullables">
+      <HintPath>..\..\..\References\Nullables.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.3.2.40001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.3.2.40001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate32">
+      <HintPath>..\..\..\References\Spring.Data.NHibernate32.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Services">
+      <HintPath>..\..\..\References\Spring.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web">
+      <HintPath>..\..\..\References\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vns.Erp.Security">
+      <HintPath>..\..\..\References\Vns.Erp.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Vns.Erp.Wcf.Client">
+      <HintPath>..\..\..\References\Vns.Erp.Wcf.Client.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.vb">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documents\Xoa_dulieu_ketoan_dn_1.sql" />
+    <Content Include="Resources\IconMenu\Main_Asset.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\Main_Buy.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\Main_Control.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\Main_HeThong.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\Main_Sale.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\Main_SanXuat.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\Main_Spa.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\Main_TienMat.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\Main_TongHop.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\Main_Tool.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\Main_Warehouse.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Util\Teamview.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VnsRef\Vns.Core.Admin.Dao.dll" />
+    <Content Include="VnsRef\Vns.Core.Admin.Service.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Dao.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Domain.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Accounting.exe" />
+    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Report.Dao.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Report.Dao.NHibernate.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Report.Domain.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Report.exe" />
+    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Report.Service.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Service.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Accounting.VbAccountingGUI.exe" />
+    <Content Include="VnsRef\Vns.Erp.Core.Admin.Dao.NHibernate.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Admin.Domain.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Admin.VbAdminGUI.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Dao.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Dao.NHibernate.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Domain.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Service.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Spa.Common.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Spa.Dao.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Spa.Dao.NHibernate.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Spa.Domain.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Spa.Service.dll" />
+    <Content Include="VnsRef\Vns.Erp.Core.Spa.VbSpaGUI.exe" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Config\WebServices\calculatorService.wsdl" />
+    <Content Include="Config\WcfWinForms.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\InProcess\DaoObjects.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\InProcess\Dao-Local.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\UserGuide.docx" />
+    <None Include="Documents\TaiKhoan_QD48.xlsx" />
+    <None Include="Documents\TaiKhoan_QD48_SPA.xlsx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Config\ServerApp.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\WcfEnpoint.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SQLife\Import_ToSQLite_LyDoTG.sql" />
+    <None Include="SQLife\KeToan.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SQLife\Ketoan_Blank.db" />
+    <None Include="SQLServer\KeToanNew.bak" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.CsReportGUI\Vns.Erp.Core.Accounting.CsReportGUI.csproj">
+      <Project>{078BF1FA-B920-4F06-876B-A18E79C5077E}</Project>
+      <Name>Vns.Erp.Core.Accounting.CsReportGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Dao.NHibernate\Vns.Erp.Core.Accounting.Dao.NHibernate.csproj">
+      <Project>{931f7452-c465-46f8-8dcc-f513d15d6b20}</Project>
+      <Name>Vns.Erp.Core.Accounting.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Dao\Vns.Erp.Core.Accounting.Dao.csproj">
+      <Project>{ea173391-eaa8-4f77-adc9-3e8c2caf4681}</Project>
+      <Name>Vns.Erp.Core.Accounting.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Domain\Vns.Erp.Core.Accounting.Domain.csproj">
+      <Project>{7258abc1-7fa4-4369-b5d3-9da7faa974c5}</Project>
+      <Name>Vns.Erp.Core.Accounting.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Report.Dao.NHibernate\Vns.Erp.Core.Accounting.Report.Dao.NHibernate.csproj">
+      <Project>{5a2a350e-0f50-472a-9824-f498d35f2f10}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Report.Dao\Vns.Erp.Core.Accounting.Report.Dao.csproj">
+      <Project>{57b13f42-7ffd-4850-838c-767e5ac634b9}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Report.Domain\Vns.Erp.Core.Accounting.Report.Domain.csproj">
+      <Project>{72e457b3-cc29-4b80-9103-efca78c2e309}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Report.Service\Vns.Erp.Core.Accounting.Report.Service.csproj">
+      <Project>{7f4a409f-ed34-45d8-98af-e4659a7dfb0d}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Report\Vns.Erp.Core.Accounting.Report.vbproj">
+      <Project>{dfc200e8-b8e5-4215-99a5-d75ea7e0e3cf}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Service\Vns.Erp.Core.Accounting.Service.csproj">
+      <Project>{1567f284-e659-4c44-8d1b-4ef16b969c98}</Project>
+      <Name>Vns.Erp.Core.Accounting.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Core.Admin.Dao\Vns.Erp.Core.Admin.Dao.csproj">
+      <Project>{bd3b9c3b-64f2-4046-b1a0-6c113b5e6025}</Project>
+      <Name>Vns.Erp.Core.Admin.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.CsAssetGUI\Vns.Erp.Core.Asset.CsAssetGUI.csproj">
+      <Project>{BEAC0B3B-FAD8-458B-8DC6-436A8132E43E}</Project>
+      <Name>Vns.Erp.Core.Asset.CsAssetGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Dao.NHibernate\Vns.Erp.Core.Asset.Dao.NHibernate.csproj">
+      <Project>{4B22AEA6-4505-44B4-87C7-D86A7EC3E6A6}</Project>
+      <Name>Vns.Erp.Core.Asset.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Dao\Vns.Erp.Core.Asset.Dao.csproj">
+      <Project>{C4884187-EB36-4850-8E6E-48D7BBECF964}</Project>
+      <Name>Vns.Erp.Core.Asset.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Domain\Vns.Erp.Core.Asset.Domain.csproj">
+      <Project>{5EBA40CB-468B-47B4-B118-611F9FE5E770}</Project>
+      <Name>Vns.Erp.Core.Asset.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Service\Vns.Erp.Core.Asset.Service.csproj">
+      <Project>{277365E5-D209-4E0F-A037-01E98A216966}</Project>
+      <Name>Vns.Erp.Core.Asset.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.VbAssetGUI\Vns.Erp.Core.Asset.VbAssetGUI.vbproj">
+      <Project>{7A012DD6-8E70-480B-A842-658FD58BD39C}</Project>
+      <Name>Vns.Erp.Core.Asset.VbAssetGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Controls\Vns.Erp.Core.Controls\Vns.Erp.Core.Controls.csproj">
+      <Project>{FBC6EDB3-9A36-4E9D-9BEF-7498631CD479}</Project>
+      <Name>Vns.Erp.Core.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Produce\Vns.Erp.Core.Produce.Common\Vns.Erp.Core.Produce.Common.csproj">
+      <Project>{C9CBDAD2-3685-498D-B4CF-EE0114F7A4D8}</Project>
+      <Name>Vns.Erp.Core.Produce.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Produce\Vns.Erp.Core.Produce.CsProduceGUI\Vns.Erp.Core.Produce.CsProduceGUI.csproj">
+      <Project>{2630EF1D-35BC-437C-AC43-1577EEB5E854}</Project>
+      <Name>Vns.Erp.Core.Produce.CsProduceGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Produce\Vns.Erp.Core.Produce.Dao.NHibernate\Vns.Erp.Core.Produce.Dao.NHibernate.csproj">
+      <Project>{A54F9A7E-31FA-4D71-8F42-F561738DCBA0}</Project>
+      <Name>Vns.Erp.Core.Produce.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Produce\Vns.Erp.Core.Produce.Dao\Vns.Erp.Core.Produce.Dao.csproj">
+      <Project>{501C091E-9F75-49A7-B85E-1E77BE2B7BA6}</Project>
+      <Name>Vns.Erp.Core.Produce.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Produce\Vns.Erp.Core.Produce.Domain\Vns.Erp.Core.Produce.Domain.csproj">
+      <Project>{5B666884-E9D0-470B-8309-9EFED7CBD326}</Project>
+      <Name>Vns.Erp.Core.Produce.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Produce\Vns.Erp.Core.Produce.Service\Vns.Erp.Core.Produce.Service.csproj">
+      <Project>{469CA357-BC7F-46AC-9900-7E5EF8564BE0}</Project>
+      <Name>Vns.Erp.Core.Produce.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Spa\Vns.Erp.Core.Spa.Common\Vns.Erp.Core.Spa.Common.csproj">
+      <Project>{3A0EBE0D-12C7-469C-BC73-A1AE2A9ED8DB}</Project>
+      <Name>Vns.Erp.Core.Spa.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Spa\Vns.Erp.Core.Spa.Dao.NHibernate\Vns.Erp.Core.Spa.Dao.NHibernate.csproj">
+      <Project>{FC96B35D-FCA4-4973-9758-00C9C909629D}</Project>
+      <Name>Vns.Erp.Core.Spa.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Spa\Vns.Erp.Core.Spa.Dao\Vns.Erp.Core.Spa.Dao.csproj">
+      <Project>{41DF408B-15AF-41F1-B037-E691BC9A445B}</Project>
+      <Name>Vns.Erp.Core.Spa.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Spa\Vns.Erp.Core.Spa.Domain\Vns.Erp.Core.Spa.Domain.csproj">
+      <Project>{BAECA76A-0A00-4006-ADC1-6658F34BD1CA}</Project>
+      <Name>Vns.Erp.Core.Spa.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Spa\Vns.Erp.Core.Spa.Service\Vns.Erp.Core.Spa.Service.csproj">
+      <Project>{5C13B6EB-7D22-4CFB-8095-D04BBE5DFF96}</Project>
+      <Name>Vns.Erp.Core.Spa.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Spa\Vns.Erp.Core.Spa.VbSpaGUI\Vns.Erp.Core.Spa.VbSpaGUI.vbproj">
+      <Project>{1A9017B5-3EDF-4F80-88AC-1DAB673E51B4}</Project>
+      <Name>Vns.Erp.Core.Spa.VbSpaGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Core.Admin.NHibernate\Vns.Erp.Core.Admin.Dao.NHibernate.csproj">
+      <Project>{796175DC-C46A-47D7-9B3E-A80779B2330C}</Project>
+      <Name>Vns.Erp.Core.Admin.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Core.Admin.Service\Vns.Erp.Core.Admin.Service.csproj">
+      <Project>{B1C4C1BD-E65B-4F2D-B300-0A670E1F57C6}</Project>
+      <Name>Vns.Erp.Core.Admin.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Erp.Core.Admin.Domain\Vns.Erp.Core.Admin.Domain.csproj">
+      <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
+      <Name>Vns.Erp.Core.Admin.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
+      <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
+      <Name>Vns.Erp.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Service\Vns.Erp.Core.Service.csproj">
+      <Project>{F213FDB0-2CE0-41E6-8680-050276412F38}</Project>
+      <Name>Vns.Erp.Core.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core\Vns.Erp.Core.vbproj">
+      <Project>{6903B6FB-C64B-47C1-807D-ABF526B1A9C3}</Project>
+      <Name>Vns.Erp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Dao.NHibernate\Vns.Erp.Core.Dao.NHibernate.csproj">
+      <Project>{4A9608F9-7C07-4672-ACA5-D81672435F62}</Project>
+      <Name>Vns.Erp.Core.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.UtilGUI\Vns.Erp.UtilGUI.csproj">
+      <Project>{8FEBCE1A-CCDF-44AA-9B1B-87EFD311F35F}</Project>
+      <Name>Vns.Erp.UtilGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.VbAccountingGUI\Vns.Erp.Core.Accounting.VbAccountingGUI.vbproj">
+      <Project>{B441437E-DD45-4969-973E-1B839A160845}</Project>
+      <Name>Vns.Erp.Core.Accounting.VbAccountingGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Erp.Core.Admin.VbAdminGUI\Vns.Erp.Core.Admin.VbAdminGUI.vbproj">
+      <Project>{676649F7-9F89-4C2F-A34C-ED5D9889957E}</Project>
+      <Name>Vns.Erp.Core.Admin.VbAdminGUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cap3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cap1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cap2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\EnterpriseServices\enterpriseServices.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\InProcess\Dao-Access.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\InProcess\Dao-Online.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\InProcess\Dao-SQLite.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\InProcess\Dao.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\InProcess\inProcess.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\InProcess\Services.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\Remoting\cao.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CultureManagement.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CultureSetting.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="KTConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="KTYConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\03.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\04.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\05.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\06.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\07.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\08.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\09.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\18.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\19.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\25.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\26.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\27.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\28.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\29.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\30.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\31.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\33.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\34.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\36.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\37.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\38.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\39.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\40.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\41.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\43.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\44.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\45.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\46.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\47.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\banhang.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\baocaoquantri.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\baocaotaichinh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\bdsc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\chiphigiathanh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\hethong.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\muahang.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\phanhetaxi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\quanlynhansu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\taisancodinh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\tienmattiengui.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\tonghop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\IconMenu\tonkho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tourtle.ico" />
+    <EmbeddedResource Include="Config\WebServices\webServices.xml" />
+    <EmbeddedResource Include="Config\WebServices\webServices-aop.xml" />
+    <EmbeddedResource Include="Config\Remoting\saoSingleton.xml" />
+    <EmbeddedResource Include="Config\Remoting\saoSingleton-aop.xml" />
+    <EmbeddedResource Include="Config\Remoting\saoSingleCall.xml" />
+    <EmbeddedResource Include="Config\Remoting\saoSingleCall-aop.xml" />
+    <EmbeddedResource Include="Config\Remoting\cao-ctor.xml" />
+    <EmbeddedResource Include="Config\Remoting\cao-ctor-aop.xml" />
+    <EmbeddedResource Include="Config\Remoting\cao-aop.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Icon\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

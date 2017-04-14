@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.HtLoaichungtu, Vns.Erp.Core.Admin.Domain" table="HT_LOAICHUNGTU" lazy="false">
+		<id name="Id" column="LOAI_CT_ID">
+			<generator class="assigned" />
+		</id>
+		<property name="MaLoaiCt" column="MA_LOAI_CT" type="String" length="32" />
+		<property name="KyHieu" column="KY_HIEU" type="String" length="64" />
+		<property name="TenLoaiCt" column="TEN_LOAI_CT" type="String" length="128" />
+		<property name="MoTa" column="MO_TA" type="String" length="512" />
+		<property name="MaTkNoLq" column="MA_TK_NO_LQ" type="String" length="128" />
+		<property name="MaTkCoLq" column="MA_TK_CO_LQ" type="String" length="128" />
+		<property name="LoaiCtIdCha" column="LOAI_CT_ID_CHA" type="Guid" />
+		<property name="Cap" column="CAP" type="Decimal" precision="2" scale="0" />
+		<property name="ChiTiet" column="CHI_TIET" type="Decimal" precision="2" scale="0" />
+		<property name="DuongDan" column="DUONG_DAN" type="String" length="256" />
+		<property name="MauSoCt" column="MAU_SO_CT" type="String" length="256" />
+		<property name="MauBaoCao" column="MAU_BAO_CAO" type="String" length="256" />
+		<property name="ChoPhepSua" column="CHO_PHEP_SUA" type="Decimal" precision="2" scale="0" />
+		<property name="CoSuDung" column="CO_SU_DUNG" type="Decimal" precision="2" scale="0" />
+		<property name="SdTkThueNgamdinh" column="SD_TK_THUE_NGAMDINH" type="Decimal" precision="2" scale="0" />
+		<property name="TkThueNgamdinh" column="TK_THUE_NGAMDINH" type="String" length="256" />
+		<property name="DmPtqt" column="DM_PTQT" type="Decimal" precision="2" scale="0" />
+		<property name="DmPhongban" column="DM_PHONGBAN" type="Decimal" precision="2" scale="0" />
+		<property name="DmTudo1" column="DM_TUDO1" type="Decimal" precision="2" scale="0" />
+		<property name="DmTudo2" column="DM_TUDO2" type="Decimal" precision="2" scale="0" />
+		<property name="DmTudo3" column="DM_TUDO3" type="Decimal" precision="2" scale="0" />
+		<property name="DmTudo4" column="DM_TUDO4" type="Decimal" precision="2" scale="0" />
+		<property name="DmTudo5" column="DM_TUDO5" type="Decimal" precision="2" scale="0" />
+		<property name="DmVuviec" column="DM_VUVIEC" type="Decimal" precision="2" scale="0" />
+		<property name="KhoXuat" column="KHO_XUAT" type="Decimal" precision="2" scale="0" />
+		<property name="PhieuXuat" column="PHIEU_XUAT" type="Decimal" precision="2" scale="0" />
+		<property name="NguoiTao" column="NGUOI_TAO" type="Guid" />
+		<property name="NgayTao" column="NGAY_TAO" type="DateTime"/>
+		<property name="NguoiSua" column="NGUOI_SUA"  type="Guid" />
+		<property name="NgaySua" column="NGAY_SUA" type="DateTime"/>
+		<property name="SoCtHienthi" column="SO_CT_HIENTHI" type="Decimal" precision="5" scale="0" />
+		<property name="DmKhoanphi" column="DM_KHOANPHI" type="Decimal" precision="2" scale="0" />
+		<property name="DmHopdong" column="DM_HOPDONG" type="Decimal" precision="2" scale="0" />
+		<property name="DmKhang" column="DM_KHANG" type="Decimal" precision="2" scale="0" />
+		<property name="DmCbnv" column="DM_CBNV" type="Decimal" precision="2" scale="0" />
+		<property name="Mota01" column="MOTA_01" type="String" length="256" />
+		<property name="Mota02" column="MOTA_02" type="String" length="256" />
+		<property name="Mota03" column="MOTA_03" type="String" length="256" />
+		<property name="Mota04" column="MOTA_04" type="String" length="256" />
+		<property name="Mota05" column="MOTA_05" type="String" length="256" />
+		<property name="PrefixCt" column="PREFIX_CT" type="String" length="256" />
+    <property name="DmHoadon" column="DM_HOADON" type="Decimal" precision="2" scale="0" />
+    <property name="DonviId" column="DONVI_ID" type="Guid" />
+	</class>
+</hibernate-mapping>

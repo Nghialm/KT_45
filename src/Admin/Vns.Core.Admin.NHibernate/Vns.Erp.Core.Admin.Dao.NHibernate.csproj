@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{796175DC-C46A-47D7-9B3E-A80779B2330C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vns.Erp.Core.Admin.Dao.NHibernate</RootNamespace>
+    <AssemblyName>Vns.Erp.Core.Admin.Dao.NHibernate</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\References\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net">
+      <HintPath>..\..\References\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\References\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zlib">
+      <HintPath>..\..\References\Ionic.Zlib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\References\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\References\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Nullables">
+      <HintPath>..\..\References\Nullables.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop">
+      <HintPath>..\..\References\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\References\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\References\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate32">
+      <HintPath>..\..\References\Spring.Data.NHibernate32.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Services">
+      <HintPath>..\..\References\Spring.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\HtSoChungtuMaxDao.cs" />
+    <Compile Include="Admin\HtTaikhoanMauDao.cs" />
+    <Compile Include="Admin\KtKhoaSoNgayDao.cs" />
+    <Compile Include="Admin\KtKhoasoThangDao.cs" />
+    <Compile Include="Admin\KtStatusCtDao.cs" />
+    <Compile Include="Admin\Security\AppCtStatusDao.cs" />
+    <Compile Include="Admin\Security\AppDvBcDao.cs" />
+    <Compile Include="Admin\Security\AppDvFormDao.cs" />
+    <Compile Include="Admin\Security\AppDvGroupBcDao.cs" />
+    <Compile Include="Admin\Security\AppDvGroupDao.cs" />
+    <Compile Include="Admin\Security\AppDvGroupFormDao.cs" />
+    <Compile Include="Admin\Security\AppDvGroupUserDao.cs" />
+    <Compile Include="Admin\Security\AppFormsDao.cs" />
+    <Compile Include="Admin\Security\AppGroupFormsDao.cs" />
+    <Compile Include="Admin\Security\AppGroupFunctionDao.cs" />
+    <Compile Include="Admin\Security\AppGroupsDao.cs" />
+    <Compile Include="Admin\Security\AppHGroupFormDao.cs" />
+    <Compile Include="Admin\Security\AppHGroupFunctDao.cs" />
+    <Compile Include="Admin\Security\AppLogbookDao.cs" />
+    <Compile Include="Admin\Security\AppUgFormDao.cs" />
+    <Compile Include="Admin\Security\AppUsergroupDao.cs" />
+    <Compile Include="Admin\Security\AppUsersDao.cs" />
+    <Compile Include="BaoCao\KtDieukienBcDao.cs" />
+    <Compile Include="BaoCao\KtHBaocaoDao.cs" />
+    <Compile Include="BaoCao\KtHCotDao.cs" />
+    <Compile Include="BaoCao\KtHDongDao.cs" />
+    <Compile Include="DanhMuc\DmTudo2Dao.cs" />
+    <Compile Include="DanhMuc\DmTudo3Dao.cs" />
+    <Compile Include="DanhMuc\DmTudo4Dao.cs" />
+    <Compile Include="DanhMuc\DmTudo5Dao.cs" />
+    <Compile Include="DmBtKetchuyenDao.cs" />
+    <Compile Include="DmDonviDao.cs" />
+    <Compile Include="DmDvtDao.cs" />
+    <Compile Include="DmHanghoaDao.cs" />
+    <Compile Include="DmHopdongDao.cs" />
+    <Compile Include="DmKhangDao.cs" />
+    <Compile Include="DmKhoanphiDao.cs" />
+    <Compile Include="DmKhoDao.cs" />
+    <Compile Include="DmNgoaiteDao.cs" />
+    <Compile Include="DmNhomKhangDao.cs" />
+    <Compile Include="DmNhomvattu1Dao.cs" />
+    <Compile Include="DmPhongbanDao.cs" />
+    <Compile Include="DmPtqtDao.cs" />
+    <Compile Include="DmTaikhoanDao.cs" />
+    <Compile Include="DmThueDao.cs" />
+    <Compile Include="DmTkChitietDao.cs" />
+    <Compile Include="DmTudo1Dao.cs" />
+    <Compile Include="DmVuviecDao.cs" />
+    <Compile Include="Admin\HtBaocaoDao.cs" />
+    <Compile Include="Admin\HtBienBaocaoDao.cs" />
+    <Compile Include="HtDanhmucDao.cs" />
+    <Compile Include="Admin\HtFileBaocaoDao.cs" />
+    <Compile Include="HtLoaichungtuDao.cs" />
+    <Compile Include="HtThamsoDao.cs" />
+    <Compile Include="LsTygiaDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vns.Core.Admin.Dao\Vns.Erp.Core.Admin.Dao.csproj">
+      <Project>{BD3B9C3B-64F2-4046-B1A0-6C113B5E6025}</Project>
+      <Name>Vns.Erp.Core.Admin.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Admin.Domain\Vns.Erp.Core.Admin.Domain.csproj">
+      <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
+      <Name>Vns.Erp.Core.Admin.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
+      <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
+      <Name>Vns.Erp.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core\Vns.Erp.Core.vbproj">
+      <Project>{6903B6FB-C64B-47C1-807D-ABF526B1A9C3}</Project>
+      <Name>Vns.Erp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Dao.NHibernate\Vns.Erp.Core.Dao.NHibernate.csproj">
+      <Project>{4A9608F9-7C07-4672-ACA5-D81672435F62}</Project>
+      <Name>Vns.Erp.Core.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Dao\Vns.Erp.Core.Dao.csproj">
+      <Project>{4954B581-A0CA-43C7-B3FD-274B05148BEF}</Project>
+      <Name>Vns.Erp.Core.Dao</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Admin\Security\AppDvGroup.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Admin\Security\AppDvGroupUser.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Admin\Security\AppGroups.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Admin\Security\AppUsergroup.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Admin\Security\AppUsers.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Admin\Security\AppDvGroupForm.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DmDonvi.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Admin\Security\AppDvForm.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Admin\Security\AppForms.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\Admin\Security\AppGroupForms.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\Admin\Security\AppGroupFunction.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Admin\Security\AppHGroupForm.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\Admin\Security\AppHGroupFunct.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Admin\Security\AppLogbook.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Admin\Security\AppUgForm.hbm.xml" />
+    <EmbeddedResource Include="Mappings\HtThamso.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Admin\Security\AppDvBc.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Admin\Security\AppDvGroupBc.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Admin\HtBaocao.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Admin\Security\AppCtStatus.hbm.xml" />
+    <EmbeddedResource Include="Mappings\HtLoaichungtu.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\HtDanhmuc.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Admin\HtFileBaocao.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DmTaikhoan.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\DmPhongban.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DmTkChitiet.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DmKhang.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DmNhomKhang.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DmNhomvattu1.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DmHanghoa.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\DmDvt.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DmTudo1.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Admin\HtBienBaocao.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DmKho.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DmBtKetchuyen.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DmKhoanphi.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DmVuviec.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DanhMuc\DmTudo2.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DanhMuc\DmTudo3.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DanhMuc\DmTudo4.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DanhMuc\DmTudo5.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DmHopdong.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DmNgoaite.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\LsTygia.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DmThue.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DmPtqt.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Admin\KtStatusCt.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Admin\HtSoChungtuMax.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Admin\KtKhoasoThang.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\BaoCao\KtHBaocao.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\BaoCao\KtHCot.hbm.xml" />
+    <EmbeddedResource Include="Mappings\BaoCao\KtHDong.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\BaoCao\KtDieukienBc.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Admin\KtKhoaSoNgay.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Admin\HtTaikhoanMau.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Asset\" />
+    <Folder Include="Instr\" />
+    <Folder Include="Mappings\Asset\" />
+    <Folder Include="Mappings\Instr\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

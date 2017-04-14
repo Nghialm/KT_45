@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.AppHGroupForm, Vns.Erp.Core.Admin.Domain" table="APP_H_GROUP_FORM" lazy="false">
+    <!--
+		<id name="Id" column="ID">
+			<generator class="native" />
+		</id>
+  -->
+    <id name="Id" column="ID" type="Guid">
+      <generator class="guid"/>
+    </id>    
+		<property name="GroupId" column="GROUP_ID" />
+		<property name="FormId" column="FORM_ID" />
+		<property name="FormOrder" column="FORM_ORDER" />
+		<property name="ImageIndex" column="IMAGE_INDEX" />
+		<property name="Note1" column="NOTE1" />
+		<property name="Note2" column="NOTE2" />
+		<property name="Note3" column="NOTE3" />
+
+    <many-to-one name="AppForms" column="FORM_ID" class="AppForms" insert="false" update="false" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Spa.Domain" assembly="Vns.Erp.Core.Spa.Domain">
+  <import class="Vns.Erp.Core.Spa.Domain.SpaRpNhanVienDTO, Vns.Erp.Core.Spa.Domain" />
+</hibernate-mapping>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.Erp.Core.Admin.Domain.DmBtKetchuyen,Vns.Erp.Core.Admin.Domain" table="DM_BT_KETCHUYEN" lazy="false">
+
+		<id name="Id" column="DM_BT_KETCHUYEN_ID" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="THANG" type="Decimal" precision="2" scale="0" name="Thang" />
+		<property column="NAM" type="Decimal" precision="4" scale="0" name="Nam" />
+		<property column="TEN_BT_KETCHUYEN" type="String" name="TenBtKetchuyen" length="64" />
+		<property column="ID_TK_NO" type="Guid" name="IdTkNo" not-null="true" />
+		<property column="MA_TK_NO" type="String" name="MaTkNo" length="32" />
+		<property column="TEN_TK_NO" type="String" name="TenTkNo" length="64" />
+		<property column="ID_TK_CO" type="Guid" name="IdTkCo" not-null="true" />
+		<property column="MA_TK_CO" type="String" name="MaTkCo" length="32" />
+		<property column="TEN_TK_CO" type="String" name="TenTkCo" length="64" />
+		<property column="LOAI_KETCHUYEN" type="Decimal" name="LoaiKetchuyen" not-null="true" />
+		<property column="KC_KH" type="Decimal" precision="4" scale="0" name="KcKh" />
+		<property column="KC_VUVIEC" type="Decimal" precision="2" scale="0" name="KcVuviec" />
+		<property column="KC_PHI" type="Decimal" precision="2" scale="0" name="KcPhi" />
+		<property column="KC_CONGTRINH" type="Decimal" precision="2" scale="0" name="KcCongtrinh" />
+		<property column="KC_HOPDONG" type="Decimal" precision="2" scale="0" name="KcHopdong" />
+		<property column="KC_BPHT" type="Decimal" precision="2" scale="0" name="KcBpht" />
+		<property column="KC_TUDO_1" type="Decimal" precision="2" scale="0" name="KcTudo1" />
+		<property column="THU_TU" type="Decimal" precision="2" scale="0" name="ThuTu" not-null="true" />
+		<property column="DONVI_ID" type="Guid" name="DonviId" />
+		<property column="NGUOI_TAO" type="Guid" name="NguoiTao" />
+		<property column="NGAY_TAO" type="DateTime" name="NgayTao" />
+		<property column="NGUOI_SUA" type="Guid" name="NguoiSua" />
+		<property column="NGAY_SUA" type="DateTime" name="NgaySua" />
+		<property column="KC_TUDO_2" type="Decimal" precision="2" scale="0" name="KcTudo2" />
+		<property column="KC_TUDO_3" type="Decimal" precision="2" scale="0" name="KcTudo3" />
+		<property column="KC_TUDO_4" type="Decimal" precision="2" scale="0" name="KcTudo4" />
+		<property column="KC_TUDO_5" type="Decimal" precision="2" scale="0" name="KcTudo5" />
+		
+	</class>
+</hibernate-mapping>

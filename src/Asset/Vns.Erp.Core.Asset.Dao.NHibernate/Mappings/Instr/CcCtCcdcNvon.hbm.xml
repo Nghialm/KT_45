@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Asset.Domain" assembly="Vns.Erp.Core.Asset.Domain">
+	<class name="Vns.Erp.Core.Asset.Domain.CcCtCcdcNvon, Vns.Erp.Core.Asset.Domain" table="CC_CT_CCDC_NVON" lazy="true">
+		<id name="Id" column="CCDC_CT_CCDC_NVON_ID">
+			<generator class="guid" />
+		</id>
+    <property name="CtCcdcId" column="CT_CCDC_ID" type="Guid"  />
+    <property name="DmNguonTscdId" column="DM_NGUON_TSCD_ID" type="Guid"  />
+    <property name="SoTien" column="SO_TIEN" type="Decimal" precision="18" scale="0" />
+    <property name="SoTienNte" column="SO_TIEN_NTE" type="Decimal" precision="18" scale="2" />
+    <property name="NguyenGia" column="NGUYEN_GIA" type="Decimal" precision="18" scale="0" />
+    <property name="GiaTriConLai" column="GIA_TRI_CON_LAI" type="Decimal" precision="18" scale="0" />
+    <property name="HaoMonLuyKe" column="HAO_MON_LUY_KE" type="Decimal" precision="18" scale="0" />
+    <property name="TyLeHaoMon" column="TY_LE_HAO_MON" type="Decimal" precision="5" scale="2" />
+    <property name="LyDoTanggiam" column="LY_DO_TANGGIAM" type="Guid"  />
+    <property name="TenLyDoTanggiam" column="TEN_LY_DO_TANGGIAM" type="String" length="255" />
+    <property name="DienGiai" column="DIEN_GIAI" type="String" length="255" />
+    <property name="TangCcdc" column="TANG_CCDC" type="Decimal" precision="4" scale="0" />
+    <property name="HeSoPbKh" column="HE_SO_PB_KH" type="Decimal" precision="5" scale="2" />
+    <property name="TkCcdc" column="TK_CCDC" type="Guid"  />
+    <property name="TkChiphi" column="TK_CHIPHI" type="Guid"  />
+    <property name="MaTkCcdc" column="MA_TK_CCDC" type="String" length="255" />
+    <property name="MaTkChiphi" column="MA_TK_CHIPHI" type="String" length="255" />
+    <property name="TkPhanbo" column="TK_PHANBO" type="Guid"  />
+    <property name="MaTkPhanbo" column="MA_TK_PHANBO" type="String" length="255" />
+	</class>
+</hibernate-mapping>

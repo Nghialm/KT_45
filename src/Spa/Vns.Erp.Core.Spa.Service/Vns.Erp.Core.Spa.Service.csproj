@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C13B6EB-7D22-4CFB-8095-D04BBE5DFF96}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vns.Erp.Core.Spa.Service</RootNamespace>
+    <AssemblyName>Vns.Erp.Core.Spa.Service</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\..\References\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BanHang\CtDHddvService.cs" />
+    <Compile Include="BanHang\CtHHddvService.cs" />
+    <Compile Include="DanhMuc\SpaDmDichVuService.cs" />
+    <Compile Include="DanhMuc\SpaDmGuongdvService.cs" />
+    <Compile Include="DanhMuc\SpaDmNhanvienService.cs" />
+    <Compile Include="DanhMuc\SpaDmTheService.cs" />
+    <Compile Include="DanhMuc\SpaLsTheService.cs" />
+    <Compile Include="Interface\BanHang\ICtDHddvService.cs" />
+    <Compile Include="Interface\BanHang\ICtHHddvService.cs" />
+    <Compile Include="Interface\DanhMuc\ISpaDmDichVuService.cs" />
+    <Compile Include="Interface\DanhMuc\ISpaDmGuongdvService.cs" />
+    <Compile Include="Interface\DanhMuc\ISpaDmNhanvienService.cs" />
+    <Compile Include="Interface\DanhMuc\ISpaDmTheService.cs" />
+    <Compile Include="Interface\DanhMuc\ISpaLsTheService.cs" />
+    <Compile Include="Interface\Luong\ISpaBangLuongService.cs" />
+    <Compile Include="Interface\Reports\ISpaReportsService.cs" />
+    <Compile Include="Luong\SpaBangLuongService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\SpaReportsService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Dao\Vns.Erp.Core.Accounting.Dao.csproj">
+      <Project>{ea173391-eaa8-4f77-adc9-3e8c2caf4681}</Project>
+      <Name>Vns.Erp.Core.Accounting.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Domain\Vns.Erp.Core.Accounting.Domain.csproj">
+      <Project>{7258abc1-7fa4-4369-b5d3-9da7faa974c5}</Project>
+      <Name>Vns.Erp.Core.Accounting.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Erp.Core.Admin.Domain\Vns.Erp.Core.Admin.Domain.csproj">
+      <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
+      <Name>Vns.Erp.Core.Admin.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
+      <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
+      <Name>Vns.Erp.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Service\Vns.Erp.Core.Service.csproj">
+      <Project>{F213FDB0-2CE0-41E6-8680-050276412F38}</Project>
+      <Name>Vns.Erp.Core.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core\Vns.Erp.Core.vbproj">
+      <Project>{6903B6FB-C64B-47C1-807D-ABF526B1A9C3}</Project>
+      <Name>Vns.Erp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Dao\Vns.Erp.Core.Dao.csproj">
+      <Project>{4954B581-A0CA-43C7-B3FD-274B05148BEF}</Project>
+      <Name>Vns.Erp.Core.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Spa.Common\Vns.Erp.Core.Spa.Common.csproj">
+      <Project>{3A0EBE0D-12C7-469C-BC73-A1AE2A9ED8DB}</Project>
+      <Name>Vns.Erp.Core.Spa.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Spa.Dao\Vns.Erp.Core.Spa.Dao.csproj">
+      <Project>{41DF408B-15AF-41F1-B037-E691BC9A445B}</Project>
+      <Name>Vns.Erp.Core.Spa.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Spa.Domain\Vns.Erp.Core.Spa.Domain.csproj">
+      <Project>{BAECA76A-0A00-4006-ADC1-6658F34BD1CA}</Project>
+      <Name>Vns.Erp.Core.Spa.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

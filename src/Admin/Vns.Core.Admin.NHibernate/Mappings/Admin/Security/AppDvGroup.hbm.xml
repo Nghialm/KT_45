@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.Erp.Core.Admin.Domain.AppDvGroup,Vns.Erp.Core.Admin.Domain" table="APP_DV_GROUP" lazy="false">
+
+		<id name="DvgId" column="DVG_ID" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="DV_ID" type="Guid" name="DvId" />
+		<property column="GROUP_ID" type="Guid" name="GroupId" />
+		<property column="GROUP_ORDER" type="Decimal" name="GroupOrder" />
+    
+    <many-to-one name="AppGroup" column="GROUP_ID" class="Vns.Erp.Core.Admin.Domain.AppGroups" insert="false" update="false" not-found="ignore"/>    
+  </class>
+</hibernate-mapping>

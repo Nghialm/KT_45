@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.TsLsKhauhao, Vns.Erp.Core.Admin.Domain" table="TS_LS_KHAUHAO" lazy="false">
+		<id name="Id" column="TS_LS_KHAUHAO_ID">
+			<generator class="assigned" />
+		</id>
+		<property name="DmTscdId" column="DM_TSCD_ID" />
+		<property name="CtTscdId" column="CT_TSCD_ID" />
+		<property name="HaoMonLk" column="HAO_MON_LK" />
+		<property name="HaoMonThang" column="HAO_MON_THANG" />
+		<property name="HaoMonNam" column="HAO_MON_NAM" />
+		<property name="NguyenGia" column="NGUYEN_GIA" />
+		<property name="GiaTriCl" column="GIA_TRI_CL" />
+		<property name="Thang" column="THANG" />
+		<property name="Nam" column="NAM" />
+		<property name="DonviId" column="DONVI_ID" />
+		<property name="MaDonvi" column="MA_DONVI" />
+		<property name="CtdId" column="CTD_ID" />
+		<property name="NgayTao" column="NGAY_TAO" />
+		<property name="NguoiTao" column="NGUOI_TAO" />
+		<property name="NgaySua" column="NGAY_SUA" />
+		<property name="NguoiSua" column="NGUOI_SUA" />
+		<property name="CthId" column="CTH_ID" />
+		<property name="IdCha" column="ID_CHA" />
+		<property name="BaoCao" column="BAO_CAO" />
+		<property name="ChiTiet" column="CHI_TIET" />
+		<property name="HeSo" column="HE_SO" />
+    <property name="NguonVonId" column="NGUON_VON_ID" />
+    <property name="NgayKhauHao" column="NGAY_KHAU_HAO" />
+	</class>
+</hibernate-mapping>

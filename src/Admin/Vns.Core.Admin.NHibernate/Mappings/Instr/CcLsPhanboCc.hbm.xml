@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.CcLsPhanboCc, Vns.Erp.Core.Admin.Domain" table="CC_LS_PHANBO_CC" lazy="true">
+		<id name="Id" column="CC_LS_PHANBO_CC_ID">
+			<generator class="guid" />
+		</id>
+		<property name="LsCcdcId" column="LS_CCDC_ID" />
+		<property name="CcdcId" column="CCDC_ID" />
+		<property name="MaCcdc" column="MA_CCDC" />
+		<property name="KyHieuCcdc" column="KY_HIEU_CCDC" />
+		<property name="TenCcdc" column="TEN_CCDC" />
+		<property name="NguyenGia" column="NGUYEN_GIA" />
+		<property name="NgayBdKh" column="NGAY_BD_KH" />
+		<property name="NgayKtKh" column="NGAY_KT_KH" />
+		<property name="SoKyPhanbo" column="SO_KY_PHANBO" />
+		<property name="TyleKh" column="TYLE_KH" />
+		<property name="SoTienDaPhanbo" column="SO_TIEN_DA_PHANBO" />
+		<property name="GiaTriCl" column="GIA_TRI_CL" />
+		<property name="DonviId" column="DONVI_ID" />
+		<property name="Thang" column="THANG" />
+		<property name="Nam" column="NAM" />
+		<property name="CtdId" column="CTD_ID" />
+		<property name="CthId" column="CTH_ID" />
+	</class>
+</hibernate-mapping>

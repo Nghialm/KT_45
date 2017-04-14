@@ -1,0 +1,999 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFC200E8-B8E5-4215-99A5-D75EA7E0E3CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>Vns.Erp.Core.Accounting.Report</RootNamespace>
+    <AssemblyName>Vns.Erp.Core.Accounting.Report</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Vns.Erp.Core.Accounting.Report.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Vns.Erp.Core.Accounting.Report.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.BonusSkins.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.Data.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.OfficeSkins.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v10.2.Core, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.Utils.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v10.2.Design">
+      <HintPath>..\..\References\DevEx10\DevExpress.Xpo.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraBars.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v10.2.Design">
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraBars.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraEditors.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraGrid.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v10.2.Design">
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraGrid.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraLayout.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v10.2.Design">
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraLayout.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraNavBar.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v10.2.Design">
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraNavBar.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraPrinting.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v10.2.Design">
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraPrinting.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraReports.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraRichEdit.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.2.Design">
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraRichEdit.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.2.Extensions">
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraRichEdit.v10.2.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.2.Core, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.2.Design">
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraTreeList.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v10.2.Design">
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraTreeList.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraVerticalGrid.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v10.2.Design">
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraVerticalGrid.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Vns.Erp.Core.Accounting.Report, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <ExecutableExtension>.exe</ExecutableExtension>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chi_Tieu_BC\frmKhaiBaoChiTieu_ChiTiet.Designer.vb">
+      <DependentUpon>frmKhaiBaoChiTieu_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Chi_Tieu_BC\frmKhaiBaoChiTieu_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chi_Tieu_BC\frmKhaiBaoChiTieu_DanhSach.Designer.vb">
+      <DependentUpon>frmKhaiBaoChiTieu_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Chi_Tieu_BC\frmKhaiBaoChiTieu_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chi_Tieu_BC\frmKT_H_BAOCAO_ChiTiet.designer.vb">
+      <DependentUpon>frmKT_H_BAOCAO_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Chi_Tieu_BC\frmKT_H_BAOCAO_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chi_Tieu_BC\frmKT_H_BAOCAO_DanhSach.designer.vb">
+      <DependentUpon>frmKT_H_BAOCAO_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Chi_Tieu_BC\frmKT_H_BAOCAO_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColumnReportInfo.vb" />
+    <Compile Include="CommonClass.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\Admin\frmBcTaiKhoan_KhachHang.Designer.vb">
+      <DependentUpon>frmBcTaiKhoan_KhachHang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Admin\frmBcTaiKhoan_KhachHang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmBaoCaoTongHop.designer.vb">
+      <DependentUpon>frmBaoCaoTongHop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmBaoCaoTongHop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmBaoCaoView.Designer.vb">
+      <DependentUpon>frmBaoCaoView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmBaoCaoView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmSearchKTHDONG.Designer.vb">
+      <DependentUpon>frmSearchKTHDONG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmSearchKTHDONG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportPreview.Designer.vb">
+      <DependentUpon>ReportPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportPreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMain.Designer.vb">
+      <DependentUpon>rptMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptMain.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SoTSCD\dsS21DN.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsS21DN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ThueGTGT\dsThueGTGT.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsThueGTGT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ThueGTGT\frmHoaDonThueGTGT.designer.vb">
+      <DependentUpon>frmHoaDonThueGTGT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ThueGTGT\frmHoaDonThueGTGT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ThueGTGT\frmTimKiemHoaDon.designer.vb">
+      <DependentUpon>frmTimKiemHoaDon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ThueGTGT\frmTimKiemHoaDon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\DateTimeInput.designer.vb">
+      <DependentUpon>DateTimeInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\DateTimeInput.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\KTY_UserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\KT_H_Baocao.designer.vb">
+      <DependentUpon>KT_H_Baocao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\KT_H_Baocao.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookupKH.designer.vb">
+      <DependentUpon>LookupKH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookupKH.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_DM_Kho.designer.vb">
+      <DependentUpon>Lookup_DM_Kho.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_DM_Kho.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_DM_Nhom_KH.Designer.vb">
+      <DependentUpon>Lookup_DM_Nhom_KH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_DM_Nhom_KH.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_DM_TUDO1.designer.vb">
+      <DependentUpon>LookUp_DM_TUDO1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_DM_TUDO1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_DM_TUDO2.Designer.vb">
+      <DependentUpon>LookUp_DM_TUDO2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_DM_TUDO2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_DM_TUDO3.Designer.vb">
+      <DependentUpon>LookUp_DM_TUDO3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_DM_TUDO3.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_DM_TUDO4.Designer.vb">
+      <DependentUpon>LookUp_DM_TUDO4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_DM_TUDO4.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_DM_TUDO5.designer.vb">
+      <DependentUpon>LookUp_DM_TUDO5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_DM_TUDO5.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_Don_Vi.designer.vb">
+      <DependentUpon>Lookup_Don_Vi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_Don_Vi.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_GetNumber.designer.vb">
+      <DependentUpon>LookUp_GetNumber.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_GetNumber.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Group_Name.designer.vb">
+      <DependentUpon>LookUp_Group_Name.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Group_Name.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Group_Name_Kho.designer.vb">
+      <DependentUpon>LookUp_Group_Name_Kho.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Group_Name_Kho.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_Hang_Hoa.designer.vb">
+      <DependentUpon>Lookup_Hang_Hoa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_Hang_Hoa.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Hop_Dong.designer.vb">
+      <DependentUpon>LookUp_Hop_Dong.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Hop_Dong.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_HTLoaiChungTu.designer.vb">
+      <DependentUpon>Lookup_HTLoaiChungTu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_HTLoaiChungTu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_KhoanPhi.designer.vb">
+      <DependentUpon>LookUp_KhoanPhi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_KhoanPhi.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_LoaiKHang.Designer.vb">
+      <DependentUpon>LookUp_LoaiKHang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_LoaiKHang.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Ma_Loai_Tai_San.designer.vb">
+      <DependentUpon>LookUp_Ma_Loai_Tai_San.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Ma_Loai_Tai_San.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Ma_NTE.designer.vb">
+      <DependentUpon>LookUp_Ma_NTE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Ma_NTE.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_MulTai_Khoan.designer.vb">
+      <DependentUpon>Lookup_MulTai_Khoan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_MulTai_Khoan.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_NhomTS.designer.vb">
+      <DependentUpon>LookUp_NhomTS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_NhomTS.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Nhom_Vat_Tu_1.designer.vb">
+      <DependentUpon>LookUp_Nhom_Vat_Tu_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Nhom_Vat_Tu_1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Phong_Ban.designer.vb">
+      <DependentUpon>LookUp_Phong_Ban.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\LookUp_Phong_Ban.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_PTQT.designer.vb">
+      <DependentUpon>Lookup_PTQT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_PTQT.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_Tai_Khoan.designer.vb">
+      <DependentUpon>Lookup_Tai_Khoan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_Tai_Khoan.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_VuViec.designer.vb">
+      <DependentUpon>Lookup_VuViec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\Lookup_VuViec.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\txtMA_TAIKHOAN.designer.vb">
+      <DependentUpon>txtMA_TAIKHOAN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\txtMA_TAIKHOAN.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\TxtNgay.designer.vb">
+      <DependentUpon>TxtNgay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\TxtNgay.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\txtNumber.designer.vb">
+      <DependentUpon>txtNumber.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\txtNumber.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\TxtSo_Nam_Su_Dung.designer.vb">
+      <DependentUpon>TxtSo_Nam_Su_Dung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\TxtSo_Nam_Su_Dung.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\UserControl\urc_TrangThai.designer.vb">
+      <DependentUpon>urc_TrangThai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserControl\urc_TrangThai.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vouchers\frmHDDV_input.designer.vb">
+      <DependentUpon>frmHDDV_input.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vouchers\frmHDDV_input.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vouchers\frmKho_Input.designer.vb">
+      <DependentUpon>frmKho_Input.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vouchers\frmKho_Input.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vouchers\frmPhieu_Input.Designer.vb">
+      <DependentUpon>frmPhieu_Input.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vouchers\frmPhieu_Input.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vouchers\NumberToString.vb" />
+    <Compile Include="Vouchers\Preview.designer.vb">
+      <DependentUpon>Preview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vouchers\Preview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vouchers\Templates\dsPhieuKeToanKho.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPhieuKeToanKho.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vouchers\Templates\dsPhieuKeToanKho.vb">
+      <DependentUpon>dsPhieuKeToanKho.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vouchers\Templates\PhieuKeToan.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhieuKeToan.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Chi_Tieu_BC\frmKhaiBaoChiTieu_ChiTiet.resx">
+      <DependentUpon>frmKhaiBaoChiTieu_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chi_Tieu_BC\frmKhaiBaoChiTieu_DanhSach.resx">
+      <DependentUpon>frmKhaiBaoChiTieu_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chi_Tieu_BC\frmKT_H_BAOCAO_ChiTiet.resx">
+      <DependentUpon>frmKT_H_BAOCAO_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chi_Tieu_BC\frmKT_H_BAOCAO_DanhSach.resx">
+      <DependentUpon>frmKT_H_BAOCAO_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Admin\frmBcTaiKhoan_KhachHang.resx">
+      <DependentUpon>frmBcTaiKhoan_KhachHang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmBaoCaoTongHop.resx">
+      <DependentUpon>frmBaoCaoTongHop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmBaoCaoView.resx">
+      <DependentUpon>frmBaoCaoView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmSearchKTHDONG.resx">
+      <DependentUpon>frmSearchKTHDONG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMain.resx">
+      <DependentUpon>rptMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ThueGTGT\frmHoaDonThueGTGT.resx">
+      <DependentUpon>frmHoaDonThueGTGT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ThueGTGT\frmTimKiemHoaDon.resx">
+      <DependentUpon>frmTimKiemHoaDon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\DateTimeInput.resx">
+      <DependentUpon>DateTimeInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\KTY_UserControl.resx">
+      <DependentUpon>KTY_UserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\KT_H_Baocao.resx">
+      <DependentUpon>KT_H_Baocao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookupKH.resx">
+      <DependentUpon>LookupKH.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\Lookup_DM_Kho.resx">
+      <DependentUpon>Lookup_DM_Kho.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\Lookup_DM_Nhom_KH.resx">
+      <DependentUpon>Lookup_DM_Nhom_KH.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_DM_TUDO1.resx">
+      <DependentUpon>LookUp_DM_TUDO1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_DM_TUDO2.resx">
+      <DependentUpon>LookUp_DM_TUDO2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_DM_TUDO3.resx">
+      <DependentUpon>LookUp_DM_TUDO3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_DM_TUDO4.resx">
+      <DependentUpon>LookUp_DM_TUDO4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_DM_TUDO5.resx">
+      <DependentUpon>LookUp_DM_TUDO5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\Lookup_Don_Vi.resx">
+      <DependentUpon>Lookup_Don_Vi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_GetNumber.resx">
+      <DependentUpon>LookUp_GetNumber.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_Group_Name.resx">
+      <DependentUpon>LookUp_Group_Name.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_Group_Name_Kho.resx">
+      <DependentUpon>LookUp_Group_Name_Kho.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\Lookup_Hang_Hoa.resx">
+      <DependentUpon>Lookup_Hang_Hoa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_Hop_Dong.resx">
+      <DependentUpon>LookUp_Hop_Dong.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\Lookup_HTLoaiChungTu.resx">
+      <DependentUpon>Lookup_HTLoaiChungTu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_KhoanPhi.resx">
+      <DependentUpon>LookUp_KhoanPhi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_LoaiKHang.resx">
+      <DependentUpon>LookUp_LoaiKHang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_Ma_Loai_Tai_San.resx">
+      <DependentUpon>LookUp_Ma_Loai_Tai_San.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_Ma_NTE.resx">
+      <DependentUpon>LookUp_Ma_NTE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\Lookup_MulTai_Khoan.resx">
+      <DependentUpon>Lookup_MulTai_Khoan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_NhomTS.resx">
+      <DependentUpon>LookUp_NhomTS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_Nhom_Vat_Tu_1.resx">
+      <DependentUpon>LookUp_Nhom_Vat_Tu_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\LookUp_Phong_Ban.resx">
+      <DependentUpon>LookUp_Phong_Ban.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\Lookup_PTQT.resx">
+      <DependentUpon>Lookup_PTQT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\Lookup_Tai_Khoan.resx">
+      <DependentUpon>Lookup_Tai_Khoan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\Lookup_VuViec.resx">
+      <DependentUpon>Lookup_VuViec.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\txtMA_TAIKHOAN.resx">
+      <DependentUpon>txtMA_TAIKHOAN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\TxtNgay.resx">
+      <DependentUpon>TxtNgay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\txtNumber.resx">
+      <DependentUpon>txtNumber.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\TxtSo_Nam_Su_Dung.resx">
+      <DependentUpon>TxtSo_Nam_Su_Dung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserControl\urc_TrangThai.resx">
+      <DependentUpon>urc_TrangThai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vouchers\frmHDDV_input.resx">
+      <DependentUpon>frmHDDV_input.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vouchers\frmKho_Input.resx">
+      <DependentUpon>frmKho_Input.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vouchers\frmPhieu_Input.resx">
+      <DependentUpon>frmPhieu_Input.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reports\So\S38DN2.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\BaoCao\B01DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\BaoCao\B02DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\BaoCao\B03DN_GT.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Reports\BaoCao\dsB03DN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsB03DN.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reports\BaoCao\B03DN_TT.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Reports\BaoCao\dsB01Dn.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsB01Dn.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\BaoCao\dsB02Dn.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsB02Dn.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\SoThue\dsBangKeThue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBangKeThue.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reports\SoThue\RP_01GTGT.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SoThue\RP_02GTGT.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Reports\SoTSCD\dsS21DN.xsc">
+      <DependentUpon>dsS21DN.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\SoTSCD\dsS21DN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsS21DN.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\SoTSCD\dsS21DN.xss">
+      <DependentUpon>dsS21DN.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\SoTSCD\KhauHaoTSCD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KhauHaoTSCD.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\SoTSCD\KhauHaoTscdThang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KhauHaoTscdThang.Designer.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Reports\SoTSCD\report_Khau_hao.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SoTSCD\Report_KH_TungThang.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\SoTSCD\S21DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Reports\So\dsS03Dn_BanHang.xsc">
+      <DependentUpon>dsS03Dn_BanHang.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\So\dsS03Dn_BanHang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsS03Dn_BanHang.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\So\dsS03Dn_BanHang.xss">
+      <DependentUpon>dsS03Dn_BanHang.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\So\dsS03Dn_MuaHang.xsc">
+      <DependentUpon>dsS03Dn_MuaHang.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\So\dsS03Dn_MuaHang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsS03Dn_MuaHang.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\So\dsS03Dn_MuaHang.xss">
+      <DependentUpon>dsS03Dn_MuaHang.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\So\dsS03Dn_ThuChi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsS03Dn_ThuChi.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\So\dsS06Dn_Cn.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsS06Dn_Cn.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reports\So\S03a1DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S03a2DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S03a3DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S03a4DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S06DN_CN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Reports\So\dsS06Dn.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsS06Dn.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\So\dsS07Dn.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsS07Dn.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\So\dsS10Dn.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsS10Dn.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\So\dsS11Dn.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsS11Dn.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Reports\So\S03ADN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S06DN.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S07ADN.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S07DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S08DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S10DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S11DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S11DN_All.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S12DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S31DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S32DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S33DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\So\S34DN.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Reports\ThueGTGT\dsThueGTGT.xsc">
+      <DependentUpon>dsThueGTGT.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\ThueGTGT\dsThueGTGT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsThueGTGT.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\ThueGTGT\dsThueGTGT.xss">
+      <DependentUpon>dsThueGTGT.xsd</DependentUpon>
+    </None>
+    <Content Include="Reports\ThueGTGT\Thue_GTGT.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Vouchers\Templates\BanHangKiemXuatKho.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vouchers\Templates\chi.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Vouchers\Templates\chi_en.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Vouchers\Templates\dsPhieuKeToanKho.xsc">
+      <DependentUpon>dsPhieuKeToanKho.xsd</DependentUpon>
+    </None>
+    <None Include="Vouchers\Templates\dsPhieuKeToanKho.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPhieuKeToanKho.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Vouchers\Templates\dsPhieuKeToanKho.xss">
+      <DependentUpon>dsPhieuKeToanKho.xsd</DependentUpon>
+    </None>
+    <None Include="Vouchers\Templates\HDDV.repx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Vouchers\Templates\nhap.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Vouchers\Templates\nhap_en.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Vouchers\Templates\PhieuKeToan.xsc">
+      <DependentUpon>PhieuKeToan.xsd</DependentUpon>
+    </None>
+    <None Include="Vouchers\Templates\PhieuKeToan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhieuKeToan.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Vouchers\Templates\PhieuKeToan.xss">
+      <DependentUpon>PhieuKeToan.xsd</DependentUpon>
+    </None>
+    <None Include="Vouchers\Templates\thu.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Vouchers\Templates\thu_en.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Vouchers\Templates\xuat.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Vouchers\Templates\xuat_en.repx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Domain\Vns.Erp.Core.Asset.Domain.csproj">
+      <Project>{5EBA40CB-468B-47B4-B118-611F9FE5E770}</Project>
+      <Name>Vns.Erp.Core.Asset.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Service\Vns.Erp.Core.Asset.Service.csproj">
+      <Project>{277365E5-D209-4E0F-A037-01E98A216966}</Project>
+      <Name>Vns.Erp.Core.Asset.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Common.Controls\Vns.Erp.Core.Common.Controls.csproj">
+      <Project>{47B0F2D0-2132-495A-BA36-8744B7E4D747}</Project>
+      <Name>Vns.Erp.Core.Common.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Core.Admin.Service\Vns.Erp.Core.Admin.Service.csproj">
+      <Project>{B1C4C1BD-E65B-4F2D-B300-0A670E1F57C6}</Project>
+      <Name>Vns.Erp.Core.Admin.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Accounting.Domain\Vns.Erp.Core.Accounting.Domain.csproj">
+      <Project>{7258ABC1-7FA4-4369-B5D3-9DA7FAA974C5}</Project>
+      <Name>Vns.Erp.Core.Accounting.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Accounting.Report.Domain\Vns.Erp.Core.Accounting.Report.Domain.csproj">
+      <Project>{72E457B3-CC29-4B80-9103-EFCA78C2E309}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Accounting.Service\Vns.Erp.Core.Accounting.Service.csproj">
+      <Project>{1567F284-E659-4C44-8D1B-4EF16B969C98}</Project>
+      <Name>Vns.Erp.Core.Accounting.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Erp.Core.Admin.Domain\Vns.Erp.Core.Admin.Domain.csproj">
+      <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
+      <Name>Vns.Erp.Core.Admin.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
+      <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
+      <Name>Vns.Erp.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Service\Vns.Erp.Core.Service.csproj">
+      <Project>{F213FDB0-2CE0-41E6-8680-050276412F38}</Project>
+      <Name>Vns.Erp.Core.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core\Vns.Erp.Core.vbproj">
+      <Project>{6903B6FB-C64B-47C1-807D-ABF526B1A9C3}</Project>
+      <Name>Vns.Erp.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

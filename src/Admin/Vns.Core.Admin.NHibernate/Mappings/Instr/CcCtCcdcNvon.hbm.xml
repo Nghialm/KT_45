@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.CcCtCcdcNvon, Vns.Erp.Core.Admin.Domain" table="CC_CT_CCDC_NVON" lazy="true">
+		<id name="Id" column="CCDC_CT_CCDC_NVON_ID">
+			<generator class="guid" />
+		</id>
+		<property name="CtCcdcId" column="CT_CCDC_ID" />
+		<property name="DmNguonTscdId" column="DM_NGUON_TSCD_ID" />
+		<property name="SoTien" column="SO_TIEN" />
+		<property name="SoTienNte" column="SO_TIEN_NTE" />
+		<property name="NguyenGia" column="NGUYEN_GIA" />
+		<property name="GiaTriConLai" column="GIA_TRI_CON_LAI" />
+		<property name="HaoMonLuyKe" column="HAO_MON_LUY_KE" />
+		<property name="TyLeHaoMon" column="TY_LE_HAO_MON" />
+		<property name="LyDoTanggiam" column="LY_DO_TANGGIAM" />
+		<property name="TenLyDoTanggiam" column="TEN_LY_DO_TANGGIAM" />
+		<property name="DienGiai" column="DIEN_GIAI" />
+		<property name="TangCcdc" column="TANG_CCDC" />
+		<property name="HeSoPbKh" column="HE_SO_PB_KH" />
+		<property name="TkCcdc" column="TK_CCDC" />
+		<property name="TkChiphi" column="TK_CHIPHI" />
+		<property name="MaTkCcdc" column="MA_TK_CCDC" />
+		<property name="MaTkChiphi" column="MA_TK_CHIPHI" />
+		<property name="TkPhanbo" column="TK_PHANBO" />
+		<property name="MaTkPhanbo" column="MA_TK_PHANBO" />
+	</class>
+</hibernate-mapping>

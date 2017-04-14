@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.CtTscd, Vns.Erp.Core.Admin.Domain" table="CT_TSCD" lazy="false">
+		<id name="Id" column="CT_TSCD_ID">
+			<generator class="guid" />
+		</id>
+		<property name="LoaiTaikhoan" column="LOAI_TAIKHOAN" />
+		<property name="TaikhoanId" column="TAIKHOAN_ID" />
+		<property name="MaTaikhoan" column="MA_TAIKHOAN" />
+		<property name="CtdId" column="CTD_ID" />
+		<property name="TscdId" column="TSCD_ID" />
+		<property name="MaTscd" column="MA_TSCD" />
+		<property name="KyHieuTscd" column="KY_HIEU_TSCD" />
+		<property name="TenTscd" column="TEN_TSCD" />
+		<property name="SoTien" column="SO_TIEN" />
+		<property name="SoTienNte" column="SO_TIEN_NTE" />
+		<property name="KhangId" column="KHANG_ID" />
+		<property name="MaKhang" column="MA_KHANG" />
+		<property name="KyHieuKhang" column="KY_HIEU_KHANG" />
+		<property name="TenKhang" column="TEN_KHANG" />
+		<property name="LydoTanggiam" column="LYDO_TANGGIAM" />
+		<property name="TenLydoTanggiam" column="TEN_LYDO_TANGGIAM" />
+		<property name="DvtId" column="DVT_ID" />
+		<property name="MaDvt" column="MA_DVT" />
+		<property name="TenDvt" column="TEN_DVT" />
+		<property name="LoaitaisanId" column="LOAITAISAN_ID" />
+		<property name="MaLoaitaisan" column="MA_LOAITAISAN" />
+		<property name="NguyenGia" column="NGUYEN_GIA" />
+		<property name="GiaTriCl" column="GIA_TRI_CL" />
+		<property name="HaoMonLuyKe" column="HAO_MON_LUY_KE" />
+		<property name="TyLeHaomon" column="TY_LE_HAOMON" />
+		<property name="LoaiNghiepvu" column="LOAI_NGHIEPVU" />
+		<property name="TangTscd" column="TANG_TSCD" />
+		<property name="ThuTu" column="THU_TU" />
+		<property name="NgayCt" column="NGAY_CT" />
+		<property name="NgayBdKh" column="NGAY_BD_KH" />
+		<property name="NgayKtKh" column="NGAY_KT_KH" />
+		<property name="SoNamSd" column="SO_NAM_SD" />
+		<property name="SoThangSd" column="SO_THANG_SD" />
+		<property name="SoCt" column="SO_CT" />
+		<property name="CthId" column="CTH_ID" />
+		<property name="TkChiphi" column="TK_CHIPHI" />
+		<property name="MaTkChiphi" column="MA_TK_CHIPHI" />
+
+    <many-to-one name="ObjDmTscd" column="TSCD_ID" class="DmTscd" insert="false" update="false" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Domain" assembly="Vns.Erp.Core.Accounting.Domain">
+	<class name="Vns.Erp.Core.Accounting.Domain.KtDmBtPhanbo, Vns.Erp.Core.Accounting.Domain" table="KT_DM_BT_PHANBO" lazy="false">
+		<id name="Id" column="CT_PHANBO_ID">
+			<generator class="guid" />
+		</id>
+    <property name="TenBtPhanbo" column="TEN_BT_PHANBO" type="String" length="255" />
+    <property name="Nhom" column="NHOM" type="Decimal" precision="4" scale="0" />
+    <property name="TkPhanboId" column="TK_PHANBO_ID" type="Guid"  />
+    <property name="MaTkPhanbo" column="MA_TK_PHANBO" type="String" length="64" />
+    <property name="TenTkPhanbo" column="TEN_TK_PHANBO" type="String" length="256" />
+    <property name="TkDichId" column="TK_DICH_ID" type="Guid"  />
+    <property name="MaTkDich" column="MA_TK_DICH" type="String" length="64" />
+    <property name="TenTkDich" column="TEN_TK_DICH" type="String" length="256" />
+    <property name="KhachHangPb" column="KHACH_HANG_PB" type="Guid"  />
+    <property name="VuviecPb" column="VUVIEC_PB" type="Guid"  />
+    <property name="KhoanPhiPb" column="KHOAN_PHI_PB" type="Guid"  />
+    <property name="CongTrinhPb" column="CONG_TRINH_PB" type="Guid"  />
+    <property name="HopDongPb" column="HOP_DONG_PB" type="Guid"  />
+    <property name="PtqtPb" column="PTQT_PB" type="Guid"  />
+    <property name="Tudo1Pb" column="TUDO_1_PB" type="Guid"  />
+    <property name="Tudo2Pb" column="TUDO_2_PB" type="Guid"  />
+    <property name="Tudo3Pb" column="TUDO_3_PB" type="Guid"  />
+    <property name="Tudo4Pb" column="TUDO_4_PB" type="Guid"  />
+    <property name="Tudo5Pb" column="TUDO_5_PB" type="Guid"  />
+    <property name="KhachHangDich" column="KHACH_HANG_DICH" type="Guid"  />
+    <property name="VuviecDich" column="VUVIEC_DICH" type="Guid"  />
+    <property name="KhoanPhiDich" column="KHOAN_PHI_DICH" type="Guid"  />
+    <property name="CongTrinhDich" column="CONG_TRINH_DICH" type="Guid"  />
+    <property name="HopDongDich" column="HOP_DONG_DICH" type="Guid"  />
+    <property name="PtqtDich" column="PTQT_DICH" type="Guid"  />
+    <property name="Tudo1Dich" column="TUDO_1_DICH" type="Guid"  />
+    <property name="Tudo2Dich" column="TUDO_2_DICH" type="Guid"  />
+    <property name="Tudo3Dich" column="TUDO_3_DICH" type="Guid"  />
+    <property name="Tudo4Dich" column="TUDO_4_DICH" type="Guid"  />
+    <property name="Tudo5Dich" column="TUDO_5_DICH" type="Guid"  />
+    <property name="ThuTu" column="THU_TU" type="Decimal" precision="4" scale="0" />
+    <property name="Nam" column="NAM" type="Decimal" precision="4" scale="0" />
+    <property name="DonviId" column="DONVI_ID" type="Guid"  />
+    <property name="MaDonvi" column="MA_DONVI" type="String" length="64" />
+    <property name="LoaiPhanbo" column="LOAI_PHANBO" type="Decimal" precision="4" scale="0" />
+    <property name="MoTa" column="MO_TA" type="String" length="512" />
+	</class>
+</hibernate-mapping>

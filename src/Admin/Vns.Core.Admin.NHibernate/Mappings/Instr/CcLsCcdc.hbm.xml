@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.CcLsCcdc, Vns.Erp.Core.Admin.Domain" table="CC_LS_CCDC" lazy="true">
+		<id name="Id" column="LS_CCDC_ID">
+			<generator class="guid" />
+		</id>
+		<property name="NgayBiendoi" column="NGAY_BIENDOI" />
+		<property name="CcdcId" column="CCDC_ID" />
+		<property name="MaCcdc" column="MA_CCDC" />
+		<property name="KyHieuCcdc" column="KY_HIEU_CCDC" />
+		<property name="TenCcdc" column="TEN_CCDC" />
+		<property name="NguyenGia" column="NGUYEN_GIA" />
+		<property name="NgayBdSd" column="NGAY_BD_SD" />
+		<property name="NgayBdKh" column="NGAY_BD_KH" />
+		<property name="NgayKtKh" column="NGAY_KT_KH" />
+		<property name="SoKyPhanbo" column="SO_KY_PHANBO" />
+		<property name="SoTienDaPhanbo" column="SO_TIEN_DA_PHANBO" />
+		<property name="GiaTriCl" column="GIA_TRI_CL" />
+		<property name="DvtId" column="DVT_ID" />
+		<property name="MaDvt" column="MA_DVT" />
+		<property name="TenDvt" column="TEN_DVT" />
+		<property name="PhongbanId" column="PHONGBAN_ID" />
+		<property name="MaPhongban" column="MA_PHONGBAN" />
+		<property name="LoaitaisanId" column="LOAITAISAN_ID" />
+		<property name="LoaiPhanbo" column="LOAI_PHANBO" />
+		<property name="TenLoaiPhanbo" column="TEN_LOAI_PHANBO" />
+		<property name="ThuTu" column="THU_TU" />
+	</class>
+</hibernate-mapping>

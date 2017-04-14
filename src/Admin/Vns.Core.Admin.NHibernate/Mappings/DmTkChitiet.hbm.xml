@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.Erp.Core.Admin.Domain.DmTkChitiet,Vns.Erp.Core.Admin.Domain" table="DM_TK_CHITIET" lazy="false">
+
+		<id name="Id" column="TK_CHITIET_ID" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="TAIKHOAN_ID" type="Guid" name="TaikhoanId" />
+		<property column="DM_LIENQUAN" type="String" name="DmLienquan" length="32" />
+		<property column="BAT_BUOC" type="Decimal" precision="2" scale="0" name="BatBuoc" />
+		<property column="THU_TU" type="Decimal" precision="2" scale="0" name="ThuTu" />
+		
+	</class>
+</hibernate-mapping>

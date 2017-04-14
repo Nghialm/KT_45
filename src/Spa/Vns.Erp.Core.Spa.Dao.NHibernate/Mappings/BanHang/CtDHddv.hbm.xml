@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Spa.Domain" assembly="Vns.Erp.Core.Spa.Domain">
+	<class name="Vns.Erp.Core.Spa.Domain.CtDHddv, Vns.Erp.Core.Spa.Domain" table="CT_D_HDDV" lazy="false">
+		<id name="Id" column="CTD_HDDV_ID">
+			<generator class="guid" />
+		</id>
+		<property name="CthHddvId" column="CTH_HDDV_ID" type="Guid" />
+		<property name="IdHanghoa" column="ID_HANGHOA" type="Guid" />
+		<property name="IdDichvu" column="ID_DICHVU" type="Guid" />
+		<property name="TenHhDv" column="TEN_HH_DV" type="String" length="256" />
+		<property name="SoLuong" column="SO_LUONG" type="Decimal" precision="18" scale="2" />
+		<property name="DonGia" column="DON_GIA" type="Decimal" precision="18" scale="0" />
+		<property name="DoanhThu" column="DOANH_THU" type="Decimal" precision="18" scale="0" />
+		<property name="TyLeGiamGia" column="TY_LE_GIAM_GIA" type="Decimal" precision="5" scale="2" />
+		<property name="SoTienGiamGia" column="SO_TIEN_GIAM_GIA" type="Decimal" precision="18" scale="0" />
+		<property name="TyLeHh" column="TY_LE_HH" type="Decimal" precision="5" scale="2" />
+		<property name="SoTienHh" column="SO_TIEN_HH" type="Decimal" precision="18" scale="0" />
+		<property name="SoTienMg" column="SO_TIEN_MG" type="Decimal" precision="18" scale="0" />
+		<property name="TyLeThueGtgt" column="TY_LE_THUE_GTGT" type="Decimal" precision="5" scale="2" />
+		<property name="SoTienThueGtgt" column="SO_TIEN_THUE_GTGT" type="Decimal" precision="18" scale="0" />
+		<property name="Dvt" column="DVT" type="String" length="256" />
+		<property name="NoiDung" column="NOI_DUNG" type="String" length="512" />
+		<property name="LoaiNghiepVu" column="LOAI_NGHIEP_VU" type="Decimal" precision="5" scale="0" />
+		<property name="Nhom" column="NHOM" type="Decimal" precision="5" scale="0" />
+		<property name="PhanHe" column="PHAN_HE" type="Decimal" precision="5" scale="0" />
+		<property name="IdDoituong1" column="ID_DOITUONG_1" type="Guid"/>
+		<property name="IdDoituong2" column="ID_DOITUONG_2" type="Guid"/>
+
+    <many-to-one name="ObjCtHHddv" column="CTH_HDDV_ID" class="CtHHddv" insert="false" update="false" />
+	</class>
+</hibernate-mapping>

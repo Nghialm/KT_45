@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.Erp.Core.Admin.Domain.DmVuviec,Vns.Erp.Core.Admin.Domain" table="DM_VUVIEC" lazy="false">
+
+		<id name="Id" column="VUVIEC_ID" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="MA_VUVIEC" type="String" name="MaVuviec" length="32" />
+		<property column="KY_HIEU" type="String" name="KyHieu" length="64" />
+		<property column="TEN_VUVIEC" type="String" name="TenVuviec" length="128" />
+		<property column="MA_TK_LIENQUAN" type="String" name="MaTkLienquan" length="32" />
+		<property column="CHO_PHEP_SUA" type="Decimal" precision="2" scale="0" name="ChoPhepSua" />
+		<property column="CO_SU_DUNG" type="Decimal" precision="2" scale="0" name="CoSuDung" />
+		<property column="DONVI_ID" type="Guid" name="DonviId" />
+		<property column="MA_DONVI" type="String" name="MaDonvi" length="32" />
+		<property column="NGUOI_TAO" type="Guid" name="NguoiTao" />
+		<property column="NGAY_TAO" type="DateTime" name="NgayTao" />
+		<property column="NGUOI_SUA" type="Guid" name="NguoiSua" />
+		<property column="NGAY_SUA" type="DateTime" name="NgaySua" />
+		
+	</class>
+</hibernate-mapping>

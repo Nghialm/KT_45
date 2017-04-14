@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Produce.Domain" assembly="Vns.Erp.Core.Produce.Domain">
+	<class name="Vns.Erp.Core.Produce.Domain.SxLenhsanxuatD, Vns.Erp.Core.Produce.Domain" table="SX_LenhSanXuat_D" lazy="true">
+		<id name="Id" column="LenhSanXuat_D_Id">
+			<generator class="guid" />
+		</id>
+		<property name="LenhsanxuatId" column="LenhSanXuat_Id" type="System.Guid" />
+		<property name="VatlieuDauvaoId" column="VatLieu_DauVao_Id" type="System.Guid" />
+		<property name="VatlieuDauraId" column="VatLieu_DauRa_Id" type="System.Guid" />
+		<property name="TenChiPhi" column="Ten_Chi_Phi" type="string" />
+		<property name="SoLuong" column="SoLuong" type="decimal" precision="18" scale="3"/>
+		<property name="DvtId" column="DVT_Id" type="System.Guid" />
+		<property name="LoaiChiPhi" column="Loai_Chi_Phi" type="int" />
+		<property name="TyleHaohut" column="TyLe_HaoHut" type="decimal" precision="5" scale="2"/>
+		<property name="MoTa" column="MoTa" type="string" />
+		<property name="LoaiLenh" column="Loai_Lenh" type="int" />
+
+    <many-to-one name="ObjVatlieuDauvao" column="VatLieu_DauVao_Id" class="Vns.Erp.Core.Admin.Domain.DmHanghoa,Vns.Erp.Core.Admin.Domain" insert="false" update="false" not-found="ignore" />
+    <many-to-one name="ObjVatlieuDaura"  column="VatLieu_DauRa_Id"  class="Vns.Erp.Core.Admin.Domain.DmHanghoa,Vns.Erp.Core.Admin.Domain" insert="false" update="false" not-found="ignore" />
+	</class>
+</hibernate-mapping>

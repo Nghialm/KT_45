@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.DmTudo1, Vns.Erp.Core.Admin.Domain" table="DM_TUDO1" lazy="false">
+		<id name="Id" column="DM_TUDO_1_ID">
+			<generator class="guid" />
+		</id>
+		<property name="MaDmTudo1" type="String" length="32" column="MA_DM_TUDO_1" />
+		<property name="KyHieu" type="String" length="32" column="KY_HIEU" />
+		<property name="TenDmTudo1" type="String" length="128" column="TEN_DM_TUDO_1" />
+		<property name="MoTa" type="String" length="512" column="MO_TA" />
+		<property name="DmTudo1IdCha" type="Guid" column="DM_TUDO_1_ID_CHA" />
+		<property name="Cap" column="CAP" type="Decimal" precision="2" scale="0" />
+		<property name="ChiTiet" column="CHI_TIET" type="Decimal" precision="2" scale="0" />
+		<property name="DonviId" column="DONVI_ID" type="Guid"/>
+		<property name="MaDonvi" column="MA_DONVI" type="String" length="32" />
+		<property name="MaTk" column="MA_TK" type="String" length="32" />
+		<property name="ChoPhepSua" column="CHO_PHEP_SUA" type="Decimal" precision="2" scale="0" />
+		<property name="CoSuDung" column="CO_SU_DUNG" type="Decimal" precision="2" scale="0" />
+		<property name="NguoiTao" column="NGUOI_TAO" type="Guid" />
+		<property name="NgayTao" column="NGAY_TAO" type="DateTime" />
+		<property name="NguoiSua" column="NGUOI_SUA" type="Guid" />
+		<property name="NgaySua" column="NGAY_SUA" type="DateTime" />
+	</class>
+</hibernate-mapping>

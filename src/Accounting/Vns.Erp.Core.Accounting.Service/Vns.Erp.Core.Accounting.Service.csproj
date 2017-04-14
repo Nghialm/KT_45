@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1567F284-E659-4C44-8D1B-4EF16B969C98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vns.Erp.Core.Accounting.Service</RootNamespace>
+    <AssemblyName>Vns.Erp.Core.Accounting.Service</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\References\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\References\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate32">
+      <HintPath>..\..\References\Spring.Data.NHibernate32.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Services">
+      <HintPath>..\..\References\Spring.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BcKetoanService.cs" />
+    <Compile Include="CtDService.cs" />
+    <Compile Include="CtHoadonService.cs" />
+    <Compile Include="CtHService.cs" />
+    <Compile Include="CtThueService.cs" />
+    <Compile Include="HDDV\KtCtDHddvService.cs" />
+    <Compile Include="HDDV\KtCtHHddvService.cs" />
+    <Compile Include="IBcKetoanService.cs" />
+    <Compile Include="ICtDService.cs" />
+    <Compile Include="ICtHoadonService.cs" />
+    <Compile Include="ICtHService.cs" />
+    <Compile Include="ICtThueService.cs" />
+    <Compile Include="IKtCtDKhacService.cs" />
+    <Compile Include="IKtCtHKhacService.cs" />
+    <Compile Include="Interface\HDDV\IKtCtDHddvService.cs" />
+    <Compile Include="Interface\HDDV\IKtCtHHddvService.cs" />
+    <Compile Include="Interface\Inventory\IBcKetoanKhoService.cs" />
+    <Compile Include="Interface\Inventory\ICtDNxService.cs" />
+    <Compile Include="Interface\Inventory\ICtHNxService.cs" />
+    <Compile Include="Interface\Inventory\IKtDuluongDaukyService.cs" />
+    <Compile Include="Interface\Inventory\IKtGiaxuatDaukyService.cs" />
+    <Compile Include="Interface\TongHop\IKtDmBtPhanboService.cs" />
+    <Compile Include="Interface\TongHop\IKtThBtPhanboService.cs" />
+    <Compile Include="Inventory\BcKetoanKhoService.cs" />
+    <Compile Include="Inventory\CtDNxService.cs" />
+    <Compile Include="Inventory\CtHNxService.cs" />
+    <Compile Include="Inventory\KtDuluongDaukyService.cs" />
+    <Compile Include="Inventory\KtGiaxuatDaukyService.cs" />
+    <Compile Include="KtCtDKhacService.cs" />
+    <Compile Include="KtCtHKhacService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TongHop\KtDmBtPhanboService.cs" />
+    <Compile Include="TongHop\KtThBtPhanboService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Admin\Vns.Core.Admin.Dao\Vns.Erp.Core.Admin.Dao.csproj">
+      <Project>{BD3B9C3B-64F2-4046-B1A0-6C113B5E6025}</Project>
+      <Name>Vns.Erp.Core.Admin.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Accounting.Dao\Vns.Erp.Core.Accounting.Dao.csproj">
+      <Project>{EA173391-EAA8-4F77-ADC9-3E8C2CAF4681}</Project>
+      <Name>Vns.Erp.Core.Accounting.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Accounting.Domain\Vns.Erp.Core.Accounting.Domain.csproj">
+      <Project>{7258ABC1-7FA4-4369-B5D3-9DA7FAA974C5}</Project>
+      <Name>Vns.Erp.Core.Accounting.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Accounting.Report.Dao\Vns.Erp.Core.Accounting.Report.Dao.csproj">
+      <Project>{57B13F42-7FFD-4850-838C-767E5AC634B9}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Accounting.Report.Domain\Vns.Erp.Core.Accounting.Report.Domain.csproj">
+      <Project>{72E457B3-CC29-4B80-9103-EFCA78C2E309}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Erp.Core.Admin.Domain\Vns.Erp.Core.Admin.Domain.csproj">
+      <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
+      <Name>Vns.Erp.Core.Admin.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
+      <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
+      <Name>Vns.Erp.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Service\Vns.Erp.Core.Service.csproj">
+      <Project>{F213FDB0-2CE0-41E6-8680-050276412F38}</Project>
+      <Name>Vns.Erp.Core.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core\Vns.Erp.Core.vbproj">
+      <Project>{6903B6FB-C64B-47C1-807D-ABF526B1A9C3}</Project>
+      <Name>Vns.Erp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Dao\Vns.Erp.Core.Dao.csproj">
+      <Project>{4954B581-A0CA-43C7-B3FD-274B05148BEF}</Project>
+      <Name>Vns.Erp.Core.Dao</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

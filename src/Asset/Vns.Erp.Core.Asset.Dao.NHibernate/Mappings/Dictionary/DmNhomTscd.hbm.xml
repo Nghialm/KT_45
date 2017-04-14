@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.Erp.Core.Asset.Domain.DmNhomTscd,Vns.Erp.Core.Asset.Domain" table="DM_NHOM_TSCD" lazy="false">
+
+		<id name="Id" column="ID_NHOM_TSCD" type="Guid">
+			<generator class="guid"/>
+		</id>
+    <property name="MaNhomTscd" column="MA_NHOM_TSCD" type="String" length="32" />
+    <property name="TenNhomTscd" column="TEN_NHOM_TSCD" type="String" length="32" />
+    <property name="ChoPhepSua" column="CHO_PHEP_SUA" type="Decimal" precision="4" scale="0" />
+    <property name="CoSuDung" column="CO_SU_DUNG" type="Decimal" precision="4" scale="0" />
+    <property name="LoaiNhom" column="LOAI_NHOM" type="Decimal" precision="4" scale="0" />
+    <property name="DonviId" column="DONVI_ID" type="Guid"  />
+    <property name="MaDonvi" column="MA_DONVI" type="String" length="32" />
+    <property name="NguoiTao" column="NGUOI_TAO" type="Guid"  />
+    <property name="NgayTao" column="NGAY_TAO" type="DateTime"  />
+    <property name="NguoiSua" column="NGUOI_SUA" type="Guid"  />
+    <property name="NgaySua" column="NGAY_SUA" type="DateTime"  />
+		
+	</class>
+</hibernate-mapping>

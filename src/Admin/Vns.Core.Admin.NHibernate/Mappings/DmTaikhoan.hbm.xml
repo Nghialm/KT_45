@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.Erp.Core.Admin.Domain.DmTaikhoan,Vns.Erp.Core.Admin.Domain" table="DM_TAIKHOAN" lazy="false">
+
+		<id name="Id" column="TAIKHOAN_ID" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="MA_TAIKHOAN" type="String" name="MaTaikhoan" not-null="true" length="32" />
+		<property column="TEN_TAIKHOAN" type="String" name="TenTaikhoan" not-null="true" length="128" />
+		<property column="MO_TA" type="String" name="MoTa" length="256" />
+		<property column="TINH_CHAT" type="String" name="TinhChat" length="1" />
+		<property column="TAIKHOAN_ID_CHA" type="Guid" name="TaikhoanIdCha" />
+		<property column="CHI_TIET" type="Decimal" precision="2" scale="0" name="ChiTiet" />
+		<property column="DONVI_ID" type="Guid" name="DonviId" />
+		<property column="MA_DONVI" type="String" name="MaDonvi" length="32" />
+		<property column="IN_BCD" type="Decimal" precision="2" scale="0" name="InBcd" />
+		<property column="TK_NB" type="Decimal" precision="2" scale="0" name="TkNb" />
+		<property column="CHO_PHEP_SUA" type="Decimal" precision="2" scale="0" name="ChoPhepSua" />
+		<property column="CO_SU_DUNG" type="Decimal" precision="2" scale="0" name="CoSuDung" />
+		<property column="CAP" type="Decimal" precision="2" scale="0" name="Cap" />
+		<property column="NGUOI_TAO" type="Guid" name="NguoiTao" />
+		<property column="NGAY_TAO" type="DateTime" name="NgayTao" />
+		<property column="NGUOI_SUA" type="Guid" name="NguoiSua" />
+		<property column="NGAY_SUA" type="DateTime" name="NgaySua" />
+		
+	</class>
+</hibernate-mapping>

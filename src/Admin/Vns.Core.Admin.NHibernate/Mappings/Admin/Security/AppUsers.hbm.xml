@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.AppUsers, Vns.Erp.Core.Admin.Domain" table="APP_USERS" lazy="false">
+		<id name="Id" column="USERID" type="Guid">
+			<generator class="guid" />
+		</id>
+		<property name="Username" column="USERNAME" />
+		<property name="Fullname" column="FULLNAME" />
+		<property name="Userpassword" column="USERPASSWORD" />
+		<property name="Islocked" column="ISLOCKED" />
+		<property name="Email" column="EMAIL" />
+		<property name="Tel" column="TEL" />
+		<property name="Lastchangepass" column="LASTCHANGEPASS" />
+		<property name="DonviId" column="DONVI_ID" />
+		<property name="PassOutDate" column="PASS_OUT_DATE" />
+		<property name="HasExpire" column="HAS_EXPIRE" />
+	</class>
+</hibernate-mapping>

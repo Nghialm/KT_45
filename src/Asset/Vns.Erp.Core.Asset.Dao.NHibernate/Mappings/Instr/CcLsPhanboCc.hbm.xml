@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Asset.Domain" assembly="Vns.Erp.Core.Asset.Domain">
+	<class name="Vns.Erp.Core.Asset.Domain.CcLsPhanboCc, Vns.Erp.Core.Asset.Domain" table="CC_LS_PHANBO_CC" lazy="true">
+		<id name="Id" column="CC_LS_PHANBO_CC_ID">
+			<generator class="guid" />
+		</id>
+    <property name="LsCcdcId" column="LS_CCDC_ID" type="Guid"  />
+    <property name="CcdcId" column="CCDC_ID" type="Guid"  />
+    <property name="MaCcdc" column="MA_CCDC" type="String" length="255" />
+    <property name="KyHieuCcdc" column="KY_HIEU_CCDC" type="String" length="255" />
+    <property name="TenCcdc" column="TEN_CCDC" type="String" length="255" />
+    <property name="NguyenGia" column="NGUYEN_GIA" type="Decimal" precision="18" scale="0" />
+    <property name="SoTienPb" column="SO_TIEN_PB" type="Decimal" precision="18" scale="0" />
+    <property name="NgayBdKh" column="NGAY_BD_KH" type="DateTime"  />
+    <property name="NgayKtKh" column="NGAY_KT_KH" type="DateTime"  />
+    <property name="SoKyPhanbo" column="SO_KY_PHANBO" type="Decimal" precision="4" scale="0" />
+    <property name="TyleKh" column="TYLE_KH" type="Decimal" precision="5" scale="2" />
+    <property name="SoTienDaPhanbo" column="SO_TIEN_DA_PHANBO" type="Decimal" precision="18" scale="0" />
+    <property name="GiaTriCl" column="GIA_TRI_CL" type="Decimal" precision="18" scale="0" />
+    <property name="DonviId" column="DONVI_ID" type="Guid"  />
+    <property name="Thang" column="THANG" type="Decimal" precision="4" scale="0" />
+    <property name="Nam" column="NAM" type="Decimal" precision="4" scale="0" />
+    <property name="CtdId" column="CTD_ID" type="Guid"  />
+    <property name="CthId" column="CTH_ID" type="Guid"  />
+	</class>
+</hibernate-mapping>

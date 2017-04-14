@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Domain" assembly="Vns.Erp.Core.Accounting.Domain">
+	<class name="Vns.Erp.Core.Accounting.Domain.CtHoadon, Vns.Erp.Core.Accounting.Domain" table="CT_HOADON" lazy="false">
+		<id name="Id" column="CT_HOADON_ID">
+			<generator class="guid" />
+		</id>
+		<property name="SoHoadon" column="SO_HOADON" type="String" length="64" />
+		<property name="SoSeri" column="SO_SERI" type="String" length="64" />
+		<property name="TenKhachhang" column="TEN_KHACHHANG" type="String" length="128" />
+		<property name="DiaChi" column="DIA_CHI" type="String" length="256" />
+		<property name="NgayHoadon" column="NGAY_HOADON" type="DateTime" />
+		<property name="MaSoThue" column="MA_SO_THUE" type="String" length="64" />
+		<property name="DienGiai" column="DIEN_GIAI" type="String" length="256" />
+		<property name="DonviId" column="DONVI_ID" type="Guid"/>
+		<property name="MaDonvi" column="MA_DONVI" type="String" length="64" />
+		<property name="KhongTheoDoi" column="KHONG_THEO_DOI" type="Decimal" precision="4" scale="0"/>
+		<property name="TongTien" column="TONG_TIEN" type="Decimal" precision="18" scale="0"/>
+		<property name="DoanhThu" column="DOANH_THU" type="Decimal" precision="18" scale="0"/>
+		<property name="TienThue" column="TIEN_THUE" type="Decimal" precision="18" scale="0"/>
+		<property name="DaThanhToan" column="DA_THANH_TOAN" type="Decimal" precision="4" scale="0"/>
+		<property name="HanThanhToan" column="HAN_THANH_TOAN" type="DateTime"/>
+		<property name="SoNgayThanhToan" column="SO_NGAY_THANH_TOAN" type="Decimal" precision="4" scale="0"/>
+		<property name="CtLienQuan" column="CT_LIEN_QUAN" type="Guid" />
+		<property name="Loai" column="LOAI" type="Decimal" precision="4" scale="0"/>
+    <property name="SoTaiKhoanNh" column="SO_TAI_KHOAN_NH" type="String" length="64" />
+    <property name="HinhThucTt" column="HINH_THUC_TT" type="String" length="128"/>
+
+    <bag name="LstCtThue" lazy="false" cascade="none" >
+      <key column="CT_HOADON_ID"></key>
+      <one-to-many class="CtThue"></one-to-many>
+    </bag>
+	</class>
+</hibernate-mapping>

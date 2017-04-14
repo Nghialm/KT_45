@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:tx="http://www.springframework.net/tx">
+
+  <!-- Referenced by main application context configuration file -->
+  
+  <description>
+    The Northwind service layer definitions
+  </description>
+
+  <!-- Property placeholder configurer for database settings -->
+  <object id="AppGroupsService" type="Vns.Erp.Core.Admin.Service.AppGroupsService, Vns.Core.Admin.Service">
+    <property name="AppGroupsDao" ref="AppGroupsDao"/>
+  </object>
+  <object id="AppUsersService" type="Vns.Erp.Core.Admin.Service.AppUsersService, Vns.Core.Admin.Service">
+    <property name="AppUsersDao" ref="AppUsersDao"/>
+  </object>
+  <object id="DmDonviService" type="Vns.Erp.Core.Admin.Service.DmDonviService, Vns.Core.Admin.Service">
+    <property name="DmDonviDao" ref="DmDonviDao"/>
+  </object>
+  <object id="AppDvGroupUserService" type="Vns.Erp.Core.Admin.Service.AppDvGroupUserService, Vns.Core.Admin.Service">
+    <property name="AppDvGroupUserDao" ref="AppDvGroupUserDao"/>
+  </object>
+  <object id="HtThamsoService" type="Vns.Erp.Core.Admin.Service.HtThamsoService, Vns.Core.Admin.Service">
+    <property name="HtThamsoDao" ref="HtThamsoDao"/>
+  </object>
+  <object id="AppFormsService" type="Vns.Erp.Core.Admin.Service.AppFormsService, Vns.Core.Admin.Service">
+    <property name="AppFormsDao" ref="AppFormsDao"/>
+
+  </object>
+  <object id="AppUsergroupService" type="Vns.Erp.Core.Admin.Service.AppUsergroupService, Vns.Core.Admin.Service">
+    <property name="AppUsergroupDao" ref="AppUsergroupDao"/>
+  </object>
+  <object id="AppDvFormService" type="Vns.Erp.Core.Admin.Service.AppDvFormService, Vns.Core.Admin.Service">
+    <property name="AppDvFormDao" ref="AppDvFormDao"/>
+  </object>
+  <object id="AppHGroupFormService" type="Vns.Erp.Core.Admin.Service.AppHGroupFormService, Vns.Core.Admin.Service">
+    <property name="AppHGroupFormDao" ref="AppHGroupFormDao"/>
+  </object>
+  <object id="AppUgFormService" type="Vns.Erp.Core.Admin.Service.AppUgFormService, Vns.Core.Admin.Service">
+    <property name="AppUgFormDao" ref="AppUgFormDao"/>
+  </object>
+  <object id="AppHGroupFunctService" type="Vns.Erp.Core.Admin.Service.AppHGroupFunctService, Vns.Core.Admin.Service">
+    <property name="AppHGroupFunctDao" ref="AppHGroupFunctDao"/>
+  </object>
+  <object id="AppGroupFormsService" type="Vns.Erp.Core.Admin.Service.AppGroupFormsService, Vns.Core.Admin.Service">
+    <property name="AppGroupFormsDao" ref="AppGroupFormsDao"/>
+  </object>
+  <object id="AppGroupFunctionService" type="Vns.Erp.Core.Admin.Service.AppGroupFunctionService, Vns.Core.Admin.Service">
+    <property name="AppGroupFunctionDao" ref="AppGroupFunctionDao"/>
+  </object>
+  <object id="AppDvBcService" type="Vns.Erp.Core.Admin.Service.AppDvBcService, Vns.Core.Admin.Service">
+    <property name="AppDvBcDao" ref="AppDvBcDao"/>
+  </object>
+  <object id="AppDvGroupBcService" type="Vns.Erp.Core.Admin.Service.AppDvGroupBcService, Vns.Core.Admin.Service">
+    <property name="AppDvGroupBcDao" ref="AppDvGroupBcDao"/>
+  </object>
+  <object id="HtBaocaoService" type="Vns.Erp.Core.Admin.Service.HtBaocaoService, Vns.Core.Admin.Service">
+    <property name="HtBaocaoDao" ref="HtBaocaoDao"/>
+  </object>
+
+  <tx:attribute-driven/>
+  
+  
+</objects>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <login_info>
+    <userid></userid>
+    <username></username>
+    <password></password>
+    <donvi_id></donvi_id>
+    <ten_donvi></ten_donvi>
+    <other1>
+    </other1>
+    <other2>
+    </other2>
+    <other3>
+    </other3>
+    <other4>
+    </other4>
+    <other5>
+    </other5>
+  </login_info>
+  <database_info>
+    <server_ip></server_ip>
+    <port></port>
+    <database></database>
+    <username></username>
+    <password></password>
+    <time_out></time_out>
+  </database_info>
+  <nam_ke_toan_info>
+	  <nam_kt>2011</nam_kt>
+  </nam_ke_toan_info>
+</config>

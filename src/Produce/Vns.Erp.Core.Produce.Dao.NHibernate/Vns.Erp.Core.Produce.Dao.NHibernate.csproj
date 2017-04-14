@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A54F9A7E-31FA-4D71-8F42-F561738DCBA0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vns.Erp.Core.Produce.Dao.NHibernate</RootNamespace>
+    <AssemblyName>Vns.Erp.Core.Produce.Dao.NHibernate</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\References\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop">
+      <HintPath>..\..\..\References\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\..\References\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\..\References\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate32">
+      <HintPath>..\..\..\References\Spring.Data.NHibernate32.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="DanhMuc\SxDmQuytrinhDao.cs" />
+    <Compile Include="DanhMuc\SxKehoachDDao.cs" />
+    <Compile Include="DanhMuc\SxKehoachMDao.cs" />
+    <Compile Include="DanhMuc\SxLenhsanxuatDao.cs" />
+    <Compile Include="DanhMuc\SxLenhsanxuatDDao.cs" />
+    <Compile Include="DanhMuc\SxPhancongDao.cs" />
+    <Compile Include="DanhMuc\SxPhieuKiemkeDao.cs" />
+    <Compile Include="DanhMuc\SxPhieuKiemkeSlDDao.cs" />
+    <Compile Include="DanhMuc\SxPhieuKiemkeVtDDao.cs" />
+    <Compile Include="DanhMuc\SxQuytrinhDinhmucDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ProduceReportDao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DanhMuc\SxDmQuytrinh.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
+      <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
+      <Name>Vns.Erp.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core\Vns.Erp.Core.vbproj">
+      <Project>{6903B6FB-C64B-47C1-807D-ABF526B1A9C3}</Project>
+      <Name>Vns.Erp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Dao.NHibernate\Vns.Erp.Core.Dao.NHibernate.csproj">
+      <Project>{4A9608F9-7C07-4672-ACA5-D81672435F62}</Project>
+      <Name>Vns.Erp.Core.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Dao\Vns.Erp.Core.Dao.csproj">
+      <Project>{4954B581-A0CA-43C7-B3FD-274B05148BEF}</Project>
+      <Name>Vns.Erp.Core.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Produce.Dao\Vns.Erp.Core.Produce.Dao.csproj">
+      <Project>{501C091E-9F75-49A7-B85E-1E77BE2B7BA6}</Project>
+      <Name>Vns.Erp.Core.Produce.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Produce.Domain\Vns.Erp.Core.Produce.Domain.csproj">
+      <Project>{5B666884-E9D0-470B-8309-9EFED7CBD326}</Project>
+      <Name>Vns.Erp.Core.Produce.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DanhMuc\SxKehoachD.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DanhMuc\SxKehoachM.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\DanhMuc\SxLenhsanxuat.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\DanhMuc\SxLenhsanxuatD.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DanhMuc\SxPhancong.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mappings\DanhMuc\SxQuytrinhDinhmuc.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DanhMuc\SxPhieuKiemke.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\DanhMuc\SxPhieuKiemkeSlD.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DanhMuc\SxPhieuKiemkeVtD.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

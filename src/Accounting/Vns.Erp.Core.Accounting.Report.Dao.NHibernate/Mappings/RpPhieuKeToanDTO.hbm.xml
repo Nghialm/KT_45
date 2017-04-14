@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Report.Domain" assembly="Vns.Erp.Core.Accounting.Report.Domain">
+  <import class="Vns.Erp.Core.Accounting.Report.Domain.RpPhieuKeToanDTO, Vns.Erp.Core.Accounting.Report.Domain" />
+</hibernate-mapping>

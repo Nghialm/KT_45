@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.DmTudo2, Vns.Erp.Core.Admin.Domain" table="DM_TUDO2" lazy="false">
+		<id name="Id" column="DM_TUDO_2_ID">
+			<generator class="guid" />
+		</id>
+		<property name="MaDmTudo2" column="MA_DM_TUDO_2" />
+		<property name="KyHieu" column="KY_HIEU" />
+		<property name="TenDmTudo2" column="TEN_DM_TUDO_2" />
+		<property name="MoTa" column="MO_TA" />
+		<property name="DmTudo2IdCha" column="DM_TUDO_2_ID_CHA" />
+		<property name="ChiTiet" column="CHI_TIET" />
+		<property name="DonviId" column="DONVI_ID" />
+		<property name="MaDonvi" column="MA_DONVI" />
+		<property name="MaTk" column="MA_TK" />
+		<property name="ChoPhepSua" column="CHO_PHEP_SUA" />
+		<property name="CoSuDung" column="CO_SU_DUNG" />
+		<property name="Cap" column="CAP" />
+		<property name="NguoiTao" column="NGUOI_TAO" />
+		<property name="NgayTao" column="NGAY_TAO" />
+		<property name="NguoiSua" column="NGUOI_SUA" />
+		<property name="NgaySua" column="NGAY_SUA" />
+	</class>
+</hibernate-mapping>

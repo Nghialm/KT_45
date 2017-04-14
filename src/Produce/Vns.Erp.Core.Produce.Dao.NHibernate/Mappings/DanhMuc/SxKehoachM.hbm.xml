@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Produce.Domain" assembly="Vns.Erp.Core.Produce.Domain">
+	<class name="Vns.Erp.Core.Produce.Domain.SxKehoachM, Vns.Erp.Core.Produce.Domain" table="SX_KeHoach_M" lazy="true">
+		<id name="Id" column="KeHoach_M_id">
+			<generator class="guid" />
+		</id>
+		<property name="IdLoaiCt" column="Id_Loai_Ct" type="System.Guid"/>
+		<property name="MaLoaiCt" column="Ma_Loai_Ct" type="string"/>
+		<property name="KyHieuLoaiCt" column="Ky_Hieu_Loai_Ct" type="string"/>
+		<property name="NgayKeHoach" column="NgayKeHoach" type="System.DateTime" />
+		<property name="NgayPheDuyet" column="NgayPheDuyet" type="System.DateTime" />
+    <property name="NgayBatDau" column="NgayBatDau" type="System.DateTime" />
+    <property name="NgayKetThuc" column="NgayKetThuc" type="System.DateTime" />
+		<property name="DaKetThuc" column="DaKetThuc" type="int" />
+		<property name="SoLenh" column="SoLenh" type="string" />
+		<property name="PrefixCt" column="PrefixCt" type="string" />
+		<property name="SanphamId" column="SanPham_Id" type="System.Guid" />
+		<property name="MaSanpham" column="Ma_Sanpham" type="string"/>
+		<property name="TenSanpham" column="Ten_Sanpham" type="string"/>
+		<property name="KhachhangId" column="KhachHang_Id" type="System.Guid" />
+		<property name="MaKhachhang" column="Ma_Khachhang" type="string"/>
+		<property name="TenKhachhang" column="Ten_Khachhang" type="string"/>
+		<property name="TrangThai" column="TrangThai" type="int" />
+		<property name="NguoiLap" column="NguoiLap" type="string" />
+		<property name="NguoiPheDuyet" column="NguoiPheDuyet" type="string" />
+		<property name="MoTa" column="MoTa" type="string" />
+		<property name="DonviId" column="Donvi_Id" type="System.Guid" />
+		
+		<bag name="LstKeHoachDetail" cascade="none" table="SX_KeHoach_D" lazy="false">
+			<key column="KeHoach_M_Id"></key>
+			<one-to-many class="Vns.Erp.Core.Produce.Domain.SxKehoachD" not-found="ignore"/>
+		</bag>
+
+		<bag name="LstKhThucHien" cascade="none" table="SX_PhanCong" lazy="false">
+			<key column="KeHoach_M_Id"></key>
+			<one-to-many class="Vns.Erp.Core.Produce.Domain.SxPhancong" not-found="ignore"/>
+		</bag>
+
+    <!--<many-to-one name="ObjDmSanPham" column="SanphamId" class="Vns.Erp.Core.Admin.Domain.DmHanghoa,Vns.Erp.Core.Admin.Domain" insert="false" update="false" />-->
+
+  </class>
+</hibernate-mapping>

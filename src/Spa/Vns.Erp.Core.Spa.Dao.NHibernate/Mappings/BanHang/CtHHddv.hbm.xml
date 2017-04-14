@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Spa.Domain" assembly="Vns.Erp.Core.Spa.Domain">
+	<class name="Vns.Erp.Core.Spa.Domain.CtHHddv, Vns.Erp.Core.Spa.Domain" table="CT_H_HDDV" lazy="false">
+		<id name="Id" column="CTH_HDDV_ID">
+			<generator class="guid" />
+		</id>
+		<property name="DonviId" column="DONVI_ID" type="Guid" />
+		<property name="MaDonvi" column="MA_DONVI" type="String" length="64" />
+		<property name="IdLoaiCt" column="ID_LOAI_CT" type="Guid" />
+		<property name="MaLoaiCt" column="MA_LOAI_CT" type="String" length="64" />
+		<property name="KyHieuLoaiCt" column="KY_HIEU_LOAI_CT" type="String" length="64" />
+		<property name="NgayGhi" column="NGAY_GHI" type="DateTime" />
+		<property name="CtSo" column="CT_SO" type="String" length="64" />
+		<property name="NgayCt" column="NGAY_CT" type="DateTime" />
+		<property name="NteId" column="NTE_ID" type="Guid" />
+		<property name="MaNte" column="MA_NTE" type="String" length="64" />
+		<property name="TyGia" column="TY_GIA" type="Decimal" precision="18" scale="0" />
+		<property name="DoanhThu" column="DOANH_THU" type="Decimal" precision="18" scale="0" />
+		<property name="DoanhThuNte" column="DOANH_THU_NTE" type="Decimal" precision="18" scale="2" />
+		<property name="TyLeGiamGia" column="TY_LE_GIAM_GIA" type="Decimal" precision="5" scale="2" />
+		<property name="SoTienGiamGia" column="SO_TIEN_GIAM_GIA" type="Decimal" precision="18" scale="0" />
+		<property name="NgayTao" column="NGAY_TAO" type="DateTime" />
+		<property name="NguoiTao" column="NGUOI_TAO" type="Guid" />
+		<property name="NguoiSua" column="NGUOI_SUA" type="Guid" />
+		<property name="NgaySua" column="NGAY_SUA" type="DateTime" />
+		<property name="NguoiPd" column="NGUOI_PD" type="Guid" />
+		<property name="NgayPd" column="NGAY_PD" type="DateTime"/>
+		<property name="DienGiai" column="DIEN_GIAI" type="String" length="512" />
+		<property name="PhongbanId" column="PHONGBAN_ID" type="Guid" />
+		<property name="KhangId" column="KHANG_ID" type="Guid" />
+		<property name="MaKhang" column="MA_KHANG" type="String" length="64" />
+		<property name="KyHieuKhang" column="KY_HIEU_KHANG" type="String" length="64"/>
+		<property name="TenKhang" column="TEN_KHANG" type="String" length="128" />
+		<property name="MstKhang" column="MST_KHANG" type="String" length="64" />
+		<property name="DiaChi" column="DIA_CHI" type="String" length="128" />
+		<property name="Ghi" column="GHI" type="Decimal" precision="2" scale="0" />
+		<property name="NgoaiTe" column="NGOAI_TE" type="Decimal" precision="2" scale="0" />
+		<property name="SoSeriHd" column="SO_SERI_HD" type="String" length="64" />
+		<property name="SoHd" column="SO_HD" type="String" length="64" />
+		<property name="IdDoituongHoadon" column="ID_DOITUONG_HOADON" type="Guid" />
+		<property name="PrefixCt" column="PREFIX_CT" type="String" length="64" />
+		<property name="TtTienMat" column="TT_TIEN_MAT" type="Decimal" precision="18" scale="0" />
+		<property name="TtTienNh" column="TT_TIEN_NH" type="Decimal" precision="18" scale="0" />
+		<property name="SoThe1" column="SO_THE_1" type="Guid" />
+		<property name="TtTienThe1" column="TT_TIEN_THE_1" type="Decimal" precision="18" scale="0" />
+		<property name="SoThe2" column="SO_THE_2" type="Guid" />
+		<property name="TtTienThe2" column="TT_TIEN_THE_2" type="Decimal" precision="18" scale="0" />
+		<property name="TtTienNo" column="TT_TIEN_NO" type="Decimal" precision="18" scale="0" />
+		<property name="IdGuongDichVu" column="ID_GUONG_DICH_VU" type="Guid" />
+		<property name="IdNhanVien" column="ID_NHAN_VIEN" type="Guid" />
+		<property name="TuGio" column="TU_GIO" type="DateTime" />
+		<property name="DenGio" column="DEN_GIO" type="DateTime" />
+    <property name="TheTienThe1" column="THE_TIEN_THE_1" type="Decimal" precision="18" scale="0" />
+    <property name="TheTienKm1" column="THE_TIEN_KM_1" type="Decimal" precision="18" scale="0" />
+
+    <bag name="LstCtHHddv" lazy="false" cascade="none">
+      <key column="CTH_HDDV_ID"></key>
+      <one-to-many class="CtDHddv"></one-to-many>
+    </bag>
+    <many-to-one name="ObjSpaDmThe" column="SO_THE_1" class="Vns.Erp.Core.Spa.Domain.SpaDmThe, Vns.Erp.Core.Spa.Domain" insert="false" update="false" not-found="ignore"/>
+    <many-to-one name="ObjDmGuong" column="ID_GUONG_DICH_VU" class="SpaDmGuongdv" insert="false" update="false" not-found="ignore"/>
+    <many-to-one name="ObjDmKhachhang" column="KHANG_ID" class="Vns.Erp.Core.Admin.Domain.DmKhang,Vns.Erp.Core.Admin.Domain" insert="false" update="false" not-found="ignore"/>
+	</class>
+</hibernate-mapping>

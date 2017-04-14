@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Asset.Domain" assembly="Vns.Erp.Core.Asset.Domain">
+	<class name="Vns.Erp.Core.Asset.Domain.TsCtTscdNvon, Vns.Erp.Core.Asset.Domain" table="TS_CT_TSCD_NVON" lazy="false">
+		<id name="Id" column="TS_CT_TSCD_NVON_ID">
+			<generator class="guid" />
+		</id>
+    <property name="CtTscdId" column="CT_TSCD_ID" type="Guid"  />
+    <property name="DmNguonTscdId" column="DM_NGUON_TSCD_ID" type="Guid"  />
+    <property name="SoTien" column="SO_TIEN" type="Decimal" precision="18" scale="0" />
+    <property name="SoTienNte" column="SO_TIEN_NTE" type="Decimal" precision="18" scale="2" />
+    <property name="NguyenGia" column="NGUYEN_GIA" type="Decimal" precision="18" scale="0" />
+    <property name="GiaTriConLai" column="GIA_TRI_CON_LAI" type="Decimal" precision="18" scale="0" />
+    <property name="HaoMonLuyKe" column="HAO_MON_LUY_KE" type="Decimal" precision="18" scale="0" />
+    <property name="TyLeHaoMon" column="TY_LE_HAO_MON" type="Decimal" precision="5" scale="2" />
+    <property name="LyDoTanggiam" column="LY_DO_TANGGIAM" type="Guid"  />
+    <property name="TenLyDoTanggiam" column="TEN_LY_DO_TANGGIAM" type="String" length="255" />
+    <property name="DienGiai" column="DIEN_GIAI" type="String" length="255" />
+    <property name="TangTscd" column="TANG_TSCD" type="Decimal" precision="4" scale="0" />
+    <property name="HeSoPbKh" column="HE_SO_PB_KH" type="Decimal" precision="4" scale="0" />
+    <property name="TkTaisan" column="TK_TAISAN" type="Guid"  />
+    <property name="TkChiphi" column="TK_CHIPHI" type="Guid"  />
+    <property name="MaTkTaisan" column="MA_TK_TAISAN" type="String" length="255" />
+    <property name="MaTkChiphi" column="MA_TK_CHIPHI" type="String" length="255" />
+    <property name="TkKhauhao" column="TK_KHAUHAO" type="Guid"  />
+    <property name="MaTkKhauhao" column="MA_TK_KHAUHAO" type="String" length="255" />
+
+    <many-to-one name="ObjDmNguonTscd" column="DM_NGUON_TSCD_ID" class="DmNguonTscd" insert="false" update="false" lazy="false" not-found="ignore" />
+	</class>
+</hibernate-mapping>

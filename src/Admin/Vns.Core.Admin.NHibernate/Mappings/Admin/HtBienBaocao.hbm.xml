@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.HtBienBaocao, Vns.Erp.Core.Admin.Domain" table="HT_BIEN_BAOCAO" lazy="false">
+		<id name="Id" column="ID_HT_BIEN_BAOCAO">
+			<generator class="guid" />
+		</id>
+		<property name="IdHtBaocao" column="ID_HT_BAOCAO" type="Guid"/>
+		<property name="MaHtBaocao" column="MA_HT_BAOCAO" type="String" length="128"/>
+		<property name="TenBien" column="TEN_BIEN" type="String" length="128"/>
+		<property name="KieuBien" column="KIEU_BIEN" type="String" length="128"/>
+		<property name="TenParameter" column="TEN_PARAMETER" type="String" length="128"/>
+		<property name="GiaTriBien" column="GIA_TRI_BIEN" type="String" length="128"/>
+		<property name="ThuTu" column="THU_TU" type="Decimal" precision="4" scale="0"/>
+		<property name="CoGiaTri" column="CO_GIA_TRI" type="Decimal" precision="4" scale="0"/>
+		<property name="MoTa" column="MO_TA" type="String" length="128"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.AppCtStatus, Vns.Erp.Core.Admin.Domain" table="APP_CT_STATUS" lazy="false">
+		<id name="Id" column="ID" type="Guid">
+			<generator class="guid" />
+		</id>
+		<property name="DonviId" column="DONVI_ID" />
+		<property name="GroupId" column="GROUP_ID" />
+		<property name="LoaiCtId" column="LOAI_CT_ID" />
+		<property name="DsStatus" column="DS_STATUS" />
+		<property name="MoTa" column="MO_TA" />
+		<property name="MoTa1" column="MO_TA_1" />
+    <many-to-one name="HtLoaichungtu" column="LOAI_CT_ID" class="HtLoaichungtu" insert="false" update="false" not-found="ignore"/>
+	</class>
+</hibernate-mapping>

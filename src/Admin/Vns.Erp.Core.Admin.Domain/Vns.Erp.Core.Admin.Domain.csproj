@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vns.Erp.Core.Admin.Domain</RootNamespace>
+    <AssemblyName>Vns.Erp.Core.Admin.Domain</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\HtSoChungtuMax.cs" />
+    <Compile Include="Admin\HtSoChungtuMax.generated.cs" />
+    <Compile Include="Admin\HtTaikhoanMau.cs" />
+    <Compile Include="Admin\HtTaikhoanMau.generated.cs" />
+    <Compile Include="Admin\KtKhoaSoNgay.cs" />
+    <Compile Include="Admin\KtKhoaSoNgay.generated.cs" />
+    <Compile Include="Admin\KtKhoasoThang.cs" />
+    <Compile Include="Admin\KtKhoasoThang.generated.cs" />
+    <Compile Include="Admin\KtStatusCt.cs" />
+    <Compile Include="Admin\KtStatusCt.generated.cs" />
+    <Compile Include="Admin\Security\AppCtStatus.cs" />
+    <Compile Include="Admin\Security\AppCtStatus.generated.cs" />
+    <Compile Include="Admin\Security\AppDvBc.cs" />
+    <Compile Include="Admin\Security\AppDvBc.generated.cs" />
+    <Compile Include="Admin\Security\AppDvForm.cs" />
+    <Compile Include="Admin\Security\AppDvForm.generated.cs" />
+    <Compile Include="Admin\Security\AppDvGroup.cs" />
+    <Compile Include="Admin\Security\AppDvGroup.generated.cs" />
+    <Compile Include="Admin\Security\AppDvGroupBc.cs" />
+    <Compile Include="Admin\Security\AppDvGroupBc.generated.cs" />
+    <Compile Include="Admin\Security\AppDvGroupForm.cs" />
+    <Compile Include="Admin\Security\AppDvGroupForm.generated.cs" />
+    <Compile Include="Admin\Security\AppDvGroupUser.cs" />
+    <Compile Include="Admin\Security\AppDvGroupUser.generated.cs" />
+    <Compile Include="Admin\Security\AppForms.cs" />
+    <Compile Include="Admin\Security\AppForms.generated.cs" />
+    <Compile Include="Admin\Security\AppGroupForms.cs" />
+    <Compile Include="Admin\Security\AppGroupForms.generated.cs" />
+    <Compile Include="Admin\Security\AppGroupFunction.cs" />
+    <Compile Include="Admin\Security\AppGroupFunction.generated.cs" />
+    <Compile Include="Admin\Security\AppGroups.cs" />
+    <Compile Include="Admin\Security\AppGroups.generated.cs" />
+    <Compile Include="Admin\Security\AppHGroupForm.cs" />
+    <Compile Include="Admin\Security\AppHGroupForm.generated.cs" />
+    <Compile Include="Admin\Security\AppHGroupFunct.cs" />
+    <Compile Include="Admin\Security\AppHGroupFunct.generated.cs" />
+    <Compile Include="Admin\Security\AppLogbook.cs" />
+    <Compile Include="Admin\Security\AppLogbook.generated.cs" />
+    <Compile Include="Admin\Security\AppUgForm.cs" />
+    <Compile Include="Admin\Security\AppUgForm.generated.cs" />
+    <Compile Include="Admin\Security\AppUsergroup.cs" />
+    <Compile Include="Admin\Security\AppUsergroup.generated.cs" />
+    <Compile Include="Admin\Security\AppUsers.cs" />
+    <Compile Include="Admin\Security\AppUsers.generated.cs" />
+    <Compile Include="BaoCao\KtDieukienBc.cs" />
+    <Compile Include="BaoCao\KtDieukienBc.generated.cs" />
+    <Compile Include="BaoCao\KtHBaocao.cs" />
+    <Compile Include="BaoCao\KtHBaocao.generated.cs" />
+    <Compile Include="BaoCao\KtHCot.cs" />
+    <Compile Include="BaoCao\KtHCot.generated.cs" />
+    <Compile Include="BaoCao\KtHDong.cs" />
+    <Compile Include="BaoCao\KtHDong.generated.cs" />
+    <Compile Include="DanhMuc\DmTudo2.cs" />
+    <Compile Include="DanhMuc\DmTudo2.generated.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\DmTudo3.cs" />
+    <Compile Include="DanhMuc\DmTudo3.generated.cs" />
+    <Compile Include="DanhMuc\DmTudo4.cs" />
+    <Compile Include="DanhMuc\DmTudo4.generated.cs" />
+    <Compile Include="DanhMuc\DmTudo5.cs" />
+    <Compile Include="DanhMuc\DmTudo5.generated.cs" />
+    <Compile Include="DmBtKetchuyen.cs" />
+    <Compile Include="DmBtKetchuyen.generated.cs" />
+    <Compile Include="DmDonvi.cs" />
+    <Compile Include="DmDonvi.generated.cs" />
+    <Compile Include="DmDvt.cs" />
+    <Compile Include="DmDvt.generated.cs" />
+    <Compile Include="DmHanghoa.cs" />
+    <Compile Include="DmHanghoa.generated.cs" />
+    <Compile Include="DmHopdong.cs" />
+    <Compile Include="DmHopdong.generated.cs" />
+    <Compile Include="DmKhang.cs" />
+    <Compile Include="DmKhang.generated.cs" />
+    <Compile Include="DmKho.cs" />
+    <Compile Include="DmKho.generated.cs" />
+    <Compile Include="DmKhoanphi.cs" />
+    <Compile Include="DmKhoanphi.generated.cs" />
+    <Compile Include="DmNgoaite.cs" />
+    <Compile Include="DmNgoaite.generated.cs" />
+    <Compile Include="DmNhomKhang.cs" />
+    <Compile Include="DmNhomKhang.generated.cs" />
+    <Compile Include="DmNhomvattu1.cs" />
+    <Compile Include="DmNhomvattu1.generated.cs" />
+    <Compile Include="DmPhongban.cs" />
+    <Compile Include="DmPhongban.generated.cs" />
+    <Compile Include="DmPtqt.cs" />
+    <Compile Include="DmPtqt.generated.cs" />
+    <Compile Include="DmTaikhoan.cs" />
+    <Compile Include="DmTaikhoan.generated.cs" />
+    <Compile Include="DmThue.cs" />
+    <Compile Include="DmThue.generated.cs" />
+    <Compile Include="DmTkChitiet.cs" />
+    <Compile Include="DmTkChitiet.generated.cs" />
+    <Compile Include="DmTudo1.cs" />
+    <Compile Include="DmTudo1.generated.cs" />
+    <Compile Include="DmVuviec.cs" />
+    <Compile Include="DmVuviec.generated.cs" />
+    <Compile Include="Admin\HtBaocao.cs" />
+    <Compile Include="Admin\HtBaocao.generated.cs" />
+    <Compile Include="Admin\HtBienBaocao.cs" />
+    <Compile Include="Admin\HtBienBaocao.generated.cs" />
+    <Compile Include="HtDanhmuc.cs" />
+    <Compile Include="HtDanhmuc.generated.cs" />
+    <Compile Include="Admin\HtFileBaocao.cs" />
+    <Compile Include="Admin\HtFileBaocao.generated.cs" />
+    <Compile Include="HtLoaichungtu.cs" />
+    <Compile Include="HtLoaichungtu.generated.cs" />
+    <Compile Include="HtThamso.cs" />
+    <Compile Include="HtThamso.generated.cs" />
+    <Compile Include="LsTygia.cs" />
+    <Compile Include="LsTygia.generated.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
+      <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
+      <Name>Vns.Erp.Core.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Asset\" />
+    <Folder Include="Instr\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

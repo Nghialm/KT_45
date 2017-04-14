@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Produce.Domain" assembly="Vns.Erp.Core.Produce.Domain">
+	<class name="Vns.Erp.Core.Produce.Domain.SxPhieuKiemke, Vns.Erp.Core.Produce.Domain" table="SX_Phieu_KiemKe" lazy="true">
+		<id name="Id" column="KiemKe_M_Id">
+			<generator class="guid" />
+		</id>
+		<property name="LoaiPhieuId" column="LoaiPhieuId" type="System.Guid" />
+		<property name="MaLoaiPhieu" column="MaLoaiPhieu" type="string" />
+		<property name="TosanxuatId" column="ToSanXuat_Id" type="System.Guid" />
+		<property name="NgayKiemKe" column="NgayKiemKe" type="System.DateTime" />
+		<property name="CaKiemKe" column="CaKiemKe" type="int" />
+		<property name="NguoiLienQuan" column="NguoiLienQuan" type="string" />
+		<property name="NguoiKiemKe" column="NguoiKiemKe" type="string" />
+		<property name="SoKiemKe" column="SoKiemKe" type="string" />
+		<property name="MoTa" column="MoTa" type="string" />
+		<property name="TrangThai" column="TrangThai" type="int" />
+		<property name="DonviId" column="DonviId" type="System.Guid" />
+
+		<bag name="LstSxPhieuKiemkeSlD" cascade="none" table="SX_Phieu_KiemKe_Sl_D" lazy="false">
+			<key column="KiemKeM_Id"></key>
+			<one-to-many class="Vns.Erp.Core.Produce.Domain.SxPhieuKiemkeSlD" not-found="ignore"/>
+		</bag>
+
+		<bag name="LstSxPhieuKiemkeVtD" cascade="none" table="SX_Phieu_KiemKe_Vt_D" lazy="false">
+			<key column="KiemKeM_Id"></key>
+			<one-to-many class="Vns.Erp.Core.Produce.Domain.SxPhieuKiemkeVtD" not-found="ignore"/>
+		</bag>
+	</class>
+</hibernate-mapping>

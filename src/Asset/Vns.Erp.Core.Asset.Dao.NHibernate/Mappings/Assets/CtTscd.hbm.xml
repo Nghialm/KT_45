@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Asset.Domain" assembly="Vns.Erp.Core.Asset.Domain">
+	<class name="Vns.Erp.Core.Asset.Domain.CtTscd, Vns.Erp.Core.Asset.Domain" table="CT_TSCD" lazy="false">
+		<id name="Id" column="CT_TSCD_ID">
+			<generator class="guid" />
+		</id>
+    <property name="LoaiTaikhoan" column="LOAI_TAIKHOAN" type="String" length="64" />
+    <property name="TaikhoanId" column="TAIKHOAN_ID" type="Guid"  />
+    <property name="MaTaikhoan" column="MA_TAIKHOAN" type="String" length="64" />
+    <property name="CtdId" column="CTD_ID" type="Guid"  />
+    <property name="TscdId" column="TSCD_ID" type="Guid"  />
+    <property name="MaTscd" column="MA_TSCD" type="String" length="64" />
+    <property name="KyHieuTscd" column="KY_HIEU_TSCD" type="String" length="64" />
+    <property name="TenTscd" column="TEN_TSCD" type="String" length="255" />
+    <property name="SoTien" column="SO_TIEN" type="Decimal" precision="18" scale="0" />
+    <property name="SoTienNte" column="SO_TIEN_NTE" type="Decimal" precision="18" scale="2" />
+    <property name="KhangId" column="KHANG_ID" type="Guid"  />
+    <property name="MaKhang" column="MA_KHANG" type="String" length="64" />
+    <property name="KyHieuKhang" column="KY_HIEU_KHANG" type="String" length="128" />
+    <property name="TenKhang" column="TEN_KHANG" type="String" length="255" />
+    <property name="LydoTanggiam" column="LYDO_TANGGIAM" type="Guid"  />
+    <property name="TenLydoTanggiam" column="TEN_LYDO_TANGGIAM" type="String" length="255" />
+    <property name="DvtId" column="DVT_ID" type="Guid"  />
+    <property name="MaDvt" column="MA_DVT" type="String" length="64" />
+    <property name="TenDvt" column="TEN_DVT" type="String" length="255" />
+    <property name="LoaitaisanId" column="LOAITAISAN_ID" type="Guid"  />
+    <property name="MaLoaitaisan" column="MA_LOAITAISAN" type="String" length="64" />
+    <property name="NguyenGia" column="NGUYEN_GIA" type="Decimal" precision="18" scale="0" />
+    <property name="GiaTriCl" column="GIA_TRI_CL" type="Decimal" precision="18" scale="0" />
+    <property name="HaoMonLuyKe" column="HAO_MON_LUY_KE" type="Decimal" precision="18" scale="0" />
+    <property name="TyLeHaomon" column="TY_LE_HAOMON" type="Decimal" precision="5" scale="2" />
+    <property name="LoaiNghiepvu" column="LOAI_NGHIEPVU" type="Decimal" precision="4" scale="0" />
+    <property name="TangTscd" column="TANG_TSCD" type="Decimal" precision="4" scale="0" />
+    <property name="ThuTu" column="THU_TU" type="Decimal" precision="4" scale="0" />
+    <property name="NgayCt" column="NGAY_CT" type="DateTime"  />
+    <property name="NgayBdKh" column="NGAY_BD_KH" type="DateTime"  />
+    <property name="NgayKtKh" column="NGAY_KT_KH" type="DateTime"  />
+    <property name="SoNamSd" column="SO_NAM_SD" type="Decimal" precision="5" scale="2" />
+    <property name="SoThangSd" column="SO_THANG_SD" type="Decimal" precision="5" scale="0" />
+    <property name="SoCt" column="SO_CT" type="String" length="255" />
+    <property name="CthId" column="CTH_ID" type="Guid"  />
+    <property name="TkChiphi" column="TK_CHIPHI" type="Guid"  />
+    <property name="MaTkChiphi" column="MA_TK_CHIPHI" type="String" length="255" />
+
+    <many-to-one name="ObjDmTscd" column="TSCD_ID" class="DmTscd" insert="false" update="false" />
+	</class>
+</hibernate-mapping>

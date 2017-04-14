@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{6903B6FB-C64B-47C1-807D-ABF526B1A9C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Vns.Erp.Core</RootNamespace>
+    <AssemblyName>Vns.Erp.Core</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Vns.Erp.Core.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Vns.Erp.Core.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.Data.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.Utils.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraBars.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraEditors.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraGrid.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\DevEx10\DevExpress.XtraTreeList.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="LoadingCircle">
+      <HintPath>..\..\References\LoadingCircle.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\References\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\References\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\References\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\References\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\References\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop">
+      <HintPath>..\..\References\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\References\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationInitGlobal.vb" />
+    <Compile Include="Class1.vb" />
+    <Compile Include="ColumnInfo.vb" />
+    <Compile Include="Common\GeneralString.vb" />
+    <Compile Include="ConstantMsgs.vb" />
+    <Compile Include="ControlHanders\ComboHandle.vb" />
+    <Compile Include="ControlHanders\DataGridControlHandle.vb" />
+    <Compile Include="ControlHanders\GridLookUpEditHandle.vb" />
+    <Compile Include="ControlHanders\ListViewHandle.vb" />
+    <Compile Include="ControlHanders\LookUpEditHandle.vb" />
+    <Compile Include="ControlHanders\TextBoxHandle.vb" />
+    <Compile Include="ControlHanders\TextEditHandle.vb" />
+    <Compile Include="Controls\ComboHelper.vb" />
+    <Compile Include="Controls\ErrorProviderHelper.vb" />
+    <Compile Include="Crypto.vb" />
+    <Compile Include="CultureManagement.vb" />
+    <Compile Include="CultureSettingInfo.vb" />
+    <Compile Include="CulturesInfo.vb" />
+    <Compile Include="DataHelper.vb" />
+    <Compile Include="DataMining.vb" />
+    <Compile Include="Enum.vb" />
+    <Compile Include="FormCommon.vb" />
+    <Compile Include="Forms\ExportExcelAutoDefine.Designer.vb">
+      <DependentUpon>ExportExcelAutoDefine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExportExcelAutoDefine.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmBaseDmChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmBaseDmDanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GemboxExportExcel.Designer.vb">
+      <DependentUpon>GemboxExportExcel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GemboxExportExcel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GridExport.designer.vb">
+      <DependentUpon>GridExport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GridExport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GridFilter.designer.vb">
+      <DependentUpon>GridFilter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GridFilter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Progress.designer.vb">
+      <DependentUpon>Progress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Progress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewLog.Designer.vb">
+      <DependentUpon>ViewLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generals.vb" />
+    <Compile Include="Globals.vb" />
+    <Compile Include="GridCheckMarksSelection.vb" />
+    <Compile Include="GridConfig\ColInfo.vb" />
+    <Compile Include="GridConfig\ConfigGrid.designer.vb">
+      <DependentUpon>ConfigGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GridConfig\ConfigGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridHelper.vb" />
+    <Compile Include="Log.vb" />
+    <Compile Include="Log\CustomViewLog.Designer.vb">
+      <DependentUpon>CustomViewLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Log\CustomViewLog.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lov\CustomFilter.designer.vb">
+      <DependentUpon>CustomFilter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lov\CustomFilter.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lov\FilterGridview.vb" />
+    <Compile Include="Lov\GridViewFilterHelper.vb" />
+    <Compile Include="Lov\MultiFilterPopup.designer.vb">
+      <DependentUpon>MultiFilterPopup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lov\MultiFilterPopup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lov\PopupFilterInfo.vb" />
+    <Compile Include="Lov\RepositoryCommonFunctions.vb" />
+    <Compile Include="Lov\RepositoryItemPopupFilterEdit.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mining\DMOrder.vb" />
+    <Compile Include="Mining\FormDataInfo.vb" />
+    <Compile Include="Mining\ParamInfo.vb" />
+    <Compile Include="Mining\ShortCutInfo.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NPOIExcel\NPOIExcelHelper.vb" />
+    <Compile Include="Null.vb" />
+    <Compile Include="ParameterInfo.vb" />
+    <Compile Include="PhanBoHelper.vb" />
+    <Compile Include="SerializerUtil.vb" />
+    <Compile Include="SystemHelper.vb" />
+    <Compile Include="TNCommon.vb" />
+    <Compile Include="UserControl\BaseGridPopupForm.designer.vb">
+      <DependentUpon>BaseGridPopupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\BaseGridPopupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\MultiExportButton.designer.vb">
+      <DependentUpon>MultiExportButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\MultiExportButton.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Util\ObjectFactory.vb" />
+    <Compile Include="XMLConfig.vb" />
+    <Compile Include="ZipUtil.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ExportExcelAutoDefine.resx">
+      <DependentUpon>ExportExcelAutoDefine.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GemboxExportExcel.resx">
+      <DependentUpon>GemboxExportExcel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GridExport.resx">
+      <DependentUpon>GridExport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GridFilter.resx">
+      <DependentUpon>GridFilter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Progress.resx">
+      <DependentUpon>Progress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewLog.resx">
+      <DependentUpon>ViewLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridConfig\ConfigGrid.resx">
+      <DependentUpon>ConfigGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\CustomViewLog.resx">
+      <DependentUpon>CustomViewLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lov\CustomFilter.resx">
+      <DependentUpon>CustomFilter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lov\MultiFilterPopup.resx">
+      <DependentUpon>MultiFilterPopup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\BaseGridPopupForm.resx">
+      <DependentUpon>BaseGridPopupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\MultiExportButton.resx">
+      <DependentUpon>MultiExportButton.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Admin\Vns.Erp.Core.Admin.Domain\Vns.Erp.Core.Admin.Domain.csproj">
+      <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
+      <Name>Vns.Erp.Core.Admin.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
+      <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
+      <Name>Vns.Erp.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Dao.NHibernate\Vns.Erp.Core.Dao.NHibernate.csproj">
+      <Project>{4A9608F9-7C07-4672-ACA5-D81672435F62}</Project>
+      <Name>Vns.Erp.Core.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Dao\Vns.Erp.Core.Dao.csproj">
+      <Project>{4954B581-A0CA-43C7-B3FD-274B05148BEF}</Project>
+      <Name>Vns.Erp.Core.Dao</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAndClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Replace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DelRow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icNext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icFirst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icLast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icUnlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icLock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icWord.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icExcel.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Domain" assembly="Vns.Erp.Core.Accounting.Domain">
+	<class name="Vns.Erp.Core.Accounting.Domain.KtCtDHddv, Vns.Erp.Core.Accounting.Domain" table="KT_CT_D_HDDV" lazy="true">
+		<id name="Id" column="CTD_HDDV_ID">
+			<generator class="guid" />
+		</id>
+		<property name="CthHddvId" column="CTH_HDDV_ID" type="Guid"/>
+		<property name="TkNoId" column="TK_NO_ID" type="Guid"/>
+		<property name="MaTkNo" column="MA_TK_NO" type="String" length="64"/>
+		<property name="TenTkNo" column="TEN_TK_NO" type="String" length="128"/>
+		<property name="TkCoId" column="TK_CO_ID" type="Guid"/>
+		<property name="MaTkCo" column="MA_TK_CO" type="String" length="64"/>
+		<property name="TenTkCo" column="TEN_TK_CO" type="String" length="128"/>
+		<property name="SoTien" column="SO_TIEN" type="Decimal" precision="18" scale="0"/>
+		<property name="SoTienNte" column="SO_TIEN_NTE" type="Decimal" precision="18" scale="2"/>
+		<property name="TyLeCk" column="TY_LE_CK" type="Decimal" precision="5" scale="2"/>
+		<property name="SoTienCk" column="SO_TIEN_CK" type="Decimal" precision="18" scale="0"/>
+		<property name="TkNoIdCk" column="TK_NO_ID_CK" type="Guid"/>
+		<property name="MaTkNoCk" column="MA_TK_NO_CK" type="String" length="64"/>
+		<property name="TkCoIdCk" column="TK_CO_ID_CK" type="Guid"/>
+		<property name="MaTkCoCk" column="MA_TK_CO_CK" type="String" length="64"/>
+		<property name="TyLeThueGtgt" column="TY_LE_THUE_GTGT" type="Decimal" precision="5" scale="2"/>
+		<property name="SoTienThueGtgt" column="SO_TIEN_THUE_GTGT" type="Decimal" precision="18" scale="0"/>
+		<property name="TkNoIdGtgt" column="TK_NO_ID_GTGT" type="Guid"/>
+		<property name="MaTkNoGtgt" column="MA_TK_NO_GTGT" type="String" length="64"/>
+		<property name="TkCoIdGtgt" column="TK_CO_ID_GTGT" type="Guid"/>
+		<property name="MaTkCoGtgt" column="MA_TK_CO_GTGT" type="String" length="64"/>
+		<property name="Dvt" column="DVT" type="String" length="64"/>
+		<property name="SoLuong" column="SO_LUONG" type="Decimal" precision="18" scale="3"/>
+		<property name="DonGia" column="DON_GIA" type="Decimal" precision="18" scale="0"/>
+		<property name="NoiDung" column="NOI_DUNG" type="String" length="512"/>
+		<property name="IdDmHopdongNo" column="ID_DM_HOPDONG_NO" type="Guid"/>
+		<property name="MaHopdongNo" column="MA_HOPDONG_NO" type="String" length="64"/>
+		<property name="KyHieuHopdongNo" column="KY_HIEU_HOPDONG_NO" type="String" length="64"/>
+		<property name="TenHopdongNo" column="TEN_HOPDONG_NO" type="String" length="128"/>
+		<property name="IdDmHopdongCo" column="ID_DM_HOPDONG_CO" type="Guid"/>
+		<property name="MaHopdongCo" column="MA_HOPDONG_CO" type="String" length="64"/>
+		<property name="KyHieuHopdongCo" column="KY_HIEU_HOPDONG_CO" type="String" length="128"/>
+		<property name="TenHopdongCo" column="TEN_HOPDONG_CO" type="String" length="64"/>
+		<property name="IdDmPtqtNo" column="ID_DM_PTQT_NO" type="Guid"/>
+		<property name="IdDmPtqtCo" column="ID_DM_PTQT_CO" type="Guid"/>
+		<property name="IdDmPhongbanNo" column="ID_DM_PHONGBAN_NO" type="Guid"/>
+		<property name="IdDmPhongbanCo" column="ID_DM_PHONGBAN_CO" type="Guid"/>
+		<property name="IdCtGhiso" column="ID_CT_GHISO" type="Guid"/>
+		<property name="MaCtGhisoSo" column="MA_CT_GHISO_SO" type="String" length="64"/>
+		<property name="CtGhisoTrichyeu" column="CT_GHISO_TRICHYEU" type="String" length="64"/>
+		<property name="CtGhisoNgay" column="CT_GHISO_NGAY" type="DateTime"/>
+		<property name="DaGhiso" column="DA_GHISO" type="Decimal" precision="4" scale="0"/>
+		<property name="IdDmVuviecNo" column="ID_DM_VUVIEC_NO" type="Guid"/>
+		<property name="MaVuviecNo" column="MA_VUVIEC_NO" type="String" length="64"/>
+		<property name="KyHieuVuviecNo" column="KY_HIEU_VUVIEC_NO" type="String" length="64"/>
+		<property name="IdDmVuviecCo" column="ID_DM_VUVIEC_CO" type="Guid"/>
+		<property name="MaVuviecCo" column="MA_VUVIEC_CO" type="String" length="64"/>
+		<property name="KyHieuVuviecCo" column="KY_HIEU_VUVIEC_CO" type="String" length="128"/>
+		<property name="IdDmTudo1No" column="ID_DM_TUDO_1_NO" type="Guid"/>
+		<property name="IdDmTudo1Co" column="ID_DM_TUDO_1_CO" type="Guid"/>
+		<property name="IdDmTudo2No" column="ID_DM_TUDO_2_NO" type="Guid"/>
+		<property name="IdDmTudo2Co" column="ID_DM_TUDO_2_CO" type="Guid"/>
+		<property name="IdDmTudo3No" column="ID_DM_TUDO_3_NO" type="Guid"/>
+		<property name="IdDmTudo3Co" column="ID_DM_TUDO_3_CO" type="Guid"/>
+		<property name="IdDmTudo4No" column="ID_DM_TUDO_4_NO" type="Guid"/>
+		<property name="IdDmTudo4Co" column="ID_DM_TUDO_4_CO" type="Guid"/>
+		<property name="IdDmTudo5No" column="ID_DM_TUDO_5_NO" type="Guid"/>
+		<property name="IdDmTudo5Co" column="ID_DM_TUDO_5_CO" type="Guid"/>
+		<property name="LoaiNghiepVu" column="LOAI_NGHIEP_VU" type="Decimal" precision="4" scale="0"/>
+		<property name="IdKhangNo" column="ID_KHANG_NO" type="Guid"/>
+		<property name="MaKhangNo" column="MA_KHANG_NO" type="String" length="64"/>
+		<property name="IdKhangCo" column="ID_KHANG_CO" type="Guid"/>
+		<property name="MaKhangCo" column="MA_KHANG_CO" type="String" length="64"/>
+		<property name="IdDoituong1" column="ID_DOITUONG_1" type="Guid"/>
+		<property name="MaDoituong1" column="MA_DOITUONG_1" type="String" length="64"/>
+		<property name="TenDoituong1" column="TEN_DOITUONG_1" type="String" length="128"/>
+		<property name="IdDoituong2" column="ID_DOITUONG_2" type="Guid"/>
+		<property name="MaDoituong2" column="MA_DOITUONG_2" type="String" length="64"/>
+		<property name="TenDoituong2" column="TEN_DOITUONG_2" type="String" length="128"/>
+		<property name="IdDoituong3" column="ID_DOITUONG_3" type="Guid"/>
+		<property name="MaDoituong3" column="MA_DOITUONG_3" type="String" length="64"/>
+		<property name="TenDoituong3" column="TEN_DOITUONG_3" type="String" length="128"/>
+		<property name="IdDmKhoanphiNo" column="ID_DM_KHOANPHI_NO" type="Guid"/>
+		<property name="IdDmKhoanphiCo" column="ID_DM_KHOANPHI_CO" type="Guid"/>
+		<property name="TyGiaChenhlech" column="TY_GIA_CHENHLECH" type="Decimal" precision="18" scale="0"/>
+		<property name="Nhom" column="NHOM" type="Decimal" precision="4" scale="0"/>
+		<property name="BxNgay1" column="BX_NGAY_1" type="DateTime"/>
+		<property name="BxNgay2" column="BX_NGAY_2" type="DateTime"/>
+		<property name="BxNgay3" column="BX_NGAY_3" type="DateTime"/>
+		<property name="BxSoTien1" column="BX_SO_TIEN_1" type="Decimal" precision="18" scale="0"/>
+		<property name="BxSoTien2" column="BX_SO_TIEN_2" type="Decimal" precision="18" scale="0"/>
+		<property name="BxSoTien3" column="BX_SO_TIEN_3" type="Decimal" precision="18" scale="0"/>
+		<property name="BxDienGiai1" column="BX_DIEN_GIAI_1" type="String" length="256"/>
+		<property name="BxDienGiai2" column="BX_DIEN_GIAI_2" type="String" length="256"/>
+		<property name="BxDienGiai3" column="BX_DIEN_GIAI_3" type="String" length="256"/>
+		<property name="DoanhThu" column="DOANH_THU" type="Decimal" precision="18" scale="0"/>
+		<property name="DoanhThuNte" column="DOANH_THU_NTE" type="Decimal" precision="18" scale="2"/>
+		<property name="TienMg" column="TIEN_MG" type="Decimal" precision="18" scale="0"/>
+		<property name="TenHhDv" column="TEN_HH_DV" type="String" length="256"/>
+		<property name="DonGiaNte" column="DON_GIA_NTE" type="Decimal" precision="18" scale="2"/>
+		<property name="SoTienCkNte" column="SO_TIEN_CK_NTE" type="Decimal" precision="18" scale="2"/>
+		<property name="IdDoituongHoadon" column="ID_DOITUONG_HOADON" type="Guid"/>
+		<property name="PhanHe" column="PHAN_HE" type="Decimal" precision="4" scale="0"/>
+		<property name="MaRo" column="MA_RO" type="String" length="64"/>
+		<property name="TenRo" column="TEN_RO" type="String" length="128"/>
+		<property name="KyHieuKhangNo" column="KY_HIEU_KHANG_NO" type="String" length="128"/>
+		<property name="TenKhangNo" column="TEN_KHANG_NO" type="String" length="256"/>
+		<property name="KyHieuKhangCo" column="KY_HIEU_KHANG_CO" type="String" length="128"/>
+		<property name="TenKhangCo" column="TEN_KHANG_CO" type="String" length="256"/>
+    <property name="ThueId" column="THUE_ID" type="Guid"/>
+    <property name="TenThue" column="TEN_THUE" type="String" length="256"/>
+    <many-to-one name="ObjKtCtHHddv" column="CTH_HDDV_ID" class="KtCtHHddv" insert="false" update="false" not-found="ignore"/>
+	</class>
+</hibernate-mapping>

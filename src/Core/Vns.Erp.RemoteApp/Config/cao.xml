@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects	
+	xmlns="http://www.springframework.net" 
+	xmlns:r="http://www.springframework.net/remoting">
+	
+	<description>Registers the calculator service as a CAO.</description>
+	
+
+  <r:caoExporter targetName="AppGroupsService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppUsersService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="DmDonviService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppDvGroupUserService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="HtThamsoService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppFormsService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppUsergroupService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppGroupFunctionService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppDvBcService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppDvGroupBcService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="HtBaocaoService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppGroupFormsService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="AppUgFormService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppHGroupFunctService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppCtStatusService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppDvFormService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppHGroupFormService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppDvGroupFormService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="HtLoaichungtuService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="AppDvGroupService" infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="DmTaikhoanService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="HtFileBaocaoService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="HtBienBaocaoService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="DmTkChitietService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="DmPhongbanService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="DmKhangService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="HtDanhmucService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="DmNhomKhangService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="DmNhomvattu1Service"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  
+  <r:caoExporter targetName="DmDvtService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="DmHanghoaService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="DmTudo1Service"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="DmTudo2Service"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="DmTudo3Service"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="DmTudo4Service"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="DmTudo5Service"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="DmKhoService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="DmBtKetchuyenService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="DmKhoanphiService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="DmVuviecService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="DmHopdongService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="LsTygiaService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="DmNgoaiteService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="DmThueService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="DmPtqtService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="KtKhoasoThangService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="KtStatusCtService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="HtSoChungtuMaxService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <!--Ke Toan-->
+  <r:caoExporter targetName="BcKetoanService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="CtDService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="CtHService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="CtHoadonService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="CtThueService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="CtHNxService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="CtDNxService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="BcKetoanKhoService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+
+  <!--Tai san co dinh-->
+  <r:caoExporter targetName="DmLoaitaisanService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="DmTscdService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="TsCtTscdNvonService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="TsTscdPtungService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="CtTscdService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="TsDieuchuyenService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+
+  <r:caoExporter targetName="DmLydoTgTscdService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="DmNhomTscdService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="DmNguonTscdService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <!--Thiet lap bao cao-->
+  <r:caoExporter targetName="KtDieukienBcService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="KtHBaocaoService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="KtHCotService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="KtHDongService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+  <r:caoExporter targetName="KtDmBtPhanboService"  infinite="false">
+    <r:lifeTime initialLeaseTime="2m" renewOnCallTime="1m" />
+  </r:caoExporter>
+	
+</objects>

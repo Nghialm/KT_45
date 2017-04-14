@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Produce.Domain" assembly="Vns.Erp.Core.Produce.Domain">
+  <class name="Vns.Erp.Core.Produce.Domain.SxLenhsanxuat, Vns.Erp.Core.Produce.Domain" table="SX_LenhSanXuat" lazy="true">
+    <id name="Id" column="LenhSX_Id">
+      <generator class="assigned" />
+    </id>
+    <property name="KehoachMId" column="KeHoach_M_Id" type="System.Guid" />
+    <property name="SoKeHoach" column="So_Kehoach" type="string" />
+    <property name="PhancongId" column="PhanCong_Id" type="System.Guid" />
+    <property name="IdLoaiCt" column="Id_LoaiCt" type="System.Guid" />
+    <property name="KyHieuLoaiCt" column="KyHieu_Loai_Ct" type="string" />
+    <property name="MaLoaiCt" column="Ma_Loai_Ct" type="string" />
+    <property name="PrefixCt" column="PrefixCt" type="string" />
+    <property name="BuocPhanCong" column="Buoc_Phancong" type="int" />
+    <property name="TosanxuatId" column="ToSanXuat_Id" type="System.Guid" />
+    <property name="MaToSanXuat" column="Ma_ToSanXuat" type="string" />
+    <property name="QuyTrinhId" column="QuyTrinh_Id" type="System.Guid" />
+    <property name="MaQuyTrinh" column="Ma_QuyTrinh" type="string" />
+    <property name="KhachHangId" column="KhachHang_Id" type="System.Guid" />
+    <property name="MaKhachHang" column="Ma_KhachHang" type="string" />
+    <property name="TenKhachHang" column="Ten_KhachHang" type="string" />
+    <property name="NgayBanHanh" column="NgayBanHanh" type="System.DateTime" />
+    <property name="NguoiBanHanh" column="NguoiBanHanh" type="string" />
+    <property name="NgayGiaoLenh" column="NgayGiaoLenh" type="System.DateTime" />
+    <property name="NguoiGiaoLenh" column="NguoiGiaoLenh" type="string" />
+    <property name="SoLenhSanXuat" column="SoLenhSanXuat" type="string" />
+    <property name="MoTa" column="MoTa" type="string" />
+    <property name="TrangThai" column="TrangThai" type="int" />
+    <property name="SoNhanCong" column="So_Nhancong" type="int" />
+    <property name="DonviId" column="Donvi_Id" type="System.Guid" />
+
+    <property name="NgayBatDau" column="NgayBatDau" type="System.DateTime" />
+    <property name="NgayKetThuc" column="NgayKetThuc" type="System.DateTime" />
+
+    <many-to-one name="ObjKeHoachSx" column="KeHoach_M_Id" class="Vns.Erp.Core.Produce.Domain.SxKehoachM, Vns.Erp.Core.Produce.Domain" insert="false" update="false" />
+    <many-to-one name="ObjDmQuyTrinh" column="QuyTrinh_Id" class="Vns.Erp.Core.Produce.Domain.SxDmQuytrinh, Vns.Erp.Core.Produce.Domain" insert="false" update="false" />
+    
+    <bag name="LstLenhSanXuatDetail" cascade="none" table="SX_LenhSanXuat_D" lazy="false">
+      <key column="LenhSanXuat_Id"></key>
+      <one-to-many class="Vns.Erp.Core.Produce.Domain.SxLenhsanxuatD" not-found="ignore"/>
+    </bag>
+
+    <bag name="LstVatTuNhap" cascade="none" table="BC_KETOAN_KHO" lazy="false">
+      <key column="Lenh_San_Xuat_Nhap_Id"></key>
+      <one-to-many class="Vns.Erp.Core.Accounting.Domain.BcKetoanKho, Vns.Erp.Core.Accounting.Domain" not-found="ignore"/>
+    </bag>
+    <bag name="LstVatTuXuat" cascade="none" table="BC_KETOAN_KHO" lazy="false">
+      <key column="Lenh_San_Xuat_Xuat_Id"></key>
+      <one-to-many class="Vns.Erp.Core.Accounting.Domain.BcKetoanKho, Vns.Erp.Core.Accounting.Domain" not-found="ignore"/>
+    </bag>
+  </class>
+</hibernate-mapping>

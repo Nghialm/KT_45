@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.Erp.Core.Admin.Domain.AppForms,Vns.Erp.Core.Admin.Domain" table="APP_FORMS" lazy="false">
+<!--
+		<id name="Id" column="FormId" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+-->    
+    <id name="Id" column="FormId">
+      <generator class="guid" />
+    </id>    
+		<property column="FormName" type="String" name="FormName" length="256" />
+		<property column="FormText" type="String" name="FormText" length="250" />
+		<property column="ParentName" type="String" name="ParentName" length="50" />
+		<property column="MenuName" type="String" name="MenuName" length="50" />
+		<property column="MenuText" type="String" name="MenuText" length="250" />
+		<property column="FormParam" type="String" name="FormParam" length="500" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Produce.Domain" assembly="Vns.Erp.Core.Produce.Domain">
+	<class name="Vns.Erp.Core.Produce.Domain.SxQuytrinhDinhmuc, Vns.Erp.Core.Produce.Domain" table="SX_QuyTrinh_DinhMuc" lazy="true">
+		<id name="Id" column="DinhMuc_Id">
+			<generator class="guid" />
+		</id>
+		<property name="QuytrinhId" column="QuyTrinh_Id" type="System.Guid" />
+		<property name="VatlieuDauvaoId" column="VatLieu_DauVao_Id" type="System.Guid" />
+		<property name="VatlieuDauraId" column="VatLieu_DauRa_Id" type="System.Guid" />
+		<property name="TenChiphi" column="Ten_ChiPhi" type="string" />
+		<property name="DvtId" column="Dvt_Id" type="System.Guid" />
+		<property name="SoLuong" column="So_Luong" type="decimal" />
+		<property name="MoTa" column="Mo_Ta" type="string" />
+		<property name="LoaiChiPhi" column="Loai_Chi_Phi" type="int" />
+		<property name="LoaiQuyTrinh" column="Loai_Quy_Trinh" type="int" />
+		<property name="SoTien" column="So_Tien" type="decimal" />
+		<property name="TyLeHaohut" column="Ty_Le_HaoHut" type="decimal" precision="5" scale="2"/>
+		<property name="DonviId" column="Donvi_Id" type="System.Guid" />
+	</class>
+</hibernate-mapping>

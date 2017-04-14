@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
+	<class name="Vns.Erp.Core.Admin.Domain.HtFileBaocao, Vns.Erp.Core.Admin.Domain" table="HT_FILE_BAOCAO" lazy="false">
+		<id name="Id" column="ID">
+			<generator class="guid" />
+		</id>
+		<property name="HtBaocaoId" column="HT_BAOCAO_ID" type="Guid"/>
+		<property name="DuongDan" column="DUONG_DAN" type="String" length="512"/>
+		<property name="MoTa" column="MO_TA" type="String" length="512"/>
+		<property name="TenFileBaocao" column="TEN_FILE_BAOCAO" type="String" length="512"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,1004 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{676649F7-9F89-4C2F-A34C-ED5D9889957E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>Vns.Erp.Core.Admin.VbAdminGUI</RootNamespace>
+    <AssemblyName>Vns.Erp.Core.Admin.VbAdminGUI</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Vns.Erp.Core.Admin.VbAdminGUI.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Vns.Erp.Core.Admin.VbAdminGUI.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\..\References\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net">
+      <HintPath>..\..\..\References\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.BonusSkins.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.Data.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.OfficeSkins.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.Utils.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.Xpo.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraBars.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraBars.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraEditors.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraGrid.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraGrid.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraLayout.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraLayout.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraNavBar.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraNavBar.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraPrinting.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraPrinting.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraReports.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraRichEdit.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraRichEdit.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.2.Extensions, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraRichEdit.v10.2.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.2.Core, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraTreeList.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraTreeList.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraVerticalGrid.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraVerticalGrid.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\..\References\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zlib">
+      <HintPath>..\..\..\References\Ionic.Zlib.dll</HintPath>
+    </Reference>
+    <Reference Include="LoadingCircle, Version=1.0.2804.24934, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\LoadingCircle.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\References\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MacroScope">
+      <HintPath>..\..\..\References\MacroScope.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\References\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Nullables">
+      <HintPath>..\..\..\References\Nullables.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\..\References\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\..\References\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate32">
+      <HintPath>..\..\..\References\Spring.Data.NHibernate32.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Services">
+      <HintPath>..\..\..\References\Spring.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web">
+      <HintPath>..\..\..\References\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vns.Erp.Wcf.Client">
+      <HintPath>..\..\..\References\Vns.Erp.Wcf.Client.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminMessage.vb" />
+    <Compile Include="Admin\frmChangePassword.designer.vb">
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmGroupEdit.designer.vb">
+      <DependentUpon>frmGroupEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmGroupEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmThamSoHeThong.designer.vb">
+      <DependentUpon>frmThamSoHeThong.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmThamSoHeThong.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmUserEdit.Designer.vb">
+      <DependentUpon>frmUserEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmUserEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmUserRightList.Designer.vb">
+      <DependentUpon>frmUserRightList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmUserRightList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucDonVi_ChiTietOnline.Designer.vb">
+      <DependentUpon>frmDanhMucDonVi_ChiTietOnline.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucDonVi_ChiTietOnline.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucDonViTinh_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucDonViTinh_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucDonViTinh_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucDonViTinh_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucDonViTinh_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucDonViTinh_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucDonVi_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucDonVi_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucDonVi_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucDonVi_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucDonVi_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucDonVi_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucHangHoa_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucHangHoa_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucHangHoa_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucHangHoa_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucHangHoa_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucHangHoa_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucHopDong_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucHopDong_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucHopDong_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucHopDong_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucHopDong_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucHopDong_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucKhachHang_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucKhachHang_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucKhachHang_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucKhachHang_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucKhachHang_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucKhachHang_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucKhoanPhi_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucKhoanPhi_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucKhoanPhi_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucKhoanPhi_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucKhoanPhi_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucKhoanPhi_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucKho_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucKho_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucKho_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucKho_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucKho_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucKho_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucLoaiChungTu_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucLoaiChungTu_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucLoaiChungTu_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucLoaiChungTu_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucLoaiChungTu_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucLoaiChungTu_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucNgoaiTe_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucNgoaiTe_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucNgoaiTe_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucNgoaiTe_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucNgoaiTe_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucNgoaiTe_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucNhomKhachHang_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucNhomKhachHang_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucNhomKhachHang_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucNhomKhachHang_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucNhomKhachHang_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucNhomKhachHang_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucNhomVatTu1_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucNhomVatTu1_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucNhomVatTu1_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucNhomVatTu1_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucNhomVatTu1_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucNhomVatTu1_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucPhongBan_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucPhongBan_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucPhongBan_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucPhongBan_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucPhongBan_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucPhongBan_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucPhuongThucQuanTri_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucPhuongThucQuanTri_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucPhuongThucQuanTri_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucPhuongThucQuanTri_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucPhuongThucQuanTri_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucPhuongThucQuanTri_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTaiKhoan_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucTaiKhoan_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTaiKhoan_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTaiKhoan_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucTaiKhoan_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTaiKhoan_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucThue_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucThue_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucThue_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucThue_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucThue_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucThue_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo1_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucTuDo1_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo1_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo1_DanhSach.designer.vb">
+      <DependentUpon>frmDanhMucTuDo1_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo1_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo2_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucTuDo2_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo2_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo2_DanhSach.designer.vb">
+      <DependentUpon>frmDanhMucTuDo2_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo2_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo3_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucTuDo3_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo3_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo3_DanhSach.designer.vb">
+      <DependentUpon>frmDanhMucTuDo3_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo3_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo4_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucTuDo4_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo4_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo4_DanhSach.designer.vb">
+      <DependentUpon>frmDanhMucTuDo4_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucTuDo4_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucVuViec_ChiTiet.Designer.vb">
+      <DependentUpon>frmDanhMucVuViec_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucVuViec_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucVuViec_DanhSach.Designer.vb">
+      <DependentUpon>frmDanhMucVuViec_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhMucVuViec_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhSachKhachHangSinhTrongThang.Designer.vb">
+      <DependentUpon>frmDanhSachKhachHangSinhTrongThang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmDanhSachKhachHangSinhTrongThang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmLS_TyGiaNgoaiTe_ChiTiet.Designer.vb">
+      <DependentUpon>frmLS_TyGiaNgoaiTe_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmLS_TyGiaNgoaiTe_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmLS_TyGiaNgoaiTe_DanhSach.Designer.vb">
+      <DependentUpon>frmLS_TyGiaNgoaiTe_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmLS_TyGiaNgoaiTe_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\frmCultureSetting2.designer.vb">
+      <DependentUpon>frmCultureSetting2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmCultureSetting2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\frmNamKeToan.designer.vb">
+      <DependentUpon>frmNamKeToan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmNamKeToan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\frmSetupHMenu.designer.vb">
+      <DependentUpon>frmSetupHMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmSetupHMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\frmSetupMenu.Designer.vb">
+      <DependentUpon>frmSetupMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\frmSetupMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Permission\frmDonviBaocao.Designer.vb">
+      <DependentUpon>frmDonviBaocao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmDonviBaocao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmDonviGroup.Designer.vb">
+      <DependentUpon>frmDonviGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmDonviGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmDonviGroupBaocao.designer.vb">
+      <DependentUpon>frmDonviGroupBaocao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmDonviGroupBaocao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmDonviGroupForm.Designer.vb">
+      <DependentUpon>frmDonviGroupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmDonviGroupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmDonviGroupUser.designer.vb">
+      <DependentUpon>frmDonviGroupUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmDonviGroupUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmGrantStatusGroup.designer.vb">
+      <DependentUpon>frmGrantStatusGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmGrantStatusGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmHPopupOfSetup.Designer.vb">
+      <DependentUpon>frmHPopupOfSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmHPopupOfSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmPermission.designer.vb">
+      <DependentUpon>frmPermission.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmPermission.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmPopupOfPermission.Designer.vb">
+      <DependentUpon>frmPopupOfPermission.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmPopupOfPermission.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmPopupOfSetup.Designer.vb">
+      <DependentUpon>frmPopupOfSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmPopupOfSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmResources.Designer.vb">
+      <DependentUpon>frmResources.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmResources.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permission\frmSecurity.designer.vb">
+      <DependentUpon>frmSecurity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Permission\frmSecurity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RpSetting\ColumnReportInfo.vb" />
+    <Compile Include="RpSetting\CommonClass.vb" />
+    <Compile Include="RpSetting\frmThemSuaXoa.Designer.vb">
+      <DependentUpon>frmThemSuaXoa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RpSetting\frmThemSuaXoa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RpSetting\ReportTreeListControl.designer.vb">
+      <DependentUpon>ReportTreeListControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RpSetting\ReportTreeListControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmGroupEdit.resx">
+      <DependentUpon>frmGroupEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmThamSoHeThong.resx">
+      <DependentUpon>frmThamSoHeThong.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmUserEdit.resx">
+      <DependentUpon>frmUserEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmUserRightList.resx">
+      <DependentUpon>frmUserRightList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucDonVi_ChiTietOnline.resx">
+      <DependentUpon>frmDanhMucDonVi_ChiTietOnline.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucDonViTinh_ChiTiet.resx">
+      <DependentUpon>frmDanhMucDonViTinh_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucDonViTinh_DanhSach.resx">
+      <DependentUpon>frmDanhMucDonViTinh_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucDonVi_ChiTiet.resx">
+      <DependentUpon>frmDanhMucDonVi_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucDonVi_DanhSach.resx">
+      <DependentUpon>frmDanhMucDonVi_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucHangHoa_ChiTiet.resx">
+      <DependentUpon>frmDanhMucHangHoa_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucHangHoa_DanhSach.resx">
+      <DependentUpon>frmDanhMucHangHoa_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucHopDong_ChiTiet.resx">
+      <DependentUpon>frmDanhMucHopDong_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucHopDong_DanhSach.resx">
+      <DependentUpon>frmDanhMucHopDong_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucKhachHang_ChiTiet.resx">
+      <DependentUpon>frmDanhMucKhachHang_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucKhachHang_DanhSach.resx">
+      <DependentUpon>frmDanhMucKhachHang_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucKhoanPhi_ChiTiet.resx">
+      <DependentUpon>frmDanhMucKhoanPhi_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucKhoanPhi_DanhSach.resx">
+      <DependentUpon>frmDanhMucKhoanPhi_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucKho_ChiTiet.resx">
+      <DependentUpon>frmDanhMucKho_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucKho_DanhSach.resx">
+      <DependentUpon>frmDanhMucKho_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucLoaiChungTu_ChiTiet.resx">
+      <DependentUpon>frmDanhMucLoaiChungTu_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucLoaiChungTu_DanhSach.resx">
+      <DependentUpon>frmDanhMucLoaiChungTu_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucNgoaiTe_ChiTiet.resx">
+      <DependentUpon>frmDanhMucNgoaiTe_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucNgoaiTe_DanhSach.resx">
+      <DependentUpon>frmDanhMucNgoaiTe_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucNhomKhachHang_ChiTiet.resx">
+      <DependentUpon>frmDanhMucNhomKhachHang_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucNhomKhachHang_DanhSach.resx">
+      <DependentUpon>frmDanhMucNhomKhachHang_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucNhomVatTu1_ChiTiet.resx">
+      <DependentUpon>frmDanhMucNhomVatTu1_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucNhomVatTu1_DanhSach.resx">
+      <DependentUpon>frmDanhMucNhomVatTu1_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucPhongBan_ChiTiet.resx">
+      <DependentUpon>frmDanhMucPhongBan_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucPhongBan_DanhSach.resx">
+      <DependentUpon>frmDanhMucPhongBan_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucPhuongThucQuanTri_ChiTiet.resx">
+      <DependentUpon>frmDanhMucPhuongThucQuanTri_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucPhuongThucQuanTri_DanhSach.resx">
+      <DependentUpon>frmDanhMucPhuongThucQuanTri_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucTaiKhoan_ChiTiet.resx">
+      <DependentUpon>frmDanhMucTaiKhoan_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucTaiKhoan_DanhSach.resx">
+      <DependentUpon>frmDanhMucTaiKhoan_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucThue_ChiTiet.resx">
+      <DependentUpon>frmDanhMucThue_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucThue_DanhSach.resx">
+      <DependentUpon>frmDanhMucThue_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucTuDo1_ChiTiet.resx">
+      <DependentUpon>frmDanhMucTuDo1_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucTuDo1_DanhSach.resx">
+      <DependentUpon>frmDanhMucTuDo1_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucTuDo2_ChiTiet.resx">
+      <DependentUpon>frmDanhMucTuDo2_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucTuDo2_DanhSach.resx">
+      <DependentUpon>frmDanhMucTuDo2_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucTuDo3_ChiTiet.resx">
+      <DependentUpon>frmDanhMucTuDo3_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucTuDo3_DanhSach.resx">
+      <DependentUpon>frmDanhMucTuDo3_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucTuDo4_ChiTiet.resx">
+      <DependentUpon>frmDanhMucTuDo4_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucTuDo4_DanhSach.resx">
+      <DependentUpon>frmDanhMucTuDo4_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucVuViec_ChiTiet.resx">
+      <DependentUpon>frmDanhMucVuViec_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhMucVuViec_DanhSach.resx">
+      <DependentUpon>frmDanhMucVuViec_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDanhSachKhachHangSinhTrongThang.resx">
+      <DependentUpon>frmDanhSachKhachHangSinhTrongThang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmLS_TyGiaNgoaiTe_ChiTiet.resx">
+      <DependentUpon>frmLS_TyGiaNgoaiTe_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmLS_TyGiaNgoaiTe_DanhSach.resx">
+      <DependentUpon>frmLS_TyGiaNgoaiTe_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmCultureSetting2.resx">
+      <DependentUpon>frmCultureSetting2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmNamKeToan.resx">
+      <DependentUpon>frmNamKeToan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmSetupHMenu.resx">
+      <DependentUpon>frmSetupHMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\frmSetupMenu.resx">
+      <DependentUpon>frmSetupMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmDonviBaocao.resx">
+      <DependentUpon>frmDonviBaocao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmDonviGroup.resx">
+      <DependentUpon>frmDonviGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmDonviGroupBaocao.resx">
+      <DependentUpon>frmDonviGroupBaocao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmDonviGroupForm.resx">
+      <DependentUpon>frmDonviGroupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmDonviGroupUser.resx">
+      <DependentUpon>frmDonviGroupUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmGrantStatusGroup.resx">
+      <DependentUpon>frmGrantStatusGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmHPopupOfSetup.resx">
+      <DependentUpon>frmHPopupOfSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmPermission.resx">
+      <DependentUpon>frmPermission.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmPopupOfPermission.resx">
+      <DependentUpon>frmPopupOfPermission.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmPopupOfSetup.resx">
+      <DependentUpon>frmPopupOfSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmResources.resx">
+      <DependentUpon>frmResources.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permission\frmSecurity.resx">
+      <DependentUpon>frmSecurity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RpSetting\frmThemSuaXoa.resx">
+      <DependentUpon>frmThemSuaXoa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RpSetting\ReportTreeListControl.resx">
+      <DependentUpon>ReportTreeListControl.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Import\Imp_Dm_HangHoa.xls" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Admin\Vns.Core.Admin.Dao\Vns.Erp.Core.Admin.Dao.csproj">
+      <Project>{BD3B9C3B-64F2-4046-B1A0-6C113B5E6025}</Project>
+      <Name>Vns.Erp.Core.Admin.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Core.Admin.NHibernate\Vns.Erp.Core.Admin.Dao.NHibernate.csproj">
+      <Project>{796175DC-C46A-47D7-9B3E-A80779B2330C}</Project>
+      <Name>Vns.Erp.Core.Admin.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Core.Admin.Service\Vns.Erp.Core.Admin.Service.csproj">
+      <Project>{B1C4C1BD-E65B-4F2D-B300-0A670E1F57C6}</Project>
+      <Name>Vns.Erp.Core.Admin.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Erp.Core.Admin.Domain\Vns.Erp.Core.Admin.Domain.csproj">
+      <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
+      <Name>Vns.Erp.Core.Admin.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
+      <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
+      <Name>Vns.Erp.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Service\Vns.Erp.Core.Service.csproj">
+      <Project>{F213FDB0-2CE0-41E6-8680-050276412F38}</Project>
+      <Name>Vns.Erp.Core.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core\Vns.Erp.Core.vbproj">
+      <Project>{6903B6FB-C64B-47C1-807D-ABF526B1A9C3}</Project>
+      <Name>Vns.Erp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Dao.NHibernate\Vns.Erp.Core.Dao.NHibernate.csproj">
+      <Project>{4A9608F9-7C07-4672-ACA5-D81672435F62}</Project>
+      <Name>Vns.Erp.Core.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Dao\Vns.Erp.Core.Dao.csproj">
+      <Project>{4954B581-A0CA-43C7-B3FD-274B05148BEF}</Project>
+      <Name>Vns.Erp.Core.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Common.Controls\Vns.Erp.Core.Common.Controls.csproj">
+      <Project>{47B0F2D0-2132-495A-BA36-8744B7E4D747}</Project>
+      <Name>Vns.Erp.Core.Common.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

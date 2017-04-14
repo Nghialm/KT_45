@@ -1,0 +1,135 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Vns.Erp.Core.Dao;
+using Vns.Erp.Core.Accounting.Domain;
+using System.Data;
+
+namespace Vns.Erp.Core.Accounting.Report.Dao
+{
+    public interface IRpLedgerStoreDao : IDao<BcKetoan, System.Guid>
+    {
+        DataTable GetDataS10Dn(DateTime NgayDk, DateTime NgayCk, String MaTk, Guid KhoId, Guid HanghoaId, Guid DonviId);
+        DataTable GetDataS11Dn(DateTime NgayDk, DateTime NgayCk, Guid KhoId, Guid DonviId);
+        DataTable GetDataS11Dn_All(DateTime NgayDk, DateTime NgayCk, Guid KhoId, Guid DonviId);
+        Decimal fn_so_luong_ton_kho_4_update(String MaTk, String MaTkDu, Guid KhoId, Guid HanghoaId, Guid DonviId,
+            DateTime NgayTinh,
+            Guid IdDmHopDong, Guid IdDmHopDongDu,
+            Guid IdDmPtqt, Guid IdDmPtqtDu,
+            Guid IdDmPhongban, Guid IdDmPhongbanDu,
+            Guid IdDmVuviec, Guid IdDmVuviecDu,
+            Guid IdDmKhang, Guid IdDmKhangDu,
+            Guid IdDmKhoanphi, Guid IdDmKhoanphiDu,
+            Guid IdDmTudo1, Guid IdDmTudo1Du,
+            Guid IdDmTudo2, Guid IdDmTudo2Du,
+            Guid IdDmTudo3, Guid IdDmTudo3Du,
+            Guid IdDmTudo4, Guid IdDmTudo4Du,
+            Guid IdDmTudo5, Guid IdDmTudo5Du,
+            Guid CthNxId);
+        Decimal fn_so_luong_ton_kho(String MaTk, String MaTkDu, Guid KhoId, Guid HanghoaId, Guid DonviId,
+            DateTime NgayTinh,
+            Guid IdDmHopDong, Guid IdDmHopDongDu,
+            Guid IdDmPtqt, Guid IdDmPtqtDu,
+            Guid IdDmPhongban, Guid IdDmPhongbanDu,
+            Guid IdDmVuviec, Guid IdDmVuviecDu,
+            Guid IdDmKhang, Guid IdDmKhangDu,
+            Guid IdDmKhoanphi, Guid IdDmKhoanphiDu,
+            Guid IdDmTudo1, Guid IdDmTudo1Du,
+            Guid IdDmTudo2, Guid IdDmTudo2Du,
+            Guid IdDmTudo3, Guid IdDmTudo3Du,
+            Guid IdDmTudo4, Guid IdDmTudo4Du,
+            Guid IdDmTudo5, Guid IdDmTudo5Du);
+        Decimal fn_so_tien_ton_kho(String MaTk, String MaTkDu, Guid KhoId, Guid HanghoaId, Guid DonviId,
+            DateTime NgayTinh,
+            Guid IdDmHopDong, Guid IdDmHopDongDu,
+            Guid IdDmPtqt, Guid IdDmPtqtDu,
+            Guid IdDmPhongban, Guid IdDmPhongbanDu,
+            Guid IdDmVuviec, Guid IdDmVuviecDu,
+            Guid IdDmKhang, Guid IdDmKhangDu,
+            Guid IdDmKhoanphi, Guid IdDmKhoanphiDu,
+            Guid IdDmTudo1, Guid IdDmTudo1Du,
+            Guid IdDmTudo2, Guid IdDmTudo2Du,
+            Guid IdDmTudo3, Guid IdDmTudo3Du,
+            Guid IdDmTudo4, Guid IdDmTudo4Du,
+            Guid IdDmTudo5, Guid IdDmTudo5Du);
+        Decimal fn_sl_nhap_kho(String MaTk, String MaTkDu, Guid KhoNhapId, Guid HanghoaId, Guid DonviId,
+            DateTime TuNgay, DateTime DenNgay,
+            Guid IdDmHopDong, Guid IdDmHopDongDu,
+            Guid IdDmPtqt, Guid IdDmPtqtDu,
+            Guid IdDmPhongban, Guid IdDmPhongbanDu,
+            Guid IdDmVuviec, Guid IdDmVuviecDu,
+            Guid IdDmKhang, Guid IdDmKhangDu,
+            Guid IdDmKhoanphi, Guid IdDmKhoanphiDu,
+            Guid IdDmTudo1, Guid IdDmTudo1Du,
+            Guid IdDmTudo2, Guid IdDmTudo2Du,
+            Guid IdDmTudo3, Guid IdDmTudo3Du,
+            Guid IdDmTudo4, Guid IdDmTudo4Du,
+            Guid IdDmTudo5, Guid IdDmTudo5Du);
+        Decimal fn_SoTien_nhap_kho(String MaTk, String MaTkDu, Guid KhoNhapId, Guid HanghoaId, Guid DonviId,
+            DateTime TuNgay, DateTime DenNgay,
+            Guid IdDmHopDong, Guid IdDmHopDongDu,
+            Guid IdDmPtqt, Guid IdDmPtqtDu,
+            Guid IdDmPhongban, Guid IdDmPhongbanDu,
+            Guid IdDmVuviec, Guid IdDmVuviecDu,
+            Guid IdDmKhang, Guid IdDmKhangDu,
+            Guid IdDmKhoanphi, Guid IdDmKhoanphiDu,
+            Guid IdDmTudo1, Guid IdDmTudo1Du,
+            Guid IdDmTudo2, Guid IdDmTudo2Du,
+            Guid IdDmTudo3, Guid IdDmTudo3Du,
+            Guid IdDmTudo4, Guid IdDmTudo4Du,
+            Guid IdDmTudo5, Guid IdDmTudo5Du);
+        Decimal fn_nhap_kho(String Field, String MaTk, String MaTkDu, Guid KhoNhapId, Guid HanghoaId, Guid DonviId,
+            DateTime TuNgay, DateTime DenNgay,
+            Guid IdDmHopDong, Guid IdDmHopDongDu,
+            Guid IdDmPtqt, Guid IdDmPtqtDu,
+            Guid IdDmPhongban, Guid IdDmPhongbanDu,
+            Guid IdDmVuviec, Guid IdDmVuviecDu,
+            Guid IdDmKhang, Guid IdDmKhangDu,
+            Guid IdDmKhoanphi, Guid IdDmKhoanphiDu,
+            Guid IdDmTudo1, Guid IdDmTudo1Du,
+            Guid IdDmTudo2, Guid IdDmTudo2Du,
+            Guid IdDmTudo3, Guid IdDmTudo3Du,
+            Guid IdDmTudo4, Guid IdDmTudo4Du,
+            Guid IdDmTudo5, Guid IdDmTudo5Du);
+        Decimal fn_xuat_kho(String Field, String MaTk, String MaTkDu, Guid KhoXuatId, Guid HanghoaId, Guid DonviId,
+            DateTime TuNgay, DateTime DenNgay,
+            Guid IdDmHopDong, Guid IdDmHopDongDu,
+            Guid IdDmPtqt, Guid IdDmPtqtDu,
+            Guid IdDmPhongban, Guid IdDmPhongbanDu,
+            Guid IdDmVuviec, Guid IdDmVuviecDu,
+            Guid IdDmKhang, Guid IdDmKhangDu,
+            Guid IdDmKhoanphi, Guid IdDmKhoanphiDu,
+            Guid IdDmTudo1, Guid IdDmTudo1Du,
+            Guid IdDmTudo2, Guid IdDmTudo2Du,
+            Guid IdDmTudo3, Guid IdDmTudo3Du,
+            Guid IdDmTudo4, Guid IdDmTudo4Du,
+            Guid IdDmTudo5, Guid IdDmTudo5Du);
+        Decimal fn_sl_xuat_kho(String MaTk, String MaTkDu, Guid KhoNhapId, Guid HanghoaId, Guid DonviId,
+            DateTime TuNgay, DateTime DenNgay,
+            Guid IdDmHopDong, Guid IdDmHopDongDu,
+            Guid IdDmPtqt, Guid IdDmPtqtDu,
+            Guid IdDmPhongban, Guid IdDmPhongbanDu,
+            Guid IdDmVuviec, Guid IdDmVuviecDu,
+            Guid IdDmKhang, Guid IdDmKhangDu,
+            Guid IdDmKhoanphi, Guid IdDmKhoanphiDu,
+            Guid IdDmTudo1, Guid IdDmTudo1Du,
+            Guid IdDmTudo2, Guid IdDmTudo2Du,
+            Guid IdDmTudo3, Guid IdDmTudo3Du,
+            Guid IdDmTudo4, Guid IdDmTudo4Du,
+            Guid IdDmTudo5, Guid IdDmTudo5Du);
+        Decimal fn_SoTien_xuat_kho(String MaTk, String MaTkDu, Guid KhoNhapId, Guid HanghoaId, Guid DonviId,
+            DateTime TuNgay, DateTime DenNgay,
+            Guid IdDmHopDong, Guid IdDmHopDongDu,
+            Guid IdDmPtqt, Guid IdDmPtqtDu,
+            Guid IdDmPhongban, Guid IdDmPhongbanDu,
+            Guid IdDmVuviec, Guid IdDmVuviecDu,
+            Guid IdDmKhang, Guid IdDmKhangDu,
+            Guid IdDmKhoanphi, Guid IdDmKhoanphiDu,
+            Guid IdDmTudo1, Guid IdDmTudo1Du,
+            Guid IdDmTudo2, Guid IdDmTudo2Du,
+            Guid IdDmTudo3, Guid IdDmTudo3Du,
+            Guid IdDmTudo4, Guid IdDmTudo4Du,
+            Guid IdDmTudo5, Guid IdDmTudo5Du);
+    }
+}

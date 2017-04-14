@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Domain" assembly="Vns.Erp.Core.Accounting.Domain">
+	<class name="Vns.Erp.Core.Accounting.Domain.KtGiaxuatDauky, Vns.Erp.Core.Accounting.Domain" table="KT_GIAXUAT_DAUKY" lazy="false">
+		<composite-id>
+			<key-property name="DonviId" column="DONVI_ID" /> 
+			<key-property name="HanghoaId" column="HANGHOA_ID" /> 
+			<key-property name="KhoId" column="KHO_ID" /> 
+			<key-property name="NgayTinh" column="NGAY_TINH" /> 
+		</composite-id>
+    <property name="DonGia" column="DON_GIA" type="Decimal" precision="18" scale="0" />
+    <property name="SoLuong" column="SO_LUONG" type="Decimal" precision="18" scale="3" />
+    <property name="SoTienTon" column="SO_TIEN_TON" type="Decimal" precision="18" scale="0" />
+    <property name="PpTinh" column="PP_TINH" type="Decimal" precision="4" scale="0" />
+	</class>
+</hibernate-mapping>

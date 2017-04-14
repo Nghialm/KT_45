@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="RpLedgerS10DnService" Factory="Spring.ServiceModel.Activation.ServiceHostFactory" %>

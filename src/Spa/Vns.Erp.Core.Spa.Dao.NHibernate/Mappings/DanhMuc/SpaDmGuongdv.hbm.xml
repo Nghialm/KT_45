@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Spa.Domain" assembly="Vns.Erp.Core.Spa.Domain">
+	<class name="Vns.Erp.Core.Spa.Domain.SpaDmGuongdv, Vns.Erp.Core.Spa.Domain" table="SPA_DM_GuongDV" lazy="true">
+		<id name="Id" column="DM_GUONG_ID">
+			<generator class="guid" />
+		</id>
+		<property name="Ma" column="Ma" type="String" length="64" />
+		<property name="Kyhieu" column="KyHieu" type="String" length="64" />
+		<property name="Ten" column="Ten" type="String" length="128" />
+		<property name="Mota" column="MoTa" type="String" length="512" />
+		<property name="Ngaytao" column="NgayTao" type="DateTime" />
+		<property name="Nguoitao" column="NguoiTao" type="Guid" />
+		<property name="Donviid" column="DonViID" type="Guid" />
+		<property name="Cosudung" column="CoSuDung" type="bool" />
+	</class>
+</hibernate-mapping>

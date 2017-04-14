@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{277365E5-D209-4E0F-A037-01E98A216966}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vns.Erp.Core.Asset.Service</RootNamespace>
+    <AssemblyName>Vns.Erp.Core.Asset.Service</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Spring.Aop">
+      <HintPath>..\..\..\References\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\..\..\References\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\..\..\References\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\CtTscdService.cs" />
+    <Compile Include="Assets\DmTscdService.cs" />
+    <Compile Include="Assets\TsCtTscdNvonService.cs" />
+    <Compile Include="Assets\TsDieuchuyenService.cs" />
+    <Compile Include="Assets\TsLsKhauhaoService.cs" />
+    <Compile Include="Assets\TsTscdPtungService.cs" />
+    <Compile Include="Dictionary\DmLoaitaisanService.cs" />
+    <Compile Include="Dictionary\DmLydoTgTscdService.cs" />
+    <Compile Include="Dictionary\DmNguonTscdService.cs" />
+    <Compile Include="Dictionary\DmNhomTscdService.cs" />
+    <Compile Include="Instr\CcCtCcdcNvonService.cs" />
+    <Compile Include="Instr\CcCtCcdcService.cs" />
+    <Compile Include="Instr\CcDmCcdcService.cs" />
+    <Compile Include="Instr\CcLsCcdcService.cs" />
+    <Compile Include="Instr\CcLsPhanboCcService.cs" />
+    <Compile Include="Interface\Assets\ICtTscdService.cs" />
+    <Compile Include="Interface\Assets\IDmTscdService.cs" />
+    <Compile Include="Interface\Assets\ITsCtTscdNvonService.cs" />
+    <Compile Include="Interface\Assets\ITsDieuchuyenService.cs" />
+    <Compile Include="Interface\Assets\ITsLsKhauhaoService.cs" />
+    <Compile Include="Interface\Assets\ITsTscdPtungService.cs" />
+    <Compile Include="Interface\Dictionary\IDmLoaitaisanService.cs" />
+    <Compile Include="Interface\Dictionary\IDmLydoTgTscdService.cs" />
+    <Compile Include="Interface\Dictionary\IDmNguonTscdService.cs" />
+    <Compile Include="Interface\Dictionary\IDmNhomTscdService.cs" />
+    <Compile Include="Interface\Instr\ICcCtCcdcNvonService.cs" />
+    <Compile Include="Interface\Instr\ICcCtCcdcService.cs" />
+    <Compile Include="Interface\Instr\ICcDmCcdcService.cs" />
+    <Compile Include="Interface\Instr\ICcLsCcdcService.cs" />
+    <Compile Include="Interface\Instr\ICcLsPhanboCcService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
+      <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
+      <Name>Vns.Erp.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Service\Vns.Erp.Core.Service.csproj">
+      <Project>{F213FDB0-2CE0-41E6-8680-050276412F38}</Project>
+      <Name>Vns.Erp.Core.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Dao\Vns.Erp.Core.Dao.csproj">
+      <Project>{4954B581-A0CA-43C7-B3FD-274B05148BEF}</Project>
+      <Name>Vns.Erp.Core.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Asset.Dao\Vns.Erp.Core.Asset.Dao.csproj">
+      <Project>{C4884187-EB36-4850-8E6E-48D7BBECF964}</Project>
+      <Name>Vns.Erp.Core.Asset.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vns.Erp.Core.Asset.Domain\Vns.Erp.Core.Asset.Domain.csproj">
+      <Project>{5EBA40CB-468B-47B4-B118-611F9FE5E770}</Project>
+      <Name>Vns.Erp.Core.Asset.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
