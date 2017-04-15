@@ -43,19 +43,19 @@
   <ItemGroup>
     <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\NHibernate.dll</HintPath>
+      <HintPath>..\..\..\References\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="Spring.Aop">
-      <HintPath>..\..\References\Spring.Aop.dll</HintPath>
+      <HintPath>..\..\..\References\Spring.Aop.dll</HintPath>
     </Reference>
     <Reference Include="Spring.Core">
-      <HintPath>..\..\References\Spring.Core.dll</HintPath>
+      <HintPath>..\..\..\References\Spring.Core.dll</HintPath>
     </Reference>
     <Reference Include="Spring.Data">
-      <HintPath>..\..\References\Spring.Data.dll</HintPath>
+      <HintPath>..\..\..\References\Spring.Data.dll</HintPath>
     </Reference>
     <Reference Include="Spring.Data.NHibernate32">
-      <HintPath>..\..\References\Spring.Data.NHibernate32.dll</HintPath>
+      <HintPath>..\..\..\References\Spring.Data.NHibernate32.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

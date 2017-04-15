@@ -720,10 +720,6 @@
       <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
       <Name>Vns.Erp.Core.Admin.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Core\Vns.Erp.Core.ClientApp\Vns.Erp.Core.ClientApp.2010.csproj">
-      <Project>{EB8C9D41-F059-4D9D-B656-390C0931FB04}</Project>
-      <Name>Vns.Erp.Core.ClientApp.2010</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
       <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
       <Name>Vns.Erp.Core.Domain</Name>

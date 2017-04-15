@@ -56,7 +56,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\DevEx10\DevExpress.BonusSkins.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Charts.v10.2.Core, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\DevEx10\DevExpress.Data.v10.2.dll</HintPath>
@@ -65,8 +64,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\DevEx10\DevExpress.OfficeSkins.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.PivotGrid.v10.2.Core, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v10.2.Core, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\DevEx10\DevExpress.Utils.v10.2.dll</HintPath>
@@ -81,7 +78,6 @@
     <Reference Include="DevExpress.XtraBars.v10.2.Design">
       <HintPath>..\..\..\References\DevEx10\DevExpress.XtraBars.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\DevEx10\DevExpress.XtraEditors.v10.2.dll</HintPath>
@@ -107,7 +103,6 @@
     <Reference Include="DevExpress.XtraNavBar.v10.2.Design">
       <HintPath>..\..\..\References\DevEx10\DevExpress.XtraNavBar.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\DevEx10\DevExpress.XtraPrinting.v10.2.dll</HintPath>
