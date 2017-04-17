@@ -79,12 +79,6 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common.Logging">
-      <HintPath>..\..\..\References\Common.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Logging.Log4Net">
-      <HintPath>..\..\..\References\Common.Logging.Log4Net.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.BonusSkins.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\DevEx10\DevExpress.BonusSkins.v10.2.dll</HintPath>
@@ -193,46 +187,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\DevEx10\DevExpress.XtraVerticalGrid.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="Iesi.Collections">
-      <HintPath>..\..\..\References\Iesi.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="Ionic.Zlib">
-      <HintPath>..\..\..\References\Ionic.Zlib.dll</HintPath>
-    </Reference>
     <Reference Include="LoadingCircle, Version=1.0.2804.24934, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\LoadingCircle.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\..\References\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="MacroScope">
-      <HintPath>..\..\..\References\MacroScope.dll</HintPath>
-    </Reference>
-    <Reference Include="NHibernate">
-      <HintPath>..\..\..\References\NHibernate.dll</HintPath>
-    </Reference>
     <Reference Include="Nullables">
       <HintPath>..\..\..\References\Nullables.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Aop, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\Spring.Aop.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Core">
-      <HintPath>..\..\..\References\Spring.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Data">
-      <HintPath>..\..\..\References\Spring.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Data.NHibernate32">
-      <HintPath>..\..\..\References\Spring.Data.NHibernate32.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Services">
-      <HintPath>..\..\..\References\Spring.Services.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Web">
-      <HintPath>..\..\..\References\Spring.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -240,7 +200,6 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
