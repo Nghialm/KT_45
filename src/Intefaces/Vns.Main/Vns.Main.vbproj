@@ -63,11 +63,12 @@
     <ApplicationIcon>Tourtle.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common.Logging, Version=2.1.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Common.Logging.Log4Net">
+    <Reference Include="Common.Logging.Log4Net, Version=1.2.0.2, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\Common.Logging.Log4Net.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
@@ -160,7 +161,7 @@
     <Reference Include="Nullables">
       <HintPath>..\..\..\References\Nullables.dll</HintPath>
     </Reference>
-    <Reference Include="Spring.Aop, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Spring.Aop, Version=1.3.2.40001, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\Spring.Aop.dll</HintPath>
     </Reference>
@@ -178,8 +179,9 @@
     <Reference Include="Spring.Services">
       <HintPath>..\..\..\References\Spring.Services.dll</HintPath>
     </Reference>
-    <Reference Include="Spring.Web">
-      <HintPath>..\..\..\References\Spring.Web.dll</HintPath>
+    <Reference Include="Spring.Web, Version=1.3.2.20943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Spring.Web.1.3.2\lib\net35\Spring.Web.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System">
       <Private>True</Private>
@@ -400,6 +402,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="SQLife\Import_ToSQLite_LyDoTG.sql" />
+    <None Include="packages.config" />
     <None Include="SQLife\KeToan.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

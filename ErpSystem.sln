@@ -182,6 +182,10 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Vns.Erp.Core.Accounting.Rep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vns.Erp.Core.Accounting.Report.Dao.NHibernate", "src\Accounting\Vns.Erp.Core.Accounting.Report.Dao.NHibernate\Vns.Erp.Core.Accounting.Report.Dao.NHibernate.csproj", "{5A2A350E-0F50-472A-9824-F498D35F2F10}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPI", "WebAPI", "{836F1B6A-BB24-4E55-B992-817FD6A4B4A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "src\WebAPI\WebApplication1\WebApplication1.csproj", "{D6660ED8-2A22-4869-A22D-77D37668E8DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -668,6 +672,18 @@ Global
 		{5A2A350E-0F50-472A-9824-F498D35F2F10}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5A2A350E-0F50-472A-9824-F498D35F2F10}.Release|x86.ActiveCfg = Release|Any CPU
 		{5A2A350E-0F50-472A-9824-F498D35F2F10}.Release|x86.Build.0 = Release|Any CPU
+		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Debug|x86.Build.0 = Debug|Any CPU
+		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Release|x86.ActiveCfg = Release|Any CPU
+		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -719,6 +735,7 @@ Global
 		{931F7452-C465-46F8-8DCC-F513D15D6B20} = {7B8B1662-4CFA-4A4F-A5F2-64DA74E8EB89}
 		{DFC200E8-B8E5-4215-99A5-D75EA7E0E3CF} = {7B8B1662-4CFA-4A4F-A5F2-64DA74E8EB89}
 		{5A2A350E-0F50-472A-9824-F498D35F2F10} = {7B8B1662-4CFA-4A4F-A5F2-64DA74E8EB89}
+		{D6660ED8-2A22-4869-A22D-77D37668E8DB} = {836F1B6A-BB24-4E55-B992-817FD6A4B4A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		NAntAddinLastFileName = 
