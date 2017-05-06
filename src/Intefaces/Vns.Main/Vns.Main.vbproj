@@ -245,7 +245,6 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -338,36 +337,9 @@
     <Content Include="Util\Teamview.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="VnsRef\Vns.Core.Admin.Dao.dll" />
-    <Content Include="VnsRef\Vns.Core.Admin.Service.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Dao.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Domain.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Accounting.exe" />
-    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Report.Dao.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Report.Dao.NHibernate.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Report.Domain.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Report.exe" />
-    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Report.Service.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Accounting.Service.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Accounting.VbAccountingGUI.exe" />
-    <Content Include="VnsRef\Vns.Erp.Core.Admin.Dao.NHibernate.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Admin.Domain.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Admin.VbAdminGUI.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Dao.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Dao.NHibernate.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Domain.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Service.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Spa.Common.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Spa.Dao.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Spa.Dao.NHibernate.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Spa.Domain.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Spa.Service.dll" />
-    <Content Include="VnsRef\Vns.Erp.Core.Spa.VbSpaGUI.exe" />
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <EmbeddedResource Include="Config\WebServices\calculatorService.wsdl" />
     <Content Include="Config\WcfWinForms.xml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -810,8 +782,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Tourtle.ico" />
-    <EmbeddedResource Include="Config\WebServices\webServices.xml" />
-    <EmbeddedResource Include="Config\WebServices\webServices-aop.xml" />
     <EmbeddedResource Include="Config\Remoting\saoSingleton.xml" />
     <EmbeddedResource Include="Config\Remoting\saoSingleton-aop.xml" />
     <EmbeddedResource Include="Config\Remoting\saoSingleCall.xml" />
@@ -821,6 +791,7 @@
     <EmbeddedResource Include="Config\Remoting\cao-aop.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Config\WebServices\" />
     <Folder Include="Resources\Icon\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

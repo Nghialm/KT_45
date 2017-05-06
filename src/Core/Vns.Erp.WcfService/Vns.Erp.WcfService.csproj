@@ -55,61 +55,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Apache.NMS">
-      <HintPath>..\..\References\Apache.NMS.dll</HintPath>
+      <HintPath>..\..\..\References\Apache.NMS.dll</HintPath>
     </Reference>
     <Reference Include="Apache.NMS.ActiveMQ">
-      <HintPath>..\..\References\Apache.NMS.ActiveMQ.dll</HintPath>
+      <HintPath>..\..\..\References\Apache.NMS.ActiveMQ.dll</HintPath>
     </Reference>
     <Reference Include="Common.Logging">
       <HintPath>..\..\References\Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Common.Logging.Log4Net">
-      <HintPath>..\..\References\Common.Logging.Log4Net.dll</HintPath>
-    </Reference>
     <Reference Include="Iesi.Collections">
       <HintPath>..\..\References\Iesi.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="Ionic.Zlib">
-      <HintPath>..\..\References\Ionic.Zlib.dll</HintPath>
-    </Reference>
-    <Reference Include="LoadingCircle">
-      <HintPath>..\..\References\LoadingCircle.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\..\References\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="MacroScope">
-      <HintPath>..\..\References\MacroScope.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\..\References\NHibernate.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate.JetDriver">
-      <HintPath>..\..\References\NHibernate.JetDriver.dll</HintPath>
-    </Reference>
     <Reference Include="Nullables">
       <HintPath>..\..\References\Nullables.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.core">
-      <HintPath>..\..\References\nunit.core.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.core.interfaces">
-      <HintPath>..\..\References\nunit.core.interfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\References\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="NUnitAsp">
-      <HintPath>..\..\References\NUnitAsp.dll</HintPath>
-    </Reference>
-    <Reference Include="NUnitAspEx">
-      <HintPath>..\..\References\NUnitAspEx.dll</HintPath>
-    </Reference>
-    <Reference Include="NVelocity">
-      <HintPath>..\..\References\NVelocity.dll</HintPath>
-    </Reference>
-    <Reference Include="Rhino.Mocks">
-      <HintPath>..\..\References\Rhino.Mocks.dll</HintPath>
     </Reference>
     <Reference Include="Spring.Aop">
       <HintPath>..\..\References\Spring.Aop.dll</HintPath>
@@ -124,13 +85,7 @@
       <HintPath>..\..\References\Spring.Data.NHibernate32.dll</HintPath>
     </Reference>
     <Reference Include="Spring.Services">
-      <HintPath>..\..\References\Spring.Services.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Testing.NUnit">
-      <HintPath>..\..\References\Spring.Testing.NUnit.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Web">
-      <HintPath>..\..\References\Spring.Web.dll</HintPath>
+      <HintPath>..\..\..\References\Spring.Services.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Private>True</Private>
@@ -143,9 +98,6 @@
     </Reference>
     <Reference Include="System.Data.DataSetExtensions">
       <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Data.SQLite">
-      <HintPath>..\..\References\System.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing">
       <Private>True</Private>
@@ -205,7 +157,7 @@
       <HintPath>..\Vns.Erp.Core.Service\bin\Debug\Vns.Erp.Core.Service.dll</HintPath>
     </Reference>
     <Reference Include="Vns.Erp.Security">
-      <HintPath>..\..\References\Vns.Erp.Security.dll</HintPath>
+      <HintPath>..\..\..\References\Vns.Erp.Security.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -354,6 +306,38 @@
     <Compile Include="UserValidator.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Dao.NHibernate\Vns.Erp.Core.Accounting.Dao.NHibernate.csproj">
+      <Project>{931f7452-c465-46f8-8dcc-f513d15d6b20}</Project>
+      <Name>Vns.Erp.Core.Accounting.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Dao\Vns.Erp.Core.Accounting.Dao.csproj">
+      <Project>{ea173391-eaa8-4f77-adc9-3e8c2caf4681}</Project>
+      <Name>Vns.Erp.Core.Accounting.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Domain\Vns.Erp.Core.Accounting.Domain.csproj">
+      <Project>{7258abc1-7fa4-4369-b5d3-9da7faa974c5}</Project>
+      <Name>Vns.Erp.Core.Accounting.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Report.Dao.NHibernate\Vns.Erp.Core.Accounting.Report.Dao.NHibernate.csproj">
+      <Project>{5a2a350e-0f50-472a-9824-f498d35f2f10}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Report.Dao\Vns.Erp.Core.Accounting.Report.Dao.csproj">
+      <Project>{57b13f42-7ffd-4850-838c-767e5ac634b9}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Report.Domain\Vns.Erp.Core.Accounting.Report.Domain.csproj">
+      <Project>{72e457b3-cc29-4b80-9103-efca78c2e309}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Report.Service\Vns.Erp.Core.Accounting.Report.Service.csproj">
+      <Project>{7f4a409f-ed34-45d8-98af-e4659a7dfb0d}</Project>
+      <Name>Vns.Erp.Core.Accounting.Report.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Service\Vns.Erp.Core.Accounting.Service.csproj">
+      <Project>{1567f284-e659-4c44-8d1b-4ef16b969c98}</Project>
+      <Name>Vns.Erp.Core.Accounting.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Admin\Vns.Core.Admin.Dao\Vns.Erp.Core.Admin.Dao.csproj">
       <Project>{BD3B9C3B-64F2-4046-B1A0-6C113B5E6025}</Project>
       <Name>Vns.Erp.Core.Admin.Dao</Name>
@@ -370,12 +354,54 @@
       <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
       <Name>Vns.Erp.Core.Admin.Domain</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App_Data\TSCD.db" />
-    <None Include="App_Data\VnsCrm.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Dao.NHibernate\Vns.Erp.Core.Asset.Dao.NHibernate.csproj">
+      <Project>{4b22aea6-4505-44b4-87c7-d86a7ec3e6a6}</Project>
+      <Name>Vns.Erp.Core.Asset.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Dao\Vns.Erp.Core.Asset.Dao.csproj">
+      <Project>{c4884187-eb36-4850-8e6e-48d7bbecf964}</Project>
+      <Name>Vns.Erp.Core.Asset.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Domain\Vns.Erp.Core.Asset.Domain.csproj">
+      <Project>{5eba40cb-468b-47b4-b118-611f9fe5e770}</Project>
+      <Name>Vns.Erp.Core.Asset.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Service\Vns.Erp.Core.Asset.Service.csproj">
+      <Project>{277365e5-d209-4e0f-a037-01e98a216966}</Project>
+      <Name>Vns.Erp.Core.Asset.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Produce\Vns.Erp.Core.Produce.Dao.NHibernate\Vns.Erp.Core.Produce.Dao.NHibernate.csproj">
+      <Project>{a54f9a7e-31fa-4d71-8f42-f561738dcba0}</Project>
+      <Name>Vns.Erp.Core.Produce.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Produce\Vns.Erp.Core.Produce.Dao\Vns.Erp.Core.Produce.Dao.csproj">
+      <Project>{501c091e-9f75-49a7-b85e-1e77be2b7ba6}</Project>
+      <Name>Vns.Erp.Core.Produce.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Produce\Vns.Erp.Core.Produce.Domain\Vns.Erp.Core.Produce.Domain.csproj">
+      <Project>{5b666884-e9d0-470b-8309-9efed7cbd326}</Project>
+      <Name>Vns.Erp.Core.Produce.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Produce\Vns.Erp.Core.Produce.Service\Vns.Erp.Core.Produce.Service.csproj">
+      <Project>{469ca357-bc7f-46ac-9900-7e5ef8564be0}</Project>
+      <Name>Vns.Erp.Core.Produce.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Spa\Vns.Erp.Core.Spa.Dao.NHibernate\Vns.Erp.Core.Spa.Dao.NHibernate.csproj">
+      <Project>{fc96b35d-fca4-4973-9758-00c9c909629d}</Project>
+      <Name>Vns.Erp.Core.Spa.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Spa\Vns.Erp.Core.Spa.Dao\Vns.Erp.Core.Spa.Dao.csproj">
+      <Project>{41df408b-15af-41f1-b037-e691bc9a445b}</Project>
+      <Name>Vns.Erp.Core.Spa.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Spa\Vns.Erp.Core.Spa.Domain\Vns.Erp.Core.Spa.Domain.csproj">
+      <Project>{baeca76a-0a00-4006-adc1-6658f34bd1ca}</Project>
+      <Name>Vns.Erp.Core.Spa.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Spa\Vns.Erp.Core.Spa.Service\Vns.Erp.Core.Spa.Service.csproj">
+      <Project>{5c13b6eb-7d22-4cfb-8095-d04bbe5dff96}</Project>
+      <Name>Vns.Erp.Core.Spa.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

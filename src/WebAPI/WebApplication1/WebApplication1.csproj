@@ -170,11 +170,68 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Config\EnterpriseServices\enterpriseServices.xml" />
+    <Content Include="Config\InProcess\Dao-Access.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\InProcess\Dao-Local.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\InProcess\Dao-Online.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\InProcess\Dao-SQLite.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\InProcess\Dao.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\InProcess\DaoObjects.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\InProcess\inProcess.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\InProcess\Services.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Config\Remoting\cao-aop.xml" />
+    <EmbeddedResource Include="Config\Remoting\cao-ctor-aop.xml" />
+    <EmbeddedResource Include="Config\Remoting\cao-ctor.xml" />
+    <Content Include="Config\Remoting\cao.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Config\Remoting\saoSingleCall-aop.xml" />
+    <EmbeddedResource Include="Config\Remoting\saoSingleCall.xml" />
+    <EmbeddedResource Include="Config\Remoting\saoSingleton-aop.xml" />
+    <EmbeddedResource Include="Config\Remoting\saoSingleton.xml" />
+    <Content Include="Config\ServerApp.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\WcfEnpoint.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\WcfWinForms.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Config\WebServices\webServices-aop.xml" />
+    <EmbeddedResource Include="Config\WebServices\webServices.xml" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DictionaryController.cs" />
     <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -187,6 +244,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <None Include="Config\WebServices\calculatorService.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -196,6 +254,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="SQLite\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -212,6 +271,14 @@
     <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
       <Project>{e1963453-de64-423d-8821-5da53e540a52}</Project>
       <Name>Vns.Erp.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core.Service\Vns.Erp.Core.Service.csproj">
+      <Project>{f213fdb0-2ce0-41e6-8680-050276412f38}</Project>
+      <Name>Vns.Erp.Core.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Vns.Erp.Core\Vns.Erp.Core.vbproj">
+      <Project>{6903b6fb-c64b-47c1-807d-abf526b1a9c3}</Project>
+      <Name>Vns.Erp.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -8,7 +8,7 @@ using System.Web.Routing;
 
 namespace WebApplication1
 {
-    public class WebApiApplication : SpringMvcApplication
+    public class WebApiApplication : HttpApplication
     {
         protected void Application_Start()
         {

@@ -106,10 +106,10 @@
   <ItemGroup>
     <Reference Include="Common.Logging, Version=2.1.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\Common.Logging.dll</HintPath>
+      <HintPath>..\..\..\References\Common.Logging.dll</HintPath>
     </Reference>
     <Reference Include="Common.Logging.Log4Net">
-      <HintPath>..\..\References\Common.Logging.Log4Net.dll</HintPath>
+      <HintPath>..\..\..\References\Common.Logging.Log4Net.dll</HintPath>
     </Reference>
     <Reference Include="Iesi.Collections">
       <HintPath>..\..\References\Iesi.Collections.dll</HintPath>
@@ -123,11 +123,11 @@
     </Reference>
     <Reference Include="Spring.Aop, Version=0.0.0.20883, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\Spring.Aop.dll</HintPath>
+      <HintPath>..\..\..\References\Spring.Aop.dll</HintPath>
     </Reference>
     <Reference Include="Spring.Core, Version=0.0.0.20883, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\Spring.Core.dll</HintPath>
+      <HintPath>..\..\..\References\Spring.Core.dll</HintPath>
     </Reference>
     <Reference Include="Spring.Data">
       <HintPath>..\..\References\Spring.Data.dll</HintPath>
@@ -138,7 +138,7 @@
     </Reference>
     <Reference Include="Spring.Services, Version=0.0.0.20883, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\References\Spring.Services.dll</HintPath>
+      <HintPath>..\..\..\References\Spring.Services.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>

@@ -51,7 +51,6 @@
     </Reference>
     <Reference Include="Spring.Core">
       <HintPath>..\..\..\References\Spring.Core.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="Spring.Data">
       <HintPath>..\..\..\References\Spring.Data.dll</HintPath>
