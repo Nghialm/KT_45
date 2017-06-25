@@ -1556,10 +1556,14 @@
       <property name="DmKhangService" ref="DmKhangService" />
       <property name="RpAdminLedgerService" ref="RpAdminLedgerService" />
   </object>
-
   
   <object id="Vns.Erp.UtilGUI.FrmBackupDb" type="Vns.Erp.UtilGUI.FrmBackupDb, Vns.Erp.UtilGUI" singleton="false">
     <property name="CtHService" ref="CtHService" />
+  </object>
+
+  <object id="Vns.SynDb.SynDbHelper" type="Vns.SynDb.SynDbHelper, Vns.SynDb" singleton="false">
+    <property name="DmTaiKhoanService" ref="DmTaikhoanService" />
+    <property name="DmTaiKhoanServiceSyn" ref="DmTaikhoanServiceSyn" />
   </object>
 
 </objects>

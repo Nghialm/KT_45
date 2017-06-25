@@ -76,17 +76,9 @@ Partial Public Class frmDanhMucTaiKhoan_ChiTiet
             info.Cap = GetLevel(VnsConvert.CGuid(cFilterTaiKhoan.ListEditValue(0)), parent_lv)
             info.ChiTiet = TNCommon.ParseDecimal(cboChiTiet.Checked)
 
-            'info.MA_TAIKHOAN = string.IsNullOrEmpty(_temp.MA_TAIKHOAN) ? " " : _temp.MA_TAIKHOAN;
-            
-
-            'If VnsCheck.IsNullGuid(obj.TaikhoanIdCha) Then
-            '    obj.ChiTiet = 1
-            'Else
-            '    obj.ChiTiet = 0
-            'End If
+            info.SynDate = Null.MIN_DATE
 
             MyBase.ResultObject = info
-            'info.TaikhoanIdCha = gr.TaikhoanIdCha1.EditValue.ToString() ' drDMCHA[.TaikhoanId"].ToString();
             Return info
         End Get
 

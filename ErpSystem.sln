@@ -186,6 +186,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPI", "WebAPI", "{836F1B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "src\WebAPI\WebApplication1\WebApplication1.csproj", "{D6660ED8-2A22-4869-A22D-77D37668E8DB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Syn", "Syn", "{27CB5A7D-0AF4-42E3-AB97-2AF3FE9A59F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vns.SynDb", "src\Syn\Vns.SynDb\Vns.SynDb.csproj", "{37343EA6-2BC5-4365-9401-B38B619B1E39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -684,6 +688,18 @@ Global
 		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Release|x86.ActiveCfg = Release|Any CPU
 		{D6660ED8-2A22-4869-A22D-77D37668E8DB}.Release|x86.Build.0 = Release|Any CPU
+		{37343EA6-2BC5-4365-9401-B38B619B1E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37343EA6-2BC5-4365-9401-B38B619B1E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37343EA6-2BC5-4365-9401-B38B619B1E39}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{37343EA6-2BC5-4365-9401-B38B619B1E39}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{37343EA6-2BC5-4365-9401-B38B619B1E39}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{37343EA6-2BC5-4365-9401-B38B619B1E39}.Debug|x86.Build.0 = Debug|Any CPU
+		{37343EA6-2BC5-4365-9401-B38B619B1E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37343EA6-2BC5-4365-9401-B38B619B1E39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37343EA6-2BC5-4365-9401-B38B619B1E39}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{37343EA6-2BC5-4365-9401-B38B619B1E39}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{37343EA6-2BC5-4365-9401-B38B619B1E39}.Release|x86.ActiveCfg = Release|Any CPU
+		{37343EA6-2BC5-4365-9401-B38B619B1E39}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -736,6 +752,7 @@ Global
 		{DFC200E8-B8E5-4215-99A5-D75EA7E0E3CF} = {7B8B1662-4CFA-4A4F-A5F2-64DA74E8EB89}
 		{5A2A350E-0F50-472A-9824-F498D35F2F10} = {7B8B1662-4CFA-4A4F-A5F2-64DA74E8EB89}
 		{D6660ED8-2A22-4869-A22D-77D37668E8DB} = {836F1B6A-BB24-4E55-B992-817FD6A4B4A9}
+		{37343EA6-2BC5-4365-9401-B38B619B1E39} = {27CB5A7D-0AF4-42E3-AB97-2AF3FE9A59F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		NAntAddinLastFileName = 

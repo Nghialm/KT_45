@@ -300,6 +300,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\ServerAppSyn.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Documents\Xoa_dulieu_ketoan_dn_1.sql" />
     <Content Include="Resources\IconMenu\Main_Asset.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -541,6 +545,10 @@
     <ProjectReference Include="..\..\Admin\Vns.Erp.Core.Admin.VbAdminGUI\Vns.Erp.Core.Admin.VbAdminGUI.vbproj">
       <Project>{676649F7-9F89-4C2F-A34C-ED5D9889957E}</Project>
       <Name>Vns.Erp.Core.Admin.VbAdminGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Syn\Vns.SynDb\Vns.SynDb.csproj">
+      <Project>{37343ea6-2bc5-4365-9401-b38b619b1e39}</Project>
+      <Name>Vns.SynDb</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

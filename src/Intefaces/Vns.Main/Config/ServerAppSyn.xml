@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:wcf="http://www.springframework.net/wcf">
+  <!--Danh muc he thong-->
+  <!--Danh muc ke toan chung--> 
+  <wcf:channelFactory id="DmTaikhoanServiceSyn" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmTaikhoanService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmTaikhoanService"/>
+  <!--Ke Toan-->
+  <!--Tai san co dinh-->
+  <!--Thiet lap bao cao-->
+  <!--Report-->
+  <!--Tinh gia xuat kho  -->
+  <!--Hoa don dich vu ke toan-->
+</objects>
+
+  

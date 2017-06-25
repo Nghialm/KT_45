@@ -47,10 +47,11 @@ namespace Vns.Erp.Core.Admin.Dao.NHibernate
 
         public void SetChiTietTKCha(Guid parent_id, int ChiTiet)
         { 
-            String sql ="Update DmTaikhoan Set ChiTiet = :ChiTiet Where Id = :parent_id";
+            String sql ="Update DmTaikhoan Set ChiTiet = :ChiTiet, SynDate = :SynDate Where Id = :parent_id";
 
             IQuery q = NHibernateSession.CreateQuery(sql);
             q.SetParameter("ChiTiet", ChiTiet);
+            q.SetParameter("SynDate", Null.MIN_DATE);
             q.SetParameter("parent_id", parent_id);
             q.ExecuteUpdate();
         }
