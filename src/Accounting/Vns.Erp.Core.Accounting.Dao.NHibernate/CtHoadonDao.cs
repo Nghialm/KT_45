@@ -49,5 +49,59 @@ namespace Vns.Erp.Core.Accounting.Dao.NHibernate
 
             return isearch.List<CtHoadon>();
         }
-	}
+
+        public IList<CtHoadon> SearchBy(int PageIndex, int PageSize, 
+            DateTime TuNgay, DateTime DenNgay, Guid DonviId, String SoHoadon,
+            String MaSoThue, String TenKhachhang,
+            out int totalResult)
+        {
+            ICriteria isearch = NHibernateSession.CreateCriteria<CtHoadon>();
+            ICriteria iCount = NHibernateSession.CreateCriteria<CtHoadon>();
+
+            isearch.Add(Restrictions.Eq("DonviId", DonviId));
+            if (!string.IsNullOrEmpty(SoHoadon))
+            {
+                isearch.Add(Restrictions.Like("SoHoadon", SoHoadon, MatchMode.Anywhere));
+                iCount.Add(Restrictions.Like("SoHoadon", SoHoadon, MatchMode.Anywhere));
+            }
+
+            if (!string.IsNullOrEmpty(MaSoThue))
+            {
+                isearch.Add(Restrictions.Like("MaSoThue", MaSoThue, MatchMode.Anywhere));
+                iCount.Add(Restrictions.Like("MaSoThue", MaSoThue, MatchMode.Anywhere));
+            }
+
+            if (!string.IsNullOrEmpty(TenKhachhang))
+            {
+                isearch.Add(Restrictions.Like("TenKhachhang", TenKhachhang, MatchMode.Anywhere));
+                iCount.Add(Restrictions.Like("TenKhachhang", TenKhachhang, MatchMode.Anywhere));
+            }
+
+            if (TuNgay != Null.NULL_DATE)
+            {
+                isearch.Add(Restrictions.Ge("NgayHoadon", Vns.Erp.Core.Dao.NHibernate.Util.VnsConvert.CStartOfDate(TuNgay)));
+                iCount.Add(Restrictions.Ge("NgayHoadon", Vns.Erp.Core.Dao.NHibernate.Util.VnsConvert.CStartOfDate(TuNgay)));
+            }
+
+            if (DenNgay != Null.NULL_DATE)
+            {
+                isearch.Add(Restrictions.Le("NgayHoadon", Vns.Erp.Core.Dao.NHibernate.Util.VnsConvert.CEndOfDate(DenNgay)));
+                iCount.Add(Restrictions.Le("NgayHoadon", Vns.Erp.Core.Dao.NHibernate.Util.VnsConvert.CEndOfDate(DenNgay)));
+            }
+
+            isearch.AddOrder(new Order("NgayHoadon", true));
+            isearch.AddOrder(new Order("SoHoadon", true));
+
+            iCount.SetProjection(Projections.Count(Projections.Id()));
+            totalResult = (int)iCount.UniqueResult();
+            if ((PageIndex > 0) && (PageSize > 0))
+            {
+                isearch.SetFirstResult((PageIndex - 1) * PageSize);
+                isearch.SetMaxResults(PageSize);
+            }
+
+            return isearch.List<CtHoadon>();
+        }
+
+    }
 }

@@ -38,6 +38,7 @@
 		<property column="VI_TRI" type="String" name="ViTri" length="128" />
 		<property column="THAN_VO" type="Decimal" precision="2" scale="0" name="ThanVo" />
     <property column="LOAI_HANG_HOA" type="Decimal" precision="2" scale="0" name="LoaiHangHoa" />
-		
-	</class>
+
+    <property name="SynDate" not-null="false"  column="Syn_Date" type="DateTime" />
+  </class>
 </hibernate-mapping>

@@ -66,6 +66,8 @@ Partial Public Class frmDanhMucDonVi_ChiTiet
                 Case FormGlobals.DataInputState.EditMode
                     info.ChiTiet = _temp.ChiTiet
             End Select
+
+            info.SynDate = Null.MIN_DATE
             MyBase.ResultObject = info
             Return info
         End Get

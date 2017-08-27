@@ -38,5 +38,7 @@
     <property column="NGAY_SINH" type="DateTime" name="NgaySinh"/>
 
     <many-to-one name="ObjDmNhomKhang1" column="NHOM_KHANG_1" class="Vns.Erp.Core.Admin.Domain.DmNhomKhang,Vns.Erp.Core.Admin.Domain" insert="false" update="false" not-found="ignore"/>
+
+    <property name="SynDate" not-null="false"  column="Syn_Date" type="DateTime" />
   </class>
 </hibernate-mapping>

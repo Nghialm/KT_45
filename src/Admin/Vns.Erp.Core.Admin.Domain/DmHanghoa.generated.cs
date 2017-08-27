@@ -61,6 +61,7 @@ namespace Vns.Erp.Core.Admin.Domain
         private string _vi_tri;
         private decimal _than_vo;
         private decimal _LoaiHangHoa = 0;
+        private DateTime _SynDate;
         #endregion
 
         #region Default ( Empty ) Class Constuctor
@@ -102,6 +103,7 @@ namespace Vns.Erp.Core.Admin.Domain
             _ngay_sua = DateTime.MaxValue;
             _vi_tri = String.Empty;
             _than_vo = 0;
+            _SynDate = Null.MIN_DATE;
         }
         #endregion // End of Default ( Empty ) Class Constuctor
 
@@ -612,6 +614,13 @@ namespace Vns.Erp.Core.Admin.Domain
         {
             get { return _LoaiHangHoa; }
             set { _isChanged |= (_LoaiHangHoa != value); _LoaiHangHoa = value; }
+        }
+
+        [DataMember]
+        public DateTime SynDate
+        {
+            get { return _SynDate; }
+            set { _isChanged |= (_SynDate != value); _SynDate = value; }
         }
 
 

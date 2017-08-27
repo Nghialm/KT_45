@@ -57,7 +57,7 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
 
             _ObjectInfo.LoaiCtIdCha = VnsConvert.CGuid(cboLOAI_CT_ID_CHA.EditValue)
             _ObjectInfo.SdTkThueNgamdinh = TNCommon.ParseDecimal(chkSD_TK_THUE_NGAMDINH.Checked)
-            _ObjectInfo.TkThueNgamdinh = cboTK_THUE_NGAMDINH.EditValue.ToString()
+            _ObjectInfo.TkThueNgamdinh = txtTkThueNgamDinh.Text
             _ObjectInfo.MaLoaiCt = txtMA_LOAI_CT.Text
             _ObjectInfo.KyHieu = txtKy_Hieu.Text
             _ObjectInfo.TenLoaiCt = txtTEN_LOAI_CT.Text
@@ -101,7 +101,7 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
             _ObjectInfo = value
 
             cboLOAI_CT_ID_CHA.EditValue = _ObjectInfo.LoaiCtIdCha
-            cboTK_THUE_NGAMDINH.EditValue = _ObjectInfo.TkThueNgamdinh
+            txtTkThueNgamDinh.Text = _ObjectInfo.TkThueNgamdinh
             chkSD_TK_THUE_NGAMDINH.Checked = TNCommon.ParseBool(_ObjectInfo.SdTkThueNgamdinh)
             txtMA_LOAI_CT.Text = _ObjectInfo.MaLoaiCt
             txtKy_Hieu.Text = _ObjectInfo.KyHieu
@@ -167,7 +167,6 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         Dim _TkNdinhColumnDefine As ArrayList = New ArrayList()
         _TkNdinhColumnDefine.Add(New ColumnInfo("MaTaikhoan", "Mã tài khoản", 0, True, ""))
         _TkNdinhColumnDefine.Add(New ColumnInfo("TenTaikhoan", "Tên tài khoản", 0, True, ""))
-        TNCommon.BindData_LookupEdit(cboTK_THUE_NGAMDINH, dtTkNdinh, "MaTaikhoan", "MaTaikhoan", _TkNdinhColumnDefine, True)
 
         Try
             Me.ActiveControl = txtMA_LOAI_CT
@@ -183,7 +182,7 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
 
             If Mode = FormGlobals.DataInputState.AddMode Then
                 TNCommon.SelectFirst(cboLOAI_CT_ID_CHA)
-                TNCommon.SelectFirst(cboTK_THUE_NGAMDINH)
+
                 ma_dm_str = "DM_PTQT;DM_PHONGBAN;DM_TUDO1;DM_TUDO2;DM_TUDO3;DM_TUDO4;DM_TUDO5;DM_VUVIEC;DM_KHOANPHI;DM_HOPDONG;DM_KHANG;DM_CBNV;;;;;;;;;;;;;"
                 ten_dm_str = "DM PTQT;DM phòng ban;DM tự do 1;DM tự do 2;DM tự do 3;DM tự do 4;DM tự do 5;DM vụ việc;DM khoản phí;DM hợp đồng;DM khách hàng;DM CBNV;;;;;;;;;;;;;"
                 thu_tu_str = "1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25"
@@ -252,9 +251,9 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
     Private Sub chkSD_TK_THUE_NGAMDINH_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) Handles chkSD_TK_THUE_NGAMDINH.CheckedChanged
         Try
             If chkSD_TK_THUE_NGAMDINH.Checked Then
-                cboTK_THUE_NGAMDINH.Enabled = True
+                txtTkThueNgamDinh.Enabled = True
             Else
-                cboTK_THUE_NGAMDINH.Enabled = False
+                txtTkThueNgamDinh.Enabled = False
             End If
         Catch ex As Exception
             Message_Error(ex)

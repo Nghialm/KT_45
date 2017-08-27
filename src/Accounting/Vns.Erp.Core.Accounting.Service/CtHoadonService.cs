@@ -45,6 +45,15 @@ namespace Vns.Erp.Core.Accounting.Service
             return CtHoadonDao.SearchBy(TuNgay, DenNgay, DonviId, SoHoadon);
         }
 
+        public IList<CtHoadon> SearchBy(int PageIndex, int PageSize,
+            DateTime TuNgay, DateTime DenNgay, Guid DonviId, 
+            String SoHoadon,
+            String MaSoThue, String TenKhachhang,
+            out int totalResult)
+        {
+            return CtHoadonDao.SearchBy(PageIndex, PageSize, TuNgay, DenNgay, DonviId, SoHoadon, MaSoThue, TenKhachhang, out totalResult);
+        }
+
         [Transaction]
         public Boolean SaveHoaDonThueGTGT(CtHoadon objHoaDon, IList<CtThue> lstSave, IList<CtThue> lstDel)
         {

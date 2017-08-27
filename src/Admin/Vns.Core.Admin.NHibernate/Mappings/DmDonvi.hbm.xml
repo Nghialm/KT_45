@@ -37,6 +37,7 @@
 		<property column="NGAY_SUA" type="DateTime" name="NgaySua" />
 		<property column="BO_PHAN_TT" type="Decimal" precision="2" scale="0" name="BoPhanTt" />
 		<property column="DONVI_ID1" type="Decimal" precision="2" scale="0" name="DonviId1" not-null="true" />
-		
-	</class>
+
+    <property name="SynDate" not-null="false"  column="Syn_Date" type="DateTime" />
+  </class>
 </hibernate-mapping>

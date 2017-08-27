@@ -39,6 +39,7 @@ namespace Vns.Erp.Core.Admin.Domain
         private Guid _nguoi_sua;
         private DateTime _ngay_sua;
         private Guid _donvi_id;
+        private DateTime _SynDate;
         #endregion
 
         #region Default ( Empty ) Class Constuctor
@@ -59,6 +60,7 @@ namespace Vns.Erp.Core.Admin.Domain
             _nguoi_sua = Guid.Empty;
             _ngay_sua = DateTime.MaxValue;
             _donvi_id = Guid.Empty;
+            _SynDate = Null.MIN_DATE;
         }
         #endregion // End of Default ( Empty ) Class Constuctor
 
@@ -228,6 +230,13 @@ namespace Vns.Erp.Core.Admin.Domain
         {
             get { return _donvi_id; }
             set { _isChanged |= (_donvi_id != value); _donvi_id = value; }
+        }
+
+        [DataMember]
+        public DateTime SynDate
+        {
+            get { return _SynDate; }
+            set { _isChanged |= (_SynDate != value); _SynDate = value; }
         }
 
 

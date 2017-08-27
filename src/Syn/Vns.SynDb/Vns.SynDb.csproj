@@ -95,6 +95,22 @@
       <Project>{5d8ecb2e-1739-47cd-8bef-efe3d3856563}</Project>
       <Name>Vns.Erp.Core.Admin.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Dao.NHibernate\Vns.Erp.Core.Asset.Dao.NHibernate.csproj">
+      <Project>{4b22aea6-4505-44b4-87c7-d86a7ec3e6a6}</Project>
+      <Name>Vns.Erp.Core.Asset.Dao.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Dao\Vns.Erp.Core.Asset.Dao.csproj">
+      <Project>{c4884187-eb36-4850-8e6e-48d7bbecf964}</Project>
+      <Name>Vns.Erp.Core.Asset.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Domain\Vns.Erp.Core.Asset.Domain.csproj">
+      <Project>{5eba40cb-468b-47b4-b118-611f9fe5e770}</Project>
+      <Name>Vns.Erp.Core.Asset.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.Service\Vns.Erp.Core.Asset.Service.csproj">
+      <Project>{277365e5-d209-4e0f-a037-01e98a216966}</Project>
+      <Name>Vns.Erp.Core.Asset.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
       <Project>{e1963453-de64-423d-8821-5da53e540a52}</Project>
       <Name>Vns.Erp.Core.Domain</Name>

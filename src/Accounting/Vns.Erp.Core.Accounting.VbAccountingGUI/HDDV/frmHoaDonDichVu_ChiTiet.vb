@@ -319,7 +319,12 @@ Public Class frmHoaDonDichVu_ChiTiet
             Case DataInputState.EditMode
                 IsInsert = False
         End Select
-        KtCtHHddvService.SaveHDDVMuaBanHang(IsInsert, obj_ct_h, obj_ct_hd, lstobj_ct_d, del_lstobj_ct_d)
+
+        Try
+            KtCtHHddvService.SaveHDDVMuaBanHang(IsInsert, obj_ct_h, obj_ct_hd, lstobj_ct_d, del_lstobj_ct_d)
+        Catch ex As Exception
+            Message_Error(ex)
+        End Try
 
         'Gán lại số chứng từ 
         C_SoChungTu_RP.Text = obj_ct_h.PrefixCt + obj_ct_h.CtSo
@@ -352,11 +357,11 @@ Public Class frmHoaDonDichVu_ChiTiet
         'End If
         Select Case m_InputState
             Case DataInputState.AddMode
-                obj_ct_h.NguoiTao = Generals.USER.Id.ToString
+                obj_ct_h.NguoiTao = Generals.USER.Id
                 obj_ct_h.DaKhoaSo = 0
                 obj_ct_h.BtTudong = 0
             Case Else
-                obj_ct_h.NguoiSua = Generals.USER.Id.ToString
+                obj_ct_h.NguoiSua = Generals.USER.Id
         End Select
 
         obj_ct_h.Ghi = Convert.ToDecimal(ucStatus.Value_info.ParameterValue)

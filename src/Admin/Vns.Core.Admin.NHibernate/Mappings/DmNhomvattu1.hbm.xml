@@ -16,6 +16,7 @@
 		<property column="NGAY_TAO" type="DateTime" name="NgayTao" />
 		<property column="NGUOI_SUA" type="Guid" name="NguoiSua" />
 		<property column="NGAY_SUA" type="DateTime" name="NgaySua" />
-		
-	</class>
+    <property name="SynDate" not-null="false"  column="Syn_Date" type="DateTime" />
+
+  </class>
 </hibernate-mapping>

@@ -128,6 +128,7 @@ Partial Public Class frmDanhMucNgoaiTe_ChiTiet
                 Case FormGlobals.DataInputState.EditMode
                     info.MaNte = temp.MaNte
             End Select
+            info.SynDate = Null.MIN_DATE
 
             MyBase.ResultObject = info
             Return info

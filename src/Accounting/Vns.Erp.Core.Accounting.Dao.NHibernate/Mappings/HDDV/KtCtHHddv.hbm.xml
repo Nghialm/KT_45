@@ -60,7 +60,7 @@
 		<property name="BxDiengiai3" column="BX_DIENGIAI_3" type="String" length="256"/>
 		<property name="SoSeriHd" column="SO_SERI_HD" type="String" length="64"/>
 		<property name="SoHd" column="SO_HD" type="String" length="64"/>
-		<property name="IdDoituongHoadon" column="ID_DOITUONG_HOADON" />
+		<property name="IdDoituongHoadon" type="Guid" column="ID_DOITUONG_HOADON" />
 		<property name="PrefixCt" column="PREFIX_CT" type="String" length="64"/>
 
     <bag name="LstCtDHddv" lazy="false" cascade="none" >

@@ -14,7 +14,7 @@ namespace Vns.Erp.Core.Asset.Dao
         IList<CcCtCcdc> GetByCCDCId(Guid CcdcId);
         IList<CcCtCcdc> GetByCCDCIdAndTT(Guid CcdcId);
         Boolean DeleteByCcdcId(Guid CcdcId);
-        IList<CcCtCcdc> GetByTrangThai(decimal GiamCcdc);
+        IList<CcCtCcdc> GetByTrangThai(decimal GiamCcdc, Guid DonviId);
         Boolean DeleteByTrangThai(Guid CcdcId, Decimal GiamCcdc);
         IList<CcCtCcdc> GetByCcDcId_TrangThai(Guid CcdcId, decimal GiamCcdc);
         IList<CcCtCcdc> GetByNgayThangKhauhao(DateTime NgayTinh, Guid DonviId);

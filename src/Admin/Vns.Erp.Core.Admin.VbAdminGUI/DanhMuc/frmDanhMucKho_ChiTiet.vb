@@ -130,6 +130,7 @@ Partial Public Class frmDanhMucKho_ChiTiet
             info.CoSuDung = TNCommon.ParseDecimal(chkCO_SU_DUNG.Checked)
             info.XuatAm = TNCommon.ParseDecimal(chkXUAT_AM.Checked)
             info.ChoPhepSua = TNCommon.ParseDecimal(chkCHO_PHEP_SUA.Checked)
+            info.SynDate = Null.MIN_DATE
             MyBase.ResultObject = info
             Return info
         End Get

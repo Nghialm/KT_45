@@ -13,5 +13,10 @@ namespace Vns.Erp.Core.Accounting.Dao
 	{
         Boolean DeleteByChungTu(Guid CtLienQuan, Decimal Loai);
         IList<CtHoadon> SearchBy(DateTime TuNgay, DateTime DenNgay, Guid DonviId, String SoHoadon);
-	}
+        IList<CtHoadon> SearchBy(int PageIndex, int PageSize,
+            DateTime TuNgay, DateTime DenNgay, Guid DonviId, String SoHoadon,
+            String MaSoThue, String TenKhachhang,
+            out int totalResult);
+
+    }
 }

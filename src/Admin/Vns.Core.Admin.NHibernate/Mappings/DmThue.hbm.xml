@@ -20,5 +20,6 @@
 		<property column="NGUOI_SUA" type="Guid" name="NguoiSua" />
 		<property column="NGAY_SUA" type="DateTime" name="NgaySua" />
     <property column="MUA_HANG" type="Decimal" precision="2" scale="0" name="MuaHang" />
-	</class>
+    <property name="SynDate" not-null="false"  column="Syn_Date" type="DateTime" />
+  </class>
 </hibernate-mapping>

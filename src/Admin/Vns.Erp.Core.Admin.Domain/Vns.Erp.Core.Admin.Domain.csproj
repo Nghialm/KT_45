@@ -145,8 +145,8 @@
     <Compile Include="DmThue.generated.cs" />
     <Compile Include="DmTkChitiet.cs" />
     <Compile Include="DmTkChitiet.generated.cs" />
-    <Compile Include="DmTudo1.cs" />
-    <Compile Include="DmTudo1.generated.cs" />
+    <Compile Include="DanhMuc\DmTudo1.cs" />
+    <Compile Include="DanhMuc\DmTudo1.generated.cs" />
     <Compile Include="DmVuviec.cs" />
     <Compile Include="DmVuviec.generated.cs" />
     <Compile Include="Admin\HtBaocao.cs" />

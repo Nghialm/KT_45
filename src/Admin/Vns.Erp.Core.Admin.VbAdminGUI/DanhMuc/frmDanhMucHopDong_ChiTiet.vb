@@ -153,6 +153,7 @@ Partial Public Class frmDanhMucHopDong_ChiTiet
             info.NguoiTao = Generals.USER.Id
             info.NguoiSua = Generals.USER.Id
             info.CoSuDung = TNCommon.ParseDecimal(chkCO_SU_DUNG.Checked)
+            info.SynDate = Null.MIN_DATE
             MyBase.ResultObject = info
             Return info
         End Get

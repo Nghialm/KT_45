@@ -34,9 +34,9 @@ namespace Vns.Erp.Core.Asset.Service
             return CcCtCcdcDao .DeleteByCcdcId (CcdcId );
         }
 
-        public IList<CcCtCcdc> GetByTrangThai(decimal GiamCcdc)
+        public IList<CcCtCcdc> GetByTrangThai(decimal GiamCcdc, Guid DonviId)
         {
-            return CcCtCcdcDao.GetByTrangThai(GiamCcdc);
+            return CcCtCcdcDao.GetByTrangThai(GiamCcdc, DonviId);
         }
 
         public Boolean DeleteByTrangThai(Guid CcdcId, Decimal GiamCcdc)

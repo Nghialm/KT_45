@@ -16,6 +16,12 @@ namespace Vns.Erp.Core.Accounting.Service.Interface
 	{
         IList<CtHoadon> GetAllByDonviID(Guid DonviId);
         IList<CtHoadon> SearchBy(DateTime TuNgay, DateTime DenNgay, Guid DonviId, String SoHoadon);
+
+        IList<CtHoadon> SearchBy(int PageIndex, int PageSize,
+            DateTime TuNgay, DateTime DenNgay, Guid DonviId, String SoHoadon,
+            String MaSoThue, String TenKhachhang,
+            out int totalResult);
+
         Boolean SaveHoaDonThueGTGT(CtHoadon objHoaDon, IList<CtThue> lstSave, IList<CtThue> lstDel);
 	}
 }

@@ -14,7 +14,7 @@ namespace Vns.Erp.Core.Admin.Domain
 
     [Serializable]
     [DataContract(Namespace = "http://Vns.Erp.Core.Admin", IsReference = true)]
-    public partial class DmKhoanphi : DomainObject<Guid>, INotifyPropertyChanged
+    public partial class DmTudo1 : DomainObject<Guid>, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(String propertyName)
@@ -27,23 +27,23 @@ namespace Vns.Erp.Core.Admin.Domain
         #region Private Members
         private bool _isChanged;
         private bool _isDeleted;
-        private Guid _dm_khoanphi_id;
-        private string _ma_dm_khoanphi;
+        private Guid _dm_tudo_1_id;
+        private string _ma_dm_tudo_1;
         private string _ky_hieu;
-        private string _ten_dm_khoanphi;
+        private string _ten_dm_tudo_1;
         private string _mo_ta;
-        private decimal _co_su_dung;
-        private decimal _cho_phep_sua;
+        private Guid _dm_tudo_1_id_cha;
+        private decimal _cap;
+        private decimal _chi_tiet;
         private Guid _donvi_id;
         private string _ma_donvi;
-        private Guid _dm_khoanphi_id_cha;
-        private decimal _chi_tiet;
-        private decimal _cap;
+        private string _ma_tk;
+        private decimal _cho_phep_sua;
+        private decimal _co_su_dung;
         private Guid _nguoi_tao;
         private DateTime _ngay_tao;
         private Guid _nguoi_sua;
         private DateTime _ngay_sua;
-        private string _matk_lienquan;
         private DateTime _SynDate;
         #endregion
 
@@ -51,25 +51,25 @@ namespace Vns.Erp.Core.Admin.Domain
         /// <summary>
         /// default constructor
         /// </summary>
-        public DmKhoanphi()
+        public DmTudo1()
         {
-            _dm_khoanphi_id = new Guid();
-            _ma_dm_khoanphi = String.Empty;
+            _dm_tudo_1_id = new Guid();
+            _ma_dm_tudo_1 = String.Empty;
             _ky_hieu = String.Empty;
-            _ten_dm_khoanphi = String.Empty;
+            _ten_dm_tudo_1 = String.Empty;
             _mo_ta = String.Empty;
-            _co_su_dung = 0;
-            _cho_phep_sua = 0;
+            _dm_tudo_1_id_cha = new Guid();
+            _cap = 0;
+            _chi_tiet = 0;
             _donvi_id = new Guid();
             _ma_donvi = String.Empty;
-            _dm_khoanphi_id_cha = new Guid();
-            _chi_tiet = 0;
-            _cap = 0;
+            _ma_tk = String.Empty;
+            _cho_phep_sua = 0;
+            _co_su_dung = 0;
             _nguoi_tao = Guid.Empty;
             _ngay_tao = DateTime.MaxValue;
             _nguoi_sua = Guid.Empty;
             _ngay_sua = DateTime.MaxValue;
-            _matk_lienquan = String.Empty;
             _SynDate = Null.MIN_DATE;
         }
         #endregion // End of Default ( Empty ) Class Constuctor
@@ -81,10 +81,10 @@ namespace Vns.Erp.Core.Admin.Domain
         /// </summary>		
 
         [DataMember]
-        public Guid DmKhoanphiId
+        public Guid DmTudo1Id
         {
-            get { return _dm_khoanphi_id; }
-            set { _isChanged |= (_dm_khoanphi_id != value); _dm_khoanphi_id = value; }
+            get { return _dm_tudo_1_id; }
+            set { _isChanged |= (_dm_tudo_1_id != value); _dm_tudo_1_id = value; }
         }
 
 
@@ -93,16 +93,16 @@ namespace Vns.Erp.Core.Admin.Domain
         /// </summary>		
 
         [DataMember]
-        public string MaDmKhoanphi
+        public string MaDmTudo1
         {
-            get { return _ma_dm_khoanphi; }
+            get { return _ma_dm_tudo_1; }
             set
             {
                 if (value != null)
                     if (value.Length > 32)
-                        throw new ArgumentOutOfRangeException("Invalid value for MaDmKhoanphi", value, value.ToString());
+                        throw new ArgumentOutOfRangeException("Invalid value for MaDmTudo1", value, value.ToString());
 
-                _isChanged |= (_ma_dm_khoanphi != value); _ma_dm_khoanphi = value;
+                _isChanged |= (_ma_dm_tudo_1 != value); _ma_dm_tudo_1 = value;
             }
         }
 
@@ -118,7 +118,7 @@ namespace Vns.Erp.Core.Admin.Domain
             set
             {
                 if (value != null)
-                    if (value.Length > 32)
+                    if (value.Length > 64)
                         throw new ArgumentOutOfRangeException("Invalid value for KyHieu", value, value.ToString());
 
                 _isChanged |= (_ky_hieu != value); _ky_hieu = value;
@@ -131,16 +131,16 @@ namespace Vns.Erp.Core.Admin.Domain
         /// </summary>		
 
         [DataMember]
-        public string TenDmKhoanphi
+        public string TenDmTudo1
         {
-            get { return _ten_dm_khoanphi; }
+            get { return _ten_dm_tudo_1; }
             set
             {
                 if (value != null)
                     if (value.Length > 128)
-                        throw new ArgumentOutOfRangeException("Invalid value for TenDmKhoanphi", value, value.ToString());
+                        throw new ArgumentOutOfRangeException("Invalid value for TenDmTudo1", value, value.ToString());
 
-                _isChanged |= (_ten_dm_khoanphi != value); _ten_dm_khoanphi = value;
+                _isChanged |= (_ten_dm_tudo_1 != value); _ten_dm_tudo_1 = value;
             }
         }
 
@@ -169,10 +169,10 @@ namespace Vns.Erp.Core.Admin.Domain
         /// </summary>		
 
         [DataMember]
-        public decimal CoSuDung
+        public Guid DmTudo1IdCha
         {
-            get { return _co_su_dung; }
-            set { _isChanged |= (_co_su_dung != value); _co_su_dung = value; }
+            get { return _dm_tudo_1_id_cha; }
+            set { _isChanged |= (_dm_tudo_1_id_cha != value); _dm_tudo_1_id_cha = value; }
         }
 
 
@@ -181,10 +181,22 @@ namespace Vns.Erp.Core.Admin.Domain
         /// </summary>		
 
         [DataMember]
-        public decimal ChoPhepSua
+        public decimal Cap
         {
-            get { return _cho_phep_sua; }
-            set { _isChanged |= (_cho_phep_sua != value); _cho_phep_sua = value; }
+            get { return _cap; }
+            set { _isChanged |= (_cap != value); _cap = value; }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>		
+
+        [DataMember]
+        public decimal ChiTiet
+        {
+            get { return _chi_tiet; }
+            set { _isChanged |= (_chi_tiet != value); _chi_tiet = value; }
         }
 
 
@@ -224,10 +236,17 @@ namespace Vns.Erp.Core.Admin.Domain
         /// </summary>		
 
         [DataMember]
-        public Guid DmKhoanphiIdCha
+        public string MaTk
         {
-            get { return _dm_khoanphi_id_cha; }
-            set { _isChanged |= (_dm_khoanphi_id_cha != value); _dm_khoanphi_id_cha = value; }
+            get { return _ma_tk; }
+            set
+            {
+                if (value != null)
+                    if (value.Length > 32)
+                        throw new ArgumentOutOfRangeException("Invalid value for MaTk", value, value.ToString());
+
+                _isChanged |= (_ma_tk != value); _ma_tk = value;
+            }
         }
 
 
@@ -236,10 +255,10 @@ namespace Vns.Erp.Core.Admin.Domain
         /// </summary>		
 
         [DataMember]
-        public decimal ChiTiet
+        public decimal ChoPhepSua
         {
-            get { return _chi_tiet; }
-            set { _isChanged |= (_chi_tiet != value); _chi_tiet = value; }
+            get { return _cho_phep_sua; }
+            set { _isChanged |= (_cho_phep_sua != value); _cho_phep_sua = value; }
         }
 
 
@@ -248,10 +267,10 @@ namespace Vns.Erp.Core.Admin.Domain
         /// </summary>		
 
         [DataMember]
-        public decimal Cap
+        public decimal CoSuDung
         {
-            get { return _cap; }
-            set { _isChanged |= (_cap != value); _cap = value; }
+            get { return _co_su_dung; }
+            set { _isChanged |= (_co_su_dung != value); _co_su_dung = value; }
         }
 
 
@@ -300,25 +319,6 @@ namespace Vns.Erp.Core.Admin.Domain
         {
             get { return _ngay_sua; }
             set { _isChanged |= (_ngay_sua != value); _ngay_sua = value; }
-        }
-
-
-        /// <summary>
-        /// 
-        /// </summary>		
-
-        [DataMember]
-        public string MatkLienquan
-        {
-            get { return _matk_lienquan; }
-            set
-            {
-                if (value != null)
-                    if (value.Length > 32)
-                        throw new ArgumentOutOfRangeException("Invalid value for MatkLienquan", value, value.ToString());
-
-                _isChanged |= (_matk_lienquan != value); _matk_lienquan = value;
-            }
         }
 
         [DataMember]
@@ -370,9 +370,9 @@ namespace Vns.Erp.Core.Admin.Domain
         {
             if (this == obj) return true;
             if ((obj == null) || (obj.GetType() != this.GetType())) return false;
-            DmKhoanphi castObj = (DmKhoanphi)obj;
+            DmTudo1 castObj = (DmTudo1)obj;
             return (castObj != null) &&
-                (this._dm_khoanphi_id == castObj.DmKhoanphiId);
+                (this._dm_tudo_1_id == castObj.DmTudo1Id);
         }
 
         /// <summary>
@@ -382,7 +382,7 @@ namespace Vns.Erp.Core.Admin.Domain
         {
 
             int hash = 57;
-            hash = 27 * hash * _dm_khoanphi_id.GetHashCode();
+            hash = 27 * hash * _dm_tudo_1_id.GetHashCode();
             return hash;
         }
         #endregion

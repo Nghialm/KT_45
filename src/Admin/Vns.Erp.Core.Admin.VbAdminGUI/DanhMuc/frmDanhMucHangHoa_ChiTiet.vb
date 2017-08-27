@@ -116,7 +116,7 @@ Partial Public Class frmDanhMucHangHoa_ChiTiet
                     info.ChiTiet = _temp.ChiTiet
             End Select
             info.ChiTiet = TNCommon.ParseDecimal(chkChiTiet.Checked)
-
+            info.SynDate = Null.MIN_DATE
             MyBase.ResultObject = info
             Return info
         End Get

@@ -38,12 +38,14 @@ namespace Vns.Erp.Core.Asset.Dao.NHibernate
         // GiamCcdc = 3: DC Tang
         // GiamCcdc = 4: DC giam
         //---------------------------
-        public IList<CcCtCcdc> GetByTrangThai(decimal GiamCcdc)
+        public IList<CcCtCcdc> GetByTrangThai(decimal GiamCcdc, Guid DonviId)
         {
             ArrayList props = new ArrayList();
             ArrayList values = new ArrayList();
             props.Add("GiamCcdc");
             values.Add(GiamCcdc);
+            props.Add("DonviId");
+            values.Add(DonviId);
             return List(-1, -1, props, values, null);
         }
 

@@ -208,7 +208,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Mappings\DmDvt.hbm.xml" />
-    <EmbeddedResource Include="Mappings\DmTudo1.hbm.xml" />
+    <EmbeddedResource Include="Mappings\DanhMuc\DmTudo1.hbm.xml" />
     <EmbeddedResource Include="Mappings\Admin\HtBienBaocao.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
