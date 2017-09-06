@@ -85,7 +85,7 @@ Partial Public Class frmDanhMucNgoaiTe_DanhSach
     '
     Public Overrides Sub Loading()
         Try
-            DataSource = DmNgoaiteService().GetAll()
+            DataSource = DmNgoaiteService().GetAllByDonviID(Generals.DonviID)
             TNCommon.BindData_GridView(Viewer, DataSource, ViewerColumnDefine)
             TNCommon.BindData_GridLookUp(SearchHelper, DataSource, (CType(SearchHelperColumnDefine(0), ColumnInfo)).FieldName, KeyName, SearchHelperColumnDefine, True, False)
             TNCommon.BindData_GridLookUp(FieldChooser, SearchHelperColumnDefine, "Caption", "FieldName", FieldChooserColumnDefine, True, True)

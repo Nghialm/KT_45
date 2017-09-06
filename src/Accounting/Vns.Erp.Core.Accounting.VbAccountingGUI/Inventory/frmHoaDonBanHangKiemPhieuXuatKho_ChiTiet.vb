@@ -532,7 +532,7 @@ Public Class frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet
 
             'Bind danh muc ngoai te
             Dim lstNgoaite As List(Of DmNgoaite) = New List(Of DmNgoaite)
-            lstNgoaite.AddRange(_DmNgoaiteService.GetAll())
+            lstNgoaite.AddRange(_DmNgoaiteService.GetAllByDonviID(Generals.DonviID))
             'Dim listNgoaite As List(Of DM_NgoaiteInfo) = New List(Of DM_NgoaiteInfo)
             cboNgoaiTe.Properties.DataSource = lstNgoaite
             cboNgoaiTe.Properties.DisplayMember = "KyHieu"

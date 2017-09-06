@@ -121,6 +121,8 @@ Partial Public Class frmDanhMucNgoaiTe_ChiTiet
             info.NguoiTao = Generals.USER.Id
             info.NguoiSua = Generals.USER.Id
             info.TenNte = Me.txtTEN_NTE.Text
+            info.DonviId = Generals.DonviID
+            info.MaDonvi = Generals.DON_VI.MaDonvi
             Select Case Mode
                 Case FormGlobals.DataInputState.AddMode
                     info.MaNte = "0"

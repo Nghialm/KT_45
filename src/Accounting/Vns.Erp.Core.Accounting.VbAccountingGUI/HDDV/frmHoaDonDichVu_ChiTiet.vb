@@ -496,7 +496,7 @@ Public Class frmHoaDonDichVu_ChiTiet
         AddHandler grlLOAI_CT_ID.EditValueChanged, AddressOf grlLOAI_CT_ID_EditValueChanged
 
         Dim lstNgoaite As List(Of DmNgoaite) = New List(Of DmNgoaite)
-        lstNgoaite.AddRange(DmNgoaiteService.GetAll())
+        lstNgoaite.AddRange(DmNgoaiteService.GetAllByDonviID(Generals.DonviID))
         'Dim listNgoaite As List(Of DmNgoaite) = New List(Of DmNgoaite)
         cboNgoaiTe.Properties.DisplayMember = "KyHieu"
         cboNgoaiTe.Properties.ValueMember = "Id"

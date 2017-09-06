@@ -188,7 +188,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "src\WebA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Syn", "Syn", "{27CB5A7D-0AF4-42E3-AB97-2AF3FE9A59F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vns.SynDb", "src\Syn\Vns.SynDb\Vns.SynDb.csproj", "{37343EA6-2BC5-4365-9401-B38B619B1E39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vns.Erp.Core.SynDb", "src\Syn\Vns.SynDb\Vns.Erp.Core.SynDb.csproj", "{37343EA6-2BC5-4365-9401-B38B619B1E39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

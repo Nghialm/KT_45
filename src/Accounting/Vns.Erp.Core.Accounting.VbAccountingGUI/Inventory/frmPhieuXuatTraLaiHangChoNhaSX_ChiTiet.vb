@@ -426,7 +426,7 @@ Public Class frmPhieuXuatTraLaiHangChoNhaSX_ChiTiet
 
             'Bind danh muc ngoai te
             Dim lstNgoaite As List(Of DmNgoaite) = New List(Of DmNgoaite)
-            lstNgoaite.AddRange(_DmNgoaiteService.GetAll())
+            lstNgoaite.AddRange(_DmNgoaiteService.GetAllByDonviID(Generals.DonviID))
             cboNgoaiTe.Properties.DisplayMember = "KyHieu"
             cboNgoaiTe.Properties.ValueMember = "Id"
             cboNgoaiTe.Properties.DataSource = lstNgoaite

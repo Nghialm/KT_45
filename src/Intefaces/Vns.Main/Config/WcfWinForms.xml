@@ -1562,57 +1562,9 @@
     <property name="CtHService" ref="CtHService" />
   </object>
 
-  <object id="Vns.SynDb.SynDbHelper" type="Vns.SynDb.SynDbHelper, Vns.SynDb" singleton="false">
+  <object id="Vns.Erp.Core.SynDb.SynDbHelper" type="Vns.Erp.Core.SynDb.SynDbHelper, Vns.Erp.Core.SynDb" singleton="false">
     <property name="DmTaiKhoanService" ref="DmTaikhoanService" />
     <property name="DmTaiKhoanServiceSyn" ref="DmTaikhoanServiceSyn" />
-
-    <property name="DmKhangService" ref="DmKhangService" />
-    <property name="DmKhangServiceSyn" ref="DmKhangServiceSyn" />
-
-    <property name="DmHanghoaService" ref="DmHanghoaService" />
-    <property name="DmHanghoaServiceSyn" ref="DmHanghoaServiceSyn" />
-
-    <property name="DmHopdongService" ref="DmHopdongService" />
-    <property name="DmHopdongServiceSyn" ref="DmHopdongServiceSyn" />
-
-    <property name="DmDvtService" ref="DmDvtService" />
-    <property name="DmDvtServiceSyn" ref="DmDvtServiceSyn" />
-
-    <property name="DmKhoService" ref="DmKhoService" />
-    <property name="DmKhoServiceSyn" ref="DmKhoServiceSyn" />
-
-    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
-    <property name="DmKhoanphiServiceSyn" ref="DmKhoanphiServiceSyn" />
-
-    <property name="DmDonviService" ref="DmDonviService" />
-    <property name="DmDonviServiceSyn" ref="DmDonviServiceSyn" />
-
-    <property name="DmLoaitaisanService" ref="DmLoaitaisanService" />
-    <property name="DmLoaitaisanServiceSyn" ref="DmLoaitaisanServiceSyn" />
-
-    <property name="DmLydoTgTscdService" ref="DmLydoTgTscdService" />
-    <property name="DmLydoTgTscdServiceSyn" ref="DmLydoTgTscdServiceSyn" />
-
-    <property name="DmNguonTscdService" ref="DmNguonTscdService" />
-    <property name="DmNguonTscdServiceSyn" ref="DmNguonTscdServiceSyn" />
-
-    <property name="DmNhomTscdService" ref="DmNhomTscdService" />
-    <property name="DmNhomTscdServiceSyn" ref="DmNhomTscdServiceSyn" />
-
-    <property name="DmNhomKhangService" ref="DmNhomKhangService" />
-    <property name="DmNhomKhangServiceSyn" ref="DmNhomKhangServiceSyn" />
-
-    <property name="DmNhomvattu1Service" ref="DmNhomvattu1Service" />
-    <property name="DmNhomvattu1ServiceSyn" ref="DmNhomvattu1ServiceSyn" />
-
-    <property name="DmPhongbanService" ref="DmPhongbanService" />
-    <property name="DmPhongbanServiceSyn" ref="DmPhongbanServiceSyn" />
-
-    <property name="DmPtqtService" ref="DmPtqtService" />
-    <property name="DmPtqtServiceSyn" ref="DmPtqtServiceSyn" />
-
-    <property name="DmThueService" ref="DmThueService" />
-    <property name="DmThueServiceSyn" ref="DmThueServiceSyn" />
 
     <property name="DmTudo1Service" ref="DmTudo1Service" />
     <property name="DmTudo1ServiceSyn" ref="DmTudo1ServiceSyn" />
@@ -1631,6 +1583,57 @@
 
     <property name="DmVuviecService" ref="DmVuviecService" />
     <property name="DmVuviecServiceSyn" ref="DmVuviecServiceSyn" />
+    
+    <property name="DmDonviService" ref="DmDonviService" />
+    <property name="DmDonviServiceSyn" ref="DmDonviServiceSyn" />
+    
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="DmKhangServiceSyn" ref="DmKhangServiceSyn" />
+
+    <property name="DmHanghoaService" ref="DmHanghoaService" />
+    <property name="DmHanghoaServiceSyn" ref="DmHanghoaServiceSyn" />
+
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="DmHopdongServiceSyn" ref="DmHopdongServiceSyn" />
+
+    <property name="DmDvtService" ref="DmDvtService" />
+    <property name="DmDvtServiceSyn" ref="DmDvtServiceSyn" />
+
+    <property name="DmKhoService" ref="DmKhoService" />
+    <property name="DmKhoServiceSyn" ref="DmKhoServiceSyn" />
+
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmKhoanphiServiceSyn" ref="DmKhoanphiServiceSyn" />
+
+    <property name="DmNhomKhangService" ref="DmNhomKhangService" />
+    <property name="DmNhomKhangServiceSyn" ref="DmNhomKhangServiceSyn" />
+
+    <property name="DmNhomvattu1Service" ref="DmNhomvattu1Service" />
+    <property name="DmNhomvattu1ServiceSyn" ref="DmNhomvattu1ServiceSyn" />
+
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="DmPhongbanServiceSyn" ref="DmPhongbanServiceSyn" />
+
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmPtqtServiceSyn" ref="DmPtqtServiceSyn" />
+
+    <property name="DmThueService" ref="DmThueService" />
+    <property name="DmThueServiceSyn" ref="DmThueServiceSyn" />
+
+    <!--tai san co dinh-->
+    <property name="DmLoaitaisanService" ref="DmLoaitaisanService" />
+    <property name="DmLoaitaisanServiceSyn" ref="DmLoaitaisanServiceSyn" />
+
+    <property name="DmLydoTgTscdService" ref="DmLydoTgTscdService" />
+    <property name="DmLydoTgTscdServiceSyn" ref="DmLydoTgTscdServiceSyn" />
+
+    <property name="DmNguonTscdService" ref="DmNguonTscdService" />
+    <property name="DmNguonTscdServiceSyn" ref="DmNguonTscdServiceSyn" />
+
+    <property name="DmNhomTscdService" ref="DmNhomTscdService" />
+    <property name="DmNhomTscdServiceSyn" ref="DmNhomTscdServiceSyn" />
   </object>
 
+  <object id="Vns.Erp.Core.SynDb.frmDongBoDuLieu" type="Vns.Erp.Core.SynDb.frmDongBoDuLieu, Vns.Erp.Core.SynDb" singleton="false">
+  </object>
 </objects>

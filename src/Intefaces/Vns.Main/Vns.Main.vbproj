@@ -430,6 +430,10 @@
       <Project>{bd3b9c3b-64f2-4046-b1a0-6c113b5e6025}</Project>
       <Name>Vns.Erp.Core.Admin.Dao</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Admin\Vns.Core.Admin.Service\Vns.Erp.Core.Admin.Service.csproj">
+      <Project>{b1c4c1bd-e65b-4f2d-b300-0a670e1f57c6}</Project>
+      <Name>Vns.Erp.Core.Admin.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Asset\Vns.Erp.Core.Asset.CsAssetGUI\Vns.Erp.Core.Asset.CsAssetGUI.csproj">
       <Project>{BEAC0B3B-FAD8-458B-8DC6-436A8132E43E}</Project>
       <Name>Vns.Erp.Core.Asset.CsAssetGUI</Name>
@@ -510,10 +514,6 @@
       <Project>{796175DC-C46A-47D7-9B3E-A80779B2330C}</Project>
       <Name>Vns.Erp.Core.Admin.Dao.NHibernate</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Admin\Vns.Core.Admin.Service\Vns.Erp.Core.Admin.Service.csproj">
-      <Project>{B1C4C1BD-E65B-4F2D-B300-0A670E1F57C6}</Project>
-      <Name>Vns.Erp.Core.Admin.Service</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Admin\Vns.Erp.Core.Admin.Domain\Vns.Erp.Core.Admin.Domain.csproj">
       <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
       <Name>Vns.Erp.Core.Admin.Domain</Name>
@@ -546,9 +546,9 @@
       <Project>{676649F7-9F89-4C2F-A34C-ED5D9889957E}</Project>
       <Name>Vns.Erp.Core.Admin.VbAdminGUI</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Syn\Vns.SynDb\Vns.SynDb.csproj">
+    <ProjectReference Include="..\..\Syn\Vns.SynDb\Vns.Erp.Core.SynDb.csproj">
       <Project>{37343ea6-2bc5-4365-9401-b38b619b1e39}</Project>
-      <Name>Vns.SynDb</Name>
+      <Name>Vns.Erp.Core.SynDb</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

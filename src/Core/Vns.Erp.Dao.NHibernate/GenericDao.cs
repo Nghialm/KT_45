@@ -66,15 +66,6 @@ namespace Vns.Erp.Core.Dao.NHibernate
         public IList<T> List(int recordStart, int recordCount)
         {
             ICriteria cri = Session.CreateCriteria(typeof(T));
-            //if (recordStart >= 0)
-            //{
-            //    cri.SetFirstResult(recordStart);
-            //}
-            //if (recordCount > 0)
-            //{
-            //    cri.SetMaxResults(recordCount);
-            //}
-            //return cri.List<T>();
             return List(recordStart, recordCount, cri);
         }
         public IList<T> List(int recordStart, int recordCount,IList props, IList values)
@@ -241,8 +232,6 @@ namespace Vns.Erp.Core.Dao.NHibernate
         public int RecordCount()
         {
             ICriteria cri = Session.CreateCriteria(typeof(T));
-            //cri.SetProjection(Projections.ProjectionList().Add(Projections.RowCount()));
-            //return cri.UniqueResult<int>();
             return RecordCount(cri);
         }
         public T Save(T entity)

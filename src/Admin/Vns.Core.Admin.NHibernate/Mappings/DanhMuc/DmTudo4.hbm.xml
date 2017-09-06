@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
 	<class name="Vns.Erp.Core.Admin.Domain.DmTudo4, Vns.Erp.Core.Admin.Domain" table="DM_TUDO4" lazy="false">
-		<id name="Id" column="DM_TUDO_4_ID">
-			<generator class="guid" />
-		</id>
+		<id name="Id" column="DM_TUDO_4_ID"/>
+			
 		<property name="MaDmTudo4" column="MA_DM_TUDO_4" />
 		<property name="KyHieu" column="KY_HIEU" />
 		<property name="TenDmTudo4" column="TEN_DM_TUDO_4" />

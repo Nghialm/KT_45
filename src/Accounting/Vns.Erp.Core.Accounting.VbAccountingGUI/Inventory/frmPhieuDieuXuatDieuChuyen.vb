@@ -316,7 +316,7 @@ Public Class PhieuDieuXuatDieuChuyen
         TNCommon.SelectFirst(grlLoaiPhieuNhap)
 
         'Bind ngoai te
-        Dim lstNgoaite As List(Of DmNgoaite) = _DmNgoaiteService.GetAll()
+        Dim lstNgoaite As List(Of DmNgoaite) = _DmNgoaiteService.GetAllByDonviID(Generals.DonviID)
         cboTyGia.Properties.DisplayMember = "KyHieu"
         cboTyGia.Properties.ValueMember = "Id"
         cboTyGia.Properties.DataSource = lstNgoaite

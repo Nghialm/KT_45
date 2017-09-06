@@ -8,8 +8,8 @@
     <ProjectGuid>{B1C4C1BD-E65B-4F2D-B300-0A670E1F57C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Vns.Core.Admin.Service</RootNamespace>
-    <AssemblyName>Vns.Core.Admin.Service</AssemblyName>
+    <RootNamespace>Vns.Erp.Core.Admin.Service</RootNamespace>
+    <AssemblyName>Vns.Erp.Core.Admin.Service</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -90,24 +90,24 @@
     <Compile Include="DanhMuc\DmTudo3Service.cs" />
     <Compile Include="DanhMuc\DmTudo4Service.cs" />
     <Compile Include="DanhMuc\DmTudo5Service.cs" />
-    <Compile Include="DmBtKetchuyenService.cs" />
-    <Compile Include="DmDonviService.cs" />
-    <Compile Include="DmDvtService.cs" />
-    <Compile Include="DmHanghoaService.cs" />
-    <Compile Include="DmHopdongService.cs" />
-    <Compile Include="DmKhangService.cs" />
-    <Compile Include="DmKhoanphiService.cs" />
-    <Compile Include="DmKhoService.cs" />
-    <Compile Include="DmNgoaiteService.cs" />
-    <Compile Include="DmNhomKhangService.cs" />
-    <Compile Include="DmNhomvattu1Service.cs" />
-    <Compile Include="DmPhongbanService.cs" />
-    <Compile Include="DmPtqtService.cs" />
-    <Compile Include="DmTaikhoanService.cs" />
-    <Compile Include="DmThueService.cs" />
-    <Compile Include="DmTkChitietService.cs" />
-    <Compile Include="DmTudo1Service.cs" />
-    <Compile Include="DmVuviecService.cs" />
+    <Compile Include="DanhMuc\DmBtKetchuyenService.cs" />
+    <Compile Include="DanhMuc\DmDonviService.cs" />
+    <Compile Include="DanhMuc\DmDvtService.cs" />
+    <Compile Include="DanhMuc\DmHanghoaService.cs" />
+    <Compile Include="DanhMuc\DmHopdongService.cs" />
+    <Compile Include="DanhMuc\DmKhangService.cs" />
+    <Compile Include="DanhMuc\DmKhoanphiService.cs" />
+    <Compile Include="DanhMuc\DmKhoService.cs" />
+    <Compile Include="DanhMuc\DmNgoaiteService.cs" />
+    <Compile Include="DanhMuc\DmNhomKhangService.cs" />
+    <Compile Include="DanhMuc\DmNhomvattu1Service.cs" />
+    <Compile Include="DanhMuc\DmPhongbanService.cs" />
+    <Compile Include="DanhMuc\DmPtqtService.cs" />
+    <Compile Include="DanhMuc\DmTaikhoanService.cs" />
+    <Compile Include="DanhMuc\DmThueService.cs" />
+    <Compile Include="DanhMuc\DmTkChitietService.cs" />
+    <Compile Include="DanhMuc\DmTudo1Service.cs" />
+    <Compile Include="DanhMuc\DmVuviecService.cs" />
     <Compile Include="Admin\HtBaocaoService.cs" />
     <Compile Include="Admin\HtBienBaocaoService.cs" />
     <Compile Include="HtDanhmucService.cs" />
@@ -131,23 +131,23 @@
     <Compile Include="Interface\Admin\Security\IAppUgFormService.cs" />
     <Compile Include="Interface\Admin\Security\IAppUsergroupService.cs" />
     <Compile Include="Interface\Admin\Security\IAppUsersService.cs" />
-    <Compile Include="IDmBtKetchuyenService.cs" />
-    <Compile Include="IDmDonviService.cs" />
-    <Compile Include="IDmDvtService.cs" />
-    <Compile Include="IDmHanghoaService.cs" />
-    <Compile Include="IDmHopdongService.cs" />
-    <Compile Include="IDmKhangService.cs" />
-    <Compile Include="IDmKhoanphiService.cs" />
-    <Compile Include="IDmKhoService.cs" />
-    <Compile Include="IDmNgoaiteService.cs" />
-    <Compile Include="IDmNhomKhangService.cs" />
-    <Compile Include="IDmNhomvattu1Service.cs" />
-    <Compile Include="IDmPhongbanService.cs" />
-    <Compile Include="IDmPtqtService.cs" />
-    <Compile Include="IDmTaikhoanService.cs" />
-    <Compile Include="IDmTkChitietService.cs" />
-    <Compile Include="IDmTudo1Service.cs" />
-    <Compile Include="IDmVuviecService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmBtKetchuyenService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmDonviService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmDvtService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmHanghoaService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmHopdongService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmKhangService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmKhoanphiService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmKhoService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmNgoaiteService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmNhomKhangService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmNhomvattu1Service.cs" />
+    <Compile Include="Interface\DanhMuc\IDmPhongbanService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmPtqtService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmTaikhoanService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmTkChitietService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmTudo1Service.cs" />
+    <Compile Include="Interface\DanhMuc\IDmVuviecService.cs" />
     <Compile Include="Interface\Admin\IHtBaocaoService.cs" />
     <Compile Include="Interface\Admin\IHtBienBaocaoService.cs" />
     <Compile Include="IHtDanhmucService.cs" />
@@ -168,7 +168,7 @@
     <Compile Include="Interface\DanhMuc\IDmTudo4Service.cs" />
     <Compile Include="Interface\DanhMuc\IDmTudo5Service.cs" />
     <Compile Include="ILsTygiaService.cs" />
-    <Compile Include="IDmThueService.cs" />
+    <Compile Include="Interface\DanhMuc\IDmThueService.cs" />
     <Compile Include="License\BigInteger.cs" />
     <Compile Include="License\Const.cs" />
     <Compile Include="License\DecryptUtil.cs" />

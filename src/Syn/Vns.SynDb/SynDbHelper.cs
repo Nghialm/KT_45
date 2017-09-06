@@ -9,10 +9,28 @@ using Vns.Erp.Core.Asset.Domain;
 using Vns.Erp.Core.Asset.Service.Interface;
 using Vns.Erp.Core.Domain;
 
-namespace Vns.SynDb
+namespace Vns.Erp.Core.SynDb
 {
     public class SynDbHelper
     {
+        #region Property
+        private Boolean _IsSynAll = false;
+
+
+        public bool IsSynAll
+        {
+            get
+            {
+                return _IsSynAll;
+            }
+
+            set
+            {
+                _IsSynAll = value;
+            }
+        }
+        #endregion
+
         #region Dm tai khoan
         private IDmTaikhoanService _DmTaiKhoanService;
         private IDmTaikhoanService _DmTaiKhoanServiceSyn;
@@ -50,9 +68,11 @@ namespace Vns.SynDb
 
             foreach (DmTaikhoan client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
+                    client.NgayTao = DateTime.Now;
+                    client.NgaySua = DateTime.Now;
                     _DmTaiKhoanServiceSyn.SaveOrUpdate(client);
                     _DmTaiKhoanService.SaveOrUpdate(client);
                 }
@@ -97,7 +117,7 @@ namespace Vns.SynDb
 
             foreach (DmKhang client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmKhangServiceSyn.SaveOrUpdate(client);
@@ -144,7 +164,7 @@ namespace Vns.SynDb
 
             foreach (DmHanghoa client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmHanghoaServiceSyn.SaveOrUpdate(client);
@@ -191,7 +211,7 @@ namespace Vns.SynDb
 
             foreach (DmHopdong client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmHopdongServiceSyn.SaveOrUpdate(client);
@@ -238,7 +258,7 @@ namespace Vns.SynDb
 
             foreach (DmDvt client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmDvtServiceSyn.SaveOrUpdate(client);
@@ -285,7 +305,7 @@ namespace Vns.SynDb
 
             foreach (DmKho client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmKhoServiceSyn.SaveOrUpdate(client);
@@ -332,7 +352,7 @@ namespace Vns.SynDb
 
             foreach (DmKhoanphi client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmKhoanphiServiceSyn.SaveOrUpdate(client);
@@ -379,7 +399,7 @@ namespace Vns.SynDb
 
             foreach (DmDonvi client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmDonviServiceSyn.SaveOrUpdate(client);
@@ -426,7 +446,7 @@ namespace Vns.SynDb
 
             foreach (DmLoaitaisan client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmLoaitaisanServiceSyn.SaveOrUpdate(client);
@@ -473,7 +493,7 @@ namespace Vns.SynDb
 
             foreach (DmLydoTgTscd client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmLydoTgTscdServiceSyn.SaveOrUpdate(client);
@@ -520,7 +540,7 @@ namespace Vns.SynDb
 
             foreach (DmNgoaite client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmNgoaiteServiceSyn.SaveOrUpdate(client);
@@ -567,7 +587,7 @@ namespace Vns.SynDb
 
             foreach (DmNguonTscd client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmNguonTscdServiceSyn.SaveOrUpdate(client);
@@ -614,7 +634,7 @@ namespace Vns.SynDb
 
             foreach (DmNhomTscd client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmNhomTscdServiceSyn.SaveOrUpdate(client);
@@ -661,7 +681,7 @@ namespace Vns.SynDb
 
             foreach (DmNhomKhang client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmNhomKhangServiceSyn.SaveOrUpdate(client);
@@ -708,7 +728,7 @@ namespace Vns.SynDb
 
             foreach (DmNhomvattu1 client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmNhomvattu1ServiceSyn.SaveOrUpdate(client);
@@ -755,7 +775,7 @@ namespace Vns.SynDb
 
             foreach (DmPhongban client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmPhongbanServiceSyn.SaveOrUpdate(client);
@@ -802,7 +822,7 @@ namespace Vns.SynDb
 
             foreach (DmPtqt client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmPtqtServiceSyn.SaveOrUpdate(client);
@@ -849,7 +869,7 @@ namespace Vns.SynDb
 
             foreach (DmThue client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmThueServiceSyn.SaveOrUpdate(client);
@@ -896,7 +916,7 @@ namespace Vns.SynDb
 
             foreach (DmTudo1 client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmTudo1ServiceSyn.SaveOrUpdate(client);
@@ -943,7 +963,7 @@ namespace Vns.SynDb
 
             foreach (DmTudo2 client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmTudo2ServiceSyn.SaveOrUpdate(client);
@@ -990,7 +1010,7 @@ namespace Vns.SynDb
 
             foreach (DmTudo3 client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmTudo3ServiceSyn.SaveOrUpdate(client);
@@ -1037,7 +1057,7 @@ namespace Vns.SynDb
 
             foreach (DmTudo4 client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmTudo4ServiceSyn.SaveOrUpdate(client);
@@ -1084,7 +1104,7 @@ namespace Vns.SynDb
 
             foreach (DmTudo5 client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmTudo5ServiceSyn.SaveOrUpdate(client);
@@ -1124,6 +1144,7 @@ namespace Vns.SynDb
             }
         }
 
+
         public void SynDmVuviec(Guid DonviId)
         {
             IList<DmVuviec> lstClient = new List<DmVuviec>();
@@ -1131,7 +1152,7 @@ namespace Vns.SynDb
 
             foreach (DmVuviec client in lstClient)
             {
-                if (client.SynDate == Null.MIN_DATE)
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
                 {
                     client.SynDate = DateTime.Now;
                     _DmVuviecServiceSyn.SaveOrUpdate(client);
