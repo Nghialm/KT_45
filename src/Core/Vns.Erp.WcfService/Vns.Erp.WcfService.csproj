@@ -161,6 +161,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="KtCtDKhacService.svc" />
+    <Content Include="KtCtHKhacService.svc" />
     <Content Include="App_Data\Ketoan.db" />
     <Content Include="AuthenticationService.svc" />
     <EmbeddedResource Include="Config\InProcess\Dao.xml">
@@ -192,6 +194,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Config\InProcess\Services.xml">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="AppCtStatusService.svc" />
     <Content Include="AppDvBcService.svc" />
@@ -402,6 +405,10 @@
       <Project>{5c13b6eb-7d22-4cfb-8095-d04bbe5dff96}</Project>
       <Name>Vns.Erp.Core.Spa.Service</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Accounting\" />
+    <Folder Include="Admin\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

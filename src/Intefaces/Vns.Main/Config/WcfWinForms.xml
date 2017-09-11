@@ -697,41 +697,12 @@
 		<property name="DmThueService" ref="DmThueService" />
 	</object>
 	<!--Phieu ke toan khac-->
-	<object id="frmPhieuKeToanKhac2_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuKeToanKhac2_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
-		<property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
-		<property name="CtHService" ref="CtHService" />
-		<property name="CtDService" ref="CtDService" />
-		<property name="DmPtqtService" ref="DmPtqtService" />
-		<property name="DmVuviecService" ref="DmVuviecService" />
-	</object>
 	<object id="frmPhieuKeToanKhac3_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuKeToanKhac3_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
 		<property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
 		<property name="KtCtHKhacService" ref="KtCtHKhacService" />
 		<property name="KtCtDKhacService" ref="KtCtDKhacService" />
 		<property name="DmPtqtService" ref="DmPtqtService" />
 		<property name="DmVuviecService" ref="DmVuviecService" />
-	</object>
-	<object id="frmPhieuKeToanKhac2_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuKeToanKhac2_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
-		<property name="CtThueService" ref="CtThueService" />
-		<property name="CtHService" ref="CtHService" />
-		<property name="CtDService" ref="CtDService" />
-		<property name="DmTaikhoanService" ref="DmTaikhoanService" />
-		<property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
-		<property name="DmNgoaiteService" ref="DmNgoaiteService" />
-		<property name="DmHopdongService" ref="DmHopdongService" />
-		<property name="DmVuviecService" ref="DmVuviecService" />
-		<property name="DmPhongbanService" ref="DmPhongbanService" />
-		<property name="DmKhoanphiService" ref="DmKhoanphiService" />
-		<property name="DmVuviecService" ref="DmVuviecService" />
-		<property name="DmTudo1Service" ref="DmTudo1Service" />
-		<property name="DmTudo2Service" ref="DmTudo2Service" />
-		<property name="DmTudo3Service" ref="DmTudo3Service" />
-		<property name="DmTudo4Service" ref="DmTudo4Service" />
-		<property name="DmTudo5Service" ref="DmTudo5Service" />
-		<property name="DmPtqtService" ref="DmPtqtService" />
-		<property name="DmKhangService" ref="DmKhangService" />
-		<property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
-		<property name="LsTygiaService" ref="LsTygiaService" />
 	</object>
 	<object id="frmPhieuKeToanKhac3_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuKeToanKhac3_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
 		<property name="CtThueService" ref="CtThueService" />
@@ -756,11 +727,6 @@
 		<property name="LsTygiaService" ref="LsTygiaService" />
     <property name="CtHoadonService" ref="CtHoadonService" />
   </object>
-	<object id="frmChungTuThue2" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmChungTuThue2, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
-		<property name="DmThueService" ref="DmThueService" />
-		<!--<property name="CtHoadonService" ref="CtHoadonService" />
-    <property name="CtThueService" ref="CtThueService" />-->
-	</object>
 	<object id="frmChungTuThue3" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmChungTuThue3, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
 		<property name="DmThueService" ref="DmThueService" />
 		<!--<property name="CtHoadonService" ref="CtHoadonService" />
@@ -1634,6 +1600,17 @@
     <property name="DmNhomTscdServiceSyn" ref="DmNhomTscdServiceSyn" />
   </object>
 
+  <object id="Vns.Erp.Core.SynDb.SynAccountingHelper" type="Vns.Erp.Core.SynDb.SynAccountingHelper, Vns.Erp.Core.SynDb" singleton="false">
+    <property name="CtHService" ref="CtHService" />
+    <property name="CtHServiceSyn" ref="CtHServiceSyn" />
+
+    <property name="CtHoadonService" ref="CtHoadonService" />
+    <property name="CtHoadonServiceSyn" ref="CtHoadonServiceSyn" />
+
+    <property name="KtCtHKhacService" ref="KtCtHKhacService" />
+    <property name="KtCtHKhacServiceSyn" ref="KtCtHKhacServiceSyn" />
+  </object>
+  
   <object id="Vns.Erp.Core.SynDb.frmDongBoDuLieu" type="Vns.Erp.Core.SynDb.frmDongBoDuLieu, Vns.Erp.Core.SynDb" singleton="false">
   </object>
 </objects>

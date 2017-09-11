@@ -364,18 +364,6 @@
     <Compile Include="KeToan\frmCT_H_DanhSach.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KeToan\frmPhieuKeToanKhac2_ChiTiet.Designer.vb">
-      <DependentUpon>frmPhieuKeToanKhac2_ChiTiet.vb</DependentUpon>
-    </Compile>
-    <Compile Include="KeToan\frmPhieuKeToanKhac2_ChiTiet.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KeToan\frmPhieuKeToanKhac2_DanhSach.designer.vb">
-      <DependentUpon>frmPhieuKeToanKhac2_DanhSach.vb</DependentUpon>
-    </Compile>
-    <Compile Include="KeToan\frmPhieuKeToanKhac2_DanhSach.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -419,12 +407,6 @@
       <DependentUpon>frmChungTuThue.vb</DependentUpon>
     </Compile>
     <Compile Include="Thue\frmChungTuThue.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Thue\frmChungTuThue2.Designer.vb">
-      <DependentUpon>frmChungTuThue2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Thue\frmChungTuThue2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TimKiem\frmTimKiemChungTuKeToan.designer.vb">
@@ -559,12 +541,6 @@
     <EmbeddedResource Include="KeToan\frmCT_H_DanhSach.resx">
       <DependentUpon>frmCT_H_DanhSach.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KeToan\frmPhieuKeToanKhac2_ChiTiet.resx">
-      <DependentUpon>frmPhieuKeToanKhac2_ChiTiet.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KeToan\frmPhieuKeToanKhac2_DanhSach.resx">
-      <DependentUpon>frmPhieuKeToanKhac2_DanhSach.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -586,9 +562,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Thue\frmChungTuThue.resx">
       <DependentUpon>frmChungTuThue.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Thue\frmChungTuThue2.resx">
-      <DependentUpon>frmChungTuThue2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TimKiem\frmTimKiemChungTuKeToan.resx">
       <DependentUpon>frmTimKiemChungTuKeToan.vb</DependentUpon>

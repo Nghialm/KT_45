@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SynAccountingHelper.cs" />
     <Compile Include="SynDbHelper.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -98,6 +99,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Domain\Vns.Erp.Core.Accounting.Domain.csproj">
+      <Project>{7258abc1-7fa4-4369-b5d3-9da7faa974c5}</Project>
+      <Name>Vns.Erp.Core.Accounting.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Accounting\Vns.Erp.Core.Accounting.Service\Vns.Erp.Core.Accounting.Service.csproj">
+      <Project>{1567f284-e659-4c44-8d1b-4ef16b969c98}</Project>
+      <Name>Vns.Erp.Core.Accounting.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Admin\Vns.Core.Admin.NHibernate\Vns.Erp.Core.Admin.Dao.NHibernate.csproj">
       <Project>{796175dc-c46a-47d7-9b3e-a80779b2330c}</Project>
       <Name>Vns.Erp.Core.Admin.Dao.NHibernate</Name>

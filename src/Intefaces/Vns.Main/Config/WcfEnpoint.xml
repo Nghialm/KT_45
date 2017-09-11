@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <client>
-
-
   <!-- Local-->
-
   <endpoint address="http://localhost:17022/AuthenticationService.svc"
     binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService"
     contract="AuthService.AuthenticationService" name="BasicHttpBinding_AuthenticationService" />
@@ -75,6 +72,8 @@
   <endpoint address="http://localhost:17022/CtHNxService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.ICtHNxService" name="WcfCtHNxService"/>
   <endpoint address="http://localhost:17022/CtDNxService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.ICtDNxService" name="WcfCtDNxService"/>
   <endpoint address="http://localhost:17022/BcKetoanKhoService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IBcKetoanKhoService" name="WcfBcKetoanKhoService"/>
+  <endpoint address="http://localhost:17022/KtCtDKhacService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IKtCtDKhacService" name="WcfKtCtDKhacService"/>
+  <endpoint address="http://localhost:17022/KtCtHKhacService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IKtCtHKhacService" name="WcfKtCtHKhacService"/>
 
   <!--Tai san co dinh-->
   <endpoint address="http://localhost:17022/DmLoaitaisanService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Asset.Service.Interface.IDmLoaitaisanService" name="WcfDmLoaitaisanService"/>

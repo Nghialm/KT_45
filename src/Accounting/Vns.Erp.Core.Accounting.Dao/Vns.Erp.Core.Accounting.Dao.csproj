@@ -51,13 +51,13 @@
   <ItemGroup>
     <Compile Include="HDDV\IKtCtDHddvDao.cs" />
     <Compile Include="HDDV\IKtCtHHddvDao.cs" />
-    <Compile Include="IBcKetoanDao.cs" />
-    <Compile Include="ICtDDao.cs" />
-    <Compile Include="ICtHDao.cs" />
-    <Compile Include="ICtHoadonDao.cs" />
-    <Compile Include="ICtThueDao.cs" />
-    <Compile Include="IKtCtDKhacDao.cs" />
-    <Compile Include="IKtCtHKhacDao.cs" />
+    <Compile Include="Accounting\IBcKetoanDao.cs" />
+    <Compile Include="Accounting\ICtDDao.cs" />
+    <Compile Include="Accounting\ICtHDao.cs" />
+    <Compile Include="Accounting\ICtHoadonDao.cs" />
+    <Compile Include="Accounting\ICtThueDao.cs" />
+    <Compile Include="Accounting\IKtCtDKhacDao.cs" />
+    <Compile Include="Accounting\IKtCtHKhacDao.cs" />
     <Compile Include="Inventory\IBcKetoanKhoDao.cs" />
     <Compile Include="Inventory\ICtDNxDao.cs" />
     <Compile Include="Inventory\ICtHNxDao.cs" />

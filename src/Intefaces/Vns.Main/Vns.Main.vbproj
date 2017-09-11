@@ -338,6 +338,7 @@
     <Content Include="Resources\IconMenu\Main_Warehouse.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="SQLife\Update_Error.sql" />
     <Content Include="Util\Teamview.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -799,7 +800,6 @@
     <EmbeddedResource Include="Config\Remoting\cao-aop.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Config\WebServices\" />
     <Folder Include="Resources\Icon\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

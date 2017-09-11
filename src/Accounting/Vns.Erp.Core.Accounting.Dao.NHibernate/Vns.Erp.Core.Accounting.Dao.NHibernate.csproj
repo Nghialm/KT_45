@@ -65,11 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BcKetoanDao.cs" />
-    <Compile Include="CtDDao.cs" />
-    <Compile Include="CtHDao.cs" />
-    <Compile Include="CtHoadonDao.cs" />
-    <Compile Include="CtThueDao.cs" />
+    <Compile Include="Accounting\BcKetoanDao.cs" />
+    <Compile Include="Accounting\CtDDao.cs" />
+    <Compile Include="Accounting\CtHDao.cs" />
+    <Compile Include="Accounting\CtHoadonDao.cs" />
+    <Compile Include="Accounting\CtThueDao.cs" />
     <Compile Include="HDDV\KtCtDHddvDao.cs" />
     <Compile Include="HDDV\KtCtHHddvDao.cs" />
     <Compile Include="Inventory\BcKetoanKhoDao.cs" />
@@ -77,8 +77,8 @@
     <Compile Include="Inventory\CtHNxDao.cs" />
     <Compile Include="Inventory\KtDuluongDaukyDao.cs" />
     <Compile Include="Inventory\KtGiaxuatDaukyDao.cs" />
-    <Compile Include="KtCtDKhacDao.cs" />
-    <Compile Include="KtCtHKhacDao.cs" />
+    <Compile Include="Accounting\KtCtDKhacDao.cs" />
+    <Compile Include="Accounting\KtCtHKhacDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TongHop\KtDmBtPhanboDao.cs" />
     <Compile Include="TongHop\KtThBtPhanboDao.cs" />
@@ -110,15 +110,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Mappings\BcKetoan.hbm.xml">
+    <EmbeddedResource Include="Mappings\Accounting\BcKetoan.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mappings\CtD.hbm.xml" />
-    <EmbeddedResource Include="Mappings\CtH.hbm.xml">
+    <EmbeddedResource Include="Mappings\Accounting\CtD.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Accounting\CtH.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mappings\CtHoadon.hbm.xml" />
-    <EmbeddedResource Include="Mappings\CtThue.hbm.xml">
+    <EmbeddedResource Include="Mappings\Accounting\CtHoadon.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Accounting\CtThue.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -154,8 +154,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Mappings\KtCtDKhac.hbm.xml" />
-    <EmbeddedResource Include="Mappings\KtCtHKhac.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Accounting\KtCtDKhac.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Accounting\KtCtHKhac.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

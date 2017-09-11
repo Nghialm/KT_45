@@ -34,14 +34,14 @@
             this.Panel1 = new System.Windows.Forms.Panel();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.checkEdit3 = new DevExpress.XtraEditors.CheckEdit();
-            this.checkEdit2 = new DevExpress.XtraEditors.CheckEdit();
+            this.cbkDongBoCt = new DevExpress.XtraEditors.CheckEdit();
             this.cbkSynDanhMuc = new DevExpress.XtraEditors.CheckEdit();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.TableLayoutPanel1.SuspendLayout();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbkDongBoCt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbkSynDanhMuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +77,7 @@
             // 
             this.Panel1.Controls.Add(this.simpleButton1);
             this.Panel1.Controls.Add(this.checkEdit3);
-            this.Panel1.Controls.Add(this.checkEdit2);
+            this.Panel1.Controls.Add(this.cbkDongBoCt);
             this.Panel1.Controls.Add(this.cbkSynDanhMuc);
             this.Panel1.Controls.Add(this.btnThucHien);
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -96,6 +96,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(93, 37);
             this.simpleButton1.TabIndex = 15;
             this.simpleButton1.Text = "Thoát";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // checkEdit3
             // 
@@ -105,13 +106,13 @@
             this.checkEdit3.Size = new System.Drawing.Size(218, 22);
             this.checkEdit3.TabIndex = 14;
             // 
-            // checkEdit2
+            // cbkDongBoCt
             // 
-            this.checkEdit2.Location = new System.Drawing.Point(27, 80);
-            this.checkEdit2.Name = "checkEdit2";
-            this.checkEdit2.Properties.Caption = "Đồng bộ chứng từ";
-            this.checkEdit2.Size = new System.Drawing.Size(218, 22);
-            this.checkEdit2.TabIndex = 13;
+            this.cbkDongBoCt.Location = new System.Drawing.Point(27, 80);
+            this.cbkDongBoCt.Name = "cbkDongBoCt";
+            this.cbkDongBoCt.Properties.Caption = "Đồng bộ chứng từ";
+            this.cbkDongBoCt.Size = new System.Drawing.Size(218, 22);
+            this.cbkDongBoCt.TabIndex = 13;
             // 
             // cbkSynDanhMuc
             // 
@@ -150,7 +151,7 @@
             this.TableLayoutPanel1.ResumeLayout(false);
             this.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbkDongBoCt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbkSynDanhMuc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -165,7 +166,7 @@
         internal System.Windows.Forms.Panel Panel2;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
         private DevExpress.XtraEditors.CheckEdit checkEdit3;
-        private DevExpress.XtraEditors.CheckEdit checkEdit2;
+        private DevExpress.XtraEditors.CheckEdit cbkDongBoCt;
         private DevExpress.XtraEditors.CheckEdit cbkSynDanhMuc;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }

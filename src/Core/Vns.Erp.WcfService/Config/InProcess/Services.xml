@@ -9,7 +9,7 @@
 	</description>
 
 	<!-- Property placeholder configurer for database settings -->
-	<object id="AppGroupsService" type="Vns.Erp.Core.Admin.Service.AppGroupsService, Vns.Erp.Core.Admin.Service">
+  <object id="AppGroupsService" type="Vns.Erp.Core.Admin.Service.AppGroupsService, Vns.Erp.Core.Admin.Service">
 		<property name="AppGroupsDao" ref="AppGroupsDao"/>
 	</object>
 	<object id="AppUsersService" type="Vns.Erp.Core.Admin.Service.AppUsersService, Vns.Erp.Core.Admin.Service">
@@ -415,6 +415,9 @@
 	</object>
 	<object id="DmNhomTscdService" type="Vns.Erp.Core.Asset.Service.DmNhomTscdService, Vns.Erp.Core.Asset.Service">
 		<property name="DmNhomTscdDao" ref="DmNhomTscdDao"/>
+	</object>
+	<object id="DmLoaiTaisanService" type="Vns.Erp.Core.Asset.Service.DmLoaiTaisanService, Vns.Erp.Core.Asset.Service">
+		<property name="DmLoaitaisanDao" ref="DmLoaitaisanDao"/>
 	</object>
 	<object id="DmNguonTscdService" type="Vns.Erp.Core.Asset.Service.DmNguonTscdService, Vns.Erp.Core.Asset.Service">
 		<property name="DmNguonTscdDao" ref="DmNguonTscdDao"/>

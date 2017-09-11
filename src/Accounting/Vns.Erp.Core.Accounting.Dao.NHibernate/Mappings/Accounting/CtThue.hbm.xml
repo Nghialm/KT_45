@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Domain" assembly="Vns.Erp.Core.Accounting.Domain">
+	<class name="Vns.Erp.Core.Accounting.Domain.CtThue, Vns.Erp.Core.Accounting.Domain" table="CT_THUE" lazy="false">
+		<id name="Id" column="CT_THUE_ID" type="Guid"/>
+			
+		<property name="LoaiTaikhoan" column="LOAI_TAIKHOAN" type="String" length="32" />
+		<property name="TaikhoanId" column="TAIKHOAN_ID" type="Guid"/>
+		<property name="MaTaikhoan" column="MA_TAIKHOAN" type="String" length="32"/>
+		<property name="CtdId" column="CTD_ID" type="Guid"/>
+		<property name="KyHieuHd" column="KY_HIEU_HD" type="String" length="32"/>
+		<property name="SoSeri" column="SO_SERI" type="String" length="32"/>
+		<property name="NgayHoadon" column="NGAY_HOADON" type="DateTime"/>
+		<property name="KhangId" column="KHANG_ID" type="Guid"/>
+		<property name="TenKhang" column="TEN_KHANG" type="String" length="128"/>
+		<property name="Mst" column="MST" type="String" length="32"/>
+		<property name="HangtkId" column="HANGTK_ID" type="Guid"/>
+		<property name="TscdId" column="TSCD_ID" type="Guid"/>
+		<property name="TenHanghoa" column="TEN_HANGHOA" type="String" length="128"/>
+		<property name="SoLuong" column="SO_LUONG" type="Decimal" precision="18" scale="3" />
+		<property name="NgayTao" column="NGAY_TAO" type="DateTime"/>
+		<property name="ThueId" column="THUE_ID" type="Guid"/>
+		<property name="TenThue" column="TEN_THUE" type="String" length="128"/>
+		<property name="TyLe" column="TY_LE" type="Decimal" precision="5" scale="2"/>
+		<property name="ChiuThue" column="CHIU_THUE" type="Decimal" precision="4" scale="0" />
+		<property name="DoanhSo" column="DOANH_SO" type="Decimal" precision="18" scale="0"/>
+		<property name="DoanhSoNte" column="DOANH_SO_NTE" type="Decimal" precision="18" scale="2"/>
+		<property name="SoTien" column="SO_TIEN" type="Decimal" precision="18" scale="0"/>
+		<property name="SoTienNte" column="SO_TIEN_NTE" type="Decimal" precision="18" scale="2"/>
+		<property name="GhiChu" column="GHI_CHU" type="String" length="256"/>
+		<property name="CtTscdId" column="CT_TSCD_ID" type="Guid"/>
+		<property name="CtHanghoaId" column="CT_HANGHOA_ID" type="Guid"/>
+		<property name="CtBanhangId" column="CT_BANHANG_ID" type="Guid"/>
+		<property name="TenNhomChiuThue" column="TEN_NHOM_CHIU_THUE" type="String" length="256"/>
+		<property name="NhomChiuThue" column="NHOM_CHIU_THUE" type="Decimal" precision="4" scale="0"/>
+		<property name="MuaBan" column="MUA_BAN" type="Decimal" precision="4" scale="0"/>
+		<property name="CtdNxId" column="CTD_NX_ID" type="Guid"/>
+		<property name="DonviId" column="DONVI_ID" type="Guid"/>
+		<property name="CtHoadonId" column="CT_HOADON_ID" type="Guid"/>
+		<property name="CthId" column="CTH_ID" type="Guid"/>
+		<property name="PhanHe" column="PHAN_HE" type="Decimal" precision="4" scale="0"/>
+    <property name="TenDvt" column="TEN_DVT" type="String" length="64"/>
+    <property name="SoThuTu" column="SO_THU_TU" type="String" length="64"/>
+    <property name="SapXep" column="SAP_XEP" type="Decimal" precision="4" scale="0"/>
+    <property name="DonGia" column="DON_GIA" type="Decimal" precision="18" scale="2"/>
+	</class>
+</hibernate-mapping>

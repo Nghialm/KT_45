@@ -51,18 +51,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BcKetoan.cs" />
-    <Compile Include="BcKetoan.generated.cs">
+    <Compile Include="Accounting\BcKetoan.cs" />
+    <Compile Include="Accounting\BcKetoan.generated.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CtD.cs" />
-    <Compile Include="CtD.generated.cs" />
-    <Compile Include="CtH.cs" />
-    <Compile Include="CtH.generated.cs" />
-    <Compile Include="CtHoadon.cs" />
-    <Compile Include="CtHoadon.generated.cs" />
-    <Compile Include="CtThue.cs" />
-    <Compile Include="CtThue.generated.cs" />
+    <Compile Include="Accounting\CtD.cs" />
+    <Compile Include="Accounting\CtD.generated.cs" />
+    <Compile Include="Accounting\CtH.cs" />
+    <Compile Include="Accounting\CtH.generated.cs" />
+    <Compile Include="Accounting\CtHoadon.cs" />
+    <Compile Include="Accounting\CtHoadon.generated.cs" />
+    <Compile Include="Accounting\CtThue.cs" />
+    <Compile Include="Accounting\CtThue.generated.cs" />
     <Compile Include="Extend\CT_D_KInfo.cs" />
     <Compile Include="Extend\CT_H_GInfo.cs" />
     <Compile Include="Extend\SoDuKhoInfo.cs" />
@@ -85,10 +85,10 @@
     <Compile Include="Inventory\KtDuluongDauky.generated.cs" />
     <Compile Include="Inventory\KtGiaxuatDauky.cs" />
     <Compile Include="Inventory\KtGiaxuatDauky.generated.cs" />
-    <Compile Include="KtCtDKhac.cs" />
-    <Compile Include="KtCtDKhac.generated.cs" />
-    <Compile Include="KtCtHKhac.cs" />
-    <Compile Include="KtCtHKhac.generated.cs" />
+    <Compile Include="Accounting\KtCtDKhac.cs" />
+    <Compile Include="Accounting\KtCtDKhac.generated.cs" />
+    <Compile Include="Accounting\KtCtHKhac.cs" />
+    <Compile Include="Accounting\KtCtHKhac.generated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TongHop\KtDmBtPhanbo.cs" />
     <Compile Include="TongHop\KtDmBtPhanbo.generated.cs">

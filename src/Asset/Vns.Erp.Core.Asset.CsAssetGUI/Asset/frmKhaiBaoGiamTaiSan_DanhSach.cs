@@ -183,7 +183,7 @@ namespace Vns.Erp.Core.Asset.CsAssetGUI
                         {
                             CtH tmpCth = new CtH();
                             tmpCth.Id = obj_del_ct_TSCD.CthId;
-                            _CtHService.DeleteChungTu(tmpCth, null);
+                            _CtHService.DeleteChungTuCTH(tmpCth, null, null);
                         }
 
                         this.LoadGRV();

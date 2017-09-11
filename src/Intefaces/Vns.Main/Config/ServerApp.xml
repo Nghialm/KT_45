@@ -64,7 +64,9 @@
   <wcf:channelFactory id="BcKetoanKhoService" channelType="Vns.Erp.Core.Accounting.Service.Interface.IBcKetoanKhoService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfBcKetoanKhoService"/>
   <wcf:channelFactory id="KtDmBtPhanboService" channelType="Vns.Erp.Core.Accounting.Service.Interface.IKtDmBtPhanboService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfKtDmBtPhanboService"/>
   <wcf:channelFactory id="KtThBtPhanboService" channelType="Vns.Erp.Core.Accounting.Service.Interface.IKtThBtPhanboService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfKtThBtPhanboService"/>
-
+  <wcf:channelFactory id="KtCtDKhacService" channelType="Vns.Erp.Core.Accounting.Service.Interface.IKtCtDKhacService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfKtCtDKhacService"/>
+  <wcf:channelFactory id="KtCtHKhacService" channelType="Vns.Erp.Core.Accounting.Service.Interface.IKtCtHKhacService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfKtCtHKhacService"/>
+  
   <!--Tai san co dinh-->
   <wcf:channelFactory id="TsCtTscdNvonService" channelType="Vns.Erp.Core.Asset.Service.Interface.ITsCtTscdNvonService, Vns.Erp.Core.Asset.Service" endpointConfigurationName="WcfTsCtTscdNvonService"/>
   <wcf:channelFactory id="TsTscdPtungService" channelType="Vns.Erp.Core.Asset.Service.Interface.ITsTscdPtungService, Vns.Erp.Core.Asset.Service" endpointConfigurationName="WcfTsTscdPtungService"/>

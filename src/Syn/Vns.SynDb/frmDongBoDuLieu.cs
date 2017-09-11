@@ -13,6 +13,7 @@ namespace Vns.Erp.Core.SynDb
     {
         #region Property
         private SynDbHelper _SynDbHelper;
+        private SynAccountingHelper _SynAccountingHelper;
         #endregion
 
         public frmDongBoDuLieu()
@@ -23,6 +24,7 @@ namespace Vns.Erp.Core.SynDb
         private void frmBaoCaoKhachHang_Load(object sender, EventArgs e)
         {
             _SynDbHelper = (SynDbHelper)ObjectFactory.GetObject("Vns.Erp.Core.SynDb.SynDbHelper");
+            _SynAccountingHelper = (SynAccountingHelper)ObjectFactory.GetObject("Vns.Erp.Core.SynDb.SynAccountingHelper");
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -30,6 +32,11 @@ namespace Vns.Erp.Core.SynDb
             if (cbkSynDanhMuc.Checked)
             {
                 DongBoDanhMuc();
+            }
+
+            if (cbkDongBoCt.Checked)
+            {
+                DongBoKeToan();
             }
         }
 
@@ -65,6 +72,22 @@ namespace Vns.Erp.Core.SynDb
             _SynDbHelper.SynDmNhomTscd(Generals.DonviID);
             _SynDbHelper.SynDmLydoTgTscd(Generals.DonviID);
             _SynDbHelper.SynDmNguonTscd(Generals.DonviID);
+        }
+
+        private void DongBoKeToan()
+        {
+            _SynAccountingHelper.IsSynAll = true;
+            //_SynAccountingHelper.SynCtH(Generals.DonviID);
+
+            //_SynAccountingHelper.SynCtHoadon(Generals.DonviID);
+
+            _SynAccountingHelper.SynKtCtHKhac(Generals.DonviID);
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

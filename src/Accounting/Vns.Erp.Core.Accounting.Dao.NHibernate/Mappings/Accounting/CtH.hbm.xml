@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Domain" assembly="Vns.Erp.Core.Accounting.Domain">
+	<class name="Vns.Erp.Core.Accounting.Domain.CtH, Vns.Erp.Core.Accounting.Domain" table="CT_H" lazy="false">
+		<id name="Id" column="CTH_ID" type="Guid">
+    <generator class="assigned"/>
+    </id>
+		<property name="DonviId" column="DONVI_ID" type="Guid" />
+		<property name="MaDonvi" column="MA_DONVI" type="String" length="64"/>
+		<property name="IdLoaiCt" column="ID_LOAI_CT" type="Guid" />
+		<property name="MaLoaiCt" column="MA_LOAI_CT" type="String" length="64"/>
+		<property name="KyHieuLoaiCt" column="KY_HIEU_LOAI_CT" type="String" length="64"/>
+		<property name="NgayGhi" column="NGAY_GHI" type="DateTime" />
+		<property name="CtSo" column="CT_SO" type="String" length="64"/>
+		<property name="QuyenSo" column="QUYEN_SO" type="String" length="64"/>
+		<property name="NgayCt" column="NGAY_CT" type="DateTime" />
+		<property name="NteId" column="NTE_ID" type="Guid" />
+		<property name="MaNte" column="MA_NTE" type="String" length="64"/>
+		<property name="TyGia" column="TY_GIA" type="Decimal" precision="18" scale="0" />
+		<property name="SoTien" column="SO_TIEN" type="Decimal" precision="18" scale="0" />
+		<property name="SoTienNte" column="SO_TIEN_NTE" type="Decimal" precision="18" scale="2" />
+		<property name="NgayTao" column="NGAY_TAO" type="DateTime" />
+		<property name="NguoiTao" column="NGUOI_TAO" type="Guid"/>
+		<property name="NguoiSua" column="NGUOI_SUA" type="Guid"/>
+		<property name="NgaySua" column="NGAY_SUA" type="DateTime"/>
+		<property name="NguoiPd" column="NGUOI_PD" type="Guid"/>
+		<property name="NgayPd" column="NGAY_PD"  type="DateTime"/>
+		<property name="DienGiai" column="DIEN_GIAI" type="String" length="512"/>
+		<property name="PhongbanId" column="PHONGBAN_ID" type="Guid"/>
+		<property name="MaPhongban" column="MA_PHONGBAN" type="String" length="64"/>
+		<property name="KyHieuPhongban" column="KY_HIEU_PHONGBAN" type="String" length="64"/>
+		<property name="TenPhongban" column="TEN_PHONGBAN" type="String" length="128"/>
+		<property name="NguoiNhanNopTien" column="NGUOI_NHAN_NOP_TIEN" type="String" length="128"/>
+		<property name="NguoiGiaoNhanHang" column="NGUOI_GIAO_NHAN_HANG" type="String" length="128"/>
+		<property name="KhangId" column="KHANG_ID" type="Guid"/>
+		<property name="MaKhang" column="MA_KHANG" type="String" length="64"/>
+		<property name="KyHieuKhang" column="KY_HIEU_KHANG" type="String" length="128"/>
+		<property name="TenKhang" column="TEN_KHANG" type="String" length="128"/>
+		<property name="MstKhang" column="MST_KHANG" type="String" length="64"/>
+		<property name="DiaChi" column="DIA_CHI" type="String" length="256"/>
+		<property name="CbnvId" column="CBNV_ID" type="Guid"/>
+		<property name="KyHieuCbnv" column="KY_HIEU_CBNV" type="String" length="64"/>
+		<property name="MaCbnv" column="MA_CBNV" type="String" length="64"/>
+		<property name="TenCbnv" column="TEN_CBNV" type="String" length="64"/>
+		<property name="Ghi" column="GHI" type="Decimal" precision="4" scale="0" />
+		<property name="Attachfile" column="ATTACHFILE" type="String" length="128" />
+		<property name="NgoaiTe" column="NGOAI_TE" type="Decimal" precision="4" scale="0"/>
+		<property name="DonviCt" column="DONVI_CT" type="Guid"/>
+		<property name="MaDonviCt" column="MA_DONVI_CT" type="String" length="64" />
+		<property name="DaKhoaSo" column="DA_KHOA_SO" type="Decimal" precision="4" scale="0" />
+		<property name="NgayKhoaSo" column="NGAY_KHOA_SO" type="DateTime" />
+		<property name="BtTudong" column="BT_TUDONG" type="Decimal" precision="4" scale="0" />
+		<property name="BxNgay1" column="BX_NGAY_1" type="DateTime" />
+		<property name="BxNgay2" column="BX_NGAY_2" type="DateTime" />
+		<property name="BxNgay3" column="BX_NGAY_3" type="DateTime" />
+		<property name="BxNumber1" column="BX_NUMBER_1" type="Decimal" precision="4" scale="0"/>
+		<property name="BxNumber2" column="BX_NUMBER_2" type="Decimal" precision="4" scale="0"/>
+		<property name="BxNumber3" column="BX_NUMBER_3" type="Decimal" precision="4" scale="0"/>
+		<property name="BxDiengiai1" column="BX_DIENGIAI_1" type="String" length="256" />
+		<property name="BxDiengiai2" column="BX_DIENGIAI_2" type="String" length="256" />
+		<property name="BxDiengiai3" column="BX_DIENGIAI_3" type="String" length="256" />
+		<property name="SoDu" column="SO_DU" type="Decimal" precision="4" scale="0"/>
+		<property name="PrefixCt" column="PREFIX_CT" type="String" length="64" />
+
+    <property name="SynDate" column="Syn_Date" type="DateTime" />
+    <property name="IsDeleted" column="Is_Deleted" type="Decimal" precision="4" scale="0" />
+
+    <bag name="LstCtD" lazy="false" cascade="none" >
+      <key column="CTH_ID"></key>
+      <one-to-many class="CtD"></one-to-many>
+    </bag>
+	</class>
+</hibernate-mapping>
