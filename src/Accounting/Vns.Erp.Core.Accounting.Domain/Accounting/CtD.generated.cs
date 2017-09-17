@@ -51,7 +51,7 @@ namespace Vns.Erp.Core.Accounting.Domain
         private Guid _id_ct_ghiso;
         private string _ma_ct_ghiso_so;
         private string _ct_ghiso_trichyeu;
-        private DateTime? _ct_ghiso_ngay;
+        private DateTime? _ct_ghiso_ngay = Null.MIN_DATE;
         private decimal _da_ghiso;
         private Guid _id_dm_vuviec_no;
         private string _ma_vuviec_no;

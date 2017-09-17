@@ -30,7 +30,7 @@ namespace Vns.Erp.Core.Accounting.Domain
         private string _so_seri;
         private string _ten_khachhang;
         private string _dia_chi;
-        private DateTime? _ngay_hoadon;
+        private DateTime? _ngay_hoadon = Null.MIN_DATE;
         private string _ma_so_thue;
         private string _dien_giai;
         private Guid _donvi_id;
@@ -40,7 +40,7 @@ namespace Vns.Erp.Core.Accounting.Domain
         private decimal _doanh_thu;
         private decimal _tien_thue;
         private decimal _da_thanh_toan;
-        private DateTime? _han_thanh_toan;
+        private DateTime? _han_thanh_toan = Null.MIN_DATE;
         private decimal _so_ngay_thanh_toan;
         private Guid _ct_lien_quan;
         private decimal _loai;

@@ -32,7 +32,7 @@ namespace Vns.Erp.Core.Accounting.Domain
         private Guid _ctd_id;
         private string _ky_hieu_hd;
         private string _so_seri;
-        private DateTime? _ngay_hoadon;
+        private DateTime? _ngay_hoadon = Null.MIN_DATE;
         private Guid _khang_id;
         private string _ten_khang;
         private string _mst;
@@ -40,7 +40,7 @@ namespace Vns.Erp.Core.Accounting.Domain
         private Guid _tscd_id;
         private string _ten_hanghoa;
         private decimal _so_luong;
-        private DateTime? _ngay_tao;
+        private DateTime? _ngay_tao = Null.MIN_DATE;
         private Guid _thue_id;
         private string _ten_thue;
         private decimal _ty_le;
