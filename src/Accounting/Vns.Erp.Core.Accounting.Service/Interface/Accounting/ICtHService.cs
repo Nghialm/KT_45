@@ -58,6 +58,9 @@ namespace Vns.Erp.Core.Accounting.Service.Interface
         #region Syn function
         [OperationContract]
         void SaveData4Syn(CtH _cthInfo, List<CtD> _lstctd);
+
+        [OperationContract]
+        void UpdateSynFlag(Guid id);
         #endregion
 
         #region tam bo

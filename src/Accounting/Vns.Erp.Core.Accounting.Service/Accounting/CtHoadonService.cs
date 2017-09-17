@@ -91,6 +91,11 @@ namespace Vns.Erp.Core.Accounting.Service
                 }
             }
         }
+
+        public void UpdateSynFlag(Guid id)
+        {
+            CtHoadonDao.UpdateSynFlag(id);
+        }
         #endregion
     }
 }

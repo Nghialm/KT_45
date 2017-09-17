@@ -161,8 +161,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="KtCtDKhacService.svc" />
-    <Content Include="KtCtHKhacService.svc" />
+    <Content Include="Accounting\KtCtDKhacService.svc" />
+    <Content Include="Accounting\KtCtHKhacService.svc" />
     <Content Include="App_Data\Ketoan.db" />
     <Content Include="AuthenticationService.svc" />
     <EmbeddedResource Include="Config\InProcess\Dao.xml">
@@ -213,7 +213,7 @@
     <Content Include="AppUgFormService.svc" />
     <Content Include="AppUsergroupService.svc" />
     <Content Include="AppUsersService.svc" />
-    <Content Include="BcKetoanService.svc" />
+    <Content Include="Accounting\BcKetoanService.svc" />
     <Content Include="RpTheTscdS23DnService.svc" />
     <Content Include="RpSoTscdS21DnService.svc" />
     <Content Include="Copy of RpLedgerS03DnService.svc" />
@@ -232,19 +232,19 @@
     <Content Include="KtGiaxuatDaukyService.svc" />
     <Content Include="KtDmBtPhanboService.svc" />
     <Content Include="KtThBtPhanboService.svc" />
-    <Content Include="KtCtDHddvService.svc" />
-    <Content Include="KtCtHHddvService.svc" />
-    <Content Include="CtDService.svc" />
-    <Content Include="CtHService.svc" />
-    <Content Include="CtHoadonService.svc" />
-    <Content Include="CtThueService.svc" />
+    <Content Include="HDDV\KtCtDHddvService.svc" />
+    <Content Include="HDDV\KtCtHHddvService.svc" />
+    <Content Include="Accounting\CtDService.svc" />
+    <Content Include="Accounting\CtHService.svc" />
+    <Content Include="Accounting\CtHoadonService.svc" />
+    <Content Include="Accounting\CtThueService.svc" />
     <Content Include="CtHNxService.svc" />
     <Content Include="CtDNxService.svc" />
     <Content Include="BcKetoanKhoService.svc" />
-    <Content Include="DmTudo2Service.svc" />
-    <Content Include="DmTudo3Service.svc" />
-    <Content Include="DmTudo4Service.svc" />
-    <Content Include="DmTudo5Service.svc" />
+    <Content Include="Dictionary\DmTudo2Service.svc" />
+    <Content Include="Dictionary\DmTudo3Service.svc" />
+    <Content Include="Dictionary\DmTudo4Service.svc" />
+    <Content Include="Dictionary\DmTudo5Service.svc" />
     <Content Include="KtHDongService.svc" />
     <Content Include="KtHCotService.svc" />
     <Content Include="KtHBaocaoService.svc" />
@@ -253,7 +253,7 @@
     <Content Include="TsLsKhauhaoService.svc" />
     <Content Include="TsDieuchuyenService.svc" />
     <Content Include="TsCtTscdNvonService.svc" />
-    <Content Include="DmTscdService.svc" />
+    <Content Include="Dictionary\DmTscdService.svc" />
     <Content Include="CtTscdService.svc" />
     <Content Include="KtKhoasoThangService.svc" />
     <Content Include="HtSoChungtuMaxService.svc" />
@@ -265,28 +265,28 @@
     <Content Include="HtDanhmucService.svc" />
     <Content Include="HtBienBaocaoService.svc" />
     <Content Include="HtBaocaoService.svc" />
-    <Content Include="DmVuviecService.svc" />
-    <Content Include="DmTudo1Service.svc" />
-    <Content Include="DmTkChitietService.svc" />
-    <Content Include="DmThueService.svc" />
-    <Content Include="DmTaikhoanService.svc" />
-    <Content Include="DmPtqtService.svc" />
-    <Content Include="DmPhongbanService.svc" />
-    <Content Include="DmNhomvattu1Service.svc" />
-    <Content Include="DmLoaitaisanService.svc" />
-    <Content Include="DmLydoTgTscdService.svc" />
-    <Content Include="DmNgoaiteService.svc" />
-    <Content Include="DmNguonTscdService.svc" />
-    <Content Include="DmNhomKhangService.svc" />
-    <Content Include="DmNhomTscdService.svc" />
-    <Content Include="DmHanghoaService.svc" />
-    <Content Include="DmHopdongService.svc" />
-    <Content Include="DmKhangService.svc" />
-    <Content Include="DmKhoanphiService.svc" />
-    <Content Include="DmKhoService.svc" />
-    <Content Include="DmBtKetchuyenService.svc" />
-    <Content Include="DmDonviService.svc" />
-    <Content Include="DmDvtService.svc" />
+    <Content Include="Dictionary\DmVuviecService.svc" />
+    <Content Include="Dictionary\DmTudo1Service.svc" />
+    <Content Include="Dictionary\DmTkChitietService.svc" />
+    <Content Include="Dictionary\DmThueService.svc" />
+    <Content Include="Dictionary\DmTaikhoanService.svc" />
+    <Content Include="Dictionary\DmPtqtService.svc" />
+    <Content Include="Dictionary\DmPhongbanService.svc" />
+    <Content Include="Dictionary\DmNhomvattu1Service.svc" />
+    <Content Include="Dictionary\DmLoaitaisanService.svc" />
+    <Content Include="Dictionary\DmLydoTgTscdService.svc" />
+    <Content Include="Dictionary\DmNgoaiteService.svc" />
+    <Content Include="Dictionary\DmNguonTscdService.svc" />
+    <Content Include="Dictionary\DmNhomKhangService.svc" />
+    <Content Include="Dictionary\DmNhomTscdService.svc" />
+    <Content Include="Dictionary\DmHanghoaService.svc" />
+    <Content Include="Dictionary\DmHopdongService.svc" />
+    <Content Include="Dictionary\DmKhangService.svc" />
+    <Content Include="Dictionary\DmKhoanphiService.svc" />
+    <Content Include="Dictionary\DmKhoService.svc" />
+    <Content Include="Dictionary\DmBtKetchuyenService.svc" />
+    <Content Include="Dictionary\DmDonviService.svc" />
+    <Content Include="Dictionary\DmDvtService.svc" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -407,7 +407,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Accounting\" />
     <Folder Include="Admin\" />
   </ItemGroup>
   <PropertyGroup>

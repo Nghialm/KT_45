@@ -39,6 +39,30 @@ namespace Vns.Erp.Core.Accounting.Dao.NHibernate
 
             return entity;
         }
+
+        void IDao<CtH, Guid>.DeleteById(Guid id)
+        {
+            String sql = " update CtH set IsDeleted = 1, SynDate = :SynDate " +
+                         " where Id = :Id ";
+
+            IQuery q = NHibernateSession.CreateQuery(sql);
+            q.SetParameter("SynDate", Null.MIN_DATE);
+            q.SetParameter("Id", id);
+            int i = q.ExecuteUpdate();
+        }
+        #endregion
+
+        #region Syn data
+        public void UpdateSynFlag(Guid id)
+        {
+            String sql = " update CtH set SynDate = :SynDate " +
+                         " where Id = :Id ";
+
+            IQuery q = NHibernateSession.CreateQuery(sql);
+            q.SetParameter("SynDate", Null.MIN_DATE);
+            q.SetParameter("Id", id);
+            int i = q.ExecuteUpdate();
+        } 
         #endregion
 
         public IList<CtH> GetSoDu(Guid DonviId, int NamKeToan)

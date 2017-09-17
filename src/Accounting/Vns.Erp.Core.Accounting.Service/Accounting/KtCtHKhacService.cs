@@ -55,274 +55,32 @@ namespace Vns.Erp.Core.Accounting.Service
         }
         #endregion
 
-        public IList<KtCtHKhac> GetByDonviId(Guid DonviId)
-        {
-            ArrayList props = new ArrayList();
-            ArrayList values = new ArrayList();
-            props.Add("DonviId");
-            values.Add(DonviId);
-            return List(-1, -1, props, values, null);
-        }
-
-        public IList<KtCtHKhac> GetByLoaiChungTu(Guid DonviId, string MaLoaiCt)
-        {
-            ArrayList props = new ArrayList();
-            ArrayList values = new ArrayList();
-            IList<VnsOrder> orders = new List<VnsOrder>();
-            props.Add("DonviId");
-            values.Add(DonviId);
-            props.Add("MaLoaiCt");
-            values.Add(MaLoaiCt);
-            orders.Add(new VnsOrder(false, "NgayCt"));
-            orders.Add(new VnsOrder(false, "CtSo"));
-            return List(-1, -1, props, values, orders);
-        }
-
-        public IList<KtCtHKhac> GetByLoaiChungTu(int PageIndex, int PageSize, Guid DonviId, string MaLoaiCt, out int TotalResult)
-        {
-            return KtCtHKhacDao.GetByLoaiChungTu(PageIndex, PageSize, DonviId, MaLoaiCt, out TotalResult);
-        }
-
+        #region Syn function
         [Transaction]
-        public Boolean DeleteChungTu(KtCtHKhac objCtH, IList<KtCtDKhac> lstCtD)
+        public void SaveData4Syn(KtCtHKhac _cth, List<KtCtDKhac> _lstctd)
         {
-            _BcKetoanDao.DeleteByChungTu(objCtH.Id, new Guid());
+            //Xoa du lieu
+            //_cth. = null;
+            _cth.LstKtCtDKhac = null;
+            KtCtHKhacDao.SaveOrUpdate(_cth);
 
-            if (lstCtD == null) lstCtD = new List<KtCtDKhac>();
-            foreach (KtCtDKhac tmpctd in lstCtD)
+            if (_cth.IsDeleted != 1)
             {
-                _CtThueDao.DeleteByCtD(tmpctd.IdDoituongHoadon);
-                _CtHoadonDao.DeleteByChungTu(tmpctd.IdDoituongHoadon, 1);
-            }
-
-            objCtH.IsDeleted = 1;
-            objCtH.SynDate = Null.MIN_DATE;
-            SaveOrUpdate(objCtH);
-            return true;
-        }
-
-        [Transaction]
-        public void SaveCTDK(Vns.Erp.Core.FormGlobals.DataInputState status, ref KtCtHKhac _cthInfo, List<KtCtDKhac> lstCTDK, List<KtCtDKhac> del_lstobj_ct_d_k)
-        {
-            KtCtHKhac obj = _cthInfo;
-            try
-            {
-                obj.SynDate = Null.MIN_DATE;
-                //Insert update CT_H
-                switch (status)
+                _KtCtDKhacDao.DeleteByCtH(_cth.Id);
+                foreach (KtCtDKhac _tempctdnx in _lstctd)
                 {
-                    case Vns.Erp.Core.FormGlobals.DataInputState.AddMode:
-                        obj.NgayTao = DateTime.Now;
-                        obj = KtCtHKhacDao.Save(obj);
-                        break;
-                    case Vns.Erp.Core.FormGlobals.DataInputState.CopyMode:
-                        obj.NgayTao = DateTime.Now;
-                        obj = KtCtHKhacDao.Save(obj);
-                        break;
-                    case Vns.Erp.Core.FormGlobals.DataInputState.EditMode:
-                        obj.NgaySua = DateTime.Now;
-                        _BcKetoanDao.DeleteByChungTu(obj.Id, Null.NullGuid);
-                        KtCtHKhacDao.Update(obj);
-                        break;
+                    _KtCtDKhacDao.SaveOrUpdate(_tempctdnx);
                 }
-
-                Guid str_ct_hoaDon_id = new Guid();
-                int count_thue = 0;
-                //Khai bai list cua list nhom
-                CtDService _ctdService = new CtDService();
-                List<List<KtCtDKhac>> lstnhomctdk = GetLstNhom(lstCTDK);
-                //Khai bao list thue
-                List<CtThue> lstCT_Thue = null;
-                //list del thue
-                List<CtThue> lstDelCT_Thue = null;
-                //object hoa don
-                CtHoadon CT_HOADON = default(CtHoadon);
-
-                foreach (List<KtCtDKhac> ctDKInfos in lstnhomctdk)
-                {
-                    count_thue = 0;
-                    lstCT_Thue = new List<CtThue>();
-                    lstDelCT_Thue = new List<CtThue>();
-                    CT_HOADON = new CtHoadon();
-
-                    //Dem so tai khoan thue trong 1 nhom
-                    count_thue = Count_tk_thue(ctDKInfos);
-
-                    foreach (KtCtDKhac ctDKInfo in ctDKInfos)
-                    {
-                        if (ctDKInfo.MaTk == null)
-                        {
-                            ctDKInfo.MaTk = "";
-                        }
-
-                        //Neu so tai khoan thue =1
-                        if (count_thue == 1)
-                        {
-                            //Thuc hien xoa CT_THUE va CT_HOADON trong nhung tk ko phai tk thue
-                            if ((!ctDKInfo.MaTk.StartsWith(Generals.TS_ThueGTGTDauVao.GiaTri)) & (!ctDKInfo.MaTk.StartsWith(Generals.TS_ThueGTGTDauRa.GiaTri)))
-                            {
-                                ctDKInfo.LstDelCtThue = ctDKInfo.LstCtThue;
-                                ctDKInfo.LstCtThue = null;
-                                if (ctDKInfo.CT_HOADON != null)
-                                {
-                                    str_ct_hoaDon_id = ctDKInfo.CT_HOADON.Id;
-                                    ctDKInfo.CT_HOADON = null;
-                                    CT_HOADON = null;
-                                }
-                                ctDKInfo.IdDoituongHoadon = new Guid();
-                            }
-                            //Neu so tai khoan thue khac >1 thuc hien xoa CT_THUE va CT_HOADON trong tat ca cac tk
-                        }
-                        else
-                        {
-                            ctDKInfo.LstDelCtThue = ctDKInfo.LstCtThue;
-                            ctDKInfo.LstCtThue = null;
-                            if (ctDKInfo.CT_HOADON != null)
-                            {
-                                str_ct_hoaDon_id = ctDKInfo.CT_HOADON.Id;
-                                ctDKInfo.CT_HOADON = null;
-                            }
-                            ctDKInfo.IdDoituongHoadon = new Guid();
-                            CT_HOADON = null;
-                        }
-
-                        //Lay ra lst_thue trong CTDK
-                        if (ctDKInfo.LstCtThue != null)
-                        {
-                            if (ctDKInfo.LstCtThue.Count != 0)
-                            {
-                                foreach (CtThue ctThueInfo in ctDKInfo.LstCtThue)
-                                {
-                                    lstCT_Thue.Add(ctThueInfo);
-                                }
-                            }
-                        }
-
-                        //Lay ra CT_HOADON trong CTDK
-                        if (ctDKInfo.CT_HOADON != null)
-                        {
-                            CT_HOADON = ctDKInfo.CT_HOADON;
-                        }
-
-                        //Lay ta list del_thue trong CTD_K
-                        if (ctDKInfo.LstDelCtThue != null)
-                        {
-                            if (ctDKInfo.LstDelCtThue.Count != 0)
-                            {
-                                foreach (CtThue ctThueInfo in ctDKInfo.LstDelCtThue)
-                                {
-                                    lstDelCT_Thue.Add(ctThueInfo);
-                                }
-                            }
-                        }
-                    }
-
-                    ////Thuc hien insert, update CT_HOADON
-                    if (CT_HOADON != null)
-                    {
-                        CT_HOADON.SynDate = Null.MIN_DATE;
-                        if (VnsCheck.IsNullGuid(CT_HOADON.Id))
-                        {
-                            _CtHoadonDao.Save(CT_HOADON);
-                        }
-                        else
-                        {
-                            _CtHoadonDao.Update(CT_HOADON);
-                        }
-                    }
-
-                    ////Thuc hien gan doi tuong hoa don cho CTD_K
-                    foreach (KtCtDKhac ctDKInfo_1 in lstCTDK)
-                    {
-                        if (ctDKInfo_1.CT_HOADON != null)
-                        {
-                            if (CT_HOADON != null)
-                            {
-                                ctDKInfo_1.IdDoituongHoadon = CT_HOADON.Id;
-                                ctDKInfo_1.KyHieuHoadon = CT_HOADON.SoSeri;
-                                ctDKInfo_1.MaHoadon = CT_HOADON.SoHoadon;
-                            }
-                        }
-                    }
-
-                    //Save KtCtDKhac
-                    foreach (KtCtDKhac ctDInfo in ctDKInfos)
-                    {
-                        ctDInfo.SoDu = 0;
-                        ctDInfo.PhanHe = 0;
-                        if (ctDInfo.Id == Null.NullGuid)
-                        {
-                            ctDInfo.CthId = obj.Id;
-                            _KtCtDKhacDao.Save(ctDInfo);
-                        }
-                        else
-                        {
-                            _KtCtDKhacDao.SaveOrUpdate(ctDInfo);
-                        }
-                    }
-
-                    //Lay CT_D tu CTD_K
-                    List<CtD> lstCT_D = ListConvertCTDK2CTD(ctDKInfos);
-
-                    // Dim ctDInfo As CT_DInfo = New CT_DInfo()
-                    foreach (CtD ctDInfo in lstCT_D)
-                    {
-                        //Save BcKeToan
-                        BcKetoan objbcKeToan = new BcKetoan(_cthInfo, ctDInfo);
-                        _BcKetoanDao.Save(objbcKeToan);
-                    }
-
-
-                    if (lstCT_Thue.Count != 0)
-                    {
-                        foreach (CtThue objcthue in lstCT_Thue)
-                        {
-                            if (CT_HOADON != null)
-                            {
-                                objcthue.CtHoadonId = CT_HOADON.Id;
-                            }
-                            objcthue.PhanHe = 0;
-                            if (VnsCheck.IsNullGuid(objcthue.Id))
-                            {
-                                objcthue.SoTienNte = 0;
-                                _CtThueDao.Save(objcthue);
-                            }
-                            else
-                            {
-                                _CtThueDao.Update(objcthue);
-                            }
-                        }
-                    }
-
-                    //Xoa CT_THUE
-                    foreach (CtThue del_objcthue in lstDelCT_Thue)
-                    {
-                        _CtThueDao.Delete(del_objcthue);
-                    }
-                    //Xoa CT_HOADON
-                    if (!VnsCheck.IsNullGuid(str_ct_hoaDon_id))
-                    {
-                        CtHoadon tmp = new CtHoadon();
-                        tmp.Id = str_ct_hoaDon_id;
-                        _CtHoadonDao.DeleteById(tmp.Id);
-                    }
-                }
-                
-                foreach (KtCtDKhac ctDKInfo in del_lstobj_ct_d_k)
-                {
-                    _KtCtDKhacDao.DeleteByCtH(ctDKInfo.CthId, ctDKInfo.NHOM);
-
-                    CtHoadon tmp = new CtHoadon();
-                    tmp.Id = ctDKInfo.IdDoituongHoadon;
-                    _CtHoadonDao.DeleteById(tmp.Id);
-                }
-            }
-            catch (Exception ex)
-            {
-                //Message_Error(ex);
             }
         }
 
+        public void UpdateSynFlag(Guid id)
+        {
+            CtHoadonDao.UpdateSynFlag(id);
+        }
+        #endregion
+
+        #region function
         public List<List<KtCtDKhac>> GetLstNhom(List<KtCtDKhac> lstCTDK)
         {
 
@@ -692,25 +450,264 @@ namespace Vns.Erp.Core.Accounting.Service
             }
             return objct_d;
         }
+        #endregion
 
-        #region Syn function
-        [Transaction]
-        public void SaveData4Syn(KtCtHKhac _cth, List<KtCtDKhac> _lstctd)
+        public IList<KtCtHKhac> GetByDonviId(Guid DonviId)
         {
-            //Xoa du lieu
-            //_cth. = null;
-            _cth.LstKtCtDKhac = null;
-            KtCtHKhacDao.SaveOrUpdate(_cth);
+            ArrayList props = new ArrayList();
+            ArrayList values = new ArrayList();
+            props.Add("DonviId");
+            values.Add(DonviId);
+            return List(-1, -1, props, values, null);
+        }
 
-            if (_cth.IsDeleted != 1)
+        public IList<KtCtHKhac> GetByLoaiChungTu(int PageIndex, int PageSize, Guid DonviId, string MaLoaiCt, out int TotalResult)
+        {
+            return KtCtHKhacDao.GetByLoaiChungTu(PageIndex, PageSize, DonviId, MaLoaiCt, out TotalResult);
+        }
+
+        [Transaction]
+        public Boolean DeleteChungTu(KtCtHKhac objCtH, IList<KtCtDKhac> lstCtD)
+        {
+            _BcKetoanDao.DeleteByChungTu(objCtH.Id, new Guid());
+
+            if (lstCtD == null) lstCtD = new List<KtCtDKhac>();
+            foreach (KtCtDKhac tmpctd in lstCtD)
             {
-                _KtCtDKhacDao.DeleteByCtH(_cth.Id);
-                foreach (KtCtDKhac _tempctdnx in _lstctd)
+                _CtThueDao.DeleteByCtD(tmpctd.IdDoituongHoadon);
+                _CtHoadonDao.DeleteByChungTu(tmpctd.IdDoituongHoadon, 1);
+            }
+
+            objCtH.IsDeleted = 1;
+            objCtH.SynDate = Null.MIN_DATE;
+            SaveOrUpdate(objCtH);
+            return true;
+        }
+
+        [Transaction]
+        public void SaveCTDK(Vns.Erp.Core.FormGlobals.DataInputState status, ref KtCtHKhac _cthInfo, List<KtCtDKhac> lstCTDK, List<KtCtDKhac> del_lstobj_ct_d_k)
+        {
+            KtCtHKhac obj = _cthInfo;
+            try
+            {
+                obj.SynDate = Null.MIN_DATE;
+                //Insert update CT_H
+                switch (status)
                 {
-                    _KtCtDKhacDao.SaveOrUpdate(_tempctdnx);
+                    case Vns.Erp.Core.FormGlobals.DataInputState.AddMode:
+                        obj.NgayTao = DateTime.Now;
+                        obj = KtCtHKhacDao.Save(obj);
+                        break;
+                    case Vns.Erp.Core.FormGlobals.DataInputState.CopyMode:
+                        obj.NgayTao = DateTime.Now;
+                        obj = KtCtHKhacDao.Save(obj);
+                        break;
+                    case Vns.Erp.Core.FormGlobals.DataInputState.EditMode:
+                        obj.NgaySua = DateTime.Now;
+                        _BcKetoanDao.DeleteByChungTu(obj.Id, Null.NullGuid);
+                        KtCtHKhacDao.Update(obj);
+                        break;
+                }
+
+                Guid str_ct_hoaDon_id = new Guid();
+                int count_thue = 0;
+                //Khai bai list cua list nhom
+                CtDService _ctdService = new CtDService();
+                List<List<KtCtDKhac>> lstnhomctdk = GetLstNhom(lstCTDK);
+                //Khai bao list thue
+                List<CtThue> lstCT_Thue = null;
+                //list del thue
+                List<CtThue> lstDelCT_Thue = null;
+                //object hoa don
+                CtHoadon CT_HOADON = default(CtHoadon);
+
+                foreach (List<KtCtDKhac> ctDKInfos in lstnhomctdk)
+                {
+                    count_thue = 0;
+                    lstCT_Thue = new List<CtThue>();
+                    lstDelCT_Thue = new List<CtThue>();
+                    CT_HOADON = new CtHoadon();
+
+                    //Dem so tai khoan thue trong 1 nhom
+                    count_thue = Count_tk_thue(ctDKInfos);
+
+                    foreach (KtCtDKhac ctDKInfo in ctDKInfos)
+                    {
+                        if (ctDKInfo.MaTk == null)
+                        {
+                            ctDKInfo.MaTk = "";
+                        }
+
+                        //Neu so tai khoan thue =1
+                        if (count_thue == 1)
+                        {
+                            //Thuc hien xoa CT_THUE va CT_HOADON trong nhung tk ko phai tk thue
+                            if ((!ctDKInfo.MaTk.StartsWith(Generals.TS_ThueGTGTDauVao.GiaTri)) & (!ctDKInfo.MaTk.StartsWith(Generals.TS_ThueGTGTDauRa.GiaTri)))
+                            {
+                                ctDKInfo.LstDelCtThue = ctDKInfo.LstCtThue;
+                                ctDKInfo.LstCtThue = null;
+                                if (ctDKInfo.CT_HOADON != null)
+                                {
+                                    str_ct_hoaDon_id = ctDKInfo.CT_HOADON.Id;
+                                    ctDKInfo.CT_HOADON = null;
+                                    CT_HOADON = null;
+                                }
+                                ctDKInfo.IdDoituongHoadon = new Guid();
+                            }
+                            //Neu so tai khoan thue khac >1 thuc hien xoa CT_THUE va CT_HOADON trong tat ca cac tk
+                        }
+                        else
+                        {
+                            ctDKInfo.LstDelCtThue = ctDKInfo.LstCtThue;
+                            ctDKInfo.LstCtThue = null;
+                            if (ctDKInfo.CT_HOADON != null)
+                            {
+                                str_ct_hoaDon_id = ctDKInfo.CT_HOADON.Id;
+                                ctDKInfo.CT_HOADON = null;
+                            }
+                            ctDKInfo.IdDoituongHoadon = new Guid();
+                            CT_HOADON = null;
+                        }
+
+                        //Lay ra lst_thue trong CTDK
+                        if (ctDKInfo.LstCtThue != null)
+                        {
+                            if (ctDKInfo.LstCtThue.Count != 0)
+                            {
+                                foreach (CtThue ctThueInfo in ctDKInfo.LstCtThue)
+                                {
+                                    lstCT_Thue.Add(ctThueInfo);
+                                }
+                            }
+                        }
+
+                        //Lay ra CT_HOADON trong CTDK
+                        if (ctDKInfo.CT_HOADON != null)
+                        {
+                            CT_HOADON = ctDKInfo.CT_HOADON;
+                        }
+
+                        //Lay ta list del_thue trong CTD_K
+                        if (ctDKInfo.LstDelCtThue != null)
+                        {
+                            if (ctDKInfo.LstDelCtThue.Count != 0)
+                            {
+                                foreach (CtThue ctThueInfo in ctDKInfo.LstDelCtThue)
+                                {
+                                    lstDelCT_Thue.Add(ctThueInfo);
+                                }
+                            }
+                        }
+                    }
+
+                    ////Thuc hien insert, update CT_HOADON
+                    if (CT_HOADON != null)
+                    {
+                        CT_HOADON.SynDate = Null.MIN_DATE;
+                        if (VnsCheck.IsNullGuid(CT_HOADON.Id))
+                        {
+                            _CtHoadonDao.Save(CT_HOADON);
+                        }
+                        else
+                        {
+                            _CtHoadonDao.Update(CT_HOADON);
+                        }
+                    }
+
+                    ////Thuc hien gan doi tuong hoa don cho CTD_K
+                    foreach (KtCtDKhac ctDKInfo_1 in lstCTDK)
+                    {
+                        if (ctDKInfo_1.CT_HOADON != null)
+                        {
+                            if (CT_HOADON != null)
+                            {
+                                ctDKInfo_1.IdDoituongHoadon = CT_HOADON.Id;
+                                ctDKInfo_1.KyHieuHoadon = CT_HOADON.SoSeri;
+                                ctDKInfo_1.MaHoadon = CT_HOADON.SoHoadon;
+                            }
+                        }
+                    }
+
+                    //Save KtCtDKhac
+                    foreach (KtCtDKhac ctDInfo in ctDKInfos)
+                    {
+                        ctDInfo.SoDu = 0;
+                        ctDInfo.PhanHe = 0;
+                        if (ctDInfo.Id == Null.NullGuid)
+                        {
+                            ctDInfo.CthId = obj.Id;
+                            _KtCtDKhacDao.Save(ctDInfo);
+                        }
+                        else
+                        {
+                            _KtCtDKhacDao.SaveOrUpdate(ctDInfo);
+                        }
+                    }
+
+                    //Lay CT_D tu CTD_K
+                    List<CtD> lstCT_D = ListConvertCTDK2CTD(ctDKInfos);
+
+                    // Dim ctDInfo As CT_DInfo = New CT_DInfo()
+                    foreach (CtD ctDInfo in lstCT_D)
+                    {
+                        //Save BcKeToan
+                        BcKetoan objbcKeToan = new BcKetoan(_cthInfo, ctDInfo);
+                        _BcKetoanDao.Save(objbcKeToan);
+                    }
+
+
+                    if (lstCT_Thue.Count != 0)
+                    {
+                        foreach (CtThue objcthue in lstCT_Thue)
+                        {
+                            if (CT_HOADON != null)
+                            {
+                                objcthue.CtHoadonId = CT_HOADON.Id;
+                            }
+                            objcthue.PhanHe = 0;
+                            if (VnsCheck.IsNullGuid(objcthue.Id))
+                            {
+                                objcthue.SoTienNte = 0;
+                                _CtThueDao.Save(objcthue);
+                            }
+                            else
+                            {
+                                _CtThueDao.Update(objcthue);
+                            }
+                        }
+                    }
+
+                    //Xoa CT_THUE
+                    foreach (CtThue del_objcthue in lstDelCT_Thue)
+                    {
+                        _CtThueDao.Delete(del_objcthue);
+                    }
+                    //Xoa CT_HOADON
+                    if (!VnsCheck.IsNullGuid(str_ct_hoaDon_id))
+                    {
+                        CtHoadon tmp = new CtHoadon();
+                        tmp.Id = str_ct_hoaDon_id;
+                        _CtHoadonDao.DeleteById(tmp.Id);
+                    }
+                }
+                
+                foreach (KtCtDKhac ctDKInfo in del_lstobj_ct_d_k)
+                {
+                    _KtCtDKhacDao.DeleteByCtH(ctDKInfo.CthId, ctDKInfo.NHOM);
+
+                    CtHoadon tmp = new CtHoadon();
+                    tmp.Id = ctDKInfo.IdDoituongHoadon;
+                    _CtHoadonDao.DeleteById(tmp.Id);
                 }
             }
+            catch (Exception ex)
+            {
+                //Message_Error(ex);
+            }
         }
-        #endregion
+
+        
+
+        
     }
 }

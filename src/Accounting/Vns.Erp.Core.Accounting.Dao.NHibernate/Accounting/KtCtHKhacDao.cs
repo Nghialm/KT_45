@@ -35,6 +35,30 @@ namespace Vns.Erp.Core.Accounting.Dao.NHibernate
 
             return entity;
         }
+
+        void IDao<KtCtHKhac, Guid>.DeleteById(Guid id)
+        {
+            String sql = " update KtCtHKhac set IsDeleted = 1, SynDate = :SynDate " +
+                         " where Id = :Id ";
+
+            IQuery q = NHibernateSession.CreateQuery(sql);
+            q.SetParameter("SynDate", Null.MIN_DATE);
+            q.SetParameter("Id", id);
+            int i = q.ExecuteUpdate();
+        }
+        #endregion
+
+        #region Syn data
+        public void UpdateSynFlag(Guid id)
+        {
+            String sql = " update KtCtHKhac set SynDate = :SynDate " +
+                         " where Id = :Id ";
+
+            IQuery q = NHibernateSession.CreateQuery(sql);
+            q.SetParameter("SynDate", Null.MIN_DATE);
+            q.SetParameter("Id", id);
+            int i = q.ExecuteUpdate();
+        }
         #endregion
 
         public IList<KtCtHKhac> GetByLoaiChungTu(int PageIndex, int PageSize, Guid DonviId, string MaLoaiCt, out int TotalResult)

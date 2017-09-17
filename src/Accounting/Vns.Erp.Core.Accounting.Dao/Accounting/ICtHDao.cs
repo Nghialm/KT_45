@@ -18,5 +18,9 @@ namespace Vns.Erp.Core.Accounting.Dao
                                     decimal SO_TIEN_TU, decimal SO_TIEN_DEN, string NOI_DUNG, Guid ID_DM_KHOANPHI, Guid ID_DM_VUVIEC, Guid ID_DM_HOPDONG, Guid ID_DM_PHONGBAN, Guid ID_DM_TUDO_1, Guid ID_DM_TUDO_2, Guid ID_DM_TUDO_3,
                                     Guid ID_DM_TUDO_4, Guid ID_DM_TUDO_5);
         Boolean DeleteMa(Guid IdLoaiCt, DateTime NgayCt, Guid DonviId);
-	}
+
+        #region Syn data
+        void UpdateSynFlag(Guid id);
+        #endregion
+    }
 }

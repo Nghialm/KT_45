@@ -16,7 +16,7 @@ namespace Vns.Erp.Core.Accounting.Service.Interface
 	public interface IKtCtHKhacService:IErpService<KtCtHKhac, System.Guid>
 	{
         IList<KtCtHKhac> GetByDonviId(Guid DonviId);
-        IList<KtCtHKhac> GetByLoaiChungTu(Guid DonviId, string MaLoaiCt);
+
         IList<KtCtHKhac> GetByLoaiChungTu(int PageIndex, int PageSize, Guid DonviId, string MaLoaiCt, out int TotalResult);
         Boolean DeleteChungTu(KtCtHKhac objCtH, IList<KtCtDKhac> lstCtD);
         void SaveCTDK(Vns.Erp.Core.FormGlobals.DataInputState status, ref KtCtHKhac _cthInfo, List<KtCtDKhac> lstCTDK, List<KtCtDKhac> del_lstobj_ct_d_k);
@@ -24,6 +24,9 @@ namespace Vns.Erp.Core.Accounting.Service.Interface
         #region syn function
         [OperationContract]
         void SaveData4Syn(KtCtHKhac _cth, List<KtCtDKhac> _lstctd);
+
+        [OperationContract]
+        void UpdateSynFlag(Guid id);
         #endregion
     }
 }

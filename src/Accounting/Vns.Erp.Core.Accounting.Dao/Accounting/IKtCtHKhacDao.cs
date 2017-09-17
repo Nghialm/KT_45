@@ -11,6 +11,10 @@ namespace Vns.Erp.Core.Accounting.Dao
 {
 	public interface IKtCtHKhacDao:IDao<KtCtHKhac,System.Guid>
 	{
+        #region Syn data
+        void UpdateSynFlag(Guid id);
+        #endregion
+
         IList<KtCtHKhac> GetByLoaiChungTu(int PageIndex, int PageSize, Guid DonviId, string MaLoaiCt, out int TotalResult);
 	}
 }

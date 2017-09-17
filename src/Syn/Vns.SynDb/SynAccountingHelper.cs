@@ -67,7 +67,7 @@ namespace Vns.Erp.Core.SynDb
                     List<CtD> lst = new List<CtD>(client.LstCtD);
                     client.SynDate = DateTime.Now;
                     _CtHServiceSyn.SaveData4Syn(client, lst);
-                    _CtHService.SaveData4Syn(client, lst);
+                    _CtHService.UpdateSynFlag(client.Id);
                 }
             }
         }
@@ -114,6 +114,7 @@ namespace Vns.Erp.Core.SynDb
                     List<CtThue> lst = new List<CtThue>(client.LstCtThue);
                     client.SynDate = DateTime.Now;
                     _CtHoadonServiceSyn.SaveData4Syn(client, lst);
+                    _CtHoadonService.UpdateSynFlag(client.Id);
                 }
             }
         }
@@ -160,6 +161,55 @@ namespace Vns.Erp.Core.SynDb
                     List<KtCtDKhac> lst = new List<KtCtDKhac>(client.LstKtCtDKhac);
                     client.SynDate = DateTime.Now;
                     KtCtHKhacServiceSyn.SaveData4Syn(client, lst);
+                    KtCtHKhacService.UpdateSynFlag(client.Id);
+                }
+            }
+        }
+        #endregion
+
+        #region KCtHHddv, KCtDHddv
+        private IKtCtHHddvService _KtCtHHddvService;
+        private IKtCtHHddvService _KtCtHHddvServiceSyn;
+
+        public IKtCtHHddvService KtCtHHddvService
+        {
+            get
+            {
+                return _KtCtHHddvService;
+            }
+
+            set
+            {
+                _KtCtHHddvService = value;
+            }
+        }
+
+        public IKtCtHHddvService KtCtHHddvServiceSyn
+        {
+            get
+            {
+                return _KtCtHHddvServiceSyn;
+            }
+
+            set
+            {
+                _KtCtHHddvServiceSyn = value;
+            }
+        }
+
+        public void SynKtCtHHddv(Guid DonviId)
+        {
+            IList<KtCtHHddv> lstClient = new List<KtCtHHddv>();
+            lstClient = new List<KtCtHHddv>(_KtCtHHddvService.GetByDonviId(DonviId));
+
+            foreach (KtCtHHddv client in lstClient)
+            {
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
+                {
+                    List<KtCtDHddv> lst = new List<KtCtDHddv>(client.LstCtDHddv);
+                    client.SynDate = DateTime.Now;
+                    KtCtHHddvServiceSyn.SaveData4Syn(client, lst);
+                    KtCtHHddvService.UpdateSynFlag(client.Id);
                 }
             }
         }

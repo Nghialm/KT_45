@@ -11,6 +11,10 @@ namespace Vns.Erp.Core.Accounting.Dao
 {
 	public interface ICtHoadonDao:IDao<CtHoadon,System.Guid>
 	{
+        #region Syn data
+        void UpdateSynFlag(Guid id);
+        #endregion
+
         Boolean DeleteByChungTu(Guid CtLienQuan, Decimal Loai);
         IList<CtHoadon> SearchBy(int PageIndex, int PageSize,
             DateTime TuNgay, DateTime DenNgay, Guid DonviId, String SoHoadon,

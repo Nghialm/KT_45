@@ -26,6 +26,9 @@ namespace Vns.Erp.Core.Accounting.Service.Interface
         #region Syn function
         [OperationContract]
         void SaveData4Syn(CtHoadon _hoadon, List<CtThue> _lstthue);
+
+        [OperationContract]
+        void UpdateSynFlag(Guid id);
         #endregion
     }
 }

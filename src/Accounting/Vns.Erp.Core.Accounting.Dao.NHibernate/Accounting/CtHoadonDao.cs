@@ -39,7 +39,20 @@ namespace Vns.Erp.Core.Accounting.Dao.NHibernate
 
         void IDao<CtHoadon, Guid>.DeleteById(Guid id)
         {
-            String sql = " update CtHoadon set IsUpdated = 1, SynDate = :SynDate " + 
+            String sql = " update CtHoadon set IsDeleted = 1, SynDate = :SynDate " + 
+                         " where Id = :Id ";
+
+            IQuery q = NHibernateSession.CreateQuery(sql);
+            q.SetParameter("SynDate", Null.MIN_DATE);
+            q.SetParameter("Id", id);
+            int i = q.ExecuteUpdate();
+        }
+        #endregion
+
+        #region Syn data
+        public void UpdateSynFlag(Guid id)
+        {
+            String sql = " update CtHoadon set SynDate = :SynDate " +
                          " where Id = :Id ";
 
             IQuery q = NHibernateSession.CreateQuery(sql);

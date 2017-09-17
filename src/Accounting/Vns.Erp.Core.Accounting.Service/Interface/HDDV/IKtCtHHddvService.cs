@@ -12,16 +12,13 @@ using System.ServiceModel;
 namespace Vns.Erp.Core.Accounting.Service.Interface
 {
     [ServiceContract(Namespace = "http://SpringSample.Core.Service")]
-	public interface IKtCtHHddvService:IErpService<KtCtHHddv, System.Guid>
-	{
+    public interface IKtCtHHddvService : IErpService<KtCtHHddv, System.Guid>
+    {
         [OperationContract]
         IList<KtCtHHddv> GetByDonviId(Guid DonviId);
-        [OperationContract]
-        IList<KtCtHHddv> GetByLoaiChungTu(Guid DonviId, string MaLoaiCt);
-        [OperationContract(Name = "GetByLoaiChungTuBySoCTHienThi")]
-        IList<KtCtHHddv> GetByLoaiChungTu(Guid DonviId, string MaLoaiCt, int SoCTHienThi);
+
         [OperationContract(Name = "GetByLoaiChungTuByHoaDonDichVu")]
-        IList<KtCtHHddv> GetByLoaiChungTu(int PageIndex, int PageSize,Guid DonviId, string MaLoaiCt, int SoCTHienThi,out int TotalResult);
+        IList<KtCtHHddv> GetByLoaiChungTu(int PageIndex, int PageSize, Guid DonviId, string MaLoaiCt, int SoCTHienThi, out int TotalResult);
         [OperationContract]
         Boolean DeleteChungTu(KtCtHHddv objCtH, IList<KtCtDHddv> lstCtD);
         [OperationContract]
@@ -32,5 +29,13 @@ namespace Vns.Erp.Core.Accounting.Service.Interface
                                    decimal SO_TIEN_TU, decimal SO_TIEN_DEN, string NOI_DUNG, Decimal So_Luong_Tu, Decimal So_Luong_Den, String TenHangHoa,
                                    Guid ID_DM_KHOANPHI, Guid ID_DM_VUVIEC, Guid ID_DM_HOPDONG, Guid ID_DM_PHONGBAN, Guid ID_DM_TUDO_1, Guid ID_DM_TUDO_2, Guid ID_DM_TUDO_3,
                                    Guid ID_DM_TUDO_4, Guid ID_DM_TUDO_5);
-	}
+
+        #region Syn data
+        [OperationContract]
+        void SaveData4Syn(KtCtHHddv _cth, List<KtCtDHddv> _lstctd);
+
+        [OperationContract]
+        void UpdateSynFlag(Guid id);
+        #endregion
+    }
 }
