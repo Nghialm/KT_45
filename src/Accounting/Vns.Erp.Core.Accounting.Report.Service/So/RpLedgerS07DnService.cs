@@ -29,7 +29,8 @@ namespace Vns.Erp.Core.Accounting.Report.Service
             TuNgay = (DateTime)lstValues[0];
             DenNgay = (DateTime)lstValues[1];
             MaTk = (String)lstValues[2];
-            MaTkDu = (String)lstValues[3];
+            Object tmp = lstValues[3];
+            MaTkDu = tmp == null ? "": (string)tmp;
             DonviId = (Guid)lstValues[4];
 
             return RpLedgerAccountDao.GetDataS07Dn(MaTk, MaTkDu, TuNgay, DenNgay, DonviId, "");

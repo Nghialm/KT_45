@@ -422,9 +422,6 @@
 	</object>
 
 	<object id="frmDanhMucPhuongThucQuanTri_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucPhuongThucQuanTri_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
-		<!--
-    <property name="ErpService" ref="DmPtqtService" />
-    -->
 		<property name="DmPtqtService" ref="DmPtqtService" />
 		<property name="FormChiTiet" ref="frmDanhMucPhuongThucQuanTri_ChiTiet" />
 	</object>
