@@ -214,5 +214,52 @@ namespace Vns.Erp.Core.SynDb
             }
         }
         #endregion
+
+        #region CtHNx, CtDNx
+        private ICtHNxService _CtHNxService;
+        private ICtHNxService _CtHNxServiceSyn;
+
+        public ICtHNxService CtHNxService
+        {
+            get
+            {
+                return _CtHNxService;
+            }
+
+            set
+            {
+                _CtHNxService = value;
+            }
+        }
+
+        public ICtHNxService CtHNxServiceSyn
+        {
+            get
+            {
+                return _CtHNxServiceSyn;
+            }
+
+            set
+            {
+                _CtHNxServiceSyn = value;
+            }
+        }
+        public void SynCtHNx(Guid DonviId)
+        {
+            IList<CtHNx> lstClient = new List<CtHNx>();
+            lstClient = new List<CtHNx>(_CtHNxService.GetByLoaiChungTu(DonviId, String.Empty, -1));
+
+            foreach (CtHNx client in lstClient)
+            {
+                if (client.SynDate == Null.MIN_DATE || _IsSynAll)
+                {
+                    List<CtDNx> lst = new List<CtDNx>(client.LstCtDNx);
+                    client.SynDate = DateTime.Now;
+                    _CtHNxServiceSyn.SaveData4Syn(client, lst);
+                    _CtHNxService.UpdateSynFlag(client.Id);
+                }
+            }
+        }
+        #endregion
     }
 }

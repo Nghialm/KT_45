@@ -83,7 +83,10 @@ namespace Vns.Erp.Core.SynDb
 
             //_SynAccountingHelper.SynKtCtHKhac(Generals.DonviID);
 
-            _SynAccountingHelper.SynKtCtHHddv(Generals.DonviID);
+            //_SynAccountingHelper.SynKtCtHHddv(Generals.DonviID);
+
+            _SynAccountingHelper.SynCtHNx(Generals.DonviID);
+
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

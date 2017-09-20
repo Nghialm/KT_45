@@ -53,12 +53,61 @@ namespace Vns.Erp.Core.Accounting.Service
         }
         #endregion
 
-
         public ICtHNxDao CtHNxDao
         {
             get { return (ICtHNxDao)Dao; }
             set { Dao = value; }
         }
+
+        #region Syn function
+        /// <summary>
+        /// Ham dong bo du lieu len server
+        /// </summary>
+        /// <param name="_cthInfo"></param>
+        /// <param name="_lstctd"></param>
+        [Transaction]
+        public void SaveData4Syn(CtHNx _cthInfo, List<CtDNx> _lstctd)
+        {
+            //Xoa du lieu
+            _BcKetoanDao.DeleteByChungTu(_cthInfo.Id, Null.NullGuid);
+            _BcKetoanKhoDao.DeleteByChungTu(_cthInfo.Id, Null.NullGuid);
+
+            _cthInfo.LstCtDNx = null;
+            CtHNxDao.SaveOrUpdate(_cthInfo);
+
+            if (_cthInfo.IsDeleted != 1)
+            {
+                _CtDNxDao.DeleteByCtH(_cthInfo.Id);
+                foreach (CtDNx _tempctdnx in _lstctd)
+                {
+                    _CtDNxDao.SaveOrUpdate(_tempctdnx);
+                    BcKetoanKho objkho = new BcKetoanKho(_cthInfo, _tempctdnx);
+                    if (_tempctdnx.Xuat == 2)
+                    {
+                        objkho.Xuat = 0;
+                        objkho.KhoXuatId = Null.NullGuid;
+
+                        BcKetoanKho objkho1 = new BcKetoanKho(_cthInfo, _tempctdnx);
+                        objkho1.Xuat = 1;
+                        objkho1.KhoNhapId = Null.NullGuid;
+                        _BcKetoanKhoDao.Save(objkho1);
+                    }
+                    _BcKetoanKhoDao.Save(objkho);
+
+                    List<BcKetoan> lstkt = objkho.GenBcKetoan();
+                    foreach (BcKetoan tmpkt in lstkt)
+                    {
+                        _BcKetoanDao.Save(tmpkt);
+                    }
+                }
+            }
+        }
+
+        public void UpdateSynFlag(Guid id)
+        {
+            CtHNxDao.UpdateSynFlag(id);
+        }
+        #endregion
 
         public IList<CtHNx> GetByDonviId(Guid DonviId)
         {
@@ -103,15 +152,12 @@ namespace Vns.Erp.Core.Accounting.Service
 
             if (objCtHNx.IdDoituongHoadon != Null.NullGuid)
             {
-                //Xoa thue
-                _CtThueDao.DeleteByHoaDon(objCtHNx.IdDoituongHoadon);
                 //Xoa hoa don
                 _CtHoadonDao.DeleteById(objCtHNx.IdDoituongHoadon);
             }
+
             //Xoa chung tu
-            CtHNxDao.Delete(objCtHNx);
-            //Xoa chi tiet nhap xuat
-            _CtDNxDao.DeleteByCtH(objCtHNx.Id);
+            CtHNxDao.DeleteById(objCtHNx.Id);
             return true;
         }
 
@@ -127,17 +173,23 @@ namespace Vns.Erp.Core.Accounting.Service
         public Boolean SaveChungTuKho(Boolean isUpdate, ref CtHNx _cthInfo, ref List<CtDNx> _lstctdInfo, List<CtDNx> _lstDelCtdInfo)
         {
             CtHNx obj = _cthInfo;
+            obj.SynDate = Null.MIN_DATE;
 
             try
             {
                 switch (isUpdate)
                 {
                     case false:
+                        obj.NgayTao = DateTime.Now;
+                        obj.NgaySua = DateTime.Now;
                         obj = CtHNxDao.Save(obj);
                         break;
                     case true:
                         _BcKetoanDao.DeleteByChungTu(obj.Id, Null.NullGuid);
                         _BcKetoanKhoDao.DeleteByChungTu(obj.Id, Null.NullGuid);
+                        _CtDNxDao.DeleteByCtH(obj.Id);
+
+                        obj.NgaySua = DateTime.Now;
                         CtHNxDao.SaveOrUpdate(obj);
                         break;
                 }
@@ -175,14 +227,6 @@ namespace Vns.Erp.Core.Accounting.Service
                     }
 
                 }
-
-                if ((_lstDelCtdInfo != null))
-                {
-                    foreach (CtDNx _tempdelctdnx in _lstDelCtdInfo)
-                    {
-                        _CtDNxDao.Delete(_tempdelctdnx);
-                    }
-                }
             }
             catch (Exception ex)
             {
@@ -198,29 +242,34 @@ namespace Vns.Erp.Core.Accounting.Service
         {
             CtHoadon objctHoaDon = _ctHoaDonInfo;
             CtHNx objcthnx = _cthnxInfo;
+
+            objctHoaDon.SynDate = Null.MIN_DATE;
+            objcthnx.SynDate = Null.MIN_DATE;
             try
             {
                 switch (isUpdate)
                 {
                     case false:
+                        objcthnx.NgayTao = DateTime.Now;
+                        objcthnx.NgaySua = DateTime.Now;
+                        
                         objctHoaDon = _CtHoadonDao.Save(objctHoaDon);
                         objcthnx.IdDoituongHoadon = objctHoaDon.Id;
                         objcthnx = CtHNxDao.Save(objcthnx);
                         break;
                     case true:
+                        objcthnx.NgaySua = DateTime.Now;
+
                         _BcKetoanDao.DeleteByChungTu(objcthnx.Id, Null.NullGuid);
                         _BcKetoanKhoDao.DeleteByChungTu(objcthnx.Id, Null.NullGuid);
+                        _CtThueDao.DeleteByHoaDon(objctHoaDon.Id);
+                        _CtDNxDao.DeleteByCtH(objcthnx.Id);
+
                         _CtHoadonDao.SaveOrUpdate(objctHoaDon);
                         CtHNxDao.SaveOrUpdate(objcthnx);
                         break;
                 }
-
-                IList<CtThue> lstctThue = new List<CtThue>();
-                if (isUpdate)
-                    lstctThue = _CtThueDao.GetObjectbyCtHoaDon(objctHoaDon.Id);
-                else
-                    lstctThue = null;
-
+                
                 int index = 1;
                 foreach (CtDNx _tempctdnx in _lstctdnxInfo)
                 {
@@ -229,44 +278,52 @@ namespace Vns.Erp.Core.Accounting.Service
                     if (objctHoaDon != null)
                         _tempctdnx.IdDoituongHoadon = objctHoaDon.Id;
 
+                    CtThue _objctt = new CtThue(_tempctdnx, _phieuXuat);
+                    _objctt.SoThuTu = index.ToString();
+                    _objctt.CtHoadonId = objctHoaDon.Id;
+                    _CtDNxDao.Save(_tempctdnx);
+                    _objctt.CtdNxId = _tempctdnx.Id;
+                    _objctt = _CtThueDao.Save(_objctt);
+
+                    #region tmp
                     //Lay gia tri cho chung tu thue di kem voi moi dong CTDNX
-                    if (_tempctdnx.Id == Null.NullGuid)
-                    {
-                        CtThue _objctt = new CtThue(_tempctdnx, _phieuXuat);
-                        _objctt.SoThuTu = index.ToString();
-                        _objctt.CtHoadonId = objctHoaDon.Id;
-                        _CtDNxDao.Save(_tempctdnx);
-                        _objctt.CtdNxId = _tempctdnx.Id;
-                        _objctt = _CtThueDao.Save(_objctt);
-                    }
-                    else
-                    {
-                        _CtDNxDao.Update(_tempctdnx);
-                        CtThue _objctt = GetObjThuebyCtDNxId(lstctThue, _tempctdnx.Id);
-                        if (_objctt == null) _objctt = new CtThue();
+                    //if (_tempctdnx.Id == Null.NullGuid)
+                    //{
+                    //    CtThue _objctt = new CtThue(_tempctdnx, _phieuXuat);
+                    //    _objctt.SoThuTu = index.ToString();
+                    //    _objctt.CtHoadonId = objctHoaDon.Id;
+                    //    _CtDNxDao.Save(_tempctdnx);
+                    //    _objctt.CtdNxId = _tempctdnx.Id;
+                    //    _objctt = _CtThueDao.Save(_objctt);
+                    //}
+                    //else
+                    //{
+                    //    _CtDNxDao.Update(_tempctdnx);
+                    //    CtThue _objctt = GetObjThuebyCtDNxId(lstctThue, _tempctdnx.Id);
+                    //    if (_objctt == null) _objctt = new CtThue();
 
-                        _objctt.SoThuTu = index.ToString();
+                    //    _objctt.SoThuTu = index.ToString();
 
-                        if (_objctt.Id == Null.NullGuid)
-                        {
-                            _objctt = new CtThue(_tempctdnx, _phieuXuat);
-                            _objctt.CtHoadonId = objctHoaDon.Id;
-                            _objctt.CtdNxId = _tempctdnx.Id;
-                            _objctt.SoThuTu = index.ToString();
-                            _CtThueDao.Save(_objctt);
-                        }
-                        else
-                        {
-                            CtThue tmp = new CtThue(_tempctdnx, _phieuXuat);
-                            if (_objctt == null) _objctt = new CtThue();
-                            _objctt.SetProperty(tmp);
-                            _objctt.CtHoadonId = objctHoaDon.Id;
-                            _objctt.CtdNxId = _tempctdnx.Id;
-                            _objctt.SoThuTu = index.ToString();
-                            _CtThueDao.Update(_objctt);
-                        }
-                    }
-
+                    //    if (_objctt.Id == Null.NullGuid)
+                    //    {
+                    //        _objctt = new CtThue(_tempctdnx, _phieuXuat);
+                    //        _objctt.CtHoadonId = objctHoaDon.Id;
+                    //        _objctt.CtdNxId = _tempctdnx.Id;
+                    //        _objctt.SoThuTu = index.ToString();
+                    //        _CtThueDao.Save(_objctt);
+                    //    }
+                    //    else
+                    //    {
+                    //        CtThue tmp = new CtThue(_tempctdnx, _phieuXuat);
+                    //        if (_objctt == null) _objctt = new CtThue();
+                    //        _objctt.SetProperty(tmp);
+                    //        _objctt.CtHoadonId = objctHoaDon.Id;
+                    //        _objctt.CtdNxId = _tempctdnx.Id;
+                    //        _objctt.SoThuTu = index.ToString();
+                    //        _CtThueDao.Update(_objctt);
+                    //    }
+                    //}
+                    #endregion
                     index++;
 
                     BcKetoanKho objkho = new BcKetoanKho(objcthnx, _tempctdnx);
@@ -276,18 +333,6 @@ namespace Vns.Erp.Core.Accounting.Service
                     foreach (BcKetoan tmpkt in lstkt)
                     {
                         _BcKetoanDao.Save(tmpkt);
-                    }
-                }
-
-                if ((_lstDelCtdInfo != null))
-                {
-                    foreach (CtDNx _tempdelctdnx in _lstDelCtdInfo)
-                    {
-                        if (_tempdelctdnx.Id != Null.NullGuid)
-                        {
-                            _CtDNxDao.Delete(_tempdelctdnx);
-                            _CtThueDao.DeleteById(_tempdelctdnx.Id);
-                        }
                     }
                 }
             }

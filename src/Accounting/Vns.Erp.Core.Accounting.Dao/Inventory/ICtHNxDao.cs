@@ -11,6 +11,10 @@ namespace Vns.Erp.Core.Accounting.Dao
 {
 	public interface ICtHNxDao:IDao<CtHNx,System.Guid>
 	{
+        #region Syn data
+        void UpdateSynFlag(Guid id);
+        #endregion
+
         IList<CtHNx> GetByLoaiChungTu(int PageIndex,int PageSize,Guid DonviId, string MaLoaiCt, int SoCTHienThi,out int TotalResult);
         IList<CtHNx> GetByLoaiChungTu( Guid DonviId, string MaLoaiCt, int SoCTHienThi);
         IList<CtDNx> GetAllSoDu(int PageIndex, int PageSize, Guid DonviId, int NamKeToan, out int TotalResult);

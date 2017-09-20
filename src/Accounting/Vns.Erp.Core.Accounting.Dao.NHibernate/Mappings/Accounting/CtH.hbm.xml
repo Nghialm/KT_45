@@ -62,7 +62,9 @@
 		<property name="PrefixCt" column="PREFIX_CT" type="String" length="64" />
 
     <property name="SynDate" column="Syn_Date" type="DateTime" />
-    <property name="IsDeleted" column="Is_Deleted" type="Decimal" precision="4" scale="0" />
+    <property name="IsDeleted" type="Decimal" precision="4" scale="0">
+      <column name="Is_Deleted" default="0"/>
+    </property>
 
     <bag name="LstCtD" lazy="false" cascade="none" >
       <key column="CTH_ID"></key>

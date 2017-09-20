@@ -25,7 +25,9 @@
     <property name="HinhThucTt" column="HINH_THUC_TT" type="String" length="128"/>
 
     <property name="SynDate" column="Syn_Date" type="DateTime" />
-    <property name="IsDeleted" column="Is_Deleted" type="Decimal" precision="4" scale="0" />
+    <property name="IsDeleted" type="Decimal" precision="4" scale="0">
+      <column name="Is_Deleted" default="0"/>
+    </property>
     
     <bag name="LstCtThue" lazy="false" cascade="none" >
       <key column="CT_HOADON_ID"></key>

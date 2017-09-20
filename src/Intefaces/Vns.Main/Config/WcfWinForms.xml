@@ -1609,6 +1609,9 @@
 
     <property name="KtCtHHddvService" ref="KtCtHHddvService" />
     <property name="KtCtHHddvServiceSyn" ref="KtCtHHddvServiceSyn" />
+
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtHNxServiceSyn" ref="CtHNxServiceSyn" />
   </object>
   
   <object id="Vns.Erp.Core.SynDb.frmDongBoDuLieu" type="Vns.Erp.Core.SynDb.frmDongBoDuLieu, Vns.Erp.Core.SynDb" singleton="false">

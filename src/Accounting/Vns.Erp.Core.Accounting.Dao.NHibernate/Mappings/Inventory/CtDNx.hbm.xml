@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Domain" assembly="Vns.Erp.Core.Accounting.Domain">
 	<class name="Vns.Erp.Core.Accounting.Domain.CtDNx, Vns.Erp.Core.Accounting.Domain" table="CT_D_NX" lazy="false">
-		<id name="Id" column="CTD_NX_ID">
-			<generator class="guid" />
-		</id>
+		<id name="Id" column="CTD_NX_ID"/>
+			
     <property name="HanghoaId" column="HANGHOA_ID" type="Guid"  />
     <property name="MaHanghoa" column="MA_HANGHOA" type="String" length="32" />
     <property name="KyHieuHanghoa" column="KY_HIEU_HANGHOA" type="String" length="64" />

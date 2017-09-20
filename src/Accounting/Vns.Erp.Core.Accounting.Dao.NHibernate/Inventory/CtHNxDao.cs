@@ -13,6 +13,56 @@ namespace Vns.Erp.Core.Accounting.Dao.NHibernate
 	[Serializable]
 	public sealed class CtHNxDao:GenericDao<CtHNx,System.Guid>,ICtHNxDao
 	{
+        #region IDao
+        CtHNx IDao<CtHNx, Guid>.Merge(CtHNx entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Merge(entity);
+
+            return entity;
+        }
+
+        CtHNx IDao<CtHNx, Guid>.Save(CtHNx entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Save(entity);
+
+            return entity;
+        }
+
+        CtHNx IDao<CtHNx, Guid>.SaveOrUpdate(CtHNx entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.SaveOrUpdate(entity);
+
+            return entity;
+        }
+
+        void IDao<CtHNx, Guid>.DeleteById(Guid id)
+        {
+            String sql = " update CtHNx set IsDeleted = 1, SynDate = :SynDate " +
+                         " where Id = :Id ";
+
+            IQuery q = NHibernateSession.CreateQuery(sql);
+            q.SetParameter("SynDate", Null.MIN_DATE);
+            q.SetParameter("Id", id);
+            int i = q.ExecuteUpdate();
+        }
+        #endregion
+
+        #region Syn data
+        public void UpdateSynFlag(Guid id)
+        {
+            String sql = " update CtHNx set SynDate = :SynDate " +
+                         " where Id = :Id ";
+
+            IQuery q = NHibernateSession.CreateQuery(sql);
+            q.SetParameter("SynDate", Null.MIN_DATE);
+            q.SetParameter("Id", id);
+            int i = q.ExecuteUpdate();
+        }
+        #endregion
+
         public IList<CtHNx> GetByLoaiChungTu( Guid DonviId, string MaLoaiCt, int SoCTHienThi)
         {
             String nHQL = " Select h " +
@@ -39,11 +89,13 @@ namespace Vns.Erp.Core.Accounting.Dao.NHibernate
                                      " From CtHNx h" +
                                      " Where h.DonviId = :DonviId " +
                                      " And h.MaLoaiCt like :MaLoaiCt " +
+                                     " And (h.IsDeleted <> 1 or h.IsDeleted is null) " +
                                      " Order by h.NgayCt Desc";
 
             String countHQL = " Select count(h) " +
                                      " From CtHNx h" +
                                      " Where h.DonviId = :DonviId " +
+                                     " And (h.IsDeleted <> 1 or h.IsDeleted is null) " +
                                      " And h.MaLoaiCt like :MaLoaiCt ";
                                     
 
@@ -76,11 +128,13 @@ namespace Vns.Erp.Core.Accounting.Dao.NHibernate
                                      " Where h.DonviId = :DonviId " +
                                      " And year(h.NgayCt) = :NgayCt" +
                                      " And h.SoDu = :SoDu" +
+                                     " And (h.IsDeleted <> 1 or h.IsDeleted is null) " +
                                      " Order by h.NgayCt ASC";
             String countHQL = " Select count(d) " +
                                      " From CtDNx d inner join d.ObjCtHNx h" +
                                      " Where h.DonviId = :DonviId " +
                                      " And year(h.NgayCt) = :NgayCt" +
+                                     " And (h.IsDeleted <> 1 or h.IsDeleted is null) " +
                                      " And h.SoDu = :SoDu";
             IQuery query = NHibernateSession.CreateQuery(nHQL);
             IQuery countQuery = NHibernateSession.CreateQuery(countHQL);

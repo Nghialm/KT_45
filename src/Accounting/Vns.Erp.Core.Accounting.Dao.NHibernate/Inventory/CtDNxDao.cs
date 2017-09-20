@@ -10,6 +10,32 @@ namespace Vns.Erp.Core.Accounting.Dao.NHibernate
 	[Serializable]
 	public sealed class CtDNxDao:GenericDao<CtDNx,System.Guid>,ICtDNxDao
 	{
+        #region IDao
+        CtDNx IDao<CtDNx, Guid>.Merge(CtDNx entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Merge(entity);
+
+            return entity;
+        }
+
+        CtDNx IDao<CtDNx, Guid>.Save(CtDNx entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Save(entity);
+
+            return entity;
+        }
+
+        CtDNx IDao<CtDNx, Guid>.SaveOrUpdate(CtDNx entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.SaveOrUpdate(entity);
+
+            return entity;
+        }
+        #endregion
+
         public Boolean DeleteByCtH(Guid CthNxId)
         {
             String sql = " delete from CtDNx a where " +

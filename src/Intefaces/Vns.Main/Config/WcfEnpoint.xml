@@ -41,10 +41,7 @@
 
 
   <!--Ke Toan-->
-  <endpoint address="http://localhost:17022/CtHNxService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.ICtHNxService" name="WcfCtHNxService"/>
-  <endpoint address="http://localhost:17022/CtDNxService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.ICtDNxService" name="WcfCtDNxService"/>
-  <endpoint address="http://localhost:17022/BcKetoanKhoService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IBcKetoanKhoService" name="WcfBcKetoanKhoService"/>
-  
+ 
   <!--Tai san co dinh-->
   <endpoint address="http://localhost:17022/DmLoaitaisanService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Asset.Service.Interface.IDmLoaitaisanService" name="WcfDmLoaitaisanService"/>
   <endpoint address="http://localhost:17022/DmTscdService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Asset.Service.Interface.IDmTscdService" name="WcfDmTscdService"/>
@@ -97,6 +94,11 @@
   <endpoint address="http://localhost:17022/Accounting/CtThueService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.ICtThueService" name="WcfCtThueService"/>
   <endpoint address="http://localhost:17022/Accounting/KtCtDKhacService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IKtCtDKhacService" name="WcfKtCtDKhacService"/>
   <endpoint address="http://localhost:17022/Accounting/KtCtHKhacService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IKtCtHKhacService" name="WcfKtCtHKhacService"/>
+
+  <!--Ke toan kho-->
+  <endpoint address="http://localhost:17022/Inventory/CtHNxService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.ICtHNxService" name="WcfCtHNxService"/>
+  <endpoint address="http://localhost:17022/Inventory/CtDNxService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.ICtDNxService" name="WcfCtDNxService"/>
+  <endpoint address="http://localhost:17022/Inventory/BcKetoanKhoService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IBcKetoanKhoService" name="WcfBcKetoanKhoService"/>
 
   <!--Danh muc ke toan-->
   <endpoint address="http://localhost:17022/Dictionary/DmTaikhoanService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmTaikhoanService" name="WcfDmTaikhoanService"/>

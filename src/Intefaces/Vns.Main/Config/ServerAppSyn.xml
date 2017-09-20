@@ -28,6 +28,7 @@
   <wcf:channelFactory id="CtHServiceSyn" channelType="Vns.Erp.Core.Accounting.Service.Interface.ICtHService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfCtHService"/>
   <wcf:channelFactory id="CtHoadonServiceSyn" channelType="Vns.Erp.Core.Accounting.Service.Interface.ICtHoadonService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfCtHoadonService"/>
   <wcf:channelFactory id="KtCtHKhacServiceSyn" channelType="Vns.Erp.Core.Accounting.Service.Interface.IKtCtHKhacService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfKtCtHKhacService"/>
+  
   <!--Hoa don dich vu-->
   <wcf:channelFactory id="KtCtHHddvServiceSyn" channelType="Vns.Erp.Core.Accounting.Service.Interface.IKtCtHHddvService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfKtCtHHddvService"/>
 
@@ -37,6 +38,8 @@
   <wcf:channelFactory id="DmLydoTgTscdServiceSyn" channelType="Vns.Erp.Core.Asset.Service.Interface.IDmLydoTgTscdService, Vns.Erp.Core.Asset.Service" endpointConfigurationName="WcfDmLydoTgTscdService"/>
   <wcf:channelFactory id="DmNhomTscdServiceSyn" channelType="Vns.Erp.Core.Asset.Service.Interface.IDmNhomTscdService, Vns.Erp.Core.Asset.Service" endpointConfigurationName="WcfDmNhomTscdService"/>
  
+  <!--ke toan kho-->
+  <wcf:channelFactory id="CtHNxServiceSyn" channelType="Vns.Erp.Core.Accounting.Service.Interface.ICtHNxService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfCtHNxService"/>
   <!--Thiet lap bao cao-->
   <!--Report-->
   <!--Tinh gia xuat kho  -->

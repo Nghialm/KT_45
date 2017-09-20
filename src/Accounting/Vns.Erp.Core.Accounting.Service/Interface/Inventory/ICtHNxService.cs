@@ -14,6 +14,14 @@ namespace Vns.Erp.Core.Accounting.Service.Interface
     [ServiceContract(Namespace = "http://SpringSample.Core.Service")]
 	public interface ICtHNxService:IErpService<CtHNx, System.Guid>
 	{
+        #region Syn function
+        [OperationContract]
+        void SaveData4Syn(CtHNx _cthInfo, List<CtDNx> _lstctd);
+
+        [OperationContract]
+        void UpdateSynFlag(Guid id);
+        #endregion
+
         [OperationContract]
         IList<CtHNx> GetByDonviId(Guid DonviId);
         [OperationContract]

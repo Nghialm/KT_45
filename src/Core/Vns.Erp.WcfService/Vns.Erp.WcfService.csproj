@@ -238,9 +238,9 @@
     <Content Include="Accounting\CtHService.svc" />
     <Content Include="Accounting\CtHoadonService.svc" />
     <Content Include="Accounting\CtThueService.svc" />
-    <Content Include="CtHNxService.svc" />
-    <Content Include="CtDNxService.svc" />
-    <Content Include="BcKetoanKhoService.svc" />
+    <Content Include="Inventory\CtHNxService.svc" />
+    <Content Include="Inventory\CtDNxService.svc" />
+    <Content Include="Inventory\BcKetoanKhoService.svc" />
     <Content Include="Dictionary\DmTudo2Service.svc" />
     <Content Include="Dictionary\DmTudo3Service.svc" />
     <Content Include="Dictionary\DmTudo4Service.svc" />
