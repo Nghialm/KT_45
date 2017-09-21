@@ -10,6 +10,7 @@ using Vns.Erp.Core.Produce.Service.Interface;
 using Vns.Erp.Core.Produce.Domain;
 using Vns.Erp.Core.Admin.Service.Interface;
 using Vns.Erp.Core.Admin.Domain;
+using static Vns.Erp.Core.Common.Controls.PagerControl;
 
 namespace Vns.Erp.Core.Produce.CsProduceGUI
 {
@@ -82,8 +83,18 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             if (obj_loaichungtu == null) return;
 
             lstDanhMuc = HtDanhmucService.GetByDoiTuong("LOAI_NVL");
+        }
+
+        protected void LoadGrid()
+        {
+            int totalresult = 0;
+
             IList<SxPhieuKiemke> lstDanhSach = new List<SxPhieuKiemke>();
-            lstDanhSach = SxPhieuKiemkeService.getByMaCt(obj_loaichungtu.MaLoaiCt, Generals.DonviID);
+            lstDanhSach = SxPhieuKiemkeService.getByMaCt(CtlPagerControl.PageIndex, CtlPagerControl.PageSize,
+                obj_loaichungtu.MaLoaiCt, Generals.DonviID,
+                out totalresult);
+            CtlPagerControl.TotalResult = totalresult;
+
             grcDanhSach.DataSource = lstDanhSach;
         }
 
@@ -220,6 +231,9 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             {
                 BindCombo();
                 LoadData();
+
+                CtlPagerControl.display = new DisplayResult(this.LoadGrid);
+                CtlPagerControl.RefreshPage();
             }
             catch (Exception ex)
             {

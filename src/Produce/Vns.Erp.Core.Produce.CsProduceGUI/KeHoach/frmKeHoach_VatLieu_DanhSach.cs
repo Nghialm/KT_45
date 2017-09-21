@@ -10,6 +10,7 @@ using Vns.Erp.Core.Produce.Service.Interface;
 using Vns.Erp.Core.Produce.Domain;
 using Vns.Erp.Core.Admin.Service.Interface;
 using Vns.Erp.Core.Admin.Domain;
+using static Vns.Erp.Core.Common.Controls.PagerControl;
 
 namespace Vns.Erp.Core.Produce.CsProduceGUI
 {
@@ -63,7 +64,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
 
         #region Private function
 
-        private void LoadData()
+        protected void LoadData()
         {
             string para_str = this.AccessibleDescription;
             List<ParamInfo> lst_para = DataMining.GetParams(para_str);
@@ -75,8 +76,16 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             if (obj_loaichungtu == null) return;
 
             lstDanhMuc = HtDanhmucService.GetByDoiTuong("LOAI_NVL");
+            
+        }
+        private void LoadGrid()
+        {
             IList<SxKehoachM> lstQuyTrinh = new List<SxKehoachM>();
-            lstQuyTrinh = SxKehoachMService.getByMaCt(obj_loaichungtu.MaLoaiCt, Generals.DonviID); 
+            int totalresult = 0;
+            lstQuyTrinh = SxKehoachMService.getByMaCt(CtlPagerControl.PageIndex, CtlPagerControl.PageSize,
+                obj_loaichungtu.MaLoaiCt, Generals.DonviID, 
+                out totalresult);
+            CtlPagerControl.TotalResult = totalresult;
             grcDanhSach.DataSource = lstQuyTrinh;
         }
 
@@ -192,6 +201,9 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             try
             {
                 LoadData();
+
+                CtlPagerControl.display = new DisplayResult(this.LoadGrid);
+                CtlPagerControl.RefreshPage();
             }
             catch (Exception ex)
             {

@@ -11,7 +11,8 @@ namespace Vns.Erp.Core.Produce.Dao
 {
 	public interface ISxKehoachMDao:IDao<SxKehoachM,System.Guid>
 	{
-        IList<SxKehoachM> getByMaCt(string MaLoaiCt, Guid DonviId);
+        IList<SxKehoachM> getByMaCt(int PageIndex, int PageSize, string MaLoaiCt, Guid DonviId, out int TotalResult);
+
         IList<SxKehoachM> GetByDonviId(Guid DonviId);
 	}
 }

@@ -19,5 +19,30 @@ namespace Vns.Erp.Core.Produce.Dao.NHibernate
             q.SetParameter("DonviId", DonviId);
             return q.List<SxPhieuKiemke>();
         }
-	}
+
+        public IList<SxPhieuKiemke> getByMaCt(int PageIndex, int PageSize, string MaLoaiCt, Guid DonviId, out int TotalResult)
+        {
+            String sql = "from SxPhieuKiemke h where h.MaLoaiPhieu like :MaLoaiCt and h.DonviId = :DonviId";
+            String countsql = "select count(h) from SxPhieuKiemke h where h.MaLoaiPhieu like :MaLoaiCt and h.DonviId = :DonviId";
+            
+            IQuery query = Session.CreateQuery(sql);
+            IQuery countQuery = Session.CreateQuery(countsql);
+
+            query.SetParameter("MaLoaiCt", MaLoaiCt + "%");
+            query.SetParameter("DonviId", DonviId);
+
+            countQuery.SetParameter("MaLoaiCt", MaLoaiCt + "%");
+            countQuery.SetParameter("DonviId", DonviId);
+
+            if ((PageIndex > 0) && (PageSize > 0))
+            {
+                int startRescord = (PageIndex - 1) * PageSize;
+                query.SetFirstResult(startRescord);
+                query.SetMaxResults(PageSize);
+            }
+            long numberRet = (long)countQuery.UniqueResult();
+            TotalResult = (int)numberRet;
+            return query.List<SxPhieuKiemke>();
+        }
+    }
 }

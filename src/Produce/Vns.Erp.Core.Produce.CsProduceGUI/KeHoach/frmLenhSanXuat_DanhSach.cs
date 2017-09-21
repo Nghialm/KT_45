@@ -10,6 +10,7 @@ using Vns.Erp.Core.Produce.Service.Interface;
 using Vns.Erp.Core.Produce.Domain;
 using Vns.Erp.Core.Admin.Service.Interface;
 using Vns.Erp.Core.Admin.Domain;
+using static Vns.Erp.Core.Common.Controls.PagerControl;
 
 namespace Vns.Erp.Core.Produce.CsProduceGUI
 {
@@ -109,11 +110,23 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             IList<HtDanhmuc> lstTrangThaiLenh = HtDanhmucService.GetByDoiTuong("TT_KEHOACH");
             cboTrangThaiLenh.DataSource = lstTrangThaiLenh;
 
+            
+        }
+
+        protected void LoadGrid()
+        {
             IList<SxLenhsanxuat> lstLenhSx = new List<SxLenhsanxuat>();
+            int totalresult = 0;
+
             if (IsMenu)
-                lstLenhSx = SxLenhsanxuatService.GetbyDonviId(Generals.DonviID);
+                lstLenhSx = SxLenhsanxuatService.GetbyDonviId(CtlPagerControl.PageIndex, CtlPagerControl.PageSize, 
+                    Generals.DonviID, out totalresult);
             else
-                lstLenhSx = SxLenhsanxuatService.LoadByPhanCongId(PhanCongId);
+                lstLenhSx = SxLenhsanxuatService.LoadByPhanCongId(CtlPagerControl.PageIndex, CtlPagerControl.PageSize, 
+                    PhanCongId, Generals.DonviID,
+                    out totalresult);
+            CtlPagerControl.TotalResult = totalresult;
+
             grcDanhSach.DataSource = lstLenhSx;
         }
 
@@ -229,6 +242,9 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             try
             {
                 LoadData();
+
+                CtlPagerControl.display = new DisplayResult(this.LoadGrid);
+                CtlPagerControl.RefreshPage();
             }
             catch (Exception ex)
             {

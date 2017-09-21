@@ -65,9 +65,9 @@ namespace Vns.Erp.Core.Produce.Service
             }
         }
 
-        public IList<SxKehoachM> getByMaCt(string MaLoaiCt, Guid DonviId)
+        public IList<SxKehoachM> getByMaCt(int PageIndex, int PageSize, string MaLoaiCt, Guid DonviId, out int TotalResult)
         {
-            return SxKehoachMDao.getByMaCt(MaLoaiCt, DonviId);
+            return SxKehoachMDao.getByMaCt(PageIndex, PageSize, MaLoaiCt, DonviId, out TotalResult);
         }
 
         public IList<SxKehoachM> GetByDonviId(Guid DonviId)

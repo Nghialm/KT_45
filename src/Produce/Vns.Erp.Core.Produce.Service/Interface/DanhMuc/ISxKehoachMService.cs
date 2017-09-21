@@ -12,7 +12,7 @@ namespace Vns.Erp.Core.Produce.Service.Interface
     public interface ISxKehoachMService : IErpService<SxKehoachM, System.Guid>
     {
         void SaveKeHoach(SxKehoachM objKeHoach, IList<SxKehoachD> lstSanXuat, IList<SxKehoachD> lstVatTu, IList<SxPhancong> lstKeHoach, IList<SxKehoachD> lstDelSanXuat, IList<SxKehoachD> lstDelVatTu, IList<SxPhancong> lstDelKeHoach);
-        IList<SxKehoachM> getByMaCt(string MaLoaiCt, Guid DonviId);
+        IList<SxKehoachM> getByMaCt(int PageIndex, int PageSize, string MaLoaiCt, Guid DonviId, out int TotalResult);
         IList<SxKehoachM> GetByDonviId(Guid DonviId);
     }
 }
