@@ -2,9 +2,8 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 	<class name="Vns.Erp.Core.Admin.Domain.DmKho,Vns.Erp.Core.Admin.Domain" table="DM_KHO" lazy="false">
 
-		<id name="Id" column="KHO_ID" type="Guid">
-			<generator class="assigned"/>
-		</id>
+		<id name="Id" column="KHO_ID" type="Guid"/>
+			
 		<property column="MA_KHO" type="String" name="MaKho" not-null="true" length="64" />
 		<property column="KY_HIEU" type="String" name="KyHieu" not-null="true" length="64" />
 		<property column="TEN_KHO" type="String" name="TenKho" length="128" />

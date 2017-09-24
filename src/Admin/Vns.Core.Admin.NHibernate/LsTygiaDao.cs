@@ -22,6 +22,32 @@ namespace Vns.Erp.Core.Admin.Dao.NHibernate
 	[Serializable]
 	public sealed class LsTygiaDao:GenericDao<LsTygia,Guid>,ILsTygiaDao
 	{
+        #region IDao
+        LsTygia IDao<LsTygia, Guid>.Merge(LsTygia entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Merge(entity);
+
+            return entity;
+        }
+
+        LsTygia IDao<LsTygia, Guid>.Save(LsTygia entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Save(entity);
+
+            return entity;
+        }
+
+        LsTygia IDao<LsTygia, Guid>.SaveOrUpdate(LsTygia entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.SaveOrUpdate(entity);
+
+            return entity;
+        }
+        #endregion
+
         public IList<LsTygia> GetObjectByDoiTuong(string TenNgoaiteHt)
         {
             string sql = "from LsTygia a where a.TenNgoaiteHt like (:TenNgoaiteHt)";

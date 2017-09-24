@@ -445,18 +445,6 @@
     <Compile Include="TongHop\frmKhoaSoThang.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControl\C_SoChungTu.designer.vb">
-      <DependentUpon>C_SoChungTu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\C_SoChungTu.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\Status_LoaiCT.Designer.vb">
-      <DependentUpon>Status_LoaiCT.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\Status_LoaiCT.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -581,12 +569,6 @@
     <EmbeddedResource Include="TongHop\frmKhoaSoThang.resx">
       <DependentUpon>frmKhoaSoThang.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\C_SoChungTu.resx">
-      <DependentUpon>C_SoChungTu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\Status_LoaiCT.resx">
-      <DependentUpon>Status_LoaiCT.vb</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -625,6 +607,10 @@
       <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
       <Name>Vns.Erp.Core.Admin.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Controls\Vns.Erp.Core.Controls\Vns.Erp.Core.Controls.csproj">
+      <Project>{fbc6edb3-9a36-4e9d-9bef-7498631cd479}</Project>
+      <Name>Vns.Erp.Core.Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
       <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
       <Name>Vns.Erp.Core.Domain</Name>
@@ -653,6 +639,7 @@
   <ItemGroup>
     <Folder Include="Asset\" />
     <Folder Include="CCDC\" />
+    <Folder Include="UserControl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

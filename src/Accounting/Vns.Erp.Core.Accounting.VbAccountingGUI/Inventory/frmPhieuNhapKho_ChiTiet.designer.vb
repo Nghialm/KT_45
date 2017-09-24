@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿Imports Vns.Erp.Core.Controls.UserControl
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmPhieuNhapKho_ChiTiet
     Inherits DevExpress.XtraEditors.XtraForm
 
@@ -42,7 +44,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.cboKhoanphi = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.cboHopdong = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
-        Me.C_SoChungTu_RP = New Vns.Erp.Core.Accounting.VbAccountingGUI.C_SoChungTu()
+        Me.C_SoChungTu_RP = New C_SoChungTu()
         Me.GFilter_TK = New Vns.Erp.Core.CustomFilter()
         Me.lblTK = New DevExpress.XtraEditors.LabelControl()
         Me.GFilter = New Vns.Erp.Core.CustomFilter()
@@ -124,7 +126,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.NgayGhi = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Ghi = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GroupControl3 = New DevExpress.XtraEditors.GroupControl()
-        Me.UR_STATUS = New Vns.Erp.Core.Accounting.VbAccountingGUI.Status_LoaiCT()
+        Me.UR_STATUS = New Status_LoaiCT()
         Me.txtTongSoLuong = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
         Me.TxtTongTien = New DevExpress.XtraEditors.TextEdit()
@@ -1916,7 +1918,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
     Friend WithEvents RepositoryItemTextEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
     Friend WithEvents RepositoryItemTextEdit4 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
     Friend WithEvents RepositoryItemTextEdit3 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
-    Friend WithEvents UR_STATUS As Vns.Erp.Core.Accounting.VbAccountingGUI.Status_LoaiCT
+    Friend WithEvents UR_STATUS As Status_LoaiCT
     Friend WithEvents Gfilter_MA_TKN_GIAVON As Vns.Erp.Core.RepositoryItemPopupFilterEdit
     Friend WithEvents Gfilter_MA_TKC_GIAVON As Vns.Erp.Core.RepositoryItemPopupFilterEdit
     Friend WithEvents RepositoryItemTextEdit5 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
@@ -1953,5 +1955,5 @@ Partial Class frmPhieuNhapKho_ChiTiet
     Friend WithEvents NgayCt As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents NgayGhi As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents Ghi As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents C_SoChungTu_RP As Vns.Erp.Core.Accounting.VbAccountingGUI.C_SoChungTu
+    Friend WithEvents C_SoChungTu_RP As C_SoChungTu
 End Class

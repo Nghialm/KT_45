@@ -11,6 +11,32 @@ namespace Vns.Erp.Core.Admin.Dao.NHibernate
 	[Serializable]
 	public sealed class HtLoaichungtuDao:GenericDao<HtLoaichungtu,System.Guid>,IHtLoaichungtuDao
 	{
+        #region IDao
+        HtLoaichungtu IDao<HtLoaichungtu, Guid>.Merge(HtLoaichungtu entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Merge(entity);
+
+            return entity;
+        }
+
+        HtLoaichungtu IDao<HtLoaichungtu, Guid>.Save(HtLoaichungtu entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Save(entity);
+
+            return entity;
+        }
+
+        HtLoaichungtu IDao<HtLoaichungtu, Guid>.SaveOrUpdate(HtLoaichungtu entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.SaveOrUpdate(entity);
+
+            return entity;
+        }
+        #endregion
+
         public IList<HtLoaichungtu> LikeObjetMA_LOAI_CT(string p_MA_CT, Guid DonviId)
         {
             string sql = "from HtLoaichungtu a where a.MaLoaiCt like :MaLoaiCtLike and DuongDan <> '' and DonviId = :DonviId";

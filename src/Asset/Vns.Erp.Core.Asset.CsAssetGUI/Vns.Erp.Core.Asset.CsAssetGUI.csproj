@@ -409,6 +409,10 @@
       <Project>{1567f284-e659-4c44-8d1b-4ef16b969c98}</Project>
       <Name>Vns.Erp.Core.Accounting.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Controls\Vns.Erp.Core.Controls\Vns.Erp.Core.Controls.csproj">
+      <Project>{FBC6EDB3-9A36-4E9D-9BEF-7498631CD479}</Project>
+      <Name>Vns.Erp.Core.Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\Vns.Erp.Core.Common.Controls\Vns.Erp.Core.Common.Controls.csproj">
       <Project>{47B0F2D0-2132-495A-BA36-8744B7E4D747}</Project>
       <Name>Vns.Erp.Core.Common.Controls</Name>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Admin.Domain" assembly="Vns.Erp.Core.Admin.Domain">
 	<class name="Vns.Erp.Core.Admin.Domain.HtThamso, Vns.Erp.Core.Admin.Domain" table="HT_THAMSO" lazy="false">
-		<id name="Id" column="ID" type="Guid">
-			<generator class="guid" />
-		</id>
+		<id name="Id" column="ID" type="Guid" />
+			
 		<property name="MaThamso" column="MA_THAMSO" type="String" length="32" />
 		<property name="TenThamso" column="TEN_THAMSO" type="String" length="128" />
 		<property name="GiaTri" column="GIA_TRI" type="String" length="128" />

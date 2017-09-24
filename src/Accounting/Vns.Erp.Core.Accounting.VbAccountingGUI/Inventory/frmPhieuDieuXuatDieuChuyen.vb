@@ -13,6 +13,7 @@ Imports Vns.Erp.Core.Accounting.Service.Interface
 Imports Vns.Erp.Core.Admin.Domain
 Imports Vns.Erp.Core.Accounting.Domain
 Imports DevExpress.Utils
+Imports Vns.Erp.Core.Controls.Commons
 
 Public Class PhieuDieuXuatDieuChuyen
 
@@ -767,7 +768,7 @@ Public Class PhieuDieuXuatDieuChuyen
 
                 CtHNxService.DeleteChungTu(obj_ct_h_nx)
 
-                mCTHNXID = Vns.Erp.Core.Accounting.VbAccountingGUI.GridHelper.RemoveLeftGrid(lstobj_ct_h_gg, mCTHNXID)
+                mCTHNXID = GridHelper.RemoveLeftGrid(lstobj_ct_h_gg, mCTHNXID)
                 If Not Guid.Empty = mCTHNXID Then
                     SetObjectToControl()
                 End If

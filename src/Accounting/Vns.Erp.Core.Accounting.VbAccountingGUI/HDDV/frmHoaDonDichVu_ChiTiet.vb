@@ -5,6 +5,7 @@ Imports Vns.Erp.Core.Accounting.Service.Interface
 Imports Vns.Erp.Core.Admin.Domain
 Imports Vns.Erp.Core.Admin.Service.Interface
 Imports DevExpress.Utils
+Imports Vns.Erp.Core.Controls.Commons
 
 Public Class frmHoaDonDichVu_ChiTiet
 
@@ -790,7 +791,7 @@ Public Class frmHoaDonDichVu_ChiTiet
             txttienhangck.Text = tienhangck.ToString()
             txttienthue.Text = tienthue.ToString()
 
-            txtTongTien.Text = _
+            txtTongTien.Text =
                 Convert.ToString(tienhangck + tienthue)
         Catch ex As OverflowException
             Message_Information("Giá trị số tiền nhập vào không hợp lệ!")
@@ -802,7 +803,7 @@ Public Class frmHoaDonDichVu_ChiTiet
         Dim gridctd As KtCtDHddv = CType(_GridView.GetRow(i), KtCtDHddv)
         Select Case ColumnName
             Case "MA_TK_NO"
-                Dim cbotaikhoan As DmTaikhoan = CType(cboTaiKhoanNo.GetDataSourceRowByKeyValue(gridctd.MaTkNo),  _
+                Dim cbotaikhoan As DmTaikhoan = CType(cboTaiKhoanNo.GetDataSourceRowByKeyValue(gridctd.MaTkNo),
                                                             DmTaikhoan)
                 If (gridctd Is Nothing) Then
                     Return
@@ -829,13 +830,13 @@ Public Class frmHoaDonDichVu_ChiTiet
                     gridctd.MaTkCo = rowTK("MaTaikhoan").ToString
                 End If
             Case "MA_VUVIEC_CO"
-                Dim cbovu_viec As DmVuviec = CType(cboVuViec.GetDataSourceRowByKeyValue(gridctd.IdDmVuviecCo),  _
+                Dim cbovu_viec As DmVuviec = CType(cboVuViec.GetDataSourceRowByKeyValue(gridctd.IdDmVuviecCo),
                                                          DmVuviec)
                 gridctd.IdDmVuviecCo = cbovu_viec.Id
                 gridctd.MaVuviecCo = cbovu_viec.MaVuviec
                 gridctd.KyHieuVuviecCo = cbovu_viec.KyHieu
             Case "ID_DM_PTQT_CO"
-                Dim cboPTQT As DmPtqt = CType(cboPPQT.GetDataSourceRowByKeyValue(gridctd.IdDmPtqtCo),  _
+                Dim cboPTQT As DmPtqt = CType(cboPPQT.GetDataSourceRowByKeyValue(gridctd.IdDmPtqtCo),
                                                     DmPtqt)
                 gridctd.IdDmPtqtCo = cboPTQT.Id
                 gridctd.IdDmPtqtNo = cboPTQT.Id
@@ -843,7 +844,7 @@ Public Class frmHoaDonDichVu_ChiTiet
     End Sub
 
     Private Function BindTaiKhoan(ByVal tklienquan As String) As List(Of DmTaikhoan)
-        Dim ListTK As List(Of DmTaikhoan) = _
+        Dim ListTK As List(Of DmTaikhoan) =
                 DmTaikhoanService.GetAllByDonviID(Generals.DON_VI.Id)
         Dim ListTKFilter As List(Of DmTaikhoan) = New List(Of DmTaikhoan)
 
@@ -879,9 +880,9 @@ Public Class frmHoaDonDichVu_ChiTiet
 
         For Each matk As String In tkFilter.Split(New Char() {";"c})
             Dim stw As String = matk
-            ListTKFilter.AddRange(From i As DmTaikhoan In ListTK _
-                                      Where i.MaTaikhoan.StartsWith(stw) _
-                                      Select i)
+            ListTKFilter.AddRange(From i As DmTaikhoan In ListTK
+                                  Where i.MaTaikhoan.StartsWith(stw)
+                                  Select i)
         Next
 
         If ListTKFilter.Count > 0 Then
@@ -1321,13 +1322,13 @@ Public Class frmHoaDonDichVu_ChiTiet
             Dim objCT_D_H As KtCtDHddv = CType(_GridView.GetRow(_GridView.FocusedRowHandle), KtCtDHddv)
             Select Case e.Column.Name
                 Case "MA_VUVIEC_CO"
-                    Dim cbovu_viec As DmVuviec = CType(cboVuViec.GetDataSourceRowByKeyValue(objCT_D_H.IdDmVuviecCo),  _
+                    Dim cbovu_viec As DmVuviec = CType(cboVuViec.GetDataSourceRowByKeyValue(objCT_D_H.IdDmVuviecCo),
                                                              DmVuviec)
                     objCT_D_H.IdDmVuviecCo = cbovu_viec.Id
                     objCT_D_H.MaVuviecCo = cbovu_viec.MaVuviec
                     objCT_D_H.KyHieuVuviecCo = cbovu_viec.KyHieu
                 Case "ID_DM_PTQT_CO"
-                    Dim cboPTQT As DmPtqt = CType(cboPPQT.GetDataSourceRowByKeyValue(objCT_D_H.IdDmPtqtCo),  _
+                    Dim cboPTQT As DmPtqt = CType(cboPPQT.GetDataSourceRowByKeyValue(objCT_D_H.IdDmPtqtCo),
                                                         DmPtqt)
                     objCT_D_H.IdDmPtqtCo = cboPTQT.Id
                     objCT_D_H.IdDmPtqtNo = cboPTQT.Id
@@ -1512,7 +1513,7 @@ Public Class frmHoaDonDichVu_ChiTiet
                 KtCtHHddvService.DeleteChungTu(obj_ct_h, Nothing)
                 ckeNhapTienCK.Checked = False
 
-                m_CTH_ID = Vns.Erp.Core.Accounting.VbAccountingGUI.GridHelper.RemoveLeftGrid(lstobj_ct_h_gg, m_CTH_ID)
+                m_CTH_ID = GridHelper.RemoveLeftGrid(lstobj_ct_h_gg, m_CTH_ID)
                 If Not VnsCheck.IsNullGuid(m_CTH_ID) Then
                     LoadDB()
                 End If

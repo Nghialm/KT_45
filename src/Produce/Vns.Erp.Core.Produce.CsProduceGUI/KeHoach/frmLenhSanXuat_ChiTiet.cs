@@ -10,6 +10,7 @@ using Vns.Erp.Core.Produce.Service.Interface;
 using Vns.Erp.Core.Produce.Domain;
 using Vns.Erp.Core.Admin.Domain;
 using Vns.Erp.Core.Admin.Service.Interface;
+using Vns.Erp.Core.Controls.Commons;
 
 namespace Vns.Erp.Core.Produce.CsProduceGUI
 {

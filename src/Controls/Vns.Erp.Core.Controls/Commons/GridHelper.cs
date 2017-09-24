@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using Vns.Erp.Core.Accounting.Domain.Extend;
 using System;
 using System.Windows.Forms;
-using Vns.Erp.Core;
 
 namespace Vns.Erp.Core.Controls.Commons
 {
@@ -139,6 +138,31 @@ namespace Vns.Erp.Core.Controls.Commons
                 }
             }
             return false;
+        }
+
+        public static void FormatGridView(DevExpress.XtraGrid.Views.Grid.GridView _GridView)
+        {
+            _GridView.OptionsView.ShowAutoFilterRow = true;
+            _GridView.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.ShowAlways;
+        }
+
+        public static Object GetRow(DevExpress.XtraGrid.Views.Grid.GridView _GridView)
+        {
+            Object currentRow = _GridView.GetRow(_GridView.FocusedRowHandle);
+            if (currentRow == null)
+            {
+                return null;
+            }
+            return currentRow;
+        }
+
+        public static void SetFocus_AfterAddRow(DevExpress.XtraGrid.Views.Grid.GridView _GridView, int i)
+        {
+            if (_GridView.RowCount > 0)
+            {
+                _GridView.FocusedRowHandle = i;
+                _GridView.FocusedColumn = _GridView.VisibleColumns[0];
+            }
         }
     }
 }

@@ -189,7 +189,6 @@
     <Compile Include="GridConfig\ConfigGrid.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GridHelper.vb" />
     <Compile Include="Log.vb" />
     <Compile Include="Log\CustomViewLog.Designer.vb">
       <DependentUpon>CustomViewLog.vb</DependentUpon>

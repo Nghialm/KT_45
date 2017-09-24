@@ -12,6 +12,7 @@ Imports Vns.Erp.Core.Admin.Domain
 Imports Vns.Erp.Core.Accounting.Service.Interface
 Imports Vns.Erp.Core.Admin.Service.Interface
 Imports DevExpress.Utils
+Imports Vns.Erp.Core.Controls.Commons
 
 Public Class frmPhieuNhapKho_ChiTiet
 
@@ -984,7 +985,7 @@ Public Class frmPhieuNhapKho_ChiTiet
                 'Refesh Grid
                 mCTHNXID = obj_ct_h_nx.Id
                 Dim editObject As Extend.CT_H_GInfo = New Extend.CT_H_GInfo(obj_ct_h_nx)
-                Vns.Erp.Core.Accounting.VbAccountingGUI.GridHelper.RefreshLeftGrid(grvLPX_Hnx, lstobj_ct_h_gg, editObject, m_InputState)
+                GridHelper.RefreshLeftGrid(grvLPX_Hnx, lstobj_ct_h_gg, editObject, m_InputState)
 
                 m_InputState = DataInputState.ViewMode
                 DatTrangThaiControl()
@@ -1142,7 +1143,7 @@ Public Class frmPhieuNhapKho_ChiTiet
 
                 _CtHNxService.DeleteChungTu(obj_ct_h_nx)
 
-                mCTHNXID = Vns.Erp.Core.Accounting.VbAccountingGUI.GridHelper.RemoveLeftGrid(lstobj_ct_h_gg, mCTHNXID)
+                mCTHNXID = GridHelper.RemoveLeftGrid(lstobj_ct_h_gg, mCTHNXID)
                 If Not (mCTHNXID = Null.NullGuid) Then
                     SetObjectToControl()
                 End If

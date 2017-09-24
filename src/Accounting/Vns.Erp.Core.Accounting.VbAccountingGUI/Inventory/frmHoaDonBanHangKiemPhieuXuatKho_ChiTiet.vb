@@ -13,6 +13,7 @@ Imports Vns.Erp.Core.Accounting.Domain
 Imports Vns.Erp.Core.Admin.Domain
 Imports Vns.Erp.Core.Admin.Service.Interface
 Imports Vns.Erp.Core.Accounting.Service.Interface
+Imports Vns.Erp.Core.Controls.Commons
 
 Public Class frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet
 
@@ -714,9 +715,9 @@ Public Class frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet
 
         Dim matk As String
         For Each matk In tkFilter.Split(New Char() {";"c})
-            ListTKFilter.AddRange(From i As DmTaikhoan In ListTK _
-                                 Where i.MaTaikhoan.StartsWith(matk) _
-                                 Select i)
+            ListTKFilter.AddRange(From i As DmTaikhoan In ListTK
+                                  Where i.MaTaikhoan.StartsWith(matk)
+                                  Select i)
         Next
 
         If ListTKFilter.Count > 0 Then
@@ -1552,7 +1553,7 @@ Public Class frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet
 
                 _CtHNxService.DeleteChungTu(obj_ct_h_nx)
 
-                m_CTH_ID = Vns.Erp.Core.Accounting.VbAccountingGUI.GridHelper.RemoveLeftGrid(lstobj_ct_h_gg, m_CTH_ID)
+                m_CTH_ID = GridHelper.RemoveLeftGrid(lstobj_ct_h_gg, m_CTH_ID)
                 If Not (m_CTH_ID = Null.NullGuid) Then
                     SetObjectToControl()
                 End If

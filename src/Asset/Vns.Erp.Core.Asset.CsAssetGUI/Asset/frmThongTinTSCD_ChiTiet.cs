@@ -16,6 +16,7 @@ using Vns.Erp.Core.Asset.Service.Interface;
 
 using Vns.Erp.Core.Admin.Domain;
 using Vns.Erp.Core.Admin.Service.Interface;
+using Vns.Erp.Core.Controls.Commons;
 
 namespace Vns.Erp.Core.Asset.CsAssetGUI
 {

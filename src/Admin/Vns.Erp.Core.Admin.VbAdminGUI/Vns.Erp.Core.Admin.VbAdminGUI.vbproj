@@ -904,6 +904,10 @@
       <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
       <Name>Vns.Erp.Core.Admin.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Controls\Vns.Erp.Core.Controls\Vns.Erp.Core.Controls.csproj">
+      <Project>{FBC6EDB3-9A36-4E9D-9BEF-7498631CD479}</Project>
+      <Name>Vns.Erp.Core.Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
       <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
       <Name>Vns.Erp.Core.Domain</Name>
