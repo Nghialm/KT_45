@@ -276,7 +276,6 @@
     <EmbeddedResource Include="Mappings\Admin\HtTaikhoanMau.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Asset\" />
     <Folder Include="Instr\" />
     <Folder Include="Mappings\Asset\" />
     <Folder Include="Mappings\Instr\" />

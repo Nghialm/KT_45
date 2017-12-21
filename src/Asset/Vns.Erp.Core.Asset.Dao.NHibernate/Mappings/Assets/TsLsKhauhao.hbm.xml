@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Asset.Domain" assembly="Vns.Erp.Core.Asset.Domain">
 	<class name="Vns.Erp.Core.Asset.Domain.TsLsKhauhao, Vns.Erp.Core.Asset.Domain" table="TS_LS_KHAUHAO" lazy="false">
-		<id name="Id" column="TS_LS_KHAUHAO_ID">
-			<generator class="assigned" />
-		</id>
+		<id name="Id" column="TS_LS_KHAUHAO_ID" />
+			
     <property name="DmTscdId" column="DM_TSCD_ID" type="Guid"  />
     <property name="CtTscdId" column="CT_TSCD_ID" type="Guid"  />
     <property name="HaoMonLk" column="HAO_MON_LK" type="Decimal" precision="18" scale="0" />

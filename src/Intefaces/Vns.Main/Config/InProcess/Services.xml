@@ -399,7 +399,10 @@
 	<object id="DmTscdService" type="Vns.Erp.Core.Asset.Service.DmTscdService, Vns.Erp.Core.Asset.Service">
 		<property name="DmTscdDao" ref="DmTscdDao"/>
 		<property name="TsLsKhauhaoDao" ref="TsLsKhauhaoDao"/>
-		<property name="CtTscdDao" ref="CtTscdDao"/>
+    <property name="CtTscdDao" ref="CtTscdDao"/>
+    <property name="TsTscdPtungDao" ref="TsTscdPtungDao"/>
+    <property name="TsDieuchuyenDao" ref="TsDieuchuyenDao"/>
+    <property name="TsCtTscdNvonDao" ref="TsCtTscdNvonDao"/>
 	</object>
 	<object id="TsCtTscdNvonService" type="Vns.Erp.Core.Asset.Service.TsCtTscdNvonService, Vns.Erp.Core.Asset.Service">
 		<property name="TsCtTscdNvonDao" ref="TsCtTscdNvonDao"/>

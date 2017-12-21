@@ -24,5 +24,7 @@ namespace Vns.Erp.Core.Asset.Service.Interface
         CtTscd GetByTRANG_THAI(Guid TscdId, Decimal TangTscd);
         [OperationContract]
         TsLsKhauhao KHAUHAO_VET_CUOI(Guid DmTscdId, DateTime Ngay);
-	}
+
+        IList<CtTscd> GetByDmTscdId(Guid DmTscdId);
+    }
 }

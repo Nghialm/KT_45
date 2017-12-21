@@ -10,6 +10,7 @@ namespace Vns.Erp.Core.Accounting.Report.Domain
     public class RpPhieuKeToanDTO
     {
         public virtual String CtSo { get; set; }
+        public virtual DateTime NgayCt { get; set; }
         public virtual String MaTkNo { get; set; }
         public virtual String MaTkCo { get; set; }
         public virtual String NguoiNhanNopTien { get; set; }
@@ -26,6 +27,7 @@ namespace Vns.Erp.Core.Accounting.Report.Domain
             DiaChi = objCtH.DiaChi;
             DienGiai = objCtH.DienGiai;
             TenKhHang =objCtH.TenKhang;
+            NgayCt = objCtH.NgayCt.Value;
             foreach (CtD tmp in lstCtD)
             {
                 SoTien += tmp.SoTien;

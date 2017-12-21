@@ -37,6 +37,7 @@
   <wcf:channelFactory id="DmNguonTscdServiceSyn" channelType="Vns.Erp.Core.Asset.Service.Interface.IDmNguonTscdService, Vns.Erp.Core.Asset.Service" endpointConfigurationName="WcfDmNguonTscdService"/>
   <wcf:channelFactory id="DmLydoTgTscdServiceSyn" channelType="Vns.Erp.Core.Asset.Service.Interface.IDmLydoTgTscdService, Vns.Erp.Core.Asset.Service" endpointConfigurationName="WcfDmLydoTgTscdService"/>
   <wcf:channelFactory id="DmNhomTscdServiceSyn" channelType="Vns.Erp.Core.Asset.Service.Interface.IDmNhomTscdService, Vns.Erp.Core.Asset.Service" endpointConfigurationName="WcfDmNhomTscdService"/>
+  <wcf:channelFactory id="DmTscdServiceSyn" channelType="Vns.Erp.Core.Asset.Service.Interface.IDmTscdService, Vns.Erp.Core.Asset.Service" endpointConfigurationName="WcfDmTscdService"/>
  
   <!--ke toan kho-->
   <wcf:channelFactory id="CtHNxServiceSyn" channelType="Vns.Erp.Core.Accounting.Service.Interface.ICtHNxService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfCtHNxService"/>

@@ -12,8 +12,8 @@ namespace Vns.Erp.Core.Asset.Domain
     /// </summary>
 
 
-    //[Serializable]
-    //[DataContract(Namespace ="http://Vns.Erp.Core.Admin",IsReference=true)]
+    [Serializable]
+    [DataContract(Namespace = "http://Vns.Erp.Core.Asset.Domain", IsReference = true)]
     public partial class DmLydoTgTscd : DomainObject<Guid>, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

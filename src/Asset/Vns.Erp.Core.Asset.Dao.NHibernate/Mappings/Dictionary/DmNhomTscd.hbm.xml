@@ -2,9 +2,8 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 	<class name="Vns.Erp.Core.Asset.Domain.DmNhomTscd,Vns.Erp.Core.Asset.Domain" table="DM_NHOM_TSCD" lazy="false">
 
-		<id name="Id" column="ID_NHOM_TSCD" type="Guid">
-			<generator class="guid"/>
-		</id>
+		<id name="Id" column="ID_NHOM_TSCD" type="Guid" />
+			
     <property name="MaNhomTscd" column="MA_NHOM_TSCD" type="String" length="32" />
     <property name="TenNhomTscd" column="TEN_NHOM_TSCD" type="String" length="32" />
     <property name="ChoPhepSua" column="CHO_PHEP_SUA" type="Decimal" precision="4" scale="0" />

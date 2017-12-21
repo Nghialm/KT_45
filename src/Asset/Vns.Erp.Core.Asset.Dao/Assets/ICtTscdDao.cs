@@ -13,5 +13,7 @@ namespace Vns.Erp.Core.Asset.Dao
 	{
         TsLsKhauhao KHAUHAO_VET_CUOI(Guid DmTscdId, DateTime Ngay);
         Boolean DeleteByDmTscdId(Guid TscdId);
+
+        IList<CtTscd> GetByDmTscdId(Guid DmTscdId);
 	}
 }

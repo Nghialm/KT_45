@@ -105,5 +105,11 @@ namespace Vns.Erp.Core.Asset.Service
         {
             return CtTscdDao.KHAUHAO_VET_CUOI(DmTscdId, Ngay);
         }
+
+        public IList<CtTscd> GetByDmTscdId(Guid DmTscdId)
+        {
+            return CtTscdDao.GetByDmTscdId(DmTscdId);
+        }
+        
     }
 }

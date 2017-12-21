@@ -24,6 +24,9 @@ namespace Vns.Erp.Core.Asset.Service
 
         public ITsLsKhauhaoDao TsLsKhauhaoDao;
         public ICtTscdDao CtTscdDao;
+        public ITsTscdPtungDao TsTscdPtungDao;
+        public ITsDieuchuyenDao TsDieuchuyenDao;
+        public ITsCtTscdNvonDao TsCtTscdNvonDao;
 
         public IList<DmTscd> GetbyParameter(DateTime TuNgay, DateTime DenNgay, String TenTscd, Guid LoaitaisanId, Guid DonviId)
         {
@@ -60,6 +63,18 @@ namespace Vns.Erp.Core.Asset.Service
             return lst;
         }
 
+        public IList<DmTscd> GetByDonviID(Guid DonviId)
+        {
+            ArrayList props = new ArrayList();
+            ArrayList values = new ArrayList();
+            ArrayList expression = new ArrayList();
+            props.Add("DonviId");
+            values.Add(DonviId);
+            expression.Add("=");
+            IList<DmTscd> lst = List(-1, -1, props, values, null);
+            return lst;
+        }
+
         [Transaction]
         public void DeleteTscd(Guid TscdId)
         {
@@ -69,5 +84,47 @@ namespace Vns.Erp.Core.Asset.Service
 
             DmTscdDao.DeleteById(TscdId);
         }
+
+        #region Syn function
+        /// <summary>
+        /// Ham dong bo du lieu len server
+        /// </summary>
+        /// <param name="_cthInfo"></param>
+        /// <param name="_lstctd"></param>
+        [Transaction]
+        public void SaveData4Syn(DmTscd objdmtscd, List<CtTscd> lsCtTscd, List<TsCtTscdNvon> lsTsCtTscdNvon,
+            List<TsDieuchuyen> lsTsDieuChuyen, List<TsLsKhauhao> lsTsLsKhauhao, List<TsTscdPtung> lsTsTscdPtung)
+        {
+            //Xoa du lieu
+            TsLsKhauhaoDao.DeleteByTscdId(objdmtscd.Id);
+            TsDieuchuyenDao.DeleteByDmTscdId(objdmtscd.Id);
+            TsCtTscdNvonDao.DeleteByDmTscdId(objdmtscd.Id);
+            CtTscdDao.DeleteByDmTscdId(objdmtscd.Id);
+            TsTscdPtungDao.DeleteByTscdId(objdmtscd.Id);
+            //DmTscdDao.DeleteById(objdmtscd.Id);
+
+            DmTscdDao.SaveOrUpdate(objdmtscd);
+
+            foreach (CtTscd tmp in lsCtTscd)
+                CtTscdDao.SaveOrUpdate(tmp);
+
+            foreach (TsTscdPtung tmp in lsTsTscdPtung)
+                TsTscdPtungDao.SaveOrUpdate(tmp);
+
+            foreach (TsCtTscdNvon tmp in lsTsCtTscdNvon)
+                TsCtTscdNvonDao.SaveOrUpdate(tmp);
+
+            foreach (TsDieuchuyen tmp in lsTsDieuChuyen)
+                TsDieuchuyenDao.SaveOrUpdate(tmp);
+
+            foreach (TsLsKhauhao tmp in lsTsLsKhauhao)
+                TsLsKhauhaoDao.SaveOrUpdate(tmp);
+        }
+
+        public void UpdateSynFlag(Guid id)
+        {
+            DmTscdDao.UpdateSynFlag(id);
+        }
+        #endregion
     }
 }

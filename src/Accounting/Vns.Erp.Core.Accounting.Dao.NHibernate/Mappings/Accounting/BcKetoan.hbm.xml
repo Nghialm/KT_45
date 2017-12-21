@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Domain" assembly="Vns.Erp.Core.Accounting.Domain">
 	<class name="Vns.Erp.Core.Accounting.Domain.BcKetoan, Vns.Erp.Core.Accounting.Domain" table="BC_KETOAN" lazy="false">
-		<id name="Id" column="BC_KETOAN_ID" type="Guid">
-    <generator class="assigned"/>
-    </id>
+		<id name="Id" column="BC_KETOAN_ID" type="Guid" />
+    
 		<property name="CthId" column="CTH_ID" type="Guid" />
 		<property name="CtdId" column="CTD_ID" type="Guid" />
 		<property name="DonviId" column="DONVI_ID" type="Guid" />

@@ -38,5 +38,11 @@ namespace Vns.Erp.Core.Asset.Service
             values.Add(DmTscdId);
             return List(-1, -1, props, values, null);
         }
+
+        public IList<TsTscdPtung> GetByTscdId(Guid DmTscdId)
+        {
+            return TsTscdPtungDao.GetByTscdId(DmTscdId);
+        }
+
     }
 }

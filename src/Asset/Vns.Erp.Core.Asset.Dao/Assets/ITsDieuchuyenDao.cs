@@ -13,6 +13,8 @@ namespace Vns.Erp.Core.Asset.Dao
 	{
         IList<TsDieuchuyen> GetObjectByTSCD_ID(Guid TscdId);
 
-        
-	}
+        Boolean DeleteByDmTscdId(Guid TscdId);
+
+        IList<TsDieuchuyen> GetByDmTscdId(Guid DmTscdId);
+    }
 }

@@ -57,5 +57,11 @@ namespace Vns.Erp.Core.Asset.Service
         {
             TsLsKhauhaoDao.DeleteByThangNam(DonviId, Thang, Nam);
         }
-	}
+
+        public IList<TsLsKhauhao> GetByTscdId(Guid DmTscdId)
+        {
+            return TsLsKhauhaoDao.GetByTscdId(DmTscdId);
+        }
+
+    }
 }

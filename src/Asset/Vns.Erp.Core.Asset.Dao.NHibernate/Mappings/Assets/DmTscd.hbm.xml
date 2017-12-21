@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Asset.Domain" assembly="Vns.Erp.Core.Asset.Domain">
 	<class name="Vns.Erp.Core.Asset.Domain.DmTscd, Vns.Erp.Core.Asset.Domain" table="DM_TSCD" lazy="false">
-		<id name="Id" column="TSCD_ID">
-			<generator class="guid" />
-		</id>
+		<id name="Id" column="TSCD_ID" />
+			
     <property name="LoaitaisanId" column="LOAITAISAN_ID" type="Guid"  />
     <property name="MaLoaitaisan" column="MA_LOAITAISAN" type="String" length="64" />
     <property name="TenLoaitaisan" column="TEN_LOAITAISAN" type="String" length="128" />
@@ -55,6 +54,11 @@
     <property name="NgayGiam" column="NGAY_GIAM" type="DateTime"  />
     <property name="NguyenGia" column="NGUYEN_GIA" type="Decimal" precision="18" scale="0" />
 
+    <property name="SynDate" column="Syn_Date" type="DateTime" />
+    <property name="IsDeleted" type="Decimal" precision="4" scale="0">
+      <column name="Is_Deleted" default="0"/>
+    </property>
+    
     <bag name="LstCtTscd" lazy="false" cascade="none" >
       <key column="TSCD_ID"></key>
       <one-to-many class="CtTscd"></one-to-many>

@@ -2,9 +2,8 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 	<class name="Vns.Erp.Core.Asset.Domain.DmLydoTgTscd,Vns.Erp.Core.Asset.Domain" table="DM_LYDO_TG_TSCD" lazy="false">
 
-		<id name="Id" column="LYDO_TG_TSCD_ID" type="Guid">
-			<generator class="guid"/>
-		</id>
+		<id name="Id" column="LYDO_TG_TSCD_ID" type="Guid" />
+			
     <property name="MaLydoTgTscd" column="MA_LYDO_TG_TSCD" type="String" length="32" />
     <property name="KyHieu" column="KY_HIEU" type="String" length="64" />
     <property name="TenLydoTgTscd" column="TEN_LYDO_TG_TSCD" type="String" length="128" />

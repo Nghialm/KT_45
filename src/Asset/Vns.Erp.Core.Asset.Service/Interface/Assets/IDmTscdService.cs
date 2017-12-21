@@ -12,8 +12,8 @@ using System.ServiceModel;
 namespace Vns.Erp.Core.Asset.Service.Interface
 {
     [ServiceContract(Namespace = "http://SpringSample.Core.Service")]
-	public interface IDmTscdService:IErpService<DmTscd, System.Guid>
-	{
+    public interface IDmTscdService : IErpService<DmTscd, System.Guid>
+    {
         [OperationContract]
         IList<DmTscd> GetbyParameter(DateTime TuNgay, DateTime DenNgay, String TenTscd, Guid LoaitaisanId, Guid DonviId);
         [OperationContract]
@@ -22,5 +22,12 @@ namespace Vns.Erp.Core.Asset.Service.Interface
         IList<DmTscd> GetObjectAllByDonviID(int PageIndex, int PageSize, Guid DonviId, out int TotalResult);
         [OperationContract]
         void DeleteTscd(Guid TscdId);
-	}
+
+        [OperationContract]
+        IList<DmTscd> GetByDonviID(Guid DonviId);
+
+        [OperationContract]
+        void SaveData4Syn(DmTscd objdmtscd, List<CtTscd> lsCtTscd, List<TsCtTscdNvon> lsTsCtTscdNvon,
+            List<TsDieuchuyen> lsTsDieuChuyen, List<TsLsKhauhao> lsTsLsKhauhao, List<TsTscdPtung> lsTsTscdPtung);
+    }
 }

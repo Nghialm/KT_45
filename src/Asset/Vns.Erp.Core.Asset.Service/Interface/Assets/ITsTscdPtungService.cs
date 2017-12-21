@@ -18,5 +18,7 @@ namespace Vns.Erp.Core.Asset.Service.Interface
         IList<TsTscdPtung> GetAllByCT_TSCD_ID(Guid CtTscdId);
         [OperationContract]
         IList<TsTscdPtung> GetAllByTSCD_ID(Guid DmTscdId);
+
+        IList<TsTscdPtung> GetByTscdId(Guid DmTscdId);
     }
 }

@@ -1612,8 +1612,22 @@
 
     <property name="CtHNxService" ref="CtHNxService" />
     <property name="CtHNxServiceSyn" ref="CtHNxServiceSyn" />
+
+    
   </object>
   
-  <object id="Vns.Erp.Core.SynDb.frmDongBoDuLieu" type="Vns.Erp.Core.SynDb.frmDongBoDuLieu, Vns.Erp.Core.SynDb" singleton="false">
+  
+  <object id="Vns.Erp.Core.SynDb.SynAssetHelper" type="Vns.Erp.Core.SynDb.SynAssetHelper, Vns.Erp.Core.SynDb" singleton="false">
+    <property name="DmTscdService" ref="DmTscdService" />
+    <property name="DmTscdServiceSyn" ref="DmTscdServiceSyn" />
+    
+    <property name="CtTscdService" ref="CtTscdService" />
+    <property name="TsLsKhauhaoService" ref="TsLsKhauhaoService" />
+    <property name="TsTscdPtungService" ref="TsTscdPtungService" />
+    <property name="TsDieuchuyenService" ref="TsDieuchuyenService" />
+    <property name="TsCtTscdNvonService" ref="TsCtTscdNvonService" />
+  </object>
+
+    <object id="Vns.Erp.Core.SynDb.frmDongBoDuLieu" type="Vns.Erp.Core.SynDb.frmDongBoDuLieu, Vns.Erp.Core.SynDb" singleton="false">
   </object>
 </objects>

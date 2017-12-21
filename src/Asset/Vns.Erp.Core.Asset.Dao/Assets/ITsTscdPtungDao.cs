@@ -11,5 +11,8 @@ namespace Vns.Erp.Core.Asset.Dao
 {
 	public interface ITsTscdPtungDao:IDao<TsTscdPtung,System.Guid>
 	{
-	}
+        void DeleteByTscdId(Guid DmTscdId);
+
+        IList<TsTscdPtung> GetByTscdId(Guid DmTscdId);
+    }
 }
