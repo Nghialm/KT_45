@@ -879,6 +879,7 @@
     <None Include="Vouchers\Templates\BanHangKiemXuatKho.repx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Vouchers\Templates\chi _2lien.repx" />
     <None Include="Vouchers\Templates\chi.repx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -919,6 +920,7 @@
     <None Include="Vouchers\Templates\thu.repx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Vouchers\Templates\thu_2lien.repx" />
     <None Include="Vouchers\Templates\thu_en.repx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
