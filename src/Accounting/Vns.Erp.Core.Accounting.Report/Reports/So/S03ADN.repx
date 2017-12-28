@@ -572,7 +572,7 @@ namespace XtraReportSerialization {
             this.label6.StylePriority.UseFont = false;
             this.label6.StylePriority.UseForeColor = false;
             this.label6.StylePriority.UseTextAlignment = false;
-            this.label6.Text = "SỔ KẾ TOÁN CHI TIẾT QUỸ TIỀN MẶT";
+            this.label6.Text = "SỔ NHẬT KÝ CHUNG";
             this.label6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // label5

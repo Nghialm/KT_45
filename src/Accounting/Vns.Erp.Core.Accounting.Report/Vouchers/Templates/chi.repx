@@ -53,6 +53,7 @@ namespace XtraReportSerialization {
         private DevExpress.XtraReports.UI.XRTableRow tableRow32;
         private DevExpress.XtraReports.UI.XRTableCell tableCell49;
         private DevExpress.XtraReports.UI.XRTableCell tableCell50;
+        private DevExpress.XtraReports.Parameters.Parameter pNguoiNhanNopTien;
         private DevExpress.XtraReports.UI.XRTableCell tableCell110;
         private DevExpress.XtraReports.UI.XRTableRow tableRow34;
         private DevExpress.XtraReports.UI.XRTableCell tableCell53;
@@ -311,6 +312,7 @@ namespace XtraReportSerialization {
             this.pDiaChiCongTy = new DevExpress.XtraReports.Parameters.Parameter();
             this.p_MauQuyetDinh_BanHanh = new DevExpress.XtraReports.Parameters.Parameter();
             this.p_MauQuyetDinh_NgayBH = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pNguoiNhanNopTien = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.table13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table10)).BeginInit();
@@ -747,19 +749,19 @@ namespace XtraReportSerialization {
             // tableCell50
             // 
             this.tableCell50.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "PhieuKeToan.NguoiNhanNopTien")});
+                        new DevExpress.XtraReports.UI.XRBinding(this.pNguoiNhanNopTien, "Text", "")});
             this.tableCell50.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableCell50.Name = "tableCell50";
             this.tableCell50.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 0, 0, 0, 100F);
             this.tableCell50.StylePriority.UseFont = false;
             this.tableCell50.StylePriority.UsePadding = false;
-            this.tableCell50.Text = "tableCell32";
-            this.tableCell50.Weight = 0.88287973773909034;
+            this.tableCell50.Text = "tableCell50";
+            this.tableCell50.Weight = 1.0762382802007138;
             // 
             // tableCell110
             // 
             this.tableCell110.Name = "tableCell110";
-            this.tableCell110.Weight = 0.66454538012957132;
+            this.tableCell110.Weight = 0.47118683766794789;
             // 
             // tableCell53
             // 
@@ -777,12 +779,12 @@ namespace XtraReportSerialization {
             this.tableCell54.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 0, 0, 0, 100F);
             this.tableCell54.StylePriority.UsePadding = false;
             this.tableCell54.Text = "tableCell39";
-            this.tableCell54.Weight = 1.0830196058623325;
+            this.tableCell54.Weight = 1.276378148323956;
             // 
             // tableCell105
             // 
             this.tableCell105.Name = "tableCell105";
-            this.tableCell105.Weight = 0.66454539506109422;
+            this.tableCell105.Weight = 0.4711868525994708;
             // 
             // tableCell55
             // 
@@ -1189,6 +1191,11 @@ namespace XtraReportSerialization {
             this.p_MauQuyetDinh_NgayBH.Name = "p_MauQuyetDinh_NgayBH";
             this.p_MauQuyetDinh_NgayBH.Value = "Ngày 20/3/2006 của Bộ trưởng BTC";
             // 
+            // pNguoiNhanNopTien
+            // 
+            this.pNguoiNhanNopTien.Name = "pNguoiNhanNopTien";
+            this.pNguoiNhanNopTien.Value = "";
+            // 
             // template
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1223,7 +1230,8 @@ namespace XtraReportSerialization {
                         this.pCongTy,
                         this.pDiaChiCongTy,
                         this.p_MauQuyetDinh_BanHanh,
-                        this.p_MauQuyetDinh_NgayBH});
+                        this.p_MauQuyetDinh_NgayBH,
+                        this.pNguoiNhanNopTien});
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
                         this.xrControlStyle1,
                         this.xrControlStyle2});
