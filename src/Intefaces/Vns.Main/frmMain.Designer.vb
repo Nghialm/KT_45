@@ -46,6 +46,8 @@ Partial Public Class frmMain
         Me.soExit = New DevExpress.XtraBars.BarButtonItem()
         Me.adminReport = New DevExpress.XtraBars.BarSubItem()
         Me._frmTreeBaoCao = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarSubItem2 = New DevExpress.XtraBars.BarSubItem()
+        Me._barTeamview = New DevExpress.XtraBars.BarButtonItem()
         Me.barBottom = New DevExpress.XtraBars.Bar()
         Me.barGuide = New DevExpress.XtraBars.BarStaticItem()
         Me.barClientDate = New DevExpress.XtraBars.BarStaticItem()
@@ -192,8 +194,7 @@ Partial Public Class frmMain
         Me.bar4 = New DevExpress.XtraBars.Bar()
         Me.bar1 = New DevExpress.XtraBars.Bar()
         Me.iStatus1 = New DevExpress.XtraBars.BarStaticItem()
-        Me.BarSubItem2 = New DevExpress.XtraBars.BarSubItem()
-        Me._barTeamview = New DevExpress.XtraBars.BarButtonItem()
+        Me._barUpdateSoftware = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.barManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.xtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -210,9 +211,9 @@ Partial Public Class frmMain
         Me.barManager1.DockControls.Add(Me.barDockControlRight)
         Me.barManager1.Form = Me
         Me.barManager1.Images = Me.ImageList1
-        Me.barManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.barSubItem1, Me.barSubItem3, Me._KhaiBaoCacButToanPhanBoTuDong, Me._KhaiBaoCacButToanKetChuyenTuDong, Me._DanhMucTaiKhoan, Me._DanhMucTaiKhoanNganHang, Me._DanhMucKhachHang, Me._DanhMucThueSuat, Me._DanhMucPhongBan, Me._DanhMucHangHoaVatTu, Me._DanhMucKhoHang, Me._DanhMucTaiSanCoDinh, Me._DieuChinhGiaTriTaiSan, Me._DanhMucNguonVonTSCD, Me._DanhMucLyDoTangGiamTSCD, Me._DanhMucBoPhanSuDungTSCD, Me._DanhMucNhomTSCD, Me.barButtonItem15, Me._DanhMucPhanNhomTaiSan, Me.barButtonItem17, Me.barButtonItem18, Me.barButtonItem1, Me.barButtonItem2, Me.barButtonItem3, Me.barButtonItem4, Me.barButtonItem5, Me.barButtonItem6, Me.barButtonItem7, Me.barButtonItem8, Me.barButtonItem9, Me.barButtonItem10, Me.barButtonItem11, Me.barButtonItem12, Me.barButtonItem13, Me.barButtonItem14, Me.barButtonItem16, Me.barButtonItem19, Me.barButtonItem20, Me.barButtonItem21, Me.barButtonItem22, Me.barButtonItem23, Me.barButtonItem24, Me.barButtonItem25, Me.barButtonItem27, Me.barButtonItem28, Me.barButtonItem26, Me.barSubItem4, Me.barSubItem5, Me.barToolbarsListItem1, Me.barMdiChildrenListItem1, Me.barSubItem6, Me.barSubItem7, Me._PhieuKeToan, Me._PhieuThuTienMat, Me._PhieuChiTienMat, Me._PhieuThuTienMatNgoaiTeTheoTiGiaHachToan, Me._PhieuChiTienMatNgoaiTeTheoTiGiaHachToan, Me._PhieuNhapHangBanBiTraLai, Me._PhieuThuDatCoc, Me._PhieuNhapMuaHang, Me._PhieuNhapKhau, Me._PhieuNhapChiPhiMuaHang, Me._PhieuXuatTraLaiNhaCungCap, Me._PhieuThanhToanTamUng, Me._PhieuNhapKho, Me._PhieuXuatKho, Me._PhieuDieuchuyen, Me._ButToanPhanBoTuDong, Me._ButToanKetChuyenTuDong, Me._GiayBaoCoNganHang, Me._GiayBaoNoNganHang, Me._GiayBaoCoNGoaiTeTheoTiGiaHachToan, Me._GiayBaoNoNgoaiTeTheoTiGiaHachToan, Me._HoaDonBanHangKiemPhieuXuatKho, Me._HoaDonMuaHangDichVu, Me._ChungTuPhaiThuBuTruCongNo, Me._ChungTuPhaiTraBuTruCongNo, Me.barButtonItem54, Me.soAdmin, Me.soLogin, Me.siLogOut, Me.siAdminChangePass, Me.siUserManagement, Me.siFreezeData, Me.siUserActionReport, Me.soAdminDatabaseSettings, Me.soExit, Me._DanhMucDonViTinh, Me._DanhMucNgoaiTe, Me._DanhMucKho, Me._DanhMucVuViec, Me._DanhMucHangHoa, Me._f, Me.barSubItem12, Me.barSubItem13, Me._TSCD, Me.Da, Me.barSubItem15, Me.barSubItem16, Me.barSubItem17, Me.barSubItem18, Me.barSubItem19, Me.barSubItem20, Me._NhomVatTu1, Me._NhomVatTu3, Me.barSubItem21, Me._DanhMucTuDo2, Me._DanhMucTuDo3, Me._DanhMucTuDo4, Me._DanhMucTuDo5, Me._DanhMucTuDo1, Me._DanhMucDonVi, Me._DanhMucKieuXe, Me._DanhMucXe, Me._DanhMucCanBoCongNhanVien, Me._DanhMucCongViecSuaChua, Me._DanhMucHopDong, Me._DanhMucPhuongThucQuanTri, Me.adminReport, Me._InDanhMuc, Me._DMLoaiChungTu, Me._frmTreeBaoCao, Me.barGuide, Me.barClientDate, Me._DMKhoanPhi, Me.BarSubItem23, Me._LenhPhuTung, Me._LenhSuaChua, Me._ThucHienPhanBoTuDong, Me._NhomVatTu2, Me._NhapSoDuTaiKhoan, Me._QuanLyNgoaiTe, Me._DMNhomKHang, Me._ThietLapMenu, Me._KhaiBaoGiamTaiSan, Me._NhapSoDuDauNam, Me._DieuChuyenTSCD, Me.BarEditItem1, Me.BarButtonItem29, Me.BarButtonItem30, Me._TinhGiaXuatKho, Me._CloseAllVisible, Me.siGrantPermission, Me.barClientDonVi, Me.siDonviGroup, Me.siDonviGroupUser, Me.siDonviGroupForm, Me.siDonviBaocao, Me.siDonviGroupBaocao, Me.siDataTransfer, Me.barClientNamKT, Me.BarSubItem2, Me._barTeamview})
+        Me.barManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.barSubItem1, Me.barSubItem3, Me._KhaiBaoCacButToanPhanBoTuDong, Me._KhaiBaoCacButToanKetChuyenTuDong, Me._DanhMucTaiKhoan, Me._DanhMucTaiKhoanNganHang, Me._DanhMucKhachHang, Me._DanhMucThueSuat, Me._DanhMucPhongBan, Me._DanhMucHangHoaVatTu, Me._DanhMucKhoHang, Me._DanhMucTaiSanCoDinh, Me._DieuChinhGiaTriTaiSan, Me._DanhMucNguonVonTSCD, Me._DanhMucLyDoTangGiamTSCD, Me._DanhMucBoPhanSuDungTSCD, Me._DanhMucNhomTSCD, Me.barButtonItem15, Me._DanhMucPhanNhomTaiSan, Me.barButtonItem17, Me.barButtonItem18, Me.barButtonItem1, Me.barButtonItem2, Me.barButtonItem3, Me.barButtonItem4, Me.barButtonItem5, Me.barButtonItem6, Me.barButtonItem7, Me.barButtonItem8, Me.barButtonItem9, Me.barButtonItem10, Me.barButtonItem11, Me.barButtonItem12, Me.barButtonItem13, Me.barButtonItem14, Me.barButtonItem16, Me.barButtonItem19, Me.barButtonItem20, Me.barButtonItem21, Me.barButtonItem22, Me.barButtonItem23, Me.barButtonItem24, Me.barButtonItem25, Me.barButtonItem27, Me.barButtonItem28, Me.barButtonItem26, Me.barSubItem4, Me.barSubItem5, Me.barToolbarsListItem1, Me.barMdiChildrenListItem1, Me.barSubItem6, Me.barSubItem7, Me._PhieuKeToan, Me._PhieuThuTienMat, Me._PhieuChiTienMat, Me._PhieuThuTienMatNgoaiTeTheoTiGiaHachToan, Me._PhieuChiTienMatNgoaiTeTheoTiGiaHachToan, Me._PhieuNhapHangBanBiTraLai, Me._PhieuThuDatCoc, Me._PhieuNhapMuaHang, Me._PhieuNhapKhau, Me._PhieuNhapChiPhiMuaHang, Me._PhieuXuatTraLaiNhaCungCap, Me._PhieuThanhToanTamUng, Me._PhieuNhapKho, Me._PhieuXuatKho, Me._PhieuDieuchuyen, Me._ButToanPhanBoTuDong, Me._ButToanKetChuyenTuDong, Me._GiayBaoCoNganHang, Me._GiayBaoNoNganHang, Me._GiayBaoCoNGoaiTeTheoTiGiaHachToan, Me._GiayBaoNoNgoaiTeTheoTiGiaHachToan, Me._HoaDonBanHangKiemPhieuXuatKho, Me._HoaDonMuaHangDichVu, Me._ChungTuPhaiThuBuTruCongNo, Me._ChungTuPhaiTraBuTruCongNo, Me.barButtonItem54, Me.soAdmin, Me.soLogin, Me.siLogOut, Me.siAdminChangePass, Me.siUserManagement, Me.siFreezeData, Me.siUserActionReport, Me.soAdminDatabaseSettings, Me.soExit, Me._DanhMucDonViTinh, Me._DanhMucNgoaiTe, Me._DanhMucKho, Me._DanhMucVuViec, Me._DanhMucHangHoa, Me._f, Me.barSubItem12, Me.barSubItem13, Me._TSCD, Me.Da, Me.barSubItem15, Me.barSubItem16, Me.barSubItem17, Me.barSubItem18, Me.barSubItem19, Me.barSubItem20, Me._NhomVatTu1, Me._NhomVatTu3, Me.barSubItem21, Me._DanhMucTuDo2, Me._DanhMucTuDo3, Me._DanhMucTuDo4, Me._DanhMucTuDo5, Me._DanhMucTuDo1, Me._DanhMucDonVi, Me._DanhMucKieuXe, Me._DanhMucXe, Me._DanhMucCanBoCongNhanVien, Me._DanhMucCongViecSuaChua, Me._DanhMucHopDong, Me._DanhMucPhuongThucQuanTri, Me.adminReport, Me._InDanhMuc, Me._DMLoaiChungTu, Me._frmTreeBaoCao, Me.barGuide, Me.barClientDate, Me._DMKhoanPhi, Me.BarSubItem23, Me._LenhPhuTung, Me._LenhSuaChua, Me._ThucHienPhanBoTuDong, Me._NhomVatTu2, Me._NhapSoDuTaiKhoan, Me._QuanLyNgoaiTe, Me._DMNhomKHang, Me._ThietLapMenu, Me._KhaiBaoGiamTaiSan, Me._NhapSoDuDauNam, Me._DieuChuyenTSCD, Me.BarEditItem1, Me.BarButtonItem29, Me.BarButtonItem30, Me._TinhGiaXuatKho, Me._CloseAllVisible, Me.siGrantPermission, Me.barClientDonVi, Me.siDonviGroup, Me.siDonviGroupUser, Me.siDonviGroupForm, Me.siDonviBaocao, Me.siDonviGroupBaocao, Me.siDataTransfer, Me.barClientNamKT, Me.BarSubItem2, Me._barTeamview, Me._barUpdateSoftware})
         Me.barManager1.MainMenu = Me.barMenu
-        Me.barManager1.MaxItemId = 180
+        Me.barManager1.MaxItemId = 181
         '
         'barMenu
         '
@@ -334,6 +335,19 @@ Partial Public Class frmMain
         Me._frmTreeBaoCao.ImageIndex = 0
         Me._frmTreeBaoCao.Name = "_frmTreeBaoCao"
         '
+        'BarSubItem2
+        '
+        Me.BarSubItem2.Caption = "Tiện ích"
+        Me.BarSubItem2.Id = 178
+        Me.BarSubItem2.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me._barTeamview), New DevExpress.XtraBars.LinkPersistInfo(Me._barUpdateSoftware)})
+        Me.BarSubItem2.Name = "BarSubItem2"
+        '
+        '_barTeamview
+        '
+        Me._barTeamview.Caption = "Hỗ trợ từ xa bằng Teamview"
+        Me._barTeamview.Id = 179
+        Me._barTeamview.Name = "_barTeamview"
+        '
         'barBottom
         '
         Me.barBottom.BarName = "barBottom"
@@ -383,28 +397,32 @@ Partial Public Class frmMain
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlTop.Size = New System.Drawing.Size(1016, 25)
+        Me.barDockControlTop.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.barDockControlTop.Size = New System.Drawing.Size(1185, 30)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 694)
-        Me.barDockControlBottom.Size = New System.Drawing.Size(1016, 29)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 856)
+        Me.barDockControlBottom.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1185, 34)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 25)
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 669)
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 30)
+        Me.barDockControlLeft.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 826)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1016, 25)
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 669)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1185, 30)
+        Me.barDockControlRight.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 826)
         '
         'ImageList1
         '
@@ -1269,29 +1287,23 @@ Partial Public Class frmMain
         Me.iStatus1.TextAlignment = System.Drawing.StringAlignment.Near
         Me.iStatus1.Width = 695
         '
-        'BarSubItem2
+        '_barUpdateSoftware
         '
-        Me.BarSubItem2.Caption = "Tiện ích"
-        Me.BarSubItem2.Id = 178
-        Me.BarSubItem2.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me._barTeamview)})
-        Me.BarSubItem2.Name = "BarSubItem2"
-        '
-        '_barTeamview
-        '
-        Me._barTeamview.Caption = "Hỗ trợ từ xa bằng Teamview"
-        Me._barTeamview.Id = 179
-        Me._barTeamview.Name = "_barTeamview"
+        Me._barUpdateSoftware.Caption = "Cập nhật phần mềm"
+        Me._barUpdateSoftware.Id = 180
+        Me._barUpdateSoftware.Name = "_barUpdateSoftware"
         '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1016, 723)
+        Me.ClientSize = New System.Drawing.Size(1185, 890)
         Me.Controls.Add(Me.barDockControlLeft)
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
         Me.IsMdiContainer = True
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Hệ thống Kế toán"
@@ -1473,5 +1485,5 @@ Partial Public Class frmMain
     Public WithEvents barClientNamKT As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents BarSubItem2 As DevExpress.XtraBars.BarSubItem
     Friend WithEvents _barTeamview As DevExpress.XtraBars.BarButtonItem
-
+    Friend WithEvents _barUpdateSoftware As DevExpress.XtraBars.BarButtonItem
 End Class
