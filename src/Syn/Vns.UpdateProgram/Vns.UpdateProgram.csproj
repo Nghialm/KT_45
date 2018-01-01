@@ -93,7 +93,7 @@
     <None Include="Service References\WSUpdate\Vns.UpdateProgram.WSUpdate.FileVersion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\WSUpdate\WSUpdate.wsdl" />
+    <None Include="Service References\WSUpdate\wsupdate1.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -103,9 +103,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\WSUpdate\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\WSUpdate\WSUpdate.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\WSUpdate\configuration91.svcinfo" />
@@ -118,6 +115,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WSUpdate\wsupdate1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

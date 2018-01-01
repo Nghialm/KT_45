@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
+using System.ServiceModel;
 using System.Text;
 using System.Windows.Forms;
 using Vns.UpdateProgram.WSUpdate;
@@ -48,6 +49,12 @@ namespace Vns.UpdateProgram
                 txtLog.Text = sProgressLog.ToString();
             }
 
+            //Update file csv
+            if (lstFileVer.Count > 0)
+            {
+                UploadResponse sLog = objUpdate.DownloadFile("", "file_version.csv");
+            }
+
             if (errCount > 0) lblSummary.Text = string.Format("Message: Update not successfull {0}", errCount);
             else lblSummary.Text = "Message: Update successfull";
         }
@@ -59,6 +66,8 @@ namespace Vns.UpdateProgram
             try
             {
                 procs = Process.GetProcessesByName("VKetoan");
+
+                if (procs.Length <= 0) return;
 
                 Process mspaintProc = procs[0];
 
@@ -86,7 +95,10 @@ namespace Vns.UpdateProgram
 
         private List<WSUpdate.FileVersion> CheckUpdate()
         {
-            WSUpdateSoapClient wsUpdate = new WSUpdateSoapClient(Global.Endpoint);
+            BasicHttpBinding binding = new BasicHttpBinding();
+            EndpointAddress address = new EndpointAddress(Global.Endpoint);
+            WSUpdateSoapClient wsUpdate = new WSUpdateSoapClient(binding, address);
+            //WSUpdateSoapClient wsUpdate = new WSUpdateSoapClient();
             List<WSUpdate.FileVersion> lstcli = new List<WSUpdate.FileVersion>();
             lstcli = FileHelper.ReadCsvFile("file_version.csv");
             List<WSUpdate.FileVersion> lstUpdate = new List<WSUpdate.FileVersion>(wsUpdate.UpdateVersion(lstcli.ToArray()));

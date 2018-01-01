@@ -18,11 +18,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:3331/WSUpdate.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://kt45.somee.com/wsupdate.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WSUpdate.wsdl" MetadataType="Wsdl" ID="8b89f8ac-9abe-4178-b1d9-560a870a1b6f" SourceId="1" SourceUrl="http://localhost:3331/WSUpdate.asmx?wsdl" />
-    <MetadataFile FileName="WSUpdate.disco" MetadataType="Disco" ID="763e1c68-746b-41ce-a777-58006ab35369" SourceId="1" SourceUrl="http://localhost:3331/WSUpdate.asmx?disco" />
+    <MetadataFile FileName="wsupdate1.disco" MetadataType="Disco" ID="a122c614-893d-42dc-8819-727408858d43" SourceId="1" SourceUrl="http://kt45.somee.com/wsupdate.asmx?disco" />
+    <MetadataFile FileName="wsupdate1.wsdl" MetadataType="Wsdl" ID="22e5eaf0-9a8e-4dc6-8fce-b4806524ab6a" SourceId="1" SourceUrl="http://kt45.somee.com/wsupdate.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

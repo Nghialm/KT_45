@@ -8,9 +8,9 @@ namespace UpdateWC
 {
     public class FileHelper
     {
-        public static List<FileVersion> ReadCsvFile()
+        public static List<FileVersion> ReadCsvFile(string file_name)
         {
-            using (var reader = new StreamReader("file_version.csv"))
+            using (var reader = new StreamReader(file_name))
             {
                 List<FileVersion> lstFileVer = new List<FileVersion>();
                 while (!reader.EndOfStream)

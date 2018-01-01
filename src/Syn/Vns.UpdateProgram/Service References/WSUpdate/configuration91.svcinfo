@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="yUzhNqFX4Pi9VVx5SE/kvtuSwfg=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="z8XStX7MtYpjJ1Hh2D19CfXoDZI=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="WSUpdateSoap">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="WSUpdateSoap" contract="WSUpdate.WSUpdateSoap" bindingType="basicHttpBinding" address="http://localhost:3331/WSUpdate.asmx" bindingConfiguration="WSUpdateSoap">
+    <endpoint name="WSUpdateSoap" contract="WSUpdate.WSUpdateSoap" bindingType="basicHttpBinding" address="http://kt45.somee.com/wsupdate.asmx" bindingConfiguration="WSUpdateSoap">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:3331/WSUpdate.asmx</serializedValue>
+          <serializedValue>http://kt45.somee.com/wsupdate.asmx</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

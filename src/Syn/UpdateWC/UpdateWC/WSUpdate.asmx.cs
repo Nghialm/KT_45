@@ -27,9 +27,10 @@ namespace UpdateWC
         public List<FileVersion> UpdateVersion(List<FileVersion> lstcli)
         {
             // Read csv file
-            
+            String path = HttpContext.Current.Server.MapPath(".");
+            String file_path = path + @"\KT45\file_version.csv";
 
-            List<FileVersion> lstser = FileHelper.ReadCsvFile();
+            List<FileVersion> lstser = FileHelper.ReadCsvFile(file_path);
             List<FileVersion> lstUpdate = FileHelper.ListFileUpdate(lstcli, lstser);
             
             return lstUpdate;

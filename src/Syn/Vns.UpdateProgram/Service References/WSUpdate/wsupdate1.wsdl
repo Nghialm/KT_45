@@ -107,10 +107,10 @@
   </wsdl:binding>
   <wsdl:service name="WSUpdate">
     <wsdl:port name="WSUpdateSoap" binding="tns:WSUpdateSoap">
-      <soap:address location="http://localhost:3331/WSUpdate.asmx" />
+      <soap:address location="http://kt45.somee.com/wsupdate.asmx" />
     </wsdl:port>
     <wsdl:port name="WSUpdateSoap12" binding="tns:WSUpdateSoap12">
-      <soap12:address location="http://localhost:3331/WSUpdate.asmx" />
+      <soap12:address location="http://kt45.somee.com/wsupdate.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
