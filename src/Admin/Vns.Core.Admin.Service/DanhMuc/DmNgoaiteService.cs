@@ -25,9 +25,9 @@ namespace Vns.Erp.Core.Admin.Service
             get { return (IDmNgoaiteDao)Dao; }
             set { Dao = value; }
         }
-        public IList<DmNgoaite> GetAllByKyHieu(string KyHieu)
+        public IList<DmNgoaite> GetAllByKyHieu(Guid DonviId, string KyHieu)
         {
-            return DmNgoaiteDao.GetAllByKyHieu(KyHieu);
+            return DmNgoaiteDao.GetAllByKyHieu(DonviId, KyHieu);
         }
 
         public IList<DmNgoaite> GetAllByDonviID(Guid DonviId)

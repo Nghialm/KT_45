@@ -52,7 +52,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI.BaoCao
         {
             try
             {
-                loadData(dteTuNgay.DateTime, dteDenNgay.DateTime);
+                loadData(dateTimeInput1.StartDate, dateTimeInput1.EndDate);
             }
             catch (Exception ex)
             {
@@ -62,9 +62,6 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI.BaoCao
 
         private void frmBcSanXuatTheoNgay_Load(object sender, EventArgs e)
         {
-            dteTuNgay.DateTime = new DateTime(DateTime.Now.Year, 1, 1);
-            dteDenNgay.DateTime = new DateTime(DateTime.Now.Year, 12, 31);
-
             bindDataToCbo();
         }
 
@@ -99,6 +96,16 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI.BaoCao
             //grcReport.DataSource = lstData;
 
             pivotGridControl1.DataSource = lstData;
+        }
+
+        private void frmBcSanLuongTheoCa_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    this.Close();
+                    break; // TODO: might not be correct. Was : Exit Select
+            }
         }
     }
 }

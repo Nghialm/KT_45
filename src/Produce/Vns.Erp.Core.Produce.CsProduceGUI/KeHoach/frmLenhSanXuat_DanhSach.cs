@@ -202,7 +202,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             SxLenhsanxuat objReturn = frm.Show_Form(obj, FormGlobals.DataInputState.EditMode);
             if (objReturn != null)
             {
-                LoadData();
+                LoadGrid();
                 grvDanhSach.FocusedRowHandle = i;
             }
         }
@@ -213,7 +213,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             SxLenhsanxuat obj = frm.Show_Form(new SxLenhsanxuat(), FormGlobals.DataInputState.AddMode);
             if (obj != null)
             {
-                LoadData();
+                LoadGrid();
             }
         }
 
@@ -229,7 +229,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             if (FormGlobals.Message_Confirm("Bạn có chắc chắn muốn xóa bản ghi này?"))
             {
                 SxLenhsanxuatService.DeleteById(obj.Id);
-                LoadData();
+                LoadGrid();
             }
         }
 
@@ -243,7 +243,8 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             {
                 LoadData();
 
-                CtlPagerControl.display = new DisplayResult(this.LoadGrid);
+                LoadGrid();
+                CtlPagerControl.display += new DisplayResult(this.LoadGrid);
                 CtlPagerControl.RefreshPage();
             }
             catch (Exception ex)
@@ -318,5 +319,28 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
         }
 
         #endregion
+
+        private void frmLenhSanXuat_DanhSach_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Escape:
+                        this.Close();
+                        break; // TODO: might not be correct. Was : Exit Select
+                    case Keys.F3:
+                        AddNew();
+                        break; // TODO: might not be correct. Was : Exit Select
+                    case Keys.F4:
+                        Edit();
+                        break; // TODO: might not be correct. Was : Exit Select
+                }
+            }
+            catch (Exception ex)
+            {
+                FormGlobals.Message_Error(ex);
+            }
+        }
     }
 }

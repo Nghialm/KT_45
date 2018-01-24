@@ -48,11 +48,13 @@ namespace Vns.Erp.Core.Admin.Dao.NHibernate
         }
         #endregion
 
-        public IList<DmNgoaite> GetAllByKyHieu(string KyHieu)
+        public IList<DmNgoaite> GetAllByKyHieu(Guid DonviId, string KyHieu)
         {
-            string sql = "from DmNgoaite a where a.KyHieu like (:KyHieu)";
+            string sql = "from DmNgoaite a where a.KyHieu = (:KyHieu) and a.DonviId = :DonviId";
             IQuery q = NHibernateSession.CreateQuery(sql);
             q.SetParameter("KyHieu", KyHieu);
+            q.SetParameter("DonviId", DonviId);
+
             return q.List<DmNgoaite>();
         }
 	}

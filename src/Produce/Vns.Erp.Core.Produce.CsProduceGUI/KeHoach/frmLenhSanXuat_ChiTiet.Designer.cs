@@ -169,7 +169,8 @@
             // 
             this.cboQuyTrinhSx.EditValue = "";
             this.cboQuyTrinhSx.EnterMoveNextControl = true;
-            this.cboQuyTrinhSx.Location = new System.Drawing.Point(461, 103);
+            this.cboQuyTrinhSx.Location = new System.Drawing.Point(538, 127);
+            this.cboQuyTrinhSx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboQuyTrinhSx.Name = "cboQuyTrinhSx";
             this.cboQuyTrinhSx.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cboQuyTrinhSx.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -177,7 +178,7 @@
             this.cboQuyTrinhSx.Properties.ImmediatePopup = true;
             this.cboQuyTrinhSx.Properties.NullText = "";
             this.cboQuyTrinhSx.Properties.View = this.gridView5;
-            this.cboQuyTrinhSx.Size = new System.Drawing.Size(200, 20);
+            this.cboQuyTrinhSx.Size = new System.Drawing.Size(233, 22);
             this.cboQuyTrinhSx.TabIndex = 9;
             // 
             // gridView5
@@ -208,16 +209,18 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(341, 107);
+            this.labelControl9.Location = new System.Drawing.Point(398, 132);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(91, 13);
+            this.labelControl9.Size = new System.Drawing.Size(117, 17);
             this.labelControl9.TabIndex = 17;
             this.labelControl9.Text = "Quy trình Sản xuất";
             // 
             // cboToSanXuat
             // 
             this.cboToSanXuat.EnterMoveNextControl = true;
-            this.cboToSanXuat.Location = new System.Drawing.Point(777, 26);
+            this.cboToSanXuat.Location = new System.Drawing.Point(906, 32);
+            this.cboToSanXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboToSanXuat.Name = "cboToSanXuat";
             this.cboToSanXuat.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cboToSanXuat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -225,7 +228,7 @@
             this.cboToSanXuat.Properties.ImmediatePopup = true;
             this.cboToSanXuat.Properties.NullText = "";
             this.cboToSanXuat.Properties.View = this.gridView3;
-            this.cboToSanXuat.Size = new System.Drawing.Size(200, 20);
+            this.cboToSanXuat.Size = new System.Drawing.Size(233, 22);
             this.cboToSanXuat.TabIndex = 10;
             // 
             // gridView3
@@ -256,22 +259,25 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(698, 30);
+            this.labelControl8.Location = new System.Drawing.Point(814, 37);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(57, 13);
+            this.labelControl8.Size = new System.Drawing.Size(73, 17);
             this.labelControl8.TabIndex = 15;
             this.labelControl8.Text = "Tổ sản xuất";
             // 
             // cboTrangThaiLenh
             // 
             this.cboTrangThaiLenh.EnterMoveNextControl = true;
-            this.cboTrangThaiLenh.Location = new System.Drawing.Point(134, 102);
+            this.cboTrangThaiLenh.Location = new System.Drawing.Point(156, 126);
+            this.cboTrangThaiLenh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTrangThaiLenh.Name = "cboTrangThaiLenh";
             this.cboTrangThaiLenh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboTrangThaiLenh.Properties.ImmediatePopup = true;
             this.cboTrangThaiLenh.Properties.NullText = "";
             this.cboTrangThaiLenh.Properties.View = this.gridView2;
-            this.cboTrangThaiLenh.Size = new System.Drawing.Size(156, 20);
+            this.cboTrangThaiLenh.Size = new System.Drawing.Size(182, 22);
             this.cboTrangThaiLenh.TabIndex = 3;
             // 
             // gridView2
@@ -293,36 +299,40 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(17, 106);
+            this.labelControl7.Location = new System.Drawing.Point(20, 130);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(87, 13);
+            this.labelControl7.Size = new System.Drawing.Size(111, 17);
             this.labelControl7.TabIndex = 13;
             this.labelControl7.Text = "Trạng thái lệnh SX";
             // 
             // txtSoNhanCong
             // 
             this.txtSoNhanCong.EnterMoveNextControl = true;
-            this.txtSoNhanCong.Location = new System.Drawing.Point(461, 26);
+            this.txtSoNhanCong.Location = new System.Drawing.Point(538, 32);
+            this.txtSoNhanCong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSoNhanCong.Name = "txtSoNhanCong";
             this.txtSoNhanCong.Properties.Appearance.Options.UseTextOptions = true;
             this.txtSoNhanCong.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtSoNhanCong.Properties.Mask.EditMask = "n0";
             this.txtSoNhanCong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtSoNhanCong.Size = new System.Drawing.Size(200, 20);
+            this.txtSoNhanCong.Size = new System.Drawing.Size(233, 22);
             this.txtSoNhanCong.TabIndex = 6;
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(342, 30);
+            this.labelControl6.Location = new System.Drawing.Point(399, 37);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(89, 13);
+            this.labelControl6.Size = new System.Drawing.Size(116, 17);
             this.labelControl6.TabIndex = 11;
             this.labelControl6.Text = "Nhân công dự kiến";
             // 
             // cboKeHoachSx
             // 
             this.cboKeHoachSx.EnterMoveNextControl = true;
-            this.cboKeHoachSx.Location = new System.Drawing.Point(461, 52);
+            this.cboKeHoachSx.Location = new System.Drawing.Point(538, 64);
+            this.cboKeHoachSx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboKeHoachSx.Name = "cboKeHoachSx";
             this.cboKeHoachSx.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cboKeHoachSx.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -330,7 +340,7 @@
             this.cboKeHoachSx.Properties.ImmediatePopup = true;
             this.cboKeHoachSx.Properties.NullText = "";
             this.cboKeHoachSx.Properties.View = this.gridView1;
-            this.cboKeHoachSx.Size = new System.Drawing.Size(200, 20);
+            this.cboKeHoachSx.Size = new System.Drawing.Size(233, 22);
             this.cboKeHoachSx.TabIndex = 7;
             this.cboKeHoachSx.EditValueChanged += new System.EventHandler(this.cboKeHoachSx_EditValueChanged);
             // 
@@ -381,16 +391,18 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(342, 56);
+            this.labelControl3.Location = new System.Drawing.Point(399, 69);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(90, 13);
+            this.labelControl3.Size = new System.Drawing.Size(116, 17);
             this.labelControl3.TabIndex = 9;
             this.labelControl3.Text = "Kế hoạch Sản xuất";
             // 
             // cboKhachHang
             // 
             this.cboKhachHang.EnterMoveNextControl = true;
-            this.cboKhachHang.Location = new System.Drawing.Point(777, 52);
+            this.cboKhachHang.Location = new System.Drawing.Point(906, 64);
+            this.cboKhachHang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboKhachHang.Name = "cboKhachHang";
             this.cboKhachHang.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cboKhachHang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -398,7 +410,7 @@
             this.cboKhachHang.Properties.ImmediatePopup = true;
             this.cboKhachHang.Properties.NullText = "";
             this.cboKhachHang.Properties.View = this.gridView4;
-            this.cboKhachHang.Size = new System.Drawing.Size(200, 20);
+            this.cboKhachHang.Size = new System.Drawing.Size(233, 22);
             this.cboKhachHang.TabIndex = 11;
             // 
             // gridView4
@@ -431,7 +443,8 @@
             // 
             this.dteNgayTao.EditValue = null;
             this.dteNgayTao.EnterMoveNextControl = true;
-            this.dteNgayTao.Location = new System.Drawing.Point(134, 51);
+            this.dteNgayTao.Location = new System.Drawing.Point(156, 63);
+            this.dteNgayTao.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dteNgayTao.Name = "dteNgayTao";
             this.dteNgayTao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -445,30 +458,33 @@
             this.dteNgayTao.Properties.MinValue = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dteNgayTao.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dteNgayTao.Size = new System.Drawing.Size(156, 20);
+            this.dteNgayTao.Size = new System.Drawing.Size(182, 22);
             this.dteNgayTao.TabIndex = 1;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(699, 56);
+            this.labelControl5.Location = new System.Drawing.Point(815, 69);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(56, 13);
+            this.labelControl5.Size = new System.Drawing.Size(66, 16);
             this.labelControl5.TabIndex = 4;
             this.labelControl5.Text = "Khách hàng";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(24, 80);
+            this.labelControl2.Location = new System.Drawing.Point(28, 98);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(80, 13);
+            this.labelControl2.Size = new System.Drawing.Size(102, 17);
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "Số lệnh sản xuất";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(37, 55);
+            this.labelControl1.Location = new System.Drawing.Point(43, 68);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(67, 13);
+            this.labelControl1.Size = new System.Drawing.Size(85, 17);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Ngày tạo lệnh";
             // 
@@ -502,17 +518,19 @@
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(4, 4);
+            this.groupControl1.Location = new System.Drawing.Point(5, 5);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1000, 187);
+            this.groupControl1.Size = new System.Drawing.Size(1166, 230);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Lệnh sản xuất";
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(39, 159);
+            this.labelControl14.Location = new System.Drawing.Point(45, 196);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(67, 13);
+            this.labelControl14.Size = new System.Drawing.Size(87, 17);
             this.labelControl14.TabIndex = 25;
             this.labelControl14.Text = "Ngày kết thúc";
             // 
@@ -520,7 +538,8 @@
             // 
             this.txtNgayKetThuc.EditValue = null;
             this.txtNgayKetThuc.EnterMoveNextControl = true;
-            this.txtNgayKetThuc.Location = new System.Drawing.Point(133, 156);
+            this.txtNgayKetThuc.Location = new System.Drawing.Point(155, 192);
+            this.txtNgayKetThuc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNgayKetThuc.Name = "txtNgayKetThuc";
             this.txtNgayKetThuc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -534,14 +553,15 @@
             this.txtNgayKetThuc.Properties.MinValue = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.txtNgayKetThuc.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtNgayKetThuc.Size = new System.Drawing.Size(157, 20);
+            this.txtNgayKetThuc.Size = new System.Drawing.Size(183, 22);
             this.txtNgayKetThuc.TabIndex = 5;
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(40, 133);
+            this.labelControl13.Location = new System.Drawing.Point(47, 164);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(65, 13);
+            this.labelControl13.Size = new System.Drawing.Size(83, 17);
             this.labelControl13.TabIndex = 23;
             this.labelControl13.Text = "Ngày bắt đầu";
             // 
@@ -549,7 +569,8 @@
             // 
             this.txtNgayBatDau.EditValue = null;
             this.txtNgayBatDau.EnterMoveNextControl = true;
-            this.txtNgayBatDau.Location = new System.Drawing.Point(134, 130);
+            this.txtNgayBatDau.Location = new System.Drawing.Point(156, 160);
+            this.txtNgayBatDau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNgayBatDau.Name = "txtNgayBatDau";
             this.txtNgayBatDau.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -563,31 +584,33 @@
             this.txtNgayBatDau.Properties.MinValue = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.txtNgayBatDau.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtNgayBatDau.Size = new System.Drawing.Size(157, 20);
+            this.txtNgayBatDau.Size = new System.Drawing.Size(183, 22);
             this.txtNgayBatDau.TabIndex = 4;
             // 
             // C_SoChungTu_RP
             // 
             this.C_SoChungTu_RP.Enabled = false;
             this.C_SoChungTu_RP.HtLoaichungtuService = null;
-            this.C_SoChungTu_RP.Location = new System.Drawing.Point(134, 76);
+            this.C_SoChungTu_RP.Location = new System.Drawing.Point(156, 94);
+            this.C_SoChungTu_RP.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.C_SoChungTu_RP.Name = "C_SoChungTu_RP";
             this.C_SoChungTu_RP.PREFIX = null;
-            this.C_SoChungTu_RP.Size = new System.Drawing.Size(157, 20);
+            this.C_SoChungTu_RP.Size = new System.Drawing.Size(183, 25);
             this.C_SoChungTu_RP.SO_CHUNG_TU = null;
             this.C_SoChungTu_RP.TabIndex = 2;
             // 
             // cboLoaiChungTu
             // 
             this.cboLoaiChungTu.EnterMoveNextControl = true;
-            this.cboLoaiChungTu.Location = new System.Drawing.Point(134, 25);
+            this.cboLoaiChungTu.Location = new System.Drawing.Point(156, 31);
+            this.cboLoaiChungTu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboLoaiChungTu.Name = "cboLoaiChungTu";
             this.cboLoaiChungTu.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cboLoaiChungTu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboLoaiChungTu.Properties.NullText = "";
             this.cboLoaiChungTu.Properties.View = this.gridView7;
-            this.cboLoaiChungTu.Size = new System.Drawing.Size(156, 20);
+            this.cboLoaiChungTu.Size = new System.Drawing.Size(182, 22);
             this.cboLoaiChungTu.TabIndex = 0;
             // 
             // gridView7
@@ -618,32 +641,36 @@
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(17, 29);
+            this.labelControl12.Location = new System.Drawing.Point(20, 36);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(87, 13);
+            this.labelControl12.Size = new System.Drawing.Size(110, 17);
             this.labelControl12.TabIndex = 21;
             this.labelControl12.Text = "Loại lệnh sản xuất";
             // 
             // txtMoTa
             // 
             this.txtMoTa.EnterMoveNextControl = true;
-            this.txtMoTa.Location = new System.Drawing.Point(777, 78);
+            this.txtMoTa.Location = new System.Drawing.Point(906, 96);
+            this.txtMoTa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(200, 46);
+            this.txtMoTa.Size = new System.Drawing.Size(233, 57);
             this.txtMoTa.TabIndex = 12;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(728, 81);
+            this.labelControl4.Location = new System.Drawing.Point(849, 100);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(27, 13);
+            this.labelControl4.Size = new System.Drawing.Size(34, 17);
             this.labelControl4.TabIndex = 19;
             this.labelControl4.Text = "Mô tả";
             // 
             // cboBuocPhanCong
             // 
             this.cboBuocPhanCong.EnterMoveNextControl = true;
-            this.cboBuocPhanCong.Location = new System.Drawing.Point(461, 77);
+            this.cboBuocPhanCong.Location = new System.Drawing.Point(538, 95);
+            this.cboBuocPhanCong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboBuocPhanCong.Name = "cboBuocPhanCong";
             this.cboBuocPhanCong.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cboBuocPhanCong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -651,7 +678,7 @@
             this.cboBuocPhanCong.Properties.ImmediatePopup = true;
             this.cboBuocPhanCong.Properties.NullText = "";
             this.cboBuocPhanCong.Properties.View = this.gridView6;
-            this.cboBuocPhanCong.Size = new System.Drawing.Size(200, 20);
+            this.cboBuocPhanCong.Size = new System.Drawing.Size(233, 22);
             this.cboBuocPhanCong.TabIndex = 8;
             // 
             // gridView6
@@ -674,19 +701,21 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(355, 81);
+            this.labelControl11.Location = new System.Drawing.Point(414, 100);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(77, 13);
+            this.labelControl11.Size = new System.Drawing.Size(102, 17);
             this.labelControl11.TabIndex = 9;
             this.labelControl11.Text = "Bước phân công";
             // 
             // xrMainTab
             // 
             this.xrMainTab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xrMainTab.Location = new System.Drawing.Point(4, 224);
+            this.xrMainTab.Location = new System.Drawing.Point(5, 276);
+            this.xrMainTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xrMainTab.Name = "xrMainTab";
             this.xrMainTab.SelectedTabPage = this.xrSanXuat;
-            this.xrMainTab.Size = new System.Drawing.Size(1000, 350);
+            this.xrMainTab.Size = new System.Drawing.Size(1166, 430);
             this.xrMainTab.TabIndex = 2;
             this.xrMainTab.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xrSanXuat,
@@ -695,8 +724,9 @@
             // xrSanXuat
             // 
             this.xrSanXuat.Controls.Add(this.panel3);
+            this.xrSanXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xrSanXuat.Name = "xrSanXuat";
-            this.xrSanXuat.Size = new System.Drawing.Size(994, 323);
+            this.xrSanXuat.Size = new System.Drawing.Size(1160, 399);
             this.xrSanXuat.Text = "Sản lượng sản xuất";
             // 
             // panel3
@@ -704,22 +734,25 @@
             this.panel3.Controls.Add(this.grcKhSanPham);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(994, 323);
+            this.panel3.Size = new System.Drawing.Size(1160, 399);
             this.panel3.TabIndex = 3;
             // 
             // grcKhSanPham
             // 
             this.grcKhSanPham.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grcKhSanPham.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grcKhSanPham.Location = new System.Drawing.Point(0, 0);
             this.grcKhSanPham.MainView = this.grvKhSanPham;
+            this.grcKhSanPham.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grcKhSanPham.Name = "grcKhSanPham";
             this.grcKhSanPham.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cboSanPham,
             this.cboDvt,
             this.repositoryItemTextEdit1,
             this.grlSanPham});
-            this.grcKhSanPham.Size = new System.Drawing.Size(994, 323);
+            this.grcKhSanPham.Size = new System.Drawing.Size(1160, 399);
             this.grcKhSanPham.TabIndex = 1;
             this.grcKhSanPham.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvKhSanPham});
@@ -862,8 +895,9 @@
             // xrVatTu
             // 
             this.xrVatTu.Controls.Add(this.panel4);
+            this.xrVatTu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xrVatTu.Name = "xrVatTu";
-            this.xrVatTu.Size = new System.Drawing.Size(994, 323);
+            this.xrVatTu.Size = new System.Drawing.Size(1161, 400);
             this.xrVatTu.Text = "Vật liệu dự kiến";
             // 
             // panel4
@@ -871,15 +905,18 @@
             this.panel4.Controls.Add(this.grcVatTu);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(994, 323);
+            this.panel4.Size = new System.Drawing.Size(1161, 400);
             this.panel4.TabIndex = 4;
             // 
             // grcVatTu
             // 
             this.grcVatTu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grcVatTu.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grcVatTu.Location = new System.Drawing.Point(0, 0);
             this.grcVatTu.MainView = this.grvVatTu;
+            this.grcVatTu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grcVatTu.Name = "grcVatTu";
             this.grcVatTu.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cboLoaiVatTu,
@@ -887,7 +924,7 @@
             this.cboDvt1,
             this.repositoryItemTextEdit2,
             this.grlVatTu});
-            this.grcVatTu.Size = new System.Drawing.Size(994, 323);
+            this.grcVatTu.Size = new System.Drawing.Size(1161, 400);
             this.grcVatTu.TabIndex = 1;
             this.grcVatTu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvVatTu});
@@ -1050,18 +1087,20 @@
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.panelControl2.Controls.Add(this.labelControl10);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(4, 191);
+            this.panelControl2.Location = new System.Drawing.Point(5, 235);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1000, 33);
+            this.panelControl2.Size = new System.Drawing.Size(1166, 41);
             this.panelControl2.TabIndex = 1;
             // 
             // labelControl10
             // 
             this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl10.Location = new System.Drawing.Point(748, 9);
+            this.labelControl10.Location = new System.Drawing.Point(790, 11);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(246, 13);
+            this.labelControl10.Size = new System.Drawing.Size(316, 17);
             this.labelControl10.TabIndex = 62;
             this.labelControl10.Text = "Ấn F4 - Thêm Dòng; F8 - Xóa Dòng; Esc - Hủy";
             // 
@@ -1071,18 +1110,20 @@
             this.panelControl1.Controls.Add(this.btnSave);
             this.panelControl1.Controls.Add(this.btnClose);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(4, 574);
+            this.panelControl1.Location = new System.Drawing.Point(5, 706);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1000, 34);
+            this.panelControl1.Size = new System.Drawing.Size(1166, 42);
             this.panelControl1.TabIndex = 4;
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.ImageIndex = 20;
-            this.btnSave.Location = new System.Drawing.Point(1, 3);
+            this.btnSave.Location = new System.Drawing.Point(0, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(80, 30);
+            this.btnSave.Size = new System.Drawing.Size(93, 37);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "&Nhập xong";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -1092,29 +1133,32 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.ImageIndex = 20;
-            this.btnClose.Location = new System.Drawing.Point(919, 3);
+            this.btnClose.Location = new System.Drawing.Point(1071, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(80, 30);
+            this.btnClose.Size = new System.Drawing.Size(93, 37);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "&Đóng";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmLenhSanXuat_ChiTiet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(1008, 612);
+            this.ClientSize = new System.Drawing.Size(1176, 753);
             this.Controls.Add(this.xrMainTab);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.groupControl1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLenhSanXuat_ChiTiet";
-            this.Padding = new System.Windows.Forms.Padding(4);
+            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lệnh sản xuất";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLenhSanXuat_ChiTiet_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.cboQuyTrinhSx.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboToSanXuat.Properties)).EndInit();

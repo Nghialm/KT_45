@@ -16,6 +16,6 @@ namespace Vns.Erp.Core.Admin.Dao
 	/// </summary>	
 	public interface IDmNgoaiteDao:IDao<DmNgoaite,Guid>
 	{
-        IList<DmNgoaite> GetAllByKyHieu(string KyHieu);
+        IList<DmNgoaite> GetAllByKyHieu(Guid DonviId, string KyHieu);
 	}
 }

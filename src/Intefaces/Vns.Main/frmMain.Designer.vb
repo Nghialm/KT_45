@@ -26,9 +26,8 @@ Partial Public Class frmMain
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
-        Me.barManager1 = New DevExpress.XtraBars.BarManager(Me.components)
+        Me.barManager1 = New DevExpress.XtraBars.BarManager()
         Me.barMenu = New DevExpress.XtraBars.Bar()
         Me.soAdmin = New DevExpress.XtraBars.BarSubItem()
         Me.soLogin = New DevExpress.XtraBars.BarButtonItem()
@@ -48,6 +47,7 @@ Partial Public Class frmMain
         Me._frmTreeBaoCao = New DevExpress.XtraBars.BarButtonItem()
         Me.BarSubItem2 = New DevExpress.XtraBars.BarSubItem()
         Me._barTeamview = New DevExpress.XtraBars.BarButtonItem()
+        Me._barUpdateSoftware = New DevExpress.XtraBars.BarButtonItem()
         Me.barBottom = New DevExpress.XtraBars.Bar()
         Me.barGuide = New DevExpress.XtraBars.BarStaticItem()
         Me.barClientDate = New DevExpress.XtraBars.BarStaticItem()
@@ -57,7 +57,7 @@ Partial Public Class frmMain
         Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ImageList1 = New System.Windows.Forms.ImageList()
         Me.barSubItem1 = New DevExpress.XtraBars.BarSubItem()
         Me.barSubItem3 = New DevExpress.XtraBars.BarSubItem()
         Me.barButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
@@ -189,12 +189,11 @@ Partial Public Class frmMain
         Me._CloseAllVisible = New DevExpress.XtraBars.BarButtonItem()
         Me.siGrantPermission = New DevExpress.XtraBars.BarButtonItem()
         Me.siDataTransfer = New DevExpress.XtraBars.BarButtonItem()
-        Me.xtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
-        Me.defaultLookAndFeel = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
+        Me.xtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager()
+        Me.defaultLookAndFeel = New DevExpress.LookAndFeel.DefaultLookAndFeel()
         Me.bar4 = New DevExpress.XtraBars.Bar()
         Me.bar1 = New DevExpress.XtraBars.Bar()
         Me.iStatus1 = New DevExpress.XtraBars.BarStaticItem()
-        Me._barUpdateSoftware = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.barManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.xtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -347,6 +346,12 @@ Partial Public Class frmMain
         Me._barTeamview.Caption = "Hỗ trợ từ xa bằng Teamview"
         Me._barTeamview.Id = 179
         Me._barTeamview.Name = "_barTeamview"
+        '
+        '_barUpdateSoftware
+        '
+        Me._barUpdateSoftware.Caption = "Cập nhật phần mềm"
+        Me._barUpdateSoftware.Id = 180
+        Me._barUpdateSoftware.Name = "_barUpdateSoftware"
         '
         'barBottom
         '
@@ -1286,12 +1291,6 @@ Partial Public Class frmMain
         Me.iStatus1.Name = "iStatus1"
         Me.iStatus1.TextAlignment = System.Drawing.StringAlignment.Near
         Me.iStatus1.Width = 695
-        '
-        '_barUpdateSoftware
-        '
-        Me._barUpdateSoftware.Caption = "Cập nhật phần mềm"
-        Me._barUpdateSoftware.Id = 180
-        Me._barUpdateSoftware.Name = "_barUpdateSoftware"
         '
         'frmMain
         '

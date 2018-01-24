@@ -8,8 +8,8 @@
     <ProjectGuid>{BD3B9C3B-64F2-4046-B1A0-6C113B5E6025}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Vns.Core.Admin.Dao</RootNamespace>
-    <AssemblyName>Vns.Core.Admin.Dao</AssemblyName>
+    <RootNamespace>Vns.Erp.Core.Admin.Dao</RootNamespace>
+    <AssemblyName>Vns.Erp.Core.Admin.Dao</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>

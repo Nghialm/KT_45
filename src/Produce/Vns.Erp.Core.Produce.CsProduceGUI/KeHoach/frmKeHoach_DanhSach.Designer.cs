@@ -577,11 +577,13 @@
             this.ClientSize = new System.Drawing.Size(1176, 753);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.groupControl1);
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmKeHoach_DanhSach";
-            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "Danh sách kế hoạch";
             this.Load += new System.EventHandler(this.frmKeHoach_DanhSach_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmKeHoach_DanhSach_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbQuyTrinh)).EndInit();

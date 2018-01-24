@@ -34,6 +34,12 @@
 		<property name="DmDonviService" ref="DmDonviService" />
 		<property name="AppDvGroupUserService" ref="AppDvGroupUserService" />
 	</object>
+
+  <object id="frmUserQuickEdit" type="Vns.Erp.Core.Admin.VbAdminGUI.frmUserQuickEdit, Vns.Erp.Core.Admin.VbAdminGUI">
+    <property name="AppUserService" ref="AppUsersService" />
+    <property name="DmDonviService" ref="DmDonviService" />
+  </object>
+  
 	<object id="frmGroupEdit" type="Vns.Erp.Core.Admin.VbAdminGUI.frmGroupEdit, Vns.Erp.Core.Admin.VbAdminGUI">
 		<property name="AppGroupsService" ref="AppGroupsService" />
 		<property name="DmDonviService" ref="DmDonviService" />

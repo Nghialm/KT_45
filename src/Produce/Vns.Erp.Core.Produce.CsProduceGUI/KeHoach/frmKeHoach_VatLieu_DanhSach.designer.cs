@@ -34,6 +34,8 @@
             this.btnModify = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddNew = new DevExpress.XtraEditors.SimpleButton();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.PagerControl = new DevExpress.XtraEditors.PanelControl();
+            this.CtlPagerControl = new Vns.Erp.Core.Common.Controls.PagerControl();
             this.gbQuyTrinh = new DevExpress.XtraEditors.GroupControl();
             this.grcDanhSach = new DevExpress.XtraGrid.GridControl();
             this.grvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -61,12 +63,12 @@
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.PagerControl = new DevExpress.XtraEditors.PanelControl();
-            this.CtlPagerControl = new Vns.Erp.Core.Common.Controls.PagerControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PagerControl)).BeginInit();
+            this.PagerControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbQuyTrinh)).BeginInit();
             this.gbQuyTrinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grcDanhSach)).BeginInit();
@@ -78,8 +80,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.grvChiTiet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PagerControl)).BeginInit();
-            this.PagerControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -161,6 +161,29 @@
             this.splitContainerControl1.SplitterPosition = 387;
             this.splitContainerControl1.TabIndex = 7;
             this.splitContainerControl1.Text = "splitContainerControl1";
+            // 
+            // PagerControl
+            // 
+            this.PagerControl.Controls.Add(this.CtlPagerControl);
+            this.PagerControl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PagerControl.Location = new System.Drawing.Point(0, 330);
+            this.PagerControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PagerControl.Name = "PagerControl";
+            this.PagerControl.Size = new System.Drawing.Size(1166, 57);
+            this.PagerControl.TabIndex = 7;
+            // 
+            // CtlPagerControl
+            // 
+            this.CtlPagerControl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CtlPagerControl.Location = new System.Drawing.Point(601, 2);
+            this.CtlPagerControl.Margin = new System.Windows.Forms.Padding(5);
+            this.CtlPagerControl.Name = "CtlPagerControl";
+            this.CtlPagerControl.PageIndex = 1;
+            this.CtlPagerControl.PageSize = 10;
+            this.CtlPagerControl.Size = new System.Drawing.Size(563, 53);
+            this.CtlPagerControl.TabIndex = 0;
+            this.CtlPagerControl.TotalPage = 0;
+            this.CtlPagerControl.TotalResult = 0;
             // 
             // gbQuyTrinh
             // 
@@ -540,29 +563,6 @@
             this.repositoryItemCheckEdit2.ValueChecked = 1;
             this.repositoryItemCheckEdit2.ValueUnchecked = 0;
             // 
-            // PagerControl
-            // 
-            this.PagerControl.Controls.Add(this.CtlPagerControl);
-            this.PagerControl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PagerControl.Location = new System.Drawing.Point(0, 330);
-            this.PagerControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PagerControl.Name = "PagerControl";
-            this.PagerControl.Size = new System.Drawing.Size(1166, 57);
-            this.PagerControl.TabIndex = 7;
-            // 
-            // CtlPagerControl
-            // 
-            this.CtlPagerControl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.CtlPagerControl.Location = new System.Drawing.Point(601, 2);
-            this.CtlPagerControl.Margin = new System.Windows.Forms.Padding(5);
-            this.CtlPagerControl.Name = "CtlPagerControl";
-            this.CtlPagerControl.PageIndex = 1;
-            this.CtlPagerControl.PageSize = 10;
-            this.CtlPagerControl.Size = new System.Drawing.Size(563, 53);
-            this.CtlPagerControl.TabIndex = 0;
-            this.CtlPagerControl.TotalPage = 0;
-            this.CtlPagerControl.TotalResult = 0;
-            // 
             // frmKeHoach_VatLieu_DanhSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -570,15 +570,19 @@
             this.ClientSize = new System.Drawing.Size(1176, 753);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.groupControl1);
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmKeHoach_VatLieu_DanhSach";
-            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "Danh sách kế hoạch";
             this.Load += new System.EventHandler(this.frmKeHoach_DanhSach_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmKeHoach_VatLieu_DanhSach_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PagerControl)).EndInit();
+            this.PagerControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbQuyTrinh)).EndInit();
             this.gbQuyTrinh.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grcDanhSach)).EndInit();
@@ -590,8 +594,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.grvChiTiet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PagerControl)).EndInit();
-            this.PagerControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

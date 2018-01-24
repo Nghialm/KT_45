@@ -17,7 +17,7 @@ namespace Vns.Erp.Core.Admin.Service.Interface
     public interface IDmNgoaiteService : IErpService<DmNgoaite, Guid>
     {
         [OperationContract]
-        IList<DmNgoaite> GetAllByKyHieu(string KyHieu);
+        IList<DmNgoaite> GetAllByKyHieu(Guid DonviId, string KyHieu);
 
         IList<DmNgoaite> GetAllByDonviID(Guid DonviId);
     }

@@ -38,10 +38,6 @@
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.dteDenNgay = new DevExpress.XtraEditors.DateEdit();
-            this.dteTuNgay = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.grcReport = new DevExpress.XtraGrid.GridControl();
             this.grvReport = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -57,16 +53,13 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dateTimeInput1 = new Vns.Erp.Core.Controls.UserControl.DateTimeInput();
             ((System.ComponentModel.ISupportInitialize)(this.cboPhanXuong)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboKeHoachSx.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteDenNgay.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteDenNgay.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteTuNgay.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteTuNgay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvReport)).BeginInit();
             this.SuspendLayout();
@@ -89,35 +82,35 @@
             this.tableLayoutPanel1.Controls.Add(this.grcReport, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 123F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(820, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(957, 554);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.dateTimeInput1);
             this.groupControl1.Controls.Add(this.btnSearch);
             this.groupControl1.Controls.Add(this.cboKeHoachSx);
-            this.groupControl1.Controls.Add(this.labelControl3);
-            this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.dteDenNgay);
-            this.groupControl1.Controls.Add(this.dteTuNgay);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(3, 3);
+            this.groupControl1.Location = new System.Drawing.Point(3, 4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(814, 94);
+            this.groupControl1.Size = new System.Drawing.Size(951, 115);
             this.groupControl1.TabIndex = 3;
             // 
             // btnSearch
             // 
             this.btnSearch.ImageIndex = 20;
-            this.btnSearch.Location = new System.Drawing.Point(94, 57);
+            this.btnSearch.Location = new System.Drawing.Point(158, 67);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(80, 30);
+            this.btnSearch.Size = new System.Drawing.Size(93, 37);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "&Tìm kiếm";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -125,14 +118,15 @@
             // cboKeHoachSx
             // 
             this.cboKeHoachSx.EnterMoveNextControl = true;
-            this.cboKeHoachSx.Location = new System.Drawing.Point(94, 31);
+            this.cboKeHoachSx.Location = new System.Drawing.Point(158, 37);
+            this.cboKeHoachSx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboKeHoachSx.Name = "cboKeHoachSx";
             this.cboKeHoachSx.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cboKeHoachSx.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboKeHoachSx.Properties.NullText = "";
             this.cboKeHoachSx.Properties.View = this.gridView1;
-            this.cboKeHoachSx.Size = new System.Drawing.Size(153, 20);
+            this.cboKeHoachSx.Size = new System.Drawing.Size(178, 22);
             this.cboKeHoachSx.TabIndex = 2;
             // 
             // gridView1
@@ -180,81 +174,26 @@
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 3;
             // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(290, 8);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(47, 13);
-            this.labelControl3.TabIndex = 2;
-            this.labelControl3.Text = "Đến ngày";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(29, 8);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(40, 13);
-            this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Từ ngày";
-            // 
-            // dteDenNgay
-            // 
-            this.dteDenNgay.EditValue = null;
-            this.dteDenNgay.EnterMoveNextControl = true;
-            this.dteDenNgay.Location = new System.Drawing.Point(384, 5);
-            this.dteDenNgay.Name = "dteDenNgay";
-            this.dteDenNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteDenNgay.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
-            this.dteDenNgay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dteDenNgay.Properties.EditFormat.FormatString = "dd/MM/yyyy";
-            this.dteDenNgay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dteDenNgay.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dteDenNgay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.dteDenNgay.Properties.MaxValue = new System.DateTime(2999, 1, 1, 0, 0, 0, 0);
-            this.dteDenNgay.Properties.MinValue = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dteDenNgay.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dteDenNgay.Size = new System.Drawing.Size(153, 20);
-            this.dteDenNgay.TabIndex = 1;
-            // 
-            // dteTuNgay
-            // 
-            this.dteTuNgay.EditValue = null;
-            this.dteTuNgay.EnterMoveNextControl = true;
-            this.dteTuNgay.Location = new System.Drawing.Point(94, 5);
-            this.dteTuNgay.Name = "dteTuNgay";
-            this.dteTuNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteTuNgay.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
-            this.dteTuNgay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dteTuNgay.Properties.EditFormat.FormatString = "dd/MM/yyyy";
-            this.dteTuNgay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dteTuNgay.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dteTuNgay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.dteTuNgay.Properties.MaxValue = new System.DateTime(2999, 1, 1, 0, 0, 0, 0);
-            this.dteTuNgay.Properties.MinValue = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dteTuNgay.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dteTuNgay.Size = new System.Drawing.Size(153, 20);
-            this.dteTuNgay.TabIndex = 0;
-            // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(29, 34);
+            this.labelControl1.Location = new System.Drawing.Point(34, 42);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(47, 13);
+            this.labelControl1.Size = new System.Drawing.Size(61, 17);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Kế hoạch ";
             // 
             // grcReport
             // 
             this.grcReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grcReport.Location = new System.Drawing.Point(3, 103);
+            this.grcReport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grcReport.Location = new System.Drawing.Point(3, 127);
             this.grcReport.MainView = this.grvReport;
+            this.grcReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grcReport.Name = "grcReport";
             this.grcReport.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cboPhanXuong});
-            this.grcReport.Size = new System.Drawing.Size(814, 344);
+            this.grcReport.Size = new System.Drawing.Size(951, 423);
             this.grcReport.TabIndex = 2;
             this.grcReport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvReport});
@@ -390,15 +329,27 @@
             this.gridColumn16.VisibleIndex = 2;
             this.gridColumn16.Width = 127;
             // 
+            // dateTimeInput1
+            // 
+            this.dateTimeInput1.EndDate = new System.DateTime(((long)(0)));
+            this.dateTimeInput1.Location = new System.Drawing.Point(34, 5);
+            this.dateTimeInput1.Name = "dateTimeInput1";
+            this.dateTimeInput1.Size = new System.Drawing.Size(520, 25);
+            this.dateTimeInput1.StartDate = new System.DateTime(((long)(0)));
+            this.dateTimeInput1.TabIndex = 4;
+            // 
             // frmBcSanXuatVatLieuTh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 450);
+            this.ClientSize = new System.Drawing.Size(957, 554);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmBcSanXuatVatLieuTh";
             this.Text = "Báo cáo sử dụng vật tư, NVL";
             this.Load += new System.EventHandler(this.frmBcSanXuatVatLieuTh_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmBcSanXuatVatLieuTh_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.cboPhanXuong)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -406,10 +357,6 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboKeHoachSx.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteDenNgay.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteDenNgay.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteTuNgay.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteTuNgay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvReport)).EndInit();
             this.ResumeLayout(false);
@@ -427,10 +374,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.DateEdit dteDenNgay;
-        private DevExpress.XtraEditors.DateEdit dteTuNgay;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.GridControl grcReport;
         private DevExpress.XtraGrid.Views.Grid.GridView grvReport;
@@ -447,5 +390,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
+        private Controls.UserControl.DateTimeInput dateTimeInput1;
     }
 }

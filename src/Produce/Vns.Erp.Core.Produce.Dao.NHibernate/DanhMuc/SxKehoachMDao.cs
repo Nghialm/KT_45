@@ -14,7 +14,7 @@ namespace Vns.Erp.Core.Produce.Dao.NHibernate
         public IList<SxKehoachM> getByMaCt(int PageIndex, int PageSize, string MaLoaiCt, Guid DonviId, out int TotalResult)
         {
             String sql = "from SxKehoachM h where h.MaLoaiCt like :MaLoaiCt and h.DonviId = :DonviId";
-            String countsql = "count(h) from SxKehoachM h where h.MaLoaiCt like :MaLoaiCt and h.DonviId = :DonviId";
+            String countsql = "select count(h) from SxKehoachM h where h.MaLoaiCt like :MaLoaiCt and h.DonviId = :DonviId";
 
             IQuery query = Session.CreateQuery(sql);
             IQuery countQuery = Session.CreateQuery(countsql);

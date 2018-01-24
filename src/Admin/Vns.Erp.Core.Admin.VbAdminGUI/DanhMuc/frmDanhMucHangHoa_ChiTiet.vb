@@ -188,7 +188,7 @@ Partial Public Class frmDanhMucHangHoa_ChiTiet
 
     Public Overrides Sub BindLookUpEdit()
         '//Bind Đon v? tính
-        Dim dtDonViTinh As IList(Of DmDvt) = DmDvtService().GetAll()
+        Dim dtDonViTinh As IList(Of DmDvt) = DmDvtService().GetAllByDonviID(Generals.DonviID)
         Dim _DonViTinhColumnDefine As ArrayList = New ArrayList()
         _DonViTinhColumnDefine.Add(New ColumnInfo("TenDvt", "Tên đơn vị tính", 0, True, ""))
         TNCommon.BindData_GridLookUp(grlDVT_ID, dtDonViTinh, "TenDvt", "Id", _DonViTinhColumnDefine, True, True)

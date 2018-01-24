@@ -47,7 +47,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
         {
             try
             {
-                loadData((Guid)cboKeHoachSx.EditValue, dteTuNgay.DateTime, dteDenNgay.DateTime);
+                loadData((Guid)cboKeHoachSx.EditValue, dateTimeInput1.StartDate, dateTimeInput1.EndDate);
             }
             catch (Exception ex)
             {
@@ -57,9 +57,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
 
         private void frmBcSanXuatTheoNgay_Load(object sender, EventArgs e)
         {
-            dteTuNgay.DateTime = new DateTime(DateTime.Now.Year, 1, 1);
-            dteDenNgay.DateTime = new DateTime(DateTime.Now.Year, 12, 31);
-
+            
             bindDataToCbo();
         }
 
@@ -95,6 +93,16 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             if (e.RowValueType != DevExpress.XtraPivotGrid.PivotGridValueType.GrandTotal ||
                     e.ColumnValueType == DevExpress.XtraPivotGrid.PivotGridValueType.GrandTotal ||
                     e.ColumnValueType == DevExpress.XtraPivotGrid.PivotGridValueType.Total) return;
+        }
+
+        private void frmBcKeHoachTheoNgay_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    this.Close();
+                    break; // TODO: might not be correct. Was : Exit Select
+            }
         }
     }
 }

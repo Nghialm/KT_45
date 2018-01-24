@@ -67,7 +67,7 @@ Partial Public Class frmDanhMucNgoaiTe_ChiTiet
                         End If
                 End Select
 
-                If DmNgoaiteService.GetAllByKyHieu(kh).Count <> 0 Then
+                If DmNgoaiteService.GetAllByKyHieu(Generals.DonviID, kh).Count <> 0 Then
                     ErrorProvider.SetError(txtKY_HIEU, "Ký hiệu này đã tồn tại!")
                     ErrorProvider.SetIconAlignment(txtKY_HIEU, ErrorIconAlignment.MiddleLeft)
                     e.Cancel = True
