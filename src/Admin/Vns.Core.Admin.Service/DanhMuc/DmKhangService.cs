@@ -29,6 +29,24 @@ namespace Vns.Erp.Core.Admin.Service
         {
             return DmKhangDao.GetAllByDonviID(DonviId);
         }
+
+        public IList<DmKhang> GetAllByDonviId(Guid DonviId, Decimal LoaiKhang)
+        {
+            ArrayList props = new ArrayList();
+            ArrayList values = new ArrayList();
+            ArrayList expressions = new ArrayList();
+
+            props.Add("DonviId");
+            values.Add(DonviId);
+            expressions.Add("=");
+            if (LoaiKhang != -1)
+            {
+                props.Add("LoaiKhang");
+                values.Add(LoaiKhang);
+            }
+
+            return DmKhangDao.List(-1, -1, props, values);
+        }
         /// <summary>
         /// Filter by Cataloger
         /// </summary>

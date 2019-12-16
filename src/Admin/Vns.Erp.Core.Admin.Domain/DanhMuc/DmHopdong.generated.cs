@@ -46,6 +46,10 @@ namespace Vns.Erp.Core.Admin.Domain
         private Guid _nguoi_sua;
         private DateTime _ngay_sua;
         private DateTime _SynDate;
+        private DateTime _NgayHopdong;
+        private decimal _DiaLy;
+        private Guid _KhangId;
+        private DateTime _eta;
         #endregion
 
         #region Default ( Empty ) Class Constuctor
@@ -73,6 +77,10 @@ namespace Vns.Erp.Core.Admin.Domain
             _nguoi_sua = Guid.Empty;
             _ngay_sua = DateTime.MaxValue;
             _SynDate = Null.MIN_DATE;
+            _NgayHopdong = DateTime.MaxValue;
+            _DiaLy = 0;
+            _KhangId = Null.NullGuid;
+            _eta = DateTime.MaxValue;
         }
         #endregion // End of Default ( Empty ) Class Constuctor
 
@@ -342,6 +350,33 @@ namespace Vns.Erp.Core.Admin.Domain
             set { _isChanged |= (_SynDate != value); _SynDate = value; }
         }
 
+        [DataMember]
+        public DateTime NgayHopdong
+        {
+            get { return _NgayHopdong; }
+            set { _isChanged |= (_NgayHopdong != value); _NgayHopdong = value; }
+        }
+
+        [DataMember]
+        public Guid KhangId
+        {
+            get { return _KhangId; }
+            set { _isChanged |= (_KhangId != value); _KhangId = value; }
+        }
+
+        [DataMember]
+        public decimal DiaLy
+        {
+            get { return _DiaLy; }
+            set { _isChanged |= (_DiaLy != value); _DiaLy = value; }
+        }
+
+        [DataMember]
+        public DateTime Eta
+        {
+            get { return _eta; }
+            set { _isChanged |= (_eta != value); _eta = value; }
+        }
 
         /// <summary>
         /// Returns whether or not the object has changed it's values.

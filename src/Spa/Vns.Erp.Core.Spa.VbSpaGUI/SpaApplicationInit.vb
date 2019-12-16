@@ -23,7 +23,7 @@ Public Class SpaApplicationInit
         SpaGeneral.TkGiaVonInfo = DmTaikhoanService.GetObjectByMaTK(SpaGeneral.TkGiaVon, Generals.DON_VI.Id)
         SpaGeneral.TkKhoInfo = DmTaikhoanService.GetObjectByMaTK(SpaGeneral.TkKho, Generals.DON_VI.Id)
         SpaGeneral.TkLuongInfo = DmTaikhoanService.GetObjectByMaTK(SpaGeneral.TkLuong, Generals.DON_VI.Id)
-        SpaGeneral.NoiTe = DmNgoaiteService.GetById(VnsConvert.CGuid(Generals.TS_NoiTe_ID.GiaTri))
+        'SpaGeneral.NoiTe = DmNgoaiteService.Get(VnsConvert.CGuid(Generals.TS_NoiTe_ID.GiaTri))
         SpaGeneral.LctLuong = HtLoaichungtuService.GetByMA_LOAI_CT(SpaGeneral.MaBangLuong, Generals.DON_VI.Id)
         SpaGeneral.TKChietKhauGiamGiaDvInfo = DmTaikhoanService.GetObjectByMaTK(SpaGeneral.TKChietKhauGiamGiaDv, Generals.DON_VI.Id)
 

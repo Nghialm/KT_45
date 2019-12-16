@@ -28,7 +28,8 @@
 		<property column="MD_TK_GIAVON" type="String" name="MdTkGiavon" length="32" />
 		<property column="MD_TK_GIABAN" type="String" name="MdTkGiaban" length="32" />
 		<property column="MD_TK_GIABAN_NB" type="String" name="MdTkGiabanNb" length="32" />
-		<property column="MD_TK_HB_TRALAI" type="String" name="MdTkHbTralai" length="32" />
+    <property column="MD_TK_HB_TRALAI" type="String" name="MdTkHbTralai" length="32" />
+    <property column="MD_TK_DIDUONG" type="String" name="MdTkDiduong" length="32" />
 		<property column="MD_TK_SP_DD" type="String" name="MdTkSpDd" length="32" />
 		<property column="NGUOI_TAO" type="Guid" name="NguoiTao" />
 		<property column="NGAY_TAO" type="DateTime" name="NgayTao" />

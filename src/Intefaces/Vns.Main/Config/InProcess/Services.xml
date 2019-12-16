@@ -472,10 +472,28 @@
   
   <object id="ProduceReportService" type="Vns.Erp.Core.Produce.Service.Report.ProduceReportService, Vns.Erp.Core.Produce.Service">
     <property name="ProduceReportDao" ref="ProduceReportDao"/>
+    <property name="DmKhoDao" ref="DmKhoDao"/>
+    <property name="DmHanghoaDao" ref="DmHanghoaDao"/>
+    <property name="DmNhomvattu1Dao" ref="DmNhomvattu1Dao"/>
+    <property name="DmHopdongDao" ref="DmHopdongDao"/>
+    <property name="HtDanhmucDao" ref="HtDanhmucDao"/>
+    <property name="BangGiaHDao" ref="BangGiaHDao"/>
+    <property name="BangGiaDDao" ref="BangGiaDDao"/>
   </object>
 
   <object id="RpAdminLedgerService" type="Vns.Erp.Core.Accounting.Report.Service.RpAdminLedgerService, Vns.Erp.Core.Accounting.Report.Service">
     <property name="RpLedgerAccountDao" ref="RpLedgerAccountDao"/>
   </object>
+
+  <!--Bang gia opec-->
+  <object id="BangGiaDService" type="Vns.Erp.Core.Produce.Service.BangGiaDService, Vns.Erp.Core.Produce.Service">
+    <property name="BangGiaDDao" ref="BangGiaDDao"/>
+  </object>
+
+  <object id="BangGiaHService" type="Vns.Erp.Core.Produce.Service.BangGiaHService, Vns.Erp.Core.Produce.Service">
+    <property name="BangGiaHDao" ref="BangGiaHDao"/>
+    <property name="BangGiaDDao" ref="BangGiaDDao"/>
+  </object>
+  <!--Bang gia opec-->
   
 </objects>

@@ -77,6 +77,10 @@ Public Class frmPhieuNhapKhau_Danhsach
         FormID = Me.Name + "?" + Me.AccessibleDescription
         ConfigGrid.GridConfig(FormID, grvLPN_Dnx.Name, grvLPN_Dnx)
         ConfigGrid.GridConfig(FormID, grvLPX_Hnx.Name, grvLPX_Hnx)
+
+        grvLPN_Dnx.Columns("MaTknThueGtgt").Visible = obj_loaichungtu.SdTkThueNgamdinh
+        grvLPN_Dnx.Columns("SoTienThueGtgt").Visible = obj_loaichungtu.SdTkThueNgamdinh
+        'LoadInfoBy(obj_loaichungtu)
     End Sub
 
     ''' <summary>
@@ -106,16 +110,25 @@ Public Class frmPhieuNhapKhau_Danhsach
                 End If
             End If
             'gan ten form theo ten quy dinh trong bang HT loai chung tu
-            Me.Text = obj_loaichungtu.TenLoaiCt
+            If obj_loaichungtu IsNot Nothing Then
+                Me.Text = obj_loaichungtu.TenLoaiCt
+            End If
 
             BindControl()
             'goi ham xu ly load form
             Load_Grid()
             PagerControl1.display = New DisplayResult(AddressOf Load_Grid)
             PagerControl1.RefreshPage()
+
+
         Catch ex As Exception
             Message_Error(ex)
         End Try
+    End Sub
+
+    Private Sub LoadInfoBy(objChungTu As HtLoaichungtu)
+        grvLPN_Dnx.Columns("MA_TKN_THUE_GTGT").Visible = objChungTu.SdTkThueNgamdinh
+        grvLPN_Dnx.Columns("SO_TIEN_THUE_GTGT").Visible = objChungTu.SdTkThueNgamdinh
     End Sub
 
 #End Region
@@ -150,7 +163,7 @@ Public Class frmPhieuNhapKhau_Danhsach
             phieuCT_D_NxData = Nothing
         End If
         Grid_LoadData(grvLPN_Dnx, phieuCT_D_NxData)
-        
+
     End Sub
 
     Private Sub BindControl()

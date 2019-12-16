@@ -154,6 +154,10 @@ Partial Public Class frmDanhMucHopDong_ChiTiet
             info.NguoiSua = Generals.USER.Id
             info.CoSuDung = TNCommon.ParseDecimal(chkCO_SU_DUNG.Checked)
             info.SynDate = Null.MIN_DATE
+
+            info.Eta = txtETA.EditValue
+            info.DiaLy = cboDiaLy.EditValue
+
             MyBase.ResultObject = info
             Return info
         End Get
@@ -166,10 +170,13 @@ Partial Public Class frmDanhMucHopDong_ChiTiet
                 txtKy_Hieu.Text = obj.KyHieu
                 chkCO_SU_DUNG.Checked = TNCommon.ParseBool(obj.CoSuDung)
                 cboHOPDONG_ID_CHA.EditValue = obj.HopdongIdCha
-                cboTEN_LOAI_HOPDONG1.EditValue = obj.LoaiHopdong
+                cboTEN_LOAI_HOPDONG1.EditValue = Convert.ToInt32(obj.LoaiHopdong)
                 KH_Old = obj.KyHieu
                 txtTEN_HOPDONG.Text = obj.TenHopdong
                 txtMO_TA.Text = obj.MoTa
+
+                txtETA.EditValue = obj.Eta
+                cboDiaLy.EditValue = Convert.ToInt32(obj.DiaLy)
             End If
         End Set
     End Property
@@ -198,6 +205,11 @@ Partial Public Class frmDanhMucHopDong_ChiTiet
             Dim _HopDongColumnDefine As ArrayList = New ArrayList()
             _HopDongColumnDefine.Add(New ColumnInfo("TenDanhmuc", "Loại hợp đồng", 0, True, ""))
             TNCommon.BindData_LookupEdit(cboTEN_LOAI_HOPDONG1, dtHopDong, "TenDanhmuc", "GiaTri", _HopDongColumnDefine, True)
+
+            Dim dtDiaLy As IList(Of HtDanhmuc) = HtDanhmucService.GetByDoiTuong("DIA_LY")
+            Dim DiaLyColumnDefine As ArrayList = New ArrayList()
+            DiaLyColumnDefine.Add(New ColumnInfo("TenDanhmuc", "Địa lý", 0, True, ""))
+            TNCommon.BindData_LookupEdit(cboDiaLy, dtDiaLy, "TenDanhmuc", "GiaTri", DiaLyColumnDefine, True, True)
         Catch ex As Exception
             Message_Error(ex)
         End Try

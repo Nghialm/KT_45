@@ -241,5 +241,159 @@ namespace Vns.Erp.Core.Produce.Dao.NHibernate.Report
             IList<SxBkVatLieuDTO> lstVatLieu = qbcketoan.List<SxBkVatLieuDTO>();
             return lstVatLieu;
         }
+
+        public IList<BcKeToanKhoDTO> GetTongHopHangDiDuong(DateTime DenNgay, Guid DonviId, Boolean IsNhap)
+        {
+            IList<BcKeToanKhoDTO> lstSoLuong = new List<BcKeToanKhoDTO>();
+
+            string MaNghiepVu = "MaTknGiavon";
+            if (!IsNhap) { MaNghiepVu = "MaTkcGiavon"; }
+            
+            string sSoLuong = "SoLuongNhap";
+            if (!IsNhap) { sSoLuong = "SoLuongXuat"; }
+
+            List<String> lstNghiepVu = new List<string>();
+            lstNghiepVu.Add("151");
+
+            string dkSoLuong = "";
+            string dkXuat = "";
+            int icount = 0;
+            foreach (string nv in lstNghiepVu)
+            {
+                if (!String.IsNullOrEmpty(dkSoLuong))
+                {
+                    dkSoLuong += " OR ";
+                    dkXuat += " OR ";
+                }
+                dkSoLuong += String.Format(" bc.{0} like :MaTk{1} ", MaNghiepVu, icount);
+                icount++;
+            }
+            String sqlSanLuongNhap = "Select bc.HanghoaId as HanghoaId, bc.MaVuviec as MaVuviec, " +
+                String.Format("bc.{0} as {0}, bc.{1} as {1}, Sum(bc.SoLuong) as {2} ", MaNghiepVu, "Cang", sSoLuong) +
+                "From BcKetoanKho bc " +
+                "Where bc.NgayCt <= :DenNgay " +
+                (string.IsNullOrEmpty(dkSoLuong) ? "" : String.Format("AND ({0}) ", dkSoLuong)) +
+                "And bc.DonviId = :DonviId " +
+                String.Format("Group by bc.HanghoaId, bc.{0}, bc.{1}, bc.MaVuviec ", MaNghiepVu, "Cang");
+
+            IQuery qSoLuong = NHibernateSession.CreateQuery(sqlSanLuongNhap);
+            qSoLuong.SetParameter("DenNgay", DenNgay);
+            icount = 0;
+            foreach (string nv in lstNghiepVu)
+            {
+                qSoLuong.SetParameter(String.Format("MaTk{0}", icount), nv);
+                icount++;
+            }
+            qSoLuong.SetParameter("DonviId", DonviId);
+            qSoLuong.SetResultTransformer(Transformers.AliasToBean<BcKeToanKhoDTO>());
+            lstSoLuong = qSoLuong.List<BcKeToanKhoDTO>();
+
+            return lstSoLuong;
+        }
+
+        public IList<BcKeToanKhoDTO> GetTongHopKho(DateTime DenNgay, Guid DonviId, Boolean IsNhap)
+        {
+            IList<BcKeToanKhoDTO> lstSoLuong = new List<BcKeToanKhoDTO>();
+
+            string MaNghiepVu = "MaTknGiavon";
+            if (!IsNhap) { MaNghiepVu = "MaTkcGiavon"; }
+
+            string MaKho = "KhoNhapId";
+            if (!IsNhap) { MaKho = "KhoXuatId"; }
+
+            string sSoLuong = "SoLuongNhap";
+            if (!IsNhap) { sSoLuong = "SoLuongXuat"; }
+
+            List<String> lstNghiepVu = new List<string>();
+            lstNghiepVu.Add("152");
+
+            string dkSoLuong = "";
+            string dkXuat = "";
+            int icount = 0;
+            foreach (string nv in lstNghiepVu)
+            {
+                if (!String.IsNullOrEmpty(dkSoLuong))
+                {
+                    dkSoLuong += " OR ";
+                    dkXuat += " OR ";
+                }
+                dkSoLuong += String.Format(" bc.{0} like :MaTk{1} ", MaNghiepVu, icount);
+                icount++;
+            }
+            String sqlSanLuongNhap = "Select bc.HanghoaId as HanghoaId, bc.MaVuviec as MaVuviec, " +
+                String.Format("bc.{0} as {0}, bc.{1} as {1}, Sum(bc.SoLuong) as {2} ", MaNghiepVu, MaKho, sSoLuong) +
+                "From BcKetoanKho bc " +
+                "Where bc.NgayCt <= :DenNgay " +
+                (string.IsNullOrEmpty(dkSoLuong) ? "" : String.Format("AND ({0}) ", dkSoLuong)) +
+                "And bc.DonviId = :DonviId " +
+                String.Format("Group by bc.HanghoaId, bc.{0}, bc.{1}, bc.MaVuviec ", MaNghiepVu, MaKho);
+            
+            IQuery qSoLuong = NHibernateSession.CreateQuery(sqlSanLuongNhap);
+            qSoLuong.SetParameter("DenNgay", DenNgay);
+            icount = 0;
+            foreach (string nv in lstNghiepVu)
+            {
+                qSoLuong.SetParameter(String.Format("MaTk{0}", icount), nv);
+                icount++;
+            }
+            qSoLuong.SetParameter("DonviId", DonviId);
+            qSoLuong.SetResultTransformer(Transformers.AliasToBean<BcKeToanKhoDTO>());
+            lstSoLuong = qSoLuong.List<BcKeToanKhoDTO>();
+
+            return lstSoLuong;
+        }
+        
+        public IList<BcKeToanKhoDTO> GetBangKeOpec(DateTime TuNgay, DateTime DenNgay, Guid DonviId, Boolean IsNhap)
+        {
+            IList<BcKeToanKhoDTO> lstSoLuong = new List<BcKeToanKhoDTO>();
+
+            string MaNghiepVu = "MaTknGiavon";
+            if (!IsNhap) { MaNghiepVu = "MaTkcGiavon"; }
+
+            string MaKho = "KhoNhapId";
+            if (!IsNhap) { MaKho = "KhoXuatId"; }
+
+            string sSoLuong = "SoLuongNhap";
+            if (!IsNhap) { sSoLuong = "SoLuongXuat"; }
+
+            List<String> lstNghiepVu = new List<string>();
+            lstNghiepVu.Add("151");
+            lstNghiepVu.Add("152");
+
+            string dkSoLuong = "";
+            string dkXuat = "";
+            int icount = 0;
+            foreach (string nv in lstNghiepVu)
+            {
+                if (!String.IsNullOrEmpty(dkSoLuong))
+                {
+                    dkSoLuong += " OR ";
+                    dkXuat += " OR ";
+                }
+                dkSoLuong += String.Format(" bc.{0} like :MaTk{1} ", MaNghiepVu, icount);
+                icount++;
+            }
+            String sqlSanLuongNhap = "Select bc.KyHieuLoaiCt as KyHieuLoaiCt, bc.NgayCt as NgayCt, bc.HanghoaId as HanghoaId, bc.MaVuviec as MaVuviec, bc.MaHopdong as MaHopdong, " +
+                String.Format("bc.Cang as Cang, bc.{0} as MaTk, bc.{1} as KhoId, bc.SoLuong as {2} ", MaNghiepVu, MaKho, sSoLuong) +
+                "From BcKetoanKho bc " +
+                "Where bc.NgayCt <= :DenNgay And bc.NgayCt >= :TuNgay " +
+                (string.IsNullOrEmpty(dkSoLuong) ? "" : String.Format("AND ({0}) ", dkSoLuong)) +
+                "And bc.DonviId = :DonviId ";
+
+            IQuery qSoLuong = NHibernateSession.CreateQuery(sqlSanLuongNhap);
+            qSoLuong.SetParameter("TuNgay", TuNgay);
+            qSoLuong.SetParameter("DenNgay", DenNgay);
+            icount = 0;
+            foreach (string nv in lstNghiepVu)
+            {
+                qSoLuong.SetParameter(String.Format("MaTk{0}", icount), nv);
+                icount++;
+            }
+            qSoLuong.SetParameter("DonviId", DonviId);
+            qSoLuong.SetResultTransformer(Transformers.AliasToBean<BcKeToanKhoDTO>());
+            lstSoLuong = qSoLuong.List<BcKeToanKhoDTO>();
+
+            return lstSoLuong;
+        }
     }
 }

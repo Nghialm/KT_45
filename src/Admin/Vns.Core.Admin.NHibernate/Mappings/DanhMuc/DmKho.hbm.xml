@@ -19,6 +19,9 @@
 		<property column="LOAI_KHO" type="Decimal" precision="2" scale="0" name="LoaiKho" />
 		<property column="XUAT_AM" type="Decimal" precision="2" scale="0" name="XuatAm" />
 
+    <property column="DIA_LY" type="Decimal" precision="2" scale="0" name="DiaLy" />
+
+
     <property name="SynDate" not-null="false"  column="Syn_Date" type="DateTime" />
   </class>
 </hibernate-mapping>

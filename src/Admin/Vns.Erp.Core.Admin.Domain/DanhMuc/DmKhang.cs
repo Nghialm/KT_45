@@ -16,5 +16,15 @@ namespace Vns.Erp.Core.Admin.Domain
         #region Extend Property
         public virtual DmNhomKhang ObjDmNhomKhang1 { get; set; }
         #endregion
+
+        #region Display value
+        public virtual string NameDisplay
+        {
+            get
+            {
+                return _ky_hieu + " - " + _ten_khang;
+            }
+        }
+        #endregion
     }
 }

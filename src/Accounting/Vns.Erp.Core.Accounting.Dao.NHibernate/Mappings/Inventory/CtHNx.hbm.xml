@@ -68,6 +68,8 @@
     <property name="IsDeleted" type="Decimal" precision="4" scale="0">
       <column name="Is_Deleted" default="0"/>
     </property>
+    
+    <property name="PpThanhtoan" column="PP_THANHTOAN" type="Int32"/>
       
     <bag name="LstCtDNx" lazy="false" cascade="none" >
       <key column="CTH_NX_ID"></key>

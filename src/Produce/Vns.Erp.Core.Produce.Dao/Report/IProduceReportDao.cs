@@ -27,5 +27,11 @@ namespace Vns.Erp.Core.Produce.Dao.Report
         IList<SxBkVatLieuDTO> GetBangKeVatLieu(DateTime TuNgay, DateTime DenNgay,
             Guid KeHoachId, Guid LenhSxId, Guid KhoId, Guid PhanXuongId, Guid VatTuId,
             Guid DonviId);
+
+        IList<BcKeToanKhoDTO> GetTongHopHangDiDuong(DateTime DenNgay, Guid DonviId, Boolean IsNhap);
+
+        IList<BcKeToanKhoDTO> GetTongHopKho(DateTime DenNgay, Guid DonviId, Boolean IsNhap);
+
+        IList<BcKeToanKhoDTO> GetBangKeOpec(DateTime TuNgay, DateTime DenNgay, Guid DonviId, Boolean IsNhap);
     }
 }

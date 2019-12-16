@@ -57,6 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BangGia\IBangGiaDDao.cs" />
+    <Compile Include="BangGia\IBangGiaHDao.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DanhMuc\ISxDmQuytrinhDao.cs" />
     <Compile Include="DanhMuc\ISxKehoachDDao.cs" />

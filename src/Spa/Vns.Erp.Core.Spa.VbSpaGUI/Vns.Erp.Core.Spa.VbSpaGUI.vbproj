@@ -52,102 +52,135 @@
     <Reference Include="DevComponents.DotNetBar2">
       <HintPath>..\..\..\References\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.BonusSkins.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.BonusSkins.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.BonusSkins.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.Data.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.Data.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.OfficeSkins.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.OfficeSkins.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.Utils.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.Xpo.v10.2.Design">
-      <HintPath>..\..\..\References\DevEx10\DevExpress.Xpo.v10.2.Design.dll</HintPath>
+    <Reference Include="DevExpress.Xpo.v12.1.Design">
+      
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraBars.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v10.2.Design">
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraBars.v10.2.Design.dll</HintPath>
+    <Reference Include="DevExpress.XtraBars.v12.1.Design">
+      
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraEditors.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraGrid.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v10.2.Design">
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraGrid.v10.2.Design.dll</HintPath>
+    <Reference Include="DevExpress.XtraGrid.v12.1.Design">
+      
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraLayout.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v10.2.Design">
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraLayout.v10.2.Design.dll</HintPath>
+    <Reference Include="DevExpress.XtraLayout.v12.1.Design">
+      
     </Reference>
-    <Reference Include="DevExpress.XtraNavBar.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraNavBar.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraNavBar.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.XtraNavBar.v10.2.Design">
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraNavBar.v10.2.Design.dll</HintPath>
+    <Reference Include="DevExpress.XtraNavBar.v12.1.Design">
+      
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraPrinting.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v10.2.Design">
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraPrinting.v10.2.Design.dll</HintPath>
+    <Reference Include="DevExpress.XtraPrinting.v12.1.Design">
+      
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Charts.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraReports.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraRichEdit.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v10.2.Design">
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraRichEdit.v10.2.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v10.2.Extensions">
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraRichEdit.v10.2.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.PivotGrid.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v10.2.Core, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.Core.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v10.2.Design">
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Reports.v12.1.Designer, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraTreeList.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v10.2.Design">
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraTreeList.v10.2.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraVerticalGrid.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v12.1.Extensions, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraVerticalGrid.v10.2.dll</HintPath>
+      
     </Reference>
-    <Reference Include="DevExpress.XtraVerticalGrid.v10.2.Design">
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraVerticalGrid.v10.2.Design.dll</HintPath>
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v12.1.Design">
+      
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v12.1.Extensions">
+      
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v12.1.Reporting.Extensions, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v12.1.Design">
+      
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.1.Design">
+      
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v12.1.Design">
+      
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

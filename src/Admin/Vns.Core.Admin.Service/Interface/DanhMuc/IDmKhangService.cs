@@ -24,5 +24,8 @@ namespace Vns.Erp.Core.Admin.Service.Interface
         IList<DmKhang> GetAllByDonviID(int PageIndex, int PageSize, Guid DonviId, Decimal LoaiKhang, out int TotalResult);
         [OperationContract]
         IList<DmKhang> GetKhByNgaySinh(int p_thang);
+
+        [OperationContract]
+        IList<DmKhang> GetAllByDonviId(Guid DonviId, Decimal LoaiKhang);
     }
 }

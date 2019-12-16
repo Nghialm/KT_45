@@ -288,7 +288,11 @@ Public Class frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet
                 lstobj_ct_h_gg = lstcthg
             End If
             'Control_SetRequire(dteNGAY_GHI, True)
-            UR_STATUS.LCT_STATUS = obj_lct.Id
+            If obj_lct IsNot Nothing Then
+                LoadInfoBy(obj_lct)
+                UR_STATUS.LCT_STATUS = obj_lct.Id
+            End If
+
             frmProgress.Instance.Thread = AddressOf Init_Data
             frmProgress.Instance.Show_Progress()
             AddHandler grvLPX_Hnx.FocusedRowChanged, AddressOf grvLPX_Hnx_FocusedRowChanged
@@ -306,6 +310,27 @@ Public Class frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet
             Message_Error(ex)
         End Try
     End Function
+
+    Private Sub LoadInfoBy(objChungTu As HtLoaichungtu)
+        GrcHoaDonBanHang_View.Columns("ThueId").Visible = objChungTu.SdTkThueNgamdinh
+        GrcHoaDonBanHang_View.Columns("TyLeThueGtgt").Visible = objChungTu.SdTkThueNgamdinh
+        GrcHoaDonBanHang_View.Columns("SoTienThueGtgt").Visible = objChungTu.SdTkThueNgamdinh
+        GrcHoaDonBanHang_View.Columns("SoTienCk").Visible = objChungTu.SdTkThueNgamdinh
+        labelControl30.Visible = objChungTu.SdTkThueNgamdinh
+        GFilter_TKC_THUE_GTGT.Visible = objChungTu.SdTkThueNgamdinh
+        GFilter_TKN_THUE_GTGT.Visible = objChungTu.SdTkThueNgamdinh
+        labelControl44.Visible = objChungTu.SdTkThueNgamdinh
+        txtTienThue.Visible = objChungTu.SdTkThueNgamdinh
+        ckeNhapTienThue.Visible = objChungTu.SdTkThueNgamdinh
+        labelControl34.Visible = objChungTu.SdTkThueNgamdinh
+        GFilter_TKC_CK.Visible = objChungTu.SdTkThueNgamdinh
+        GFilter_TKN_CK.Visible = objChungTu.SdTkThueNgamdinh
+        labelControl45.Visible = objChungTu.SdTkThueNgamdinh
+        txtTaiKhoanChietKhau.Visible = objChungTu.SdTkThueNgamdinh
+        chkChietKhau.Visible = objChungTu.SdTkThueNgamdinh
+        LabelControl7.Visible = objChungTu.SdTkThueNgamdinh
+        LabelControl8.Visible = objChungTu.SdTkThueNgamdinh
+    End Sub
 #End Region
 
 #Region "Private Function and Procedures"
@@ -526,10 +551,11 @@ Public Class frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet
             lstVuviec.Add(objvuviec)
             lstVuviec.AddRange(lstVuViecTemp)
             cboVuViec.DataSource = lstVuviec
-            cboVuViec.DisplayMember = "KyHieu"
-            cboVuViec.ValueMember = "Id"
-            cboVuViec.Columns.Add(New LookUpColumnInfo("KyHieu", "Mã vụ việc"))
-            cboVuViec.Columns.Add(New LookUpColumnInfo("TenVuviec", "Tên vụ việc"))
+            'cboVuViec.DisplayMember = "KyHieu"
+            'cboVuViec.ValueMember = "Id"
+            'cboVuViec.Columns.Add(New LookUpColumnInfo("KyHieu", "Mã vụ việc"))
+            'cboVuViec.Columns.Add(New LookUpColumnInfo("TenVuviec", "Tên vụ việc"))
+            rcboDmVuviec.DataSource = lstVuviec
 
             'Bind danh muc ngoai te
             Dim lstNgoaite As List(Of DmNgoaite) = New List(Of DmNgoaite)
@@ -1436,7 +1462,7 @@ Public Class frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet
             If obj_ct_h_nx.DaKhoaSo = 0 Then
                 Try
                     m_InputState = DataInputState.EditMode
-                    checkEdit3.Checked = False
+                    chkChietKhau.Checked = False
                     DatTrangThaiControl()
                 Catch ex As Exception
                     Message_Error(ex)
@@ -1482,6 +1508,7 @@ Public Class frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet
         Try
             RemoveHandler GrcHoaDonBanHang_View.RowCellStyle, AddressOf GrcHoaDonBanHang_View_RowCellStyle
             obj_ct_h_nx = New CtHNx
+            objcthoadon = New CtHoadon
             m_InputState = DataInputState.AddMode
             DatTrangThaiControl()
             ClearPage()
@@ -1599,7 +1626,7 @@ Public Class frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet
         EnterNext(sender, e)
     End Sub
 
-    Private Sub checkEdit3_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles checkEdit3.KeyDown
+    Private Sub checkEdit3_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles chkChietKhau.KeyDown
         EnterNext(sender, e)
     End Sub
 
@@ -1910,8 +1937,8 @@ Public Class frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet
         End If
     End Sub
 
-    Private Sub checkEdit3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles checkEdit3.CheckedChanged
-        If checkEdit3.Checked = True Then
+    Private Sub checkEdit3_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkChietKhau.CheckedChanged
+        If chkChietKhau.Checked = True Then
             txtTaiKhoanChietKhau.Enabled = True
         Else
             txtTaiKhoanChietKhau.Enabled = False
@@ -1976,7 +2003,7 @@ Public Class frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet
 
     Private Sub txtTaiKhoanChietKhau_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtTaiKhoanChietKhau.TextChanged
         Try
-            If Not checkEdit3.Checked Then
+            If Not chkChietKhau.Checked Then
                 Exit Sub
             End If
             Try

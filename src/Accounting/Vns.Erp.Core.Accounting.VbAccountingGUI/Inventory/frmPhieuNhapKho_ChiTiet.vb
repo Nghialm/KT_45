@@ -505,7 +505,7 @@ Public Class frmPhieuNhapKho_ChiTiet
 
         'Bind ngoai te
         Dim lstNgoaite As List(Of DmNgoaite) = New List(Of DmNgoaite)
-        lstNgoaite.AddRange(_DmNgoaiteService.GetAllByDonviID(Generals.DonviID))
+        lstNgoaite.AddRange(_DmNgoaiteService.GetAllByDonviID(Generals.DON_VI.Id))
         cboTyGia.Properties.DisplayMember = "KyHieu"
         cboTyGia.Properties.ValueMember = "Id"
         cboTyGia.Properties.DataSource = lstNgoaite
@@ -555,11 +555,8 @@ Public Class frmPhieuNhapKho_ChiTiet
         Dim objvuviec As DmVuviec = New DmVuviec
         lstVuviec.Add(objvuviec)
         lstVuviec.AddRange(lstVuViecTemp)
-        cboVuViec.DataSource = lstVuviec
-        cboVuViec.DisplayMember = "KyHieu"
-        cboVuViec.ValueMember = "Id"
-        cboVuViec.Columns.Add(New LookUpColumnInfo("KyHieu", "Ký hiệu"))
-        cboVuViec.Columns.Add(New LookUpColumnInfo("TenVuviec", "Tên vụ việc"))
+
+        rcboVuviecId.DataSource = lstVuviec
 
         'Bind PTQT
         Dim lstPTQTTemp As List(Of DmPtqt) = New List(Of DmPtqt)
@@ -1056,13 +1053,13 @@ Public Class frmPhieuNhapKho_ChiTiet
                 End If
 
                 'xet loai phieu de hien thi cot kho tren luoi
-                If obj_lct.PhieuXuat = 0 Then
+                If obj_lct.KhoXuat = 0 Then
                     'kiem tra gia tri null cua cot kho nhap
                     If VnsCheck.IsNullGuid(objctd.KhoNhapId) Then
                         Message_Warning("Bạn chưa lựa chọn kho nhập.")
                         Return False
                     End If
-                ElseIf obj_lct.PhieuXuat = 1 Then
+                ElseIf obj_lct.KhoXuat = 1 Then
                     'kiem tra gia tri null cua cot kho xuat
                     If VnsCheck.IsNullGuid(objctd.KhoXuatId) Then
                         Message_Warning("Bạn chưa lựa chọn kho xuất.")

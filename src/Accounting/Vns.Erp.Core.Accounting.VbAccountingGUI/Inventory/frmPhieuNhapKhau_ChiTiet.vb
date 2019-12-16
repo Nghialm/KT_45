@@ -14,7 +14,6 @@ Imports Vns.Erp.Core.Admin.Service.Interface
 Imports Vns.Erp.Core.Accounting.Service.Interface
 Imports DevExpress.Utils
 Imports Vns.Erp.Core.Controls.Commons
-
 Public Class frmPhieuNhapKhau_ChiTiet
 
 #Region "Property"
@@ -286,7 +285,11 @@ Public Class frmPhieuNhapKhau_ChiTiet
                 lstobj_ct_h_gg = lstcthg
             End If
             'Control_SetRequire(dteNGAY_GHI, True)
-            UR_STATUS.LCT_STATUS = obj_lct.Id
+            If obj_lct IsNot Nothing Then
+                LoadInfoBy(obj_lct)
+                UR_STATUS.LCT_STATUS = obj_lct.Id
+            End If
+
             frmProgress.Instance.Thread = AddressOf Init_Data
             frmProgress.Instance.Show_Progress()
             AddHandler grvLPX_Hnx.FocusedRowChanged, AddressOf grvLPX_Hnx_FocusedRowChanged
@@ -302,6 +305,37 @@ Public Class frmPhieuNhapKhau_ChiTiet
             Message_Error(ex)
         End Try
     End Function
+
+    Private Sub LoadInfoBy(objChungTu As HtLoaichungtu)
+        grcPhieuNhapKhau_View.Columns("ThueId").Visible = objChungTu.SdTkThueNgamdinh
+        grcPhieuNhapKhau_View.Columns("TyLeThueGtgt").Visible = objChungTu.SdTkThueNgamdinh
+        grcPhieuNhapKhau_View.Columns("SoTienThueGtgt").Visible = objChungTu.SdTkThueNgamdinh
+        grcPhieuNhapKhau_View.Columns("SoTienThueXnk").Visible = objChungTu.SdTkThueNgamdinh
+        grcPhieuNhapKhau_View.Columns("TyLeThueTtdb").Visible = objChungTu.SdTkThueNgamdinh
+        grcPhieuNhapKhau_View.Columns("SoTienThueTtdb").Visible = objChungTu.SdTkThueNgamdinh
+
+        labelControl18.Visible = objChungTu.SdTkThueNgamdinh
+        Gfilter_TKN_THUE_XNK.Visible = objChungTu.SdTkThueNgamdinh
+        LabelControl16.Visible = objChungTu.SdTkThueNgamdinh
+        Gfilter_TKC_THUE_XNK.Visible = objChungTu.SdTkThueNgamdinh
+        labelControl19.Visible = objChungTu.SdTkThueNgamdinh
+        txtThueNK.Visible = objChungTu.SdTkThueNgamdinh
+        LabelControl17.Visible = objChungTu.SdTkThueNgamdinh
+        Gfilter_TKN_THUE_TTDB.Visible = objChungTu.SdTkThueNgamdinh
+        LabelControl21.Visible = objChungTu.SdTkThueNgamdinh
+        Gfilter_TKC_THUE_TTDB.Visible = objChungTu.SdTkThueNgamdinh
+        LabelControl12.Visible = objChungTu.SdTkThueNgamdinh
+        txtThueTTDB.Visible = objChungTu.SdTkThueNgamdinh
+        labelControl23.Visible = objChungTu.SdTkThueNgamdinh
+        txtSO_NGAY_THANH_TOAN.Visible = objChungTu.SdTkThueNgamdinh
+        labelControl54.Visible = objChungTu.SdTkThueNgamdinh
+        Gfilter_TKN_THUE_GTGT.Visible = objChungTu.SdTkThueNgamdinh
+        LabelControl14.Visible = objChungTu.SdTkThueNgamdinh
+        Gfilter_TKC_THUE_GTGT.Visible = objChungTu.SdTkThueNgamdinh
+        labelControl33.Visible = objChungTu.SdTkThueNgamdinh
+        txtThueGTGT.Visible = objChungTu.SdTkThueNgamdinh
+        ckeNhapTienThue.Visible = objChungTu.SdTkThueNgamdinh
+    End Sub
 #End Region
 
 #Region "Private Function and Procedures"
@@ -454,7 +488,7 @@ Public Class frmPhieuNhapKhau_ChiTiet
         UR_STATUS.Visible = Generals.Ts_PheDuyetChungTu
         UR_STATUS.Enabled = Generals.Ts_PheDuyetChungTu
         'Validate control
-        Commons.RequireInputControls = New Control() {dteNGAY_CT, dteNGAY_GHI, dteNGAY_HOADON}
+        'Commons.RequireInputControls = New Control() {dteNGAY_CT, dteNGAY_GHI, dteNGAY_HOADON}
         Commons.ApplyRequireInputValidate(Commons.RequireInputControls)
     End Sub
 
@@ -484,7 +518,7 @@ Public Class frmPhieuNhapKhau_ChiTiet
                     lstobj_ct_d_nx.Add(New CtDNx())
                     grlLOAI_CT_ID.EditValue = obj_lct.MaLoaiCt
 
-                    dteNGAY_HOADON.EditValue = DateTime.Now
+                    'dteNGAY_HOADON.EditValue = DateTime.Now
                     dteNGAY_GHI.EditValue = DateTime.Now
                     dteNGAY_CT.EditValue = DateTime.Now
                     BindLookUpNX()
@@ -617,6 +651,7 @@ Public Class frmPhieuNhapKhau_ChiTiet
             cboHopDong.Columns.Add(New LookUpColumnInfo("KyHieu", "Mã hợp đồng"))
             cboHopDong.Columns.Add(New LookUpColumnInfo("TenHopdong", "Tên hợp đồng"))
 
+            cboDmHopDong.Properties.DataSource = lsthopdong
 
             'Bind TK No
             Dim lstTKNo As List(Of DmTaikhoan) = New List(Of DmTaikhoan)
@@ -643,11 +678,8 @@ Public Class frmPhieuNhapKhau_ChiTiet
             Dim objvuviec As DmVuviec = New DmVuviec
             lstVuviec.Add(objvuviec)
             lstVuviec.AddRange(lstVuViecTemp)
-            cboDMVuviec.DataSource = lstVuviec
-            cboDMVuviec.DisplayMember = "KyHieu"
-            cboDMVuviec.ValueMember = "Id"
-            cboDMVuviec.Columns.Add(New LookUpColumnInfo("KyHieu", "Mã vụ việc"))
-            cboDMVuviec.Columns.Add(New LookUpColumnInfo("TenVuviec", "Tên vụ việc"))
+
+            rcboDmVuviec.DataSource = lstVuviec
 
             'Bind danh muc ngoai te
             Dim lstNgoaite As List(Of DmNgoaite) = New List(Of DmNgoaite)
@@ -785,6 +817,8 @@ Public Class frmPhieuNhapKhau_ChiTiet
             obj_ct_h_nx.IdLoaiCt = drLPNhap.Id
             obj_ct_h_nx.KyHieuLoaiCt = drLPNhap.KyHieu
 
+            Dim objHopDongM As DmHopdong = CType(ComboHelper.GetSelectData(cboDmHopDong), DmHopdong)
+
             obj_ct_h_nx.TyGia = txtTY_GIA.Text.Trim()
             obj_ct_h_nx.MaNte = cboNgoaiTe.Text.Trim()
             obj_ct_h_nx.NteId = cboNgoaiTe.EditValue
@@ -794,16 +828,16 @@ Public Class frmPhieuNhapKhau_ChiTiet
             obj_ct_h_nx.DienGiai = txtDIEN_GIAI.Text.Trim()
             obj_ct_h_nx.NgayGhi = dteNGAY_GHI.DateTime
             obj_ct_h_nx.NgayCt = dteNGAY_CT.DateTime
-            If dteNGAY_HOADON.DateTime = Nothing Then
-            Else
-                obj_ct_h_nx.NgayHoadon = dteNGAY_HOADON.DateTime
-            End If
+            'If dteNGAY_HOADON.DateTime = Nothing Then
+            'Else
+            '    obj_ct_h_nx.NgayHoadon = dteNGAY_HOADON.DateTime
+            'End If
             obj_ct_h_nx.DonviId = Generals.DON_VI.Id
             obj_ct_h_nx.MaDonvi = Generals.DON_VI.MaDonvi
             obj_ct_h_nx.SoDu = 0
             obj_ct_h_nx.Ghi = Convert.ToDecimal(UR_STATUS.Value_info.ParameterValue)
-            obj_ct_h_nx.SoSeri = txtSO_SERI.Text.Trim()
-            obj_ct_h_nx.SoHoadon = txtSO_HOADON.Text.Trim()
+            'obj_ct_h_nx.SoSeri = txtSO_SERI.Text.Trim()
+            'obj_ct_h_nx.SoHoadon = txtSO_HOADON.Text.Trim()
 
             'Lấy dữ liệu để insert vào CT_HOADON
             If objcthoadon Is Nothing Then
@@ -813,8 +847,8 @@ Public Class frmPhieuNhapKhau_ChiTiet
             obj_ct_h_nx.SoTien = Decimal.Parse(txtTongCong.Text)
             objcthoadon.TongTien = obj_ct_h_nx.SoTien
 
-            objcthoadon.SoHoadon = txtSO_HOADON.Text.Trim()
-            objcthoadon.SoSeri = txtSO_SERI.Text.Trim()
+            'objcthoadon.SoHoadon = txtSO_HOADON.Text.Trim()
+            'objcthoadon.SoSeri = txtSO_SERI.Text.Trim()
             objcthoadon.TenKhachhang = obj_ct_h_nx.TenKhang
             objcthoadon.DiaChi = txtDIA_CHI.Text.Trim()
             objcthoadon.NgayHoadon = dteNGAY_CT.DateTime
@@ -933,6 +967,17 @@ Public Class frmPhieuNhapKhau_ChiTiet
                     objctdnx.TenKhang = drKhachHang1.TenKhang
 
                 End If
+
+                If objHopDongM IsNot Nothing Then
+                    objctdnx.HopdongId = objHopDongM.Id
+                    objctdnx.IdDmHopdongNo = objHopDongM.Id
+                    objctdnx.IdDmHopdongCo = objHopDongM.Id
+                Else
+                    objctdnx.HopdongId = Null.NullGuid
+                    objctdnx.IdDmHopdongNo = Null.NullGuid
+                    objctdnx.IdDmHopdongCo = Null.NullGuid
+                End If
+
                 objctdnx.IdDmKhoanphiNo = objctdnx.IdDmKhoanphiCo
                 objctdnx.IdDmTudo1No = objctdnx.IdDmTudo1Co
                 objctdnx.IdDmTudo2No = objctdnx.IdDmTudo2Co
@@ -1006,15 +1051,15 @@ Public Class frmPhieuNhapKhau_ChiTiet
             txtDIA_CHI.Text = obj_ct_h_nx.DiaChi
             txtNGUOI_GIAO_NHAN_HANG.Text = obj_ct_h_nx.NguoiGiaoNhanHang
             txtDIEN_GIAI.Text = obj_ct_h_nx.DienGiai
-            txtSO_SERI.Text = obj_ct_h_nx.SoSeri
-            txtSO_HOADON.Text = obj_ct_h_nx.SoHoadon
+            'txtSO_SERI.Text = obj_ct_h_nx.SoSeri
+            'txtSO_HOADON.Text = obj_ct_h_nx.SoHoadon
             dteNGAY_CT.DateTime = obj_ct_h_nx.NgayCt
             dteNGAY_GHI.DateTime = obj_ct_h_nx.NgayGhi
 
-            If obj_ct_h_nx.NgayHoadon = Nothing Then
-            Else
-                dteNGAY_HOADON.DateTime = obj_ct_h_nx.NgayHoadon
-            End If
+            'If obj_ct_h_nx.NgayHoadon = Nothing Then
+            'Else
+            '    dteNGAY_HOADON.DateTime = obj_ct_h_nx.NgayHoadon
+            'End If
 
             UR_STATUS.Set_Status(obj_ct_h_nx.Ghi)
             'UR_STATUS.cboStatus.EditValue = obj_ct_h_nx.GHI.ToString()
@@ -1053,6 +1098,9 @@ Public Class frmPhieuNhapKhau_ChiTiet
                 End If
             End If
             grcPhieuNhapKhau.DataSource = lstobj_ct_d_nx
+            If (lstobj_ct_d_nx.Count > 0) Then
+                cboDmHopDong.EditValue = lstobj_ct_d_nx(0).HopdongId
+            End If
             TongSoTien()
             ConfigGrid.GridConfig(Me.Name + "?" + "MA_LOAI_CT=" + maCT, grcPhieuNhapKhau_View.Name, grcPhieuNhapKhau_View)
             ''Kiểm tra trạng thái có cho phép sửa hay không
@@ -1680,6 +1728,7 @@ Public Class frmPhieuNhapKhau_ChiTiet
         Try
             RemoveHandler grcPhieuNhapKhau_View.RowCellStyle, AddressOf grcPhieuNhapKhau_View_RowCellStyle
             obj_ct_h_nx = New CtHNx
+            objcthoadon = New CtHoadon
 
             m_InputState = DataInputState.AddMode
 
@@ -1943,7 +1992,7 @@ Public Class frmPhieuNhapKhau_ChiTiet
                         Return
                     End If
                     If GFilter_MA_TKN_GIAVON.OwnerEdit.A_LIST_VALUES.Count > 0 Then
-                        If Not String.IsNullOrEmpty(GFilterEdit_HANGHOA_ID.OwnerEdit.A_LIST_VALUES(0)) Then
+                        If Not String.IsNullOrEmpty(GFilter_MA_TKN_GIAVON.OwnerEdit.A_LIST_VALUES(0)) Then
                             gridctdnx.TknGiavon = VnsConvert.CGuid(GFilter_MA_TKN_GIAVON.OwnerEdit.A_LIST_VALUES(0))
                         Else
                             gridctdnx.TknGiavon = Null.NullGuid

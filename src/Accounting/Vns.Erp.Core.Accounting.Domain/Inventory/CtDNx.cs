@@ -102,5 +102,47 @@ namespace Vns.Erp.Core.Accounting.Domain
             }
         }
         #endregion
+
+        #region Shipping
+        private string _MaVanChuyen = String.Empty;
+        [DataMember]
+        public string MaVanChuyen
+        {
+            get { return _MaVanChuyen; }
+            set { _isChanged |= (_MaVanChuyen != value); _MaVanChuyen = value; }
+        }
+
+        private DateTime? _EtaDate;
+        [DataMember]
+        public DateTime? EtaDate
+        {
+            get { return _EtaDate; }
+            set { _isChanged |= (_EtaDate != value); _EtaDate = value; }
+        }
+
+        private DateTime? _LsdDate;
+        [DataMember]
+        public DateTime? LsdDate
+        {
+            get { return _LsdDate; }
+            set { _isChanged |= (_LsdDate != value); _LsdDate = value; }
+        }
+
+        private DateTime? _EtdDate;
+        [DataMember]
+        public DateTime? EtdDate
+        {
+            get { return _EtdDate; }
+            set { _isChanged |= (_EtdDate != value); _EtdDate = value; }
+        }
+
+        private Int32 _Cang = 0;
+        [DataMember]
+        public Int32 Cang
+        {
+            get { return _Cang; }
+            set { _isChanged |= (_Cang != value); _Cang = value; }
+        }
+        #endregion
     }
 }

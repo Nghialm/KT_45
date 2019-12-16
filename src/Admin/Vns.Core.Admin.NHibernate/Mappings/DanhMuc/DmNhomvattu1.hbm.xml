@@ -4,8 +4,8 @@
 
 		<id name="Id" column="ID_NHOM_VT_1" type="Guid"/>
 			
-		<property column="MA_NHOM_VT_1" type="String" name="MaNhomVt1" not-null="true" length="32" />
-		<property column="TEN_NHOM_VT_1" type="String" name="TenNhomVt1" not-null="true" length="32" />
+		<property column="MA_NHOM_VT_1" type="String" name="MaNhomVt1" not-null="true" length="64" />
+		<property column="TEN_NHOM_VT_1" type="String" name="TenNhomVt1" not-null="true" length="64" />
 		<property column="CHO_PHEP_SUA" type="Decimal" precision="2" scale="0" name="ChoPhepSua" />
 		<property column="CO_SU_DUNG" type="Decimal" precision="2" scale="0" name="CoSuDung" />
 		<property column="LOAI_NHOM" type="Decimal" precision="2" scale="0" name="LoaiNhom" />

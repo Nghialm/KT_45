@@ -54,6 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BangGia\BangGiaDDao.cs" />
+    <Compile Include="BangGia\BangGiaHDao.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DanhMuc\SxDmQuytrinhDao.cs" />
     <Compile Include="DanhMuc\SxKehoachDDao.cs" />
@@ -119,6 +121,10 @@
   <ItemGroup>
     <EmbeddedResource Include="Mappings\DanhMuc\SxPhieuKiemkeSlD.hbm.xml" />
     <EmbeddedResource Include="Mappings\DanhMuc\SxPhieuKiemkeVtD.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\BangGia\BangGiaD.hbm.xml" />
+    <EmbeddedResource Include="Mappings\BangGia\BangGiaH.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

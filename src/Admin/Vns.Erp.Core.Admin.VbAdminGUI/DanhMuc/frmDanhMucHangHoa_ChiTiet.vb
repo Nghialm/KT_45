@@ -106,6 +106,7 @@ Partial Public Class frmDanhMucHangHoa_ChiTiet
             info.MdTkGiaban = txtMD_TK_GIABAN.Text
             info.MdTkHbTralai = txtMD_TK_HB_TRALAI.Text
             info.MdTkSpDd = txtMD_TK_SP_DD.Text
+            info.MdTkDiduong = txtMdTkDiduong.Text
             '--------------------------
             info.LoaiHangHoa = VnsConvert.CDecimal(cboLOAI_HANG_HOA.EditValue)
             '--------------------------
@@ -148,6 +149,7 @@ Partial Public Class frmDanhMucHangHoa_ChiTiet
                 txtMD_TK_GIABAN.Text = _temp.MdTkGiaban
                 txtMD_TK_HB_TRALAI.Text = _temp.MdTkHbTralai
                 txtMD_TK_SP_DD.Text = _temp.MdTkSpDd
+                txtMdTkDiduong.Text = _temp.MdTkDiduong
 
                 'Add more here
                 grlDVT_ID.EditValue = obj.DvtId

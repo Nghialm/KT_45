@@ -12,7 +12,7 @@
 		<property name="TenTkCo" column="TEN_TK_CO" type="String" length="128"/>
 		<property name="SoTien" column="SO_TIEN" type="Decimal" precision="18" scale="0"/>
 		<property name="SoTienNte" column="SO_TIEN_NTE" type="Decimal" precision="18" scale="2"/>
-		<property name="NoiDung" column="NOI_DUNG" type="String" length="128"/>
+		<property name="NoiDung" column="NOI_DUNG" type="String" length="512"/>
 		<property name="IdDmHopdongNo" column="ID_DM_HOPDONG_NO" type="Guid"/>
 		<property name="MaHopdongNo" column="MA_HOPDONG_NO" type="String" length="64"/>
 		<property name="KyHieuHopdongNo" column="KY_HIEU_HOPDONG_NO" type="String" length="64"/>

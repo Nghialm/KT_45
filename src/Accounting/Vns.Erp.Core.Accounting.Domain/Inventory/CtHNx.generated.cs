@@ -86,6 +86,7 @@ namespace Vns.Erp.Core.Accounting.Domain
         private decimal _so_du;
         private Guid _id_doituong_hoadon;
         private string _prefix_ct;
+        private Int32 _pp_thanhtoan = 0;
 
         private DateTime _SynDate = Null.MIN_DATE;
         private decimal? _IsDeleted = 0;
@@ -161,6 +162,8 @@ namespace Vns.Erp.Core.Accounting.Domain
 
             _SynDate = Null.MIN_DATE;
             _IsDeleted = 0;
+
+            _pp_thanhtoan = 0;
         }
         #endregion // End of Default ( Empty ) Class Constuctor
 
@@ -1128,6 +1131,19 @@ namespace Vns.Erp.Core.Accounting.Domain
         {
             get { return _SynDate; }
             set { _isChanged |= (_SynDate != value); _SynDate = value; }
+        }
+
+        /// <summary>
+        /// Returns whether or not the object has changed it's values.
+        /// </summary>
+        [DataMember]
+        public Int32 PpThanhtoan
+        {
+            get { return _pp_thanhtoan; }
+            set
+            {
+                _pp_thanhtoan = value;
+            }
         }
         #endregion
 

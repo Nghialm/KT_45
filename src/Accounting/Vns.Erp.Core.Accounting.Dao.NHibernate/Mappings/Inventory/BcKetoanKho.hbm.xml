@@ -211,6 +211,9 @@
     <property name="MaPhanXuongNhap" column="Ma_Phan_Xuong_Nhap" type="string" length="64"/>
     <property name="PhanXuongXuatId" column="Phan_Xuong_Xuat_Id" type="System.Guid" />
     <property name="MaPhanXuongXuat" column="Ma_Phan_Xuong_Xuat" type="string" length="64"/>
-    
-	</class>
+
+    <!--Shipping-->
+    <property name="Cang" column="CANG" type="Int32"/>
+
+  </class>
 </hibernate-mapping>

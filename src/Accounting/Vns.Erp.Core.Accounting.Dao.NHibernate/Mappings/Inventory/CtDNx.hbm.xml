@@ -161,6 +161,13 @@
     <property name="PhanXuongXuatId" column="Phan_Xuong_Xuat_Id" type="Guid"  />
     <property name="MaPhanXuongXuat" column="Ma_Phan_Xuong_Xuat" type="String" length="255" />
     
+    <!--Shipping-->
+    <property name="MaVanChuyen" column="MA_VAN_CHUYEN" type="String" length="255" />
+    <property name="EtaDate" column="ETA_DATE" type="DateTime"  />
+    <property name="LsdDate" column="LSD_DATE" type="DateTime"  />
+    <property name="EtdDate" column="ETD_DATE" type="DateTime"  />
+    <property name="Cang" column="CANG" type="Int32"/>
+
     <many-to-one name="ObjCtHNx" column="CTH_NX_ID" class="CtHNx" insert="true" update="true" />
   </class>
 </hibernate-mapping>

@@ -17,7 +17,7 @@ Public Class NPOIExcelHelper
             Dim sheet As ISheet = workbook.GetSheet("SO_LIEU")
             Dim numberRows As Integer = sheet.PhysicalNumberOfRows
             Dim number As Integer = sheet.LastRowNum
-            Dim startCol As Integer = 1
+            Dim startCol As Integer = 0
             Dim headerRow As Integer = 0
             Dim startRow As Integer = 1
 

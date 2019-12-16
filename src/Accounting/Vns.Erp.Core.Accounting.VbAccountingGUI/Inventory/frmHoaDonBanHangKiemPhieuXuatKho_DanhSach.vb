@@ -78,6 +78,9 @@ Public Class frmHoaDonBanHangKiemPhieuXuatKho_DanhSach
         FormID = Me.Name + "?" + Me.AccessibleDescription
         ConfigGrid.GridConfig(FormID, grvLPN_Dnx.Name, grvLPN_Dnx)
         ConfigGrid.GridConfig(FormID, grvLPX_Hnx.Name, grvLPX_Hnx)
+
+        grvLPN_Dnx.Columns("MaTkcThueGtgt").Visible = obj_loaichungtu.SdTkThueNgamdinh
+        grvLPN_Dnx.Columns("SoTienThueGtgt").Visible = obj_loaichungtu.SdTkThueNgamdinh
     End Sub
 
 

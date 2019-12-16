@@ -15,6 +15,40 @@ namespace Vns.Erp.Core.Admin.Domain
 	public partial class DmHanghoa : DomainObject<Guid>
     {
         #region Mapping Excel Import
+        public string MaNhom1 { get; set; }
+        public string MaNhom2 { get; set; }
+
+        public DmHanghoa OpecMapping(DataRow dr)
+        {
+            DmHanghoa tmp = new DmHanghoa();
+
+            tmp.MaHanghoa = dr["MA_VAT_TU"].ToString();
+            tmp.KyHieu = dr["MA_VAT_TU"].ToString();
+
+            tmp.MaNhom1 = dr["NHOM_1"].ToString();
+            tmp.MaNhom2 = dr["NHOM_2"].ToString();
+
+            tmp.TenHanghoa = dr["TEN_HANG_HOA"].ToString();
+            tmp.NuocSanxuat = dr["XUAT_XU"].ToString();
+
+            tmp.MaDvt = "KG";
+            tmp.LoaiHangHoa = 1;
+            tmp.PpKtHtk = 1;
+
+            tmp.MdTkKho = "152";
+            tmp.MdTkGiavon = "632";
+            tmp.MdTkGiaban = "5111";
+            tmp.MdTkDiduong = "151";
+
+            _ngay_tao = DateTime.Now;
+            _ngay_sua = DateTime.Now;
+            _nguoi_tao = Null.NullGuid;
+            _nguoi_sua = Null.NullGuid;
+
+            _co_su_dung = 1;
+            _cho_phep_sua = 1;
+            return tmp;
+        }
         public DmHanghoa(DataRow dr)
         {
             _ma_hanghoa = dr["MA_VAT_TU"].ToString();
@@ -48,6 +82,17 @@ namespace Vns.Erp.Core.Admin.Domain
 
             _co_su_dung = 1;
             _cho_phep_sua = 1;
+        }
+
+        #endregion
+
+        #region Display only
+        public string TenHienThi
+        {
+            get
+            {
+                return _ky_hieu + " - " + _ten_hanghoa;
+            }
         }
         #endregion
     }

@@ -239,6 +239,8 @@ namespace Vns.Erp.Core.Accounting.Domain
             PhanXuongXuatId = objctd.PhanXuongXuatId;
             MaPhanXuongNhap = objctd.MaPhanXuongNhap;
             MaPhanXuongXuat = objctd.MaPhanXuongXuat;
+
+            Cang = objctd.Cang;
         }
 
         public List<BcKetoan> GenBcKetoan()
@@ -396,6 +398,15 @@ namespace Vns.Erp.Core.Accounting.Domain
 
             return lstKetoan;
         }
+
+        #region Shipping
+        private Int32 _Cang = 0;
+        public Int32 Cang
+        {
+            get { return _Cang; }
+            set { _isChanged |= (_Cang != value); _Cang = value; }
+        }
+        #endregion
     }
 
     public class DinhKhoanInfo

@@ -43,6 +43,7 @@ namespace Vns.Erp.Core.Admin.Domain
         private decimal _loai_kho;
         private decimal _xuat_am;
         private DateTime _SynDate;
+        private decimal _DiaLy;
         #endregion
 
         #region Default ( Empty ) Class Constuctor
@@ -67,6 +68,7 @@ namespace Vns.Erp.Core.Admin.Domain
             _loai_kho = 0;
             _xuat_am = 0;
             _SynDate = Null.MIN_DATE;
+            _DiaLy = 0;
         }
         #endregion // End of Default ( Empty ) Class Constuctor
 
@@ -291,6 +293,13 @@ namespace Vns.Erp.Core.Admin.Domain
         {
             get { return _SynDate; }
             set { _isChanged |= (_SynDate != value); _SynDate = value; }
+        }
+
+        [DataMember]
+        public decimal DiaLy
+        {
+            get { return _DiaLy; }
+            set { _isChanged |= (_DiaLy != value); _DiaLy = value; }
         }
 
         /// <summary>

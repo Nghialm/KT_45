@@ -23,7 +23,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPhieuNhapKho_ChiTiet))
-        Dim ValueInfo1 As Vns.Erp.Core.ValueInfo = New Vns.Erp.Core.ValueInfo()
+        Dim ValueInfo4 As Vns.Erp.Core.ValueInfo = New Vns.Erp.Core.ValueInfo()
         Me.cboMaHang = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.cboDVT = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.cboMaKho = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
@@ -44,7 +44,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.cboKhoanphi = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.cboHopdong = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
-        Me.C_SoChungTu_RP = New C_SoChungTu()
+        Me.C_SoChungTu_RP = New Vns.Erp.Core.Controls.UserControl.C_SoChungTu()
         Me.GFilter_TK = New Vns.Erp.Core.CustomFilter()
         Me.lblTK = New DevExpress.XtraEditors.LabelControl()
         Me.GFilter = New Vns.Erp.Core.CustomFilter()
@@ -100,7 +100,6 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.RepositoryItemTextEdit3 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
         Me.MaTknGiavon = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Gfilter_MA_TKN_GIAVON = New Vns.Erp.Core.RepositoryItemPopupFilterEdit()
-        Me.VuviecId = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.MaTkcGiavon = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Gfilter_MA_TKC_GIAVON = New Vns.Erp.Core.RepositoryItemPopupFilterEdit()
         Me.IdDmPtqtCo = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -112,6 +111,9 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.IdDmPhongbanCo = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.IdDmKhoanphiCo = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.IdDmHopdongCo = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.rcboVuviecId = New DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit()
+        Me.RepositoryItemGridLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.RepositoryItemAlignment1 = New DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.LabelControl4 = New DevExpress.XtraEditors.LabelControl()
@@ -126,7 +128,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.NgayGhi = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.Ghi = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GroupControl3 = New DevExpress.XtraEditors.GroupControl()
-        Me.UR_STATUS = New Status_LoaiCT()
+        Me.UR_STATUS = New Vns.Erp.Core.Controls.UserControl.Status_LoaiCT()
         Me.txtTongSoLuong = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
         Me.TxtTongTien = New DevExpress.XtraEditors.TextEdit()
@@ -141,6 +143,10 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.btnQui = New DevExpress.XtraEditors.SimpleButton()
         Me.btnPri = New DevExpress.XtraEditors.SimpleButton()
         Me.btnSav = New DevExpress.XtraEditors.SimpleButton()
+        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.cboMaHang, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboDVT, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboMaKho, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -191,6 +197,8 @@ Partial Class frmPhieuNhapKho_ChiTiet
         CType(Me.RepositoryItemTextEdit3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Gfilter_MA_TKN_GIAVON, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Gfilter_MA_TKC_GIAVON, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rcboVuviecId, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemGridLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemAlignment1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
@@ -394,9 +402,10 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.GroupControl1.Controls.Add(Me.labelControl1)
         Me.GroupControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupControl1.Location = New System.Drawing.Point(0, 0)
+        Me.GroupControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupControl1.Name = "GroupControl1"
         Me.GroupControl1.ShowCaption = False
-        Me.GroupControl1.Size = New System.Drawing.Size(800, 139)
+        Me.GroupControl1.Size = New System.Drawing.Size(967, 171)
         Me.GroupControl1.TabIndex = 0
         Me.GroupControl1.Text = "GroupControl1"
         '
@@ -404,10 +413,11 @@ Partial Class frmPhieuNhapKho_ChiTiet
         '
         Me.C_SoChungTu_RP.Enabled = False
         Me.C_SoChungTu_RP.HtLoaichungtuService = Nothing
-        Me.C_SoChungTu_RP.Location = New System.Drawing.Point(72, 83)
+        Me.C_SoChungTu_RP.Location = New System.Drawing.Point(84, 102)
+        Me.C_SoChungTu_RP.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.C_SoChungTu_RP.Name = "C_SoChungTu_RP"
         Me.C_SoChungTu_RP.PREFIX = Nothing
-        Me.C_SoChungTu_RP.Size = New System.Drawing.Size(100, 20)
+        Me.C_SoChungTu_RP.Size = New System.Drawing.Size(117, 25)
         Me.C_SoChungTu_RP.SO_CHUNG_TU = Nothing
         Me.C_SoChungTu_RP.TabIndex = 3
         '
@@ -431,28 +441,30 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.GFilter_TK.ENABLES = True
         Me.GFilter_TK.IsNotTextChanged = True
         Me.GFilter_TK.ListEditValue = CType(resources.GetObject("GFilter_TK.ListEditValue"), System.Collections.Generic.List(Of String))
-        Me.GFilter_TK.Location = New System.Drawing.Point(72, 109)
+        Me.GFilter_TK.Location = New System.Drawing.Point(84, 134)
+        Me.GFilter_TK.Margin = New System.Windows.Forms.Padding(5)
         Me.GFilter_TK.MessageWarning = "Giá trị không hợp lệ"
         Me.GFilter_TK.Name = "GFilter_TK"
         Me.GFilter_TK.NEXT_TAB = 0
-        Me.GFilter_TK.Size = New System.Drawing.Size(100, 20)
+        Me.GFilter_TK.Size = New System.Drawing.Size(117, 25)
         Me.GFilter_TK.TabIndex = 4
         '
         'lblTK
         '
         Me.lblTK.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTK.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-        Me.lblTK.Location = New System.Drawing.Point(24, 112)
+        Me.lblTK.Location = New System.Drawing.Point(195, 138)
+        Me.lblTK.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.lblTK.Name = "lblTK"
-        Me.lblTK.Size = New System.Drawing.Size(30, 13)
+        Me.lblTK.Size = New System.Drawing.Size(39, 17)
         Me.lblTK.TabIndex = 99
         Me.lblTK.Text = "Ghi nợ"
         '
         'GFilter
         '
         Me.GFilter.AllowNull = True
-        Me.GFilter.C_ARR_COLS_DISPLAY = "KyHieu-Mã KH-80-1;TenKhang-Tên KH-80-1;Id--0-0;MaKhang--0-0;MaSoThue--0-0;DiaChi-" & _
-            "-0-0"
+        Me.GFilter.C_ARR_COLS_DISPLAY = "KyHieu-Mã KH-80-1;TenKhang-Tên KH-80-1;Id--0-0;MaKhang--0-0;MaSoThue--0-0;DiaChi-" &
+    "-0-0"
         Me.GFilter.C_ARR_COLS_RETURN = "Id;TenKhang;MaKhang;KyHieu;MaSoThue;DiaChi"
         Me.GFilter.C_DATA_SOURCE = Nothing
         Me.GFilter.C_FORM_DANHSACH = "frmDanhMucKhachHang_DanhSach"
@@ -469,20 +481,21 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.GFilter.ENABLES = False
         Me.GFilter.IsNotTextChanged = True
         Me.GFilter.ListEditValue = CType(resources.GetObject("GFilter.ListEditValue"), System.Collections.Generic.List(Of String))
-        Me.GFilter.Location = New System.Drawing.Point(278, 5)
-        Me.GFilter.Margin = New System.Windows.Forms.Padding(4)
+        Me.GFilter.Location = New System.Drawing.Point(324, 6)
+        Me.GFilter.Margin = New System.Windows.Forms.Padding(5)
         Me.GFilter.MessageWarning = "Giá trị không hợp lệ"
         Me.GFilter.Name = "GFilter"
         Me.GFilter.NEXT_TAB = 0
-        Me.GFilter.Size = New System.Drawing.Size(124, 20)
+        Me.GFilter.Size = New System.Drawing.Size(145, 25)
         Me.GFilter.TabIndex = 5
         Me.GFilter.TabStop = False
         '
         'LabelControl13
         '
-        Me.LabelControl13.Location = New System.Drawing.Point(415, 8)
+        Me.LabelControl13.Location = New System.Drawing.Point(484, 10)
+        Me.LabelControl13.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl13.Name = "LabelControl13"
-        Me.LabelControl13.Size = New System.Drawing.Size(53, 13)
+        Me.LabelControl13.Size = New System.Drawing.Size(67, 17)
         Me.LabelControl13.TabIndex = 97
         Me.LabelControl13.Text = "Mã số thuế"
         '
@@ -490,7 +503,8 @@ Partial Class frmPhieuNhapKho_ChiTiet
         '
         Me.dteHDPN.EditValue = Nothing
         Me.dteHDPN.EnterMoveNextControl = True
-        Me.dteHDPN.Location = New System.Drawing.Point(701, 83)
+        Me.dteHDPN.Location = New System.Drawing.Point(818, 102)
+        Me.dteHDPN.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dteHDPN.Name = "dteHDPN"
         Me.dteHDPN.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.dteHDPN.Properties.DisplayFormat.FormatString = "dd/MM/yyyy"
@@ -502,60 +516,66 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.dteHDPN.Properties.Mask.UseMaskAsDisplayFormat = True
         Me.dteHDPN.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.dteHDPN.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.dteHDPN.Size = New System.Drawing.Size(92, 20)
+        Me.dteHDPN.Size = New System.Drawing.Size(107, 22)
         Me.dteHDPN.TabIndex = 14
         Me.dteHDPN.Visible = False
         '
         'LabelControl18
         '
-        Me.LabelControl18.Location = New System.Drawing.Point(229, 34)
+        Me.LabelControl18.Location = New System.Drawing.Point(267, 42)
+        Me.LabelControl18.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl18.Name = "LabelControl18"
-        Me.LabelControl18.Size = New System.Drawing.Size(34, 13)
+        Me.LabelControl18.Size = New System.Drawing.Size(41, 16)
         Me.LabelControl18.TabIndex = 96
         Me.LabelControl18.Text = "Tên KH"
         '
         'txtTEN_KHANG
         '
         Me.txtTEN_KHANG.EnterMoveNextControl = True
-        Me.txtTEN_KHANG.Location = New System.Drawing.Point(278, 31)
+        Me.txtTEN_KHANG.Location = New System.Drawing.Point(324, 38)
+        Me.txtTEN_KHANG.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtTEN_KHANG.Name = "txtTEN_KHANG"
         Me.txtTEN_KHANG.Properties.MaxLength = 128
         Me.txtTEN_KHANG.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.txtTEN_KHANG.Size = New System.Drawing.Size(331, 20)
+        Me.txtTEN_KHANG.Size = New System.Drawing.Size(386, 22)
         Me.txtTEN_KHANG.TabIndex = 7
         '
         'lblNgayHDPN
         '
-        Me.lblNgayHDPN.Location = New System.Drawing.Point(626, 86)
+        Me.lblNgayHDPN.Location = New System.Drawing.Point(730, 106)
+        Me.lblNgayHDPN.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.lblNgayHDPN.Name = "lblNgayHDPN"
-        Me.lblNgayHDPN.Size = New System.Drawing.Size(60, 13)
+        Me.lblNgayHDPN.Size = New System.Drawing.Size(69, 16)
         Me.lblNgayHDPN.TabIndex = 93
         Me.lblNgayHDPN.Text = "Ngày HĐ/PN"
         Me.lblNgayHDPN.Visible = False
         '
         'LabelControl14
         '
-        Me.LabelControl14.Location = New System.Drawing.Point(654, 34)
+        Me.LabelControl14.Location = New System.Drawing.Point(763, 42)
+        Me.LabelControl14.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl14.Name = "LabelControl14"
-        Me.LabelControl14.Size = New System.Drawing.Size(32, 13)
+        Me.LabelControl14.Size = New System.Drawing.Size(41, 17)
         Me.LabelControl14.TabIndex = 89
         Me.LabelControl14.Text = "Tỷ giá "
         '
         'txtHDPN
         '
         Me.txtHDPN.EnterMoveNextControl = True
-        Me.txtHDPN.Location = New System.Drawing.Point(701, 57)
+        Me.txtHDPN.Location = New System.Drawing.Point(818, 70)
+        Me.txtHDPN.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtHDPN.Name = "txtHDPN"
         Me.txtHDPN.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.txtHDPN.Size = New System.Drawing.Size(92, 20)
+        Me.txtHDPN.Size = New System.Drawing.Size(107, 22)
         Me.txtHDPN.TabIndex = 13
         Me.txtHDPN.Visible = False
         '
         'lblHDPN
         '
-        Me.lblHDPN.Location = New System.Drawing.Point(637, 60)
+        Me.lblHDPN.Location = New System.Drawing.Point(743, 74)
+        Me.lblHDPN.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.lblHDPN.Name = "lblHDPN"
-        Me.lblHDPN.Size = New System.Drawing.Size(49, 13)
+        Me.lblHDPN.Size = New System.Drawing.Size(63, 17)
         Me.lblHDPN.TabIndex = 88
         Me.lblHDPN.Text = " HĐ/PN số"
         Me.lblHDPN.Visible = False
@@ -563,23 +583,25 @@ Partial Class frmPhieuNhapKho_ChiTiet
         'txtMST_KHANG
         '
         Me.txtMST_KHANG.EnterMoveNextControl = True
-        Me.txtMST_KHANG.Location = New System.Drawing.Point(474, 5)
+        Me.txtMST_KHANG.Location = New System.Drawing.Point(553, 6)
+        Me.txtMST_KHANG.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtMST_KHANG.Name = "txtMST_KHANG"
         Me.txtMST_KHANG.Properties.MaxLength = 32
         Me.txtMST_KHANG.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.txtMST_KHANG.Size = New System.Drawing.Size(135, 20)
+        Me.txtMST_KHANG.Size = New System.Drawing.Size(157, 22)
         Me.txtMST_KHANG.TabIndex = 6
         '
         'grlLoaiPhieuNhap
         '
         Me.grlLoaiPhieuNhap.EnterMoveNextControl = True
-        Me.grlLoaiPhieuNhap.Location = New System.Drawing.Point(72, 5)
+        Me.grlLoaiPhieuNhap.Location = New System.Drawing.Point(84, 6)
+        Me.grlLoaiPhieuNhap.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.grlLoaiPhieuNhap.Name = "grlLoaiPhieuNhap"
         Me.grlLoaiPhieuNhap.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.grlLoaiPhieuNhap.Properties.NullText = ""
         Me.grlLoaiPhieuNhap.Properties.ReadOnly = True
         Me.grlLoaiPhieuNhap.Properties.View = Me.GridView2
-        Me.grlLoaiPhieuNhap.Size = New System.Drawing.Size(100, 20)
+        Me.grlLoaiPhieuNhap.Size = New System.Drawing.Size(117, 22)
         Me.grlLoaiPhieuNhap.TabIndex = 0
         '
         'GridView2
@@ -609,21 +631,23 @@ Partial Class frmPhieuNhapKho_ChiTiet
         'txtTY_GIA
         '
         Me.txtTY_GIA.EnterMoveNextControl = True
-        Me.txtTY_GIA.Location = New System.Drawing.Point(701, 31)
+        Me.txtTY_GIA.Location = New System.Drawing.Point(818, 38)
+        Me.txtTY_GIA.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtTY_GIA.Name = "txtTY_GIA"
         Me.txtTY_GIA.Properties.Appearance.Options.UseTextOptions = True
         Me.txtTY_GIA.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.txtTY_GIA.Properties.Mask.EditMask = "n2"
         Me.txtTY_GIA.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
         Me.txtTY_GIA.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.txtTY_GIA.Size = New System.Drawing.Size(92, 20)
+        Me.txtTY_GIA.Size = New System.Drawing.Size(107, 22)
         Me.txtTY_GIA.TabIndex = 12
         '
         'dteNGAY_CT
         '
         Me.dteNGAY_CT.EditValue = Nothing
         Me.dteNGAY_CT.EnterMoveNextControl = True
-        Me.dteNGAY_CT.Location = New System.Drawing.Point(72, 31)
+        Me.dteNGAY_CT.Location = New System.Drawing.Point(84, 38)
+        Me.dteNGAY_CT.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dteNGAY_CT.Name = "dteNGAY_CT"
         Me.dteNGAY_CT.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.dteNGAY_CT.Properties.DisplayFormat.FormatString = "dd/MM/yyyy"
@@ -637,14 +661,15 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.dteNGAY_CT.Properties.MinValue = New Date(1988, 1, 5, 0, 0, 0, 0)
         Me.dteNGAY_CT.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.dteNGAY_CT.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.dteNGAY_CT.Size = New System.Drawing.Size(100, 20)
+        Me.dteNGAY_CT.Size = New System.Drawing.Size(117, 22)
         Me.dteNGAY_CT.TabIndex = 1
         '
         'dteNGAY_GHI
         '
         Me.dteNGAY_GHI.EditValue = Nothing
         Me.dteNGAY_GHI.EnterMoveNextControl = True
-        Me.dteNGAY_GHI.Location = New System.Drawing.Point(72, 57)
+        Me.dteNGAY_GHI.Location = New System.Drawing.Point(84, 70)
+        Me.dteNGAY_GHI.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dteNGAY_GHI.Name = "dteNGAY_GHI"
         Me.dteNGAY_GHI.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.dteNGAY_GHI.Properties.DisplayFormat.FormatString = "dd/MM/yyyy"
@@ -658,114 +683,124 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.dteNGAY_GHI.Properties.MinValue = New Date(1988, 1, 5, 0, 0, 0, 0)
         Me.dteNGAY_GHI.Properties.VistaTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
         Me.dteNGAY_GHI.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.dteNGAY_GHI.Size = New System.Drawing.Size(100, 20)
+        Me.dteNGAY_GHI.Size = New System.Drawing.Size(117, 22)
         Me.dteNGAY_GHI.TabIndex = 2
         '
         'cboTyGia
         '
         Me.cboTyGia.EnterMoveNextControl = True
-        Me.cboTyGia.Location = New System.Drawing.Point(701, 5)
+        Me.cboTyGia.Location = New System.Drawing.Point(818, 6)
+        Me.cboTyGia.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboTyGia.Name = "cboTyGia"
         Me.cboTyGia.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup
         Me.cboTyGia.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboTyGia.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("KyHieu", "Ký hiệu"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenNte", "Tên ngoại tệ")})
         Me.cboTyGia.Properties.NullText = ""
-        Me.cboTyGia.Size = New System.Drawing.Size(92, 20)
+        Me.cboTyGia.Size = New System.Drawing.Size(107, 22)
         Me.cboTyGia.TabIndex = 11
         '
         'labelControl11
         '
-        Me.labelControl11.Location = New System.Drawing.Point(29, 86)
+        Me.labelControl11.Location = New System.Drawing.Point(34, 106)
+        Me.labelControl11.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.labelControl11.Name = "labelControl11"
-        Me.labelControl11.Size = New System.Drawing.Size(28, 13)
+        Me.labelControl11.Size = New System.Drawing.Size(37, 17)
         Me.labelControl11.TabIndex = 84
         Me.labelControl11.Text = "Số CT"
         '
         'labelControl10
         '
-        Me.labelControl10.Location = New System.Drawing.Point(16, 34)
-        Me.labelControl10.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.labelControl10.Location = New System.Drawing.Point(19, 42)
+        Me.labelControl10.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.labelControl10.Name = "labelControl10"
-        Me.labelControl10.Size = New System.Drawing.Size(41, 13)
+        Me.labelControl10.Size = New System.Drawing.Size(48, 16)
         Me.labelControl10.TabIndex = 83
         Me.labelControl10.Text = "Ngày CT"
         '
         'labelControl9
         '
-        Me.labelControl9.Location = New System.Drawing.Point(16, 60)
-        Me.labelControl9.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.labelControl9.Location = New System.Drawing.Point(19, 74)
+        Me.labelControl9.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.labelControl9.Name = "labelControl9"
-        Me.labelControl9.Size = New System.Drawing.Size(41, 13)
+        Me.labelControl9.Size = New System.Drawing.Size(48, 16)
         Me.labelControl9.TabIndex = 82
         Me.labelControl9.Text = "Ngày HT"
         '
         'txtDIA_CHI
         '
         Me.txtDIA_CHI.EnterMoveNextControl = True
-        Me.txtDIA_CHI.Location = New System.Drawing.Point(278, 57)
+        Me.txtDIA_CHI.Location = New System.Drawing.Point(324, 70)
+        Me.txtDIA_CHI.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtDIA_CHI.Name = "txtDIA_CHI"
         Me.txtDIA_CHI.Properties.MaxLength = 256
         Me.txtDIA_CHI.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.txtDIA_CHI.Size = New System.Drawing.Size(331, 20)
+        Me.txtDIA_CHI.Size = New System.Drawing.Size(386, 22)
         Me.txtDIA_CHI.TabIndex = 8
         '
         'txtNGUOI_GIAO_NHAN_HANG
         '
         Me.txtNGUOI_GIAO_NHAN_HANG.EnterMoveNextControl = True
-        Me.txtNGUOI_GIAO_NHAN_HANG.Location = New System.Drawing.Point(278, 83)
+        Me.txtNGUOI_GIAO_NHAN_HANG.Location = New System.Drawing.Point(324, 102)
+        Me.txtNGUOI_GIAO_NHAN_HANG.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtNGUOI_GIAO_NHAN_HANG.Name = "txtNGUOI_GIAO_NHAN_HANG"
         Me.txtNGUOI_GIAO_NHAN_HANG.Properties.MaxLength = 128
         Me.txtNGUOI_GIAO_NHAN_HANG.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.txtNGUOI_GIAO_NHAN_HANG.Size = New System.Drawing.Size(331, 20)
+        Me.txtNGUOI_GIAO_NHAN_HANG.Size = New System.Drawing.Size(386, 22)
         Me.txtNGUOI_GIAO_NHAN_HANG.TabIndex = 9
         '
         'txtDIEN_GIAI
         '
         Me.txtDIEN_GIAI.EnterMoveNextControl = True
-        Me.txtDIEN_GIAI.Location = New System.Drawing.Point(278, 109)
+        Me.txtDIEN_GIAI.Location = New System.Drawing.Point(324, 134)
+        Me.txtDIEN_GIAI.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtDIEN_GIAI.Name = "txtDIEN_GIAI"
         Me.txtDIEN_GIAI.Properties.MaxLength = 256
         Me.txtDIEN_GIAI.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.txtDIEN_GIAI.Size = New System.Drawing.Size(331, 20)
+        Me.txtDIEN_GIAI.Size = New System.Drawing.Size(386, 22)
         Me.txtDIEN_GIAI.TabIndex = 10
         '
         'labelControl33
         '
-        Me.labelControl33.Location = New System.Drawing.Point(223, 112)
+        Me.labelControl33.Location = New System.Drawing.Point(260, 138)
+        Me.labelControl33.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.labelControl33.Name = "labelControl33"
-        Me.labelControl33.Size = New System.Drawing.Size(40, 13)
+        Me.labelControl33.Size = New System.Drawing.Size(50, 17)
         Me.labelControl33.TabIndex = 73
         Me.labelControl33.Text = "Diễn giải"
         '
         'labelControl5
         '
-        Me.labelControl5.Location = New System.Drawing.Point(184, 86)
+        Me.labelControl5.Location = New System.Drawing.Point(215, 106)
+        Me.labelControl5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.labelControl5.Name = "labelControl5"
-        Me.labelControl5.Size = New System.Drawing.Size(79, 13)
+        Me.labelControl5.Size = New System.Drawing.Size(101, 17)
         Me.labelControl5.TabIndex = 71
         Me.labelControl5.Text = "Người giao/nhận"
         '
         'labelControl3
         '
-        Me.labelControl3.Location = New System.Drawing.Point(231, 60)
+        Me.labelControl3.Location = New System.Drawing.Point(269, 74)
+        Me.labelControl3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.labelControl3.Name = "labelControl3"
-        Me.labelControl3.Size = New System.Drawing.Size(32, 13)
+        Me.labelControl3.Size = New System.Drawing.Size(40, 17)
         Me.labelControl3.TabIndex = 70
         Me.labelControl3.Text = "Địa chỉ"
         '
         'labelControl2
         '
-        Me.labelControl2.Location = New System.Drawing.Point(233, 8)
+        Me.labelControl2.Location = New System.Drawing.Point(272, 10)
+        Me.labelControl2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.labelControl2.Name = "labelControl2"
-        Me.labelControl2.Size = New System.Drawing.Size(30, 13)
+        Me.labelControl2.Size = New System.Drawing.Size(36, 16)
         Me.labelControl2.TabIndex = 69
         Me.labelControl2.Text = "Mã KH"
         '
         'labelControl1
         '
-        Me.labelControl1.Location = New System.Drawing.Point(22, 8)
+        Me.labelControl1.Location = New System.Drawing.Point(26, 10)
+        Me.labelControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.labelControl1.Name = "labelControl1"
-        Me.labelControl1.Size = New System.Drawing.Size(35, 13)
+        Me.labelControl1.Size = New System.Drawing.Size(45, 17)
         Me.labelControl1.TabIndex = 8
         Me.labelControl1.Text = "Loại CT"
         '
@@ -775,21 +810,24 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.GroupControl2.Controls.Add(Me.grcPhieuPhapKho)
         Me.GroupControl2.Controls.Add(Me.PanelControl1)
         Me.GroupControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupControl2.Location = New System.Drawing.Point(0, 139)
+        Me.GroupControl2.Location = New System.Drawing.Point(0, 171)
+        Me.GroupControl2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupControl2.Name = "GroupControl2"
         Me.GroupControl2.ShowCaption = False
-        Me.GroupControl2.Size = New System.Drawing.Size(800, 396)
+        Me.GroupControl2.Size = New System.Drawing.Size(967, 488)
         Me.GroupControl2.TabIndex = 1
         Me.GroupControl2.Text = "GroupControl2"
         '
         'grcPhieuPhapKho
         '
         Me.grcPhieuPhapKho.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grcPhieuPhapKho.Location = New System.Drawing.Point(0, 21)
+        Me.grcPhieuPhapKho.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.grcPhieuPhapKho.Location = New System.Drawing.Point(0, 26)
         Me.grcPhieuPhapKho.MainView = Me.grvPhieuNhapKho
+        Me.grcPhieuPhapKho.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.grcPhieuPhapKho.Name = "grcPhieuPhapKho"
-        Me.grcPhieuPhapKho.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemAlignment1, Me.GFilterEdit_HANGHOA_ID, Me.RepositoryItemTextEdit1, Me.RepositoryItemTextEdit2, Me.RepositoryItemTextEdit3, Me.RepositoryItemTextEdit4, Me.Gfilter_MA_TKN_GIAVON, Me.Gfilter_MA_TKC_GIAVON, Me.RepositoryItemTextEdit5, Me.RepositoryItemTextEdit6})
-        Me.grcPhieuPhapKho.Size = New System.Drawing.Size(800, 375)
+        Me.grcPhieuPhapKho.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemAlignment1, Me.GFilterEdit_HANGHOA_ID, Me.RepositoryItemTextEdit1, Me.RepositoryItemTextEdit2, Me.RepositoryItemTextEdit3, Me.RepositoryItemTextEdit4, Me.Gfilter_MA_TKN_GIAVON, Me.Gfilter_MA_TKC_GIAVON, Me.RepositoryItemTextEdit5, Me.RepositoryItemTextEdit6, Me.rcboVuviecId})
+        Me.grcPhieuPhapKho.Size = New System.Drawing.Size(967, 462)
         Me.grcPhieuPhapKho.TabIndex = 1
         Me.grcPhieuPhapKho.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.grvPhieuNhapKho})
         '
@@ -907,7 +945,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.grvPhieuNhapKho.Appearance.VertLine.BorderColor = System.Drawing.Color.FromArgb(CType(CType(117, Byte), Integer), CType(CType(136, Byte), Integer), CType(CType(122, Byte), Integer))
         Me.grvPhieuNhapKho.Appearance.VertLine.Options.UseBackColor = True
         Me.grvPhieuNhapKho.Appearance.VertLine.Options.UseBorderColor = True
-        Me.grvPhieuNhapKho.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.HanghoaId, Me.TenHanghoa, Me.TenDvt, Me.ViTri, Me.KhoNhapId, Me.KhoXuatId, Me.TonKho, Me.SoLuong, Me.DonGiaVonNte, Me.GiaVonNt, Me.DonGiaVon, Me.GiaVon, Me.MaTknGiavon, Me.VuviecId, Me.MaTkcGiavon, Me.IdDmPtqtCo, Me.IdDmTudo1Co, Me.IdDmTudo2Co, Me.IdDmTudo3Co, Me.IdDmTudo4Co, Me.IdDmTudo5Co, Me.IdDmPhongbanCo, Me.IdDmKhoanphiCo, Me.IdDmHopdongCo})
+        Me.grvPhieuNhapKho.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.HanghoaId, Me.TenHanghoa, Me.TenDvt, Me.ViTri, Me.KhoNhapId, Me.KhoXuatId, Me.TonKho, Me.SoLuong, Me.DonGiaVonNte, Me.GiaVonNt, Me.DonGiaVon, Me.GiaVon, Me.MaTknGiavon, Me.MaTkcGiavon, Me.IdDmPtqtCo, Me.IdDmTudo1Co, Me.IdDmTudo2Co, Me.IdDmTudo3Co, Me.IdDmTudo4Co, Me.IdDmTudo5Co, Me.IdDmPhongbanCo, Me.IdDmKhoanphiCo, Me.IdDmHopdongCo, Me.GridColumn1})
         Me.grvPhieuNhapKho.GridControl = Me.grcPhieuPhapKho
         Me.grvPhieuNhapKho.Name = "grvPhieuNhapKho"
         Me.grvPhieuNhapKho.OptionsNavigation.AutoFocusNewRow = True
@@ -931,10 +969,10 @@ Partial Class frmPhieuNhapKho_ChiTiet
         '
         Me.GFilterEdit_HANGHOA_ID.AutoHeight = False
         Me.GFilterEdit_HANGHOA_ID.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.GFilterEdit_HANGHOA_ID.C_ARR_COLS_DISPLAY = "KyHieu-Mã hàng hóa-80-1;TenHanghoa-Tên hàng hóa-200-1;Id--80-0;MaHanghoa--80-0;Te" & _
-            "nDvt--80-0;ViTri--80-0;MdTkKho--80-0;MdTkGiavon--80-0;MdTkGiaban--80-0"
-        Me.GFilterEdit_HANGHOA_ID.C_ARR_COLS_RETURN = "Id;KyHieu;TenHanghoa;MaHanghoa;TenDvt;MdTkKho;MdTkGiavon;MdTkGiaban;MdTkKho;ViTri" & _
-            ""
+        Me.GFilterEdit_HANGHOA_ID.C_ARR_COLS_DISPLAY = "KyHieu-Mã hàng hóa-80-1;TenHanghoa-Tên hàng hóa-200-1;Id--80-0;MaHanghoa--80-0;Te" &
+    "nDvt--80-0;ViTri--80-0;MdTkKho--80-0;MdTkGiavon--80-0;MdTkGiaban--80-0"
+        Me.GFilterEdit_HANGHOA_ID.C_ARR_COLS_RETURN = "Id;KyHieu;TenHanghoa;MaHanghoa;TenDvt;MdTkKho;MdTkGiavon;MdTkGiaban;MdTkKho;ViTri" &
+    ""
         Me.GFilterEdit_HANGHOA_ID.C_DATA_SOURCE = Nothing
         Me.GFilterEdit_HANGHOA_ID.C_FORM_DANHSACH = "frmDanhMucHangHoa_DanhSach"
         Me.GFilterEdit_HANGHOA_ID.C_FORM_TITLE = "Chọn hàng hóa"
@@ -1168,16 +1206,6 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.Gfilter_MA_TKN_GIAVON.NEXT_TAB = 0
         Me.Gfilter_MA_TKN_GIAVON.OBJ_CONDITITION = Nothing
         '
-        'VuviecId
-        '
-        Me.VuviecId.Caption = "Vụ việc"
-        Me.VuviecId.ColumnEdit = Me.cboVuViec
-        Me.VuviecId.FieldName = "VuviecId"
-        Me.VuviecId.Name = "VuviecId"
-        Me.VuviecId.Visible = True
-        Me.VuviecId.VisibleIndex = 13
-        Me.VuviecId.Width = 120
-        '
         'MaTkcGiavon
         '
         Me.MaTkcGiavon.Caption = "Tk có"
@@ -1185,7 +1213,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.MaTkcGiavon.FieldName = "MaTkcGiavon"
         Me.MaTkcGiavon.Name = "MaTkcGiavon"
         Me.MaTkcGiavon.Visible = True
-        Me.MaTkcGiavon.VisibleIndex = 14
+        Me.MaTkcGiavon.VisibleIndex = 13
         Me.MaTkcGiavon.Width = 120
         '
         'Gfilter_MA_TKC_GIAVON
@@ -1219,7 +1247,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.IdDmPtqtCo.FieldName = "IdDmPtqtCo"
         Me.IdDmPtqtCo.Name = "IdDmPtqtCo"
         Me.IdDmPtqtCo.Visible = True
-        Me.IdDmPtqtCo.VisibleIndex = 15
+        Me.IdDmPtqtCo.VisibleIndex = 14
         '
         'IdDmTudo1Co
         '
@@ -1228,7 +1256,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.IdDmTudo1Co.FieldName = "IdDmTudo1Co"
         Me.IdDmTudo1Co.Name = "IdDmTudo1Co"
         Me.IdDmTudo1Co.Visible = True
-        Me.IdDmTudo1Co.VisibleIndex = 16
+        Me.IdDmTudo1Co.VisibleIndex = 15
         '
         'IdDmTudo2Co
         '
@@ -1237,7 +1265,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.IdDmTudo2Co.FieldName = "IdDmTudo2Co"
         Me.IdDmTudo2Co.Name = "IdDmTudo2Co"
         Me.IdDmTudo2Co.Visible = True
-        Me.IdDmTudo2Co.VisibleIndex = 17
+        Me.IdDmTudo2Co.VisibleIndex = 16
         '
         'IdDmTudo3Co
         '
@@ -1246,7 +1274,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.IdDmTudo3Co.FieldName = "IdDmTudo3Co"
         Me.IdDmTudo3Co.Name = "IdDmTudo3Co"
         Me.IdDmTudo3Co.Visible = True
-        Me.IdDmTudo3Co.VisibleIndex = 18
+        Me.IdDmTudo3Co.VisibleIndex = 17
         '
         'IdDmTudo4Co
         '
@@ -1255,7 +1283,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.IdDmTudo4Co.FieldName = "IdDmTudo4Co"
         Me.IdDmTudo4Co.Name = "IdDmTudo4Co"
         Me.IdDmTudo4Co.Visible = True
-        Me.IdDmTudo4Co.VisibleIndex = 19
+        Me.IdDmTudo4Co.VisibleIndex = 18
         '
         'IdDmTudo5Co
         '
@@ -1264,7 +1292,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.IdDmTudo5Co.FieldName = "IdDmTudo5Co"
         Me.IdDmTudo5Co.Name = "IdDmTudo5Co"
         Me.IdDmTudo5Co.Visible = True
-        Me.IdDmTudo5Co.VisibleIndex = 20
+        Me.IdDmTudo5Co.VisibleIndex = 19
         '
         'IdDmPhongbanCo
         '
@@ -1273,7 +1301,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.IdDmPhongbanCo.FieldName = "IdDmPhongbanCo"
         Me.IdDmPhongbanCo.Name = "IdDmPhongbanCo"
         Me.IdDmPhongbanCo.Visible = True
-        Me.IdDmPhongbanCo.VisibleIndex = 21
+        Me.IdDmPhongbanCo.VisibleIndex = 20
         '
         'IdDmKhoanphiCo
         '
@@ -1282,7 +1310,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.IdDmKhoanphiCo.FieldName = "IdDmKhoanphiCo"
         Me.IdDmKhoanphiCo.Name = "IdDmKhoanphiCo"
         Me.IdDmKhoanphiCo.Visible = True
-        Me.IdDmKhoanphiCo.VisibleIndex = 22
+        Me.IdDmKhoanphiCo.VisibleIndex = 21
         '
         'IdDmHopdongCo
         '
@@ -1291,7 +1319,34 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.IdDmHopdongCo.FieldName = "IdDmHopdongCo"
         Me.IdDmHopdongCo.Name = "IdDmHopdongCo"
         Me.IdDmHopdongCo.Visible = True
-        Me.IdDmHopdongCo.VisibleIndex = 23
+        Me.IdDmHopdongCo.VisibleIndex = 22
+        '
+        'GridColumn1
+        '
+        Me.GridColumn1.Caption = "Mã VC"
+        Me.GridColumn1.ColumnEdit = Me.rcboVuviecId
+        Me.GridColumn1.FieldName = "VuviecId"
+        Me.GridColumn1.Name = "GridColumn1"
+        Me.GridColumn1.Visible = True
+        Me.GridColumn1.VisibleIndex = 23
+        '
+        'rcboVuviecId
+        '
+        Me.rcboVuviecId.AutoHeight = False
+        Me.rcboVuviecId.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.rcboVuviecId.DisplayMember = "KyHieu"
+        Me.rcboVuviecId.Name = "rcboVuviecId"
+        Me.rcboVuviecId.NullText = ""
+        Me.rcboVuviecId.ValueMember = "Id"
+        Me.rcboVuviecId.View = Me.RepositoryItemGridLookUpEdit1View
+        '
+        'RepositoryItemGridLookUpEdit1View
+        '
+        Me.RepositoryItemGridLookUpEdit1View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn6, Me.GridColumn7})
+        Me.RepositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
+        Me.RepositoryItemGridLookUpEdit1View.Name = "RepositoryItemGridLookUpEdit1View"
+        Me.RepositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.RepositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = False
         '
         'RepositoryItemAlignment1
         '
@@ -1305,16 +1360,18 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.PanelControl1.Controls.Add(Me.CheckEdit1)
         Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
+        Me.PanelControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(800, 21)
+        Me.PanelControl1.Size = New System.Drawing.Size(967, 26)
         Me.PanelControl1.TabIndex = 0
         '
         'LabelControl4
         '
         Me.LabelControl4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LabelControl4.Location = New System.Drawing.Point(385, 2)
+        Me.LabelControl4.Location = New System.Drawing.Point(483, 2)
+        Me.LabelControl4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl4.Name = "LabelControl4"
-        Me.LabelControl4.Size = New System.Drawing.Size(342, 13)
+        Me.LabelControl4.Size = New System.Drawing.Size(443, 17)
         Me.LabelControl4.TabIndex = 1
         Me.LabelControl4.Text = "F4 – Thêm dòng; F8 – Xóa dòng; Ctrl + Tab – Ra khỏi chi tiết hạch toán"
         '
@@ -1322,10 +1379,11 @@ Partial Class frmPhieuNhapKho_ChiTiet
         '
         Me.CheckEdit1.Dock = System.Windows.Forms.DockStyle.Left
         Me.CheckEdit1.Location = New System.Drawing.Point(2, 2)
+        Me.CheckEdit1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CheckEdit1.Name = "CheckEdit1"
-        Me.CheckEdit1.Properties.Caption = "Nhập theo giá TB cho VT tính giá TB                                              " & _
-            "                                             "
-        Me.CheckEdit1.Size = New System.Drawing.Size(229, 19)
+        Me.CheckEdit1.Properties.Caption = "Nhập theo giá TB cho VT tính giá TB                                              " &
+    "                                             "
+        Me.CheckEdit1.Size = New System.Drawing.Size(267, 22)
         Me.CheckEdit1.TabIndex = 0
         Me.CheckEdit1.Visible = False
         '
@@ -1336,7 +1394,8 @@ Partial Class frmPhieuNhapKho_ChiTiet
         'SplitContainerControl1
         '
         Me.SplitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainerControl1.Location = New System.Drawing.Point(4, 4)
+        Me.SplitContainerControl1.Location = New System.Drawing.Point(5, 5)
+        Me.SplitContainerControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.SplitContainerControl1.Name = "SplitContainerControl1"
         Me.SplitContainerControl1.Panel1.Controls.Add(Me.GroupControl4)
         Me.SplitContainerControl1.Panel1.Text = "Panel1"
@@ -1345,7 +1404,7 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.SplitContainerControl1.Panel2.Controls.Add(Me.GroupControl1)
         Me.SplitContainerControl1.Panel2.MinSize = 800
         Me.SplitContainerControl1.Panel2.Text = "Panel2"
-        Me.SplitContainerControl1.Size = New System.Drawing.Size(1000, 571)
+        Me.SplitContainerControl1.Size = New System.Drawing.Size(1166, 703)
         Me.SplitContainerControl1.SplitterPosition = 194
         Me.SplitContainerControl1.TabIndex = 0
         Me.SplitContainerControl1.Text = "SplitContainerControl1"
@@ -1355,18 +1414,21 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.GroupControl4.Controls.Add(Me.grcLPN_Hnx)
         Me.GroupControl4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupControl4.Location = New System.Drawing.Point(0, 0)
+        Me.GroupControl4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupControl4.Name = "GroupControl4"
-        Me.GroupControl4.Size = New System.Drawing.Size(194, 571)
+        Me.GroupControl4.Size = New System.Drawing.Size(194, 703)
         Me.GroupControl4.TabIndex = 0
         Me.GroupControl4.Text = "Danh sách..."
         '
         'grcLPN_Hnx
         '
         Me.grcLPN_Hnx.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grcLPN_Hnx.Location = New System.Drawing.Point(2, 22)
+        Me.grcLPN_Hnx.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.grcLPN_Hnx.Location = New System.Drawing.Point(2, 24)
         Me.grcLPN_Hnx.MainView = Me.grvLPX_Hnx
+        Me.grcLPN_Hnx.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.grcLPN_Hnx.Name = "grcLPN_Hnx"
-        Me.grcLPN_Hnx.Size = New System.Drawing.Size(190, 547)
+        Me.grcLPN_Hnx.Size = New System.Drawing.Size(190, 677)
         Me.grcLPN_Hnx.TabIndex = 0
         Me.grcLPN_Hnx.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.grvLPX_Hnx})
         '
@@ -1541,10 +1603,11 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.GroupControl3.Controls.Add(Me.TxtTongTien)
         Me.GroupControl3.Controls.Add(Me.labelControl22)
         Me.GroupControl3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.GroupControl3.Location = New System.Drawing.Point(0, 535)
+        Me.GroupControl3.Location = New System.Drawing.Point(0, 659)
+        Me.GroupControl3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupControl3.Name = "GroupControl3"
         Me.GroupControl3.ShowCaption = False
-        Me.GroupControl3.Size = New System.Drawing.Size(800, 36)
+        Me.GroupControl3.Size = New System.Drawing.Size(967, 44)
         Me.GroupControl3.TabIndex = 2
         Me.GroupControl3.Text = "GroupControl3"
         '
@@ -1552,23 +1615,24 @@ Partial Class frmPhieuNhapKho_ChiTiet
         '
         Me.UR_STATUS.CheckStatus = True
         Me.UR_STATUS.LCT_STATUS = New System.Guid("00000000-0000-0000-0000-000000000000")
-        Me.UR_STATUS.Location = New System.Drawing.Point(5, 6)
-        Me.UR_STATUS.Margin = New System.Windows.Forms.Padding(4)
+        Me.UR_STATUS.Location = New System.Drawing.Point(6, 7)
+        Me.UR_STATUS.Margin = New System.Windows.Forms.Padding(5)
         Me.UR_STATUS.Name = "UR_STATUS"
-        Me.UR_STATUS.Size = New System.Drawing.Size(314, 20)
+        Me.UR_STATUS.Size = New System.Drawing.Size(366, 25)
         Me.UR_STATUS.TabIndex = 67
-        ValueInfo1.Den_Ngay = Nothing
-        ValueInfo1.ID_DM = Nothing
-        ValueInfo1.Ky_Hieu = Nothing
-        ValueInfo1.MA_DM = Nothing
-        ValueInfo1.ParameterValue = Nothing
-        ValueInfo1.Ten = Nothing
-        ValueInfo1.Tu_Ngay = Nothing
-        Me.UR_STATUS.Value_info = ValueInfo1
+        ValueInfo4.Den_Ngay = Nothing
+        ValueInfo4.ID_DM = Nothing
+        ValueInfo4.Ky_Hieu = Nothing
+        ValueInfo4.MA_DM = Nothing
+        ValueInfo4.ParameterValue = Nothing
+        ValueInfo4.Ten = Nothing
+        ValueInfo4.Tu_Ngay = Nothing
+        Me.UR_STATUS.Value_info = ValueInfo4
         '
         'txtTongSoLuong
         '
-        Me.txtTongSoLuong.Location = New System.Drawing.Point(410, 7)
+        Me.txtTongSoLuong.Location = New System.Drawing.Point(478, 9)
+        Me.txtTongSoLuong.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtTongSoLuong.Name = "txtTongSoLuong"
         Me.txtTongSoLuong.Properties.Appearance.Options.UseTextOptions = True
         Me.txtTongSoLuong.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
@@ -1576,21 +1640,23 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.txtTongSoLuong.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
         Me.txtTongSoLuong.Properties.Mask.UseMaskAsDisplayFormat = True
         Me.txtTongSoLuong.Properties.ReadOnly = True
-        Me.txtTongSoLuong.Size = New System.Drawing.Size(138, 20)
+        Me.txtTongSoLuong.Size = New System.Drawing.Size(161, 22)
         Me.txtTongSoLuong.TabIndex = 1
         Me.txtTongSoLuong.TabStop = False
         '
         'LabelControl6
         '
-        Me.LabelControl6.Location = New System.Drawing.Point(326, 10)
+        Me.LabelControl6.Location = New System.Drawing.Point(380, 12)
+        Me.LabelControl6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl6.Name = "LabelControl6"
-        Me.LabelControl6.Size = New System.Drawing.Size(68, 13)
+        Me.LabelControl6.Size = New System.Drawing.Size(89, 17)
         Me.LabelControl6.TabIndex = 66
         Me.LabelControl6.Text = "Tổng số lượng"
         '
         'TxtTongTien
         '
-        Me.TxtTongTien.Location = New System.Drawing.Point(633, 6)
+        Me.TxtTongTien.Location = New System.Drawing.Point(738, 7)
+        Me.TxtTongTien.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TxtTongTien.Name = "TxtTongTien"
         Me.TxtTongTien.Properties.Appearance.Options.UseTextOptions = True
         Me.TxtTongTien.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
@@ -1598,15 +1664,16 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.TxtTongTien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
         Me.TxtTongTien.Properties.Mask.UseMaskAsDisplayFormat = True
         Me.TxtTongTien.Properties.ReadOnly = True
-        Me.TxtTongTien.Size = New System.Drawing.Size(149, 20)
+        Me.TxtTongTien.Size = New System.Drawing.Size(174, 22)
         Me.TxtTongTien.TabIndex = 2
         Me.TxtTongTien.TabStop = False
         '
         'labelControl22
         '
-        Me.labelControl22.Location = New System.Drawing.Point(571, 9)
+        Me.labelControl22.Location = New System.Drawing.Point(666, 11)
+        Me.labelControl22.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.labelControl22.Name = "labelControl22"
-        Me.labelControl22.Size = New System.Drawing.Size(45, 13)
+        Me.labelControl22.Size = New System.Drawing.Size(58, 17)
         Me.labelControl22.TabIndex = 2
         Me.labelControl22.Text = "Tổng tiền"
         '
@@ -1623,9 +1690,10 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.PanelControl2.Controls.Add(Me.btnPri)
         Me.PanelControl2.Controls.Add(Me.btnSav)
         Me.PanelControl2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelControl2.Location = New System.Drawing.Point(4, 575)
+        Me.PanelControl2.Location = New System.Drawing.Point(5, 708)
+        Me.PanelControl2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PanelControl2.Name = "PanelControl2"
-        Me.PanelControl2.Size = New System.Drawing.Size(1000, 30)
+        Me.PanelControl2.Size = New System.Drawing.Size(1166, 37)
         Me.PanelControl2.TabIndex = 1
         '
         'navWelding1
@@ -1639,9 +1707,10 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.navWelding1.Buttons.PrevPage.Visible = False
         Me.navWelding1.Buttons.Remove.Visible = False
         Me.navWelding1.Location = New System.Drawing.Point(0, 0)
+        Me.navWelding1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.navWelding1.Name = "navWelding1"
         Me.navWelding1.NavigatableControl = Me.grcLPN_Hnx
-        Me.navWelding1.Size = New System.Drawing.Size(194, 30)
+        Me.navWelding1.Size = New System.Drawing.Size(226, 37)
         Me.navWelding1.TabIndex = 1
         Me.navWelding1.Text = "ControlNavigator4"
         Me.navWelding1.TextLocation = DevExpress.XtraEditors.NavigatorButtonsTextLocation.Center
@@ -1651,9 +1720,10 @@ Partial Class frmPhieuNhapKho_ChiTiet
         '
         Me.btnSea.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnSea.ImageIndex = 3
-        Me.btnSea.Location = New System.Drawing.Point(541, 0)
+        Me.btnSea.Location = New System.Drawing.Point(631, 0)
+        Me.btnSea.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnSea.Name = "btnSea"
-        Me.btnSea.Size = New System.Drawing.Size(80, 30)
+        Me.btnSea.Size = New System.Drawing.Size(93, 37)
         Me.btnSea.TabIndex = 4
         Me.btnSea.Text = "&Tìm kiếm"
         '
@@ -1661,9 +1731,10 @@ Partial Class frmPhieuNhapKho_ChiTiet
         '
         Me.btnCan.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnCan.ImageIndex = 4
-        Me.btnCan.Location = New System.Drawing.Point(713, 0)
+        Me.btnCan.Location = New System.Drawing.Point(832, 0)
+        Me.btnCan.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnCan.Name = "btnCan"
-        Me.btnCan.Size = New System.Drawing.Size(80, 30)
+        Me.btnCan.Size = New System.Drawing.Size(93, 37)
         Me.btnCan.TabIndex = 6
         Me.btnCan.Text = "&Hủy"
         '
@@ -1671,9 +1742,10 @@ Partial Class frmPhieuNhapKho_ChiTiet
         '
         Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnAdd.ImageIndex = 2
-        Me.btnAdd.Location = New System.Drawing.Point(197, 0)
+        Me.btnAdd.Location = New System.Drawing.Point(230, 0)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(80, 30)
+        Me.btnAdd.Size = New System.Drawing.Size(93, 37)
         Me.btnAdd.TabIndex = 0
         Me.btnAdd.Text = "&Mới"
         '
@@ -1681,9 +1753,10 @@ Partial Class frmPhieuNhapKho_ChiTiet
         '
         Me.btnMod.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnMod.ImageIndex = 4
-        Me.btnMod.Location = New System.Drawing.Point(283, 0)
+        Me.btnMod.Location = New System.Drawing.Point(330, 0)
+        Me.btnMod.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnMod.Name = "btnMod"
-        Me.btnMod.Size = New System.Drawing.Size(80, 30)
+        Me.btnMod.Size = New System.Drawing.Size(93, 37)
         Me.btnMod.TabIndex = 1
         Me.btnMod.Text = "&Sửa"
         '
@@ -1691,9 +1764,10 @@ Partial Class frmPhieuNhapKho_ChiTiet
         '
         Me.btnDel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnDel.ImageIndex = 3
-        Me.btnDel.Location = New System.Drawing.Point(369, 0)
+        Me.btnDel.Location = New System.Drawing.Point(430, 0)
+        Me.btnDel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnDel.Name = "btnDel"
-        Me.btnDel.Size = New System.Drawing.Size(80, 30)
+        Me.btnDel.Size = New System.Drawing.Size(93, 37)
         Me.btnDel.TabIndex = 3
         Me.btnDel.Text = "&Xóa"
         '
@@ -1702,9 +1776,10 @@ Partial Class frmPhieuNhapKho_ChiTiet
         Me.btnQui.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnQui.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnQui.ImageIndex = 8
-        Me.btnQui.Location = New System.Drawing.Point(920, 0)
+        Me.btnQui.Location = New System.Drawing.Point(1072, 0)
+        Me.btnQui.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnQui.Name = "btnQui"
-        Me.btnQui.Size = New System.Drawing.Size(80, 30)
+        Me.btnQui.Size = New System.Drawing.Size(93, 37)
         Me.btnQui.TabIndex = 7
         Me.btnQui.Text = "&Quay ra"
         '
@@ -1712,9 +1787,10 @@ Partial Class frmPhieuNhapKho_ChiTiet
         '
         Me.btnPri.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnPri.ImageIndex = 15
-        Me.btnPri.Location = New System.Drawing.Point(627, 0)
+        Me.btnPri.Location = New System.Drawing.Point(731, 0)
+        Me.btnPri.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnPri.Name = "btnPri"
-        Me.btnPri.Size = New System.Drawing.Size(80, 30)
+        Me.btnPri.Size = New System.Drawing.Size(93, 37)
         Me.btnPri.TabIndex = 5
         Me.btnPri.Text = "&In phiếu"
         '
@@ -1722,22 +1798,56 @@ Partial Class frmPhieuNhapKho_ChiTiet
         '
         Me.btnSav.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnSav.ImageIndex = 0
-        Me.btnSav.Location = New System.Drawing.Point(455, 0)
+        Me.btnSav.Location = New System.Drawing.Point(531, 0)
+        Me.btnSav.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnSav.Name = "btnSav"
-        Me.btnSav.Size = New System.Drawing.Size(80, 30)
+        Me.btnSav.Size = New System.Drawing.Size(93, 37)
         Me.btnSav.TabIndex = 2
         Me.btnSav.Text = "&Lưu"
         '
+        'GridColumn4
+        '
+        Me.GridColumn4.Caption = "Ký hiệu"
+        Me.GridColumn4.FieldName = "KyHieu"
+        Me.GridColumn4.Name = "GridColumn4"
+        Me.GridColumn4.Visible = True
+        Me.GridColumn4.VisibleIndex = 0
+        '
+        'GridColumn5
+        '
+        Me.GridColumn5.Caption = "Tên"
+        Me.GridColumn5.FieldName = "TenVuviec"
+        Me.GridColumn5.Name = "GridColumn5"
+        Me.GridColumn5.Visible = True
+        Me.GridColumn5.VisibleIndex = 1
+        '
+        'GridColumn6
+        '
+        Me.GridColumn6.Caption = "Mã"
+        Me.GridColumn6.FieldName = "KyHieu"
+        Me.GridColumn6.Name = "GridColumn6"
+        Me.GridColumn6.Visible = True
+        Me.GridColumn6.VisibleIndex = 0
+        '
+        'GridColumn7
+        '
+        Me.GridColumn7.Caption = "Tên"
+        Me.GridColumn7.FieldName = "TenVuviec"
+        Me.GridColumn7.Name = "GridColumn7"
+        Me.GridColumn7.Visible = True
+        Me.GridColumn7.VisibleIndex = 1
+        '
         'frmPhieuNhapKho_ChiTiet
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1008, 609)
+        Me.ClientSize = New System.Drawing.Size(1176, 750)
         Me.Controls.Add(Me.SplitContainerControl1)
         Me.Controls.Add(Me.PanelControl2)
         Me.KeyPreview = True
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "frmPhieuNhapKho_ChiTiet"
-        Me.Padding = New System.Windows.Forms.Padding(4)
+        Me.Padding = New System.Windows.Forms.Padding(5)
         Me.Text = "phieu nhap kho CT"
         CType(Me.cboMaHang, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboDVT, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1790,6 +1900,8 @@ Partial Class frmPhieuNhapKho_ChiTiet
         CType(Me.RepositoryItemTextEdit3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Gfilter_MA_TKN_GIAVON, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Gfilter_MA_TKC_GIAVON, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rcboVuviecId, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemGridLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemAlignment1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)
@@ -1940,7 +2052,6 @@ Partial Class frmPhieuNhapKho_ChiTiet
     Friend WithEvents DonGiaVon As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GiaVon As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents MaTknGiavon As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents VuviecId As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents MaTkcGiavon As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents IdDmPtqtCo As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents IdDmTudo1Co As DevExpress.XtraGrid.Columns.GridColumn
@@ -1956,4 +2067,11 @@ Partial Class frmPhieuNhapKho_ChiTiet
     Friend WithEvents NgayGhi As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents Ghi As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents C_SoChungTu_RP As C_SoChungTu
+    Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents rcboVuviecId As DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit
+    Friend WithEvents RepositoryItemGridLookUpEdit1View As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn7 As DevExpress.XtraGrid.Columns.GridColumn
 End Class

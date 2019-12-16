@@ -489,5 +489,17 @@
     <property name="SessionFactory" ref="NHibernateSessionFactory"/>
     <property name="HibernateTemplate" ref="HibernateTemplate"/>
   </object>
+  
+  <!--Opec bang gia-->
+  <object id="BangGiaDDao" type="Vns.Erp.Core.Produce.Dao.NHibernate.BangGiaDDao,Vns.Erp.Core.Produce.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="BangGiaHDao" type="Vns.Erp.Core.Produce.Dao.NHibernate.BangGiaHDao,Vns.Erp.Core.Produce.Dao.NHibernate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <!--Opec bang gia-->
 
 </objects>

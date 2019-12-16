@@ -36,7 +36,8 @@
   <!--
   <db:provider id="targetDbProvider" provider="SqlServer-2.0" connectionString="Data Source=.\sqlexpress;Database=ketoan1;Trusted_Connection=False;uid=qldt;pwd=qldt;"/>
   -->
-  <db:provider id="targetDbProvider" provider="SqlServer-2.0" connectionString="Data Source=.\sqlexpress;Database=KeToan;Trusted_Connection=False;uid=sa;pwd=123456;"/>
+  <!--<db:provider id="targetDbProvider" provider="SqlServer-2.0" connectionString="Data Source=.\sqlexpress;Database=KeToan;Trusted_Connection=False;uid=sa;pwd=123456;"/>-->
+  <db:provider id="targetDbProvider" provider="SqlServer-2.0" connectionString="Data Source=192.168.35.150;Database=KeToan;Trusted_Connection=False;uid=sa;pwd=@12345db;"/>
   <!--<db:provider id="targetDbProvider" provider="SqlServer-2.0" connectionString="Data Source=ADSRV\sqlexpress;Database=Ketoan;Trusted_Connection=False;uid=sa;pwd=cybersky@123456;"/>-->
 
   <!-- NHibernate Configuration -->
@@ -68,7 +69,7 @@
 
         <entry key="use_proxy_validator" value="false" />
 
-        <!--<entry key="hbm2ddl.auto" value="update"/>-->
+        <entry key="hbm2ddl.auto" value="update"/>
         <!--<entry key="hbm2ddl.auto" value="create"/>-->
       </dictionary>
     </property>

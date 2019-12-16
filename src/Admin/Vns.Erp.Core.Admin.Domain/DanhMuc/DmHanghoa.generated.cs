@@ -62,6 +62,7 @@ namespace Vns.Erp.Core.Admin.Domain
         private decimal _than_vo;
         private decimal _LoaiHangHoa = 0;
         private DateTime _SynDate;
+        private string _MdTkDiduong;
         #endregion
 
         #region Default ( Empty ) Class Constuctor
@@ -104,6 +105,7 @@ namespace Vns.Erp.Core.Admin.Domain
             _vi_tri = String.Empty;
             _than_vo = 0;
             _SynDate = Null.MIN_DATE;
+            _MdTkDiduong = String.Empty;
         }
         #endregion // End of Default ( Empty ) Class Constuctor
 
@@ -350,8 +352,20 @@ namespace Vns.Erp.Core.Admin.Domain
                 _isChanged |= (_md_tk_kho != value); _md_tk_kho = value;
             }
         }
+        [DataMember]
+        public string MdTkDiduong
+        {
+            get { return _MdTkDiduong; }
+            set
+            {
+                if (value != null)
+                    if (value.Length > 32)
+                        throw new ArgumentOutOfRangeException("Invalid value for MdTkKho", value, value.ToString());
 
-
+                _isChanged |= (_MdTkDiduong != value); _MdTkDiduong = value;
+            }
+        }
+        
         /// <summary>
         /// 
         /// </summary>		

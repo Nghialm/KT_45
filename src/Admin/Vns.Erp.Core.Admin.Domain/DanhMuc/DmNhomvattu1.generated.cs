@@ -89,7 +89,7 @@ namespace Vns.Erp.Core.Admin.Domain
             set
             {
                 if (value != null)
-                    if (value.Length > 32)
+                    if (value.Length > 64)
                         throw new ArgumentOutOfRangeException("Invalid value for MaNhomVt1", value, value.ToString());
 
                 _isChanged |= (_ma_nhom_vt_1 != value); _ma_nhom_vt_1 = value;
@@ -108,7 +108,7 @@ namespace Vns.Erp.Core.Admin.Domain
             set
             {
                 if (value != null)
-                    if (value.Length > 32)
+                    if (value.Length > 64)
                         throw new ArgumentOutOfRangeException("Invalid value for TenNhomVt1", value, value.ToString());
 
                 _isChanged |= (_ten_nhom_vt_1 != value); _ten_nhom_vt_1 = value;
