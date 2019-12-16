@@ -51,7 +51,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.SplitContainer1 = new System.Windows.Forms.SplitContainer();
             this.PanelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.PagerControl1 = new Vns.Erp.Core.Common.Controls.PagerControl();
+            this.CtlPagerControl = new Vns.Erp.Core.Common.Controls.PagerControl();
             ((System.ComponentModel.ISupportInitialize)(this.GroupControl1)).BeginInit();
             this.GroupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grcLPN_Hnx)).BeginInit();
@@ -74,18 +74,21 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             this.GroupControl1.Controls.Add(this.grcLPN_Hnx);
             this.GroupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GroupControl1.Location = new System.Drawing.Point(0, 0);
+            this.GroupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GroupControl1.Name = "GroupControl1";
-            this.GroupControl1.Size = new System.Drawing.Size(996, 245);
+            this.GroupControl1.Size = new System.Drawing.Size(1162, 302);
             this.GroupControl1.TabIndex = 22;
             this.GroupControl1.Text = "Danh sách...";
             // 
             // grcLPN_Hnx
             // 
             this.grcLPN_Hnx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grcLPN_Hnx.Location = new System.Drawing.Point(2, 22);
+            this.grcLPN_Hnx.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grcLPN_Hnx.Location = new System.Drawing.Point(2, 24);
             this.grcLPN_Hnx.MainView = this.grvLPX_Hnx;
+            this.grcLPN_Hnx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grcLPN_Hnx.Name = "grcLPN_Hnx";
-            this.grcLPN_Hnx.Size = new System.Drawing.Size(992, 221);
+            this.grcLPN_Hnx.Size = new System.Drawing.Size(1158, 276);
             this.grcLPN_Hnx.TabIndex = 1;
             this.grcLPN_Hnx.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvLPX_Hnx});
@@ -309,19 +312,21 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             this.PanelControl2.Controls.Add(this.btnAdd);
             this.PanelControl2.Controls.Add(this.btnDel);
             this.PanelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelControl2.Location = new System.Drawing.Point(6, 572);
+            this.PanelControl2.Location = new System.Drawing.Point(7, 704);
+            this.PanelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PanelControl2.Name = "PanelControl2";
-            this.PanelControl2.Padding = new System.Windows.Forms.Padding(4);
-            this.PanelControl2.Size = new System.Drawing.Size(996, 34);
+            this.PanelControl2.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.PanelControl2.Size = new System.Drawing.Size(1162, 42);
             this.PanelControl2.TabIndex = 24;
             // 
             // btnClo
             // 
             this.btnClo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClo.ImageIndex = 1;
-            this.btnClo.Location = new System.Drawing.Point(915, 3);
+            this.btnClo.Location = new System.Drawing.Point(1067, 4);
+            this.btnClo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClo.Name = "btnClo";
-            this.btnClo.Size = new System.Drawing.Size(80, 30);
+            this.btnClo.Size = new System.Drawing.Size(93, 37);
             this.btnClo.TabIndex = 6;
             this.btnClo.Text = "&Đóng";
             this.btnClo.Click += new System.EventHandler(this.btnClo_Click);
@@ -329,9 +334,10 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             // btnMod
             // 
             this.btnMod.ImageIndex = 4;
-            this.btnMod.Location = new System.Drawing.Point(88, 3);
+            this.btnMod.Location = new System.Drawing.Point(103, 4);
+            this.btnMod.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMod.Name = "btnMod";
-            this.btnMod.Size = new System.Drawing.Size(80, 30);
+            this.btnMod.Size = new System.Drawing.Size(93, 37);
             this.btnMod.TabIndex = 4;
             this.btnMod.Text = "&Sửa";
             this.btnMod.Click += new System.EventHandler(this.btnModify_Click);
@@ -339,9 +345,10 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             // btnAdd
             // 
             this.btnAdd.ImageIndex = 18;
-            this.btnAdd.Location = new System.Drawing.Point(2, 3);
+            this.btnAdd.Location = new System.Drawing.Point(2, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(80, 30);
+            this.btnAdd.Size = new System.Drawing.Size(93, 37);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "&Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnCreate_Click);
@@ -349,9 +356,10 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             // btnDel
             // 
             this.btnDel.ImageIndex = 3;
-            this.btnDel.Location = new System.Drawing.Point(174, 3);
+            this.btnDel.Location = new System.Drawing.Point(203, 4);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(80, 30);
+            this.btnDel.Size = new System.Drawing.Size(93, 37);
             this.btnDel.TabIndex = 5;
             this.btnDel.Text = "&Xóa";
             this.btnDel.Visible = false;
@@ -548,10 +556,12 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             // grcLPN_Dnx
             // 
             this.grcLPN_Dnx.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grcLPN_Dnx.Location = new System.Drawing.Point(2, 22);
+            this.grcLPN_Dnx.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grcLPN_Dnx.Location = new System.Drawing.Point(2, 24);
             this.grcLPN_Dnx.MainView = this.grvLPN_Dnx;
+            this.grcLPN_Dnx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grcLPN_Dnx.Name = "grcLPN_Dnx";
-            this.grcLPN_Dnx.Size = new System.Drawing.Size(992, 261);
+            this.grcLPN_Dnx.Size = new System.Drawing.Size(1158, 325);
             this.grcLPN_Dnx.TabIndex = 1;
             this.grcLPN_Dnx.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvLPN_Dnx});
@@ -561,15 +571,17 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             this.groupControl2.Controls.Add(this.grcLPN_Dnx);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(996, 285);
+            this.groupControl2.Size = new System.Drawing.Size(1162, 351);
             this.groupControl2.TabIndex = 23;
             this.groupControl2.Text = "Danh sách...";
             // 
             // SplitContainer1
             // 
             this.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SplitContainer1.Location = new System.Drawing.Point(6, 6);
+            this.SplitContainer1.Location = new System.Drawing.Point(7, 7);
+            this.SplitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SplitContainer1.Name = "SplitContainer1";
             this.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -581,41 +593,45 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             // SplitContainer1.Panel2
             // 
             this.SplitContainer1.Panel2.Controls.Add(this.groupControl2);
-            this.SplitContainer1.Size = new System.Drawing.Size(996, 566);
-            this.SplitContainer1.SplitterDistance = 277;
+            this.SplitContainer1.Size = new System.Drawing.Size(1162, 697);
+            this.SplitContainer1.SplitterDistance = 341;
+            this.SplitContainer1.SplitterWidth = 5;
             this.SplitContainer1.TabIndex = 25;
             // 
             // PanelControl1
             // 
-            this.PanelControl1.Controls.Add(this.PagerControl1);
+            this.PanelControl1.Controls.Add(this.CtlPagerControl);
             this.PanelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelControl1.Location = new System.Drawing.Point(0, 245);
+            this.PanelControl1.Location = new System.Drawing.Point(0, 302);
+            this.PanelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PanelControl1.Name = "PanelControl1";
-            this.PanelControl1.Size = new System.Drawing.Size(996, 32);
+            this.PanelControl1.Size = new System.Drawing.Size(1162, 39);
             this.PanelControl1.TabIndex = 23;
             // 
-            // PagerControl1
+            // CtlPagerControl
             // 
-            this.PagerControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PagerControl1.Location = new System.Drawing.Point(511, 2);
-            this.PagerControl1.Name = "PagerControl1";
-            this.PagerControl1.PageIndex = 1;
-            this.PagerControl1.PageSize = 100;
-            this.PagerControl1.Size = new System.Drawing.Size(483, 28);
-            this.PagerControl1.TabIndex = 0;
-            this.PagerControl1.TotalPage = 0;
-            this.PagerControl1.TotalResult = 0;
+            this.CtlPagerControl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CtlPagerControl.Location = new System.Drawing.Point(597, 2);
+            this.CtlPagerControl.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.CtlPagerControl.Name = "CtlPagerControl";
+            this.CtlPagerControl.PageIndex = 1;
+            this.CtlPagerControl.PageSize = 100;
+            this.CtlPagerControl.Size = new System.Drawing.Size(563, 35);
+            this.CtlPagerControl.TabIndex = 0;
+            this.CtlPagerControl.TotalPage = 0;
+            this.CtlPagerControl.TotalResult = 0;
             // 
             // frmPhieuDieuXuatDieuChuyen_DanhSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 612);
+            this.ClientSize = new System.Drawing.Size(1176, 753);
             this.Controls.Add(this.SplitContainer1);
             this.Controls.Add(this.PanelControl2);
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmPhieuDieuXuatDieuChuyen_DanhSach";
-            this.Padding = new System.Windows.Forms.Padding(6);
+            this.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phiếu điều chuyển [ Danh sách ]";
             this.Load += new System.EventHandler(this.frmPhieuDieuXuatDieuChuyen_DanhSach_Load);
@@ -679,7 +695,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
         internal DevExpress.XtraGrid.Columns.GridColumn GiaVon;
         internal DevExpress.XtraGrid.Columns.GridColumn Ghi;
         internal DevExpress.XtraEditors.PanelControl PanelControl1;
-        internal Vns.Erp.Core.Common.Controls.PagerControl PagerControl1;
+        internal Vns.Erp.Core.Common.Controls.PagerControl CtlPagerControl;
         //public frmPhieuDieuXuatDieuChuyen_DanhSach()
         //{
         //    InitializeComponent();

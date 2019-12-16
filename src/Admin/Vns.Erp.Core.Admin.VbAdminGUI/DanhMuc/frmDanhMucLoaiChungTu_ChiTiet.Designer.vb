@@ -28,6 +28,7 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         Me._GroupControlObjectInfo = New DevExpress.XtraEditors.GroupControl()
         Me.chkCHI_TIET = New DevExpress.XtraEditors.CheckEdit()
         Me._panel1 = New DevExpress.XtraEditors.PanelControl()
+        Me.LabelControl9 = New DevExpress.XtraEditors.LabelControl()
         Me.txtSO_CT_HIENTHI = New DevExpress.XtraEditors.TextEdit()
         Me.txtPREFIX_CT = New DevExpress.XtraEditors.TextEdit()
         Me.lblCarFarmily_Code = New DevExpress.XtraEditors.LabelControl()
@@ -51,7 +52,6 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         Me.LabelControl4 = New DevExpress.XtraEditors.LabelControl()
         Me.labelControl14 = New DevExpress.XtraEditors.LabelControl()
         Me.labelControl7 = New DevExpress.XtraEditors.LabelControl()
-        Me.cboTK_THUE_NGAMDINH = New DevExpress.XtraEditors.LookUpEdit()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txtKHO_XUAT = New DevExpress.XtraEditors.TextEdit()
         Me.txtPHIEU_XUAT = New DevExpress.XtraEditors.TextEdit()
@@ -86,7 +86,7 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.orderTHU_TU = New DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit()
         Me.chk_CO_SU_DUNG = New DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit()
-        Me.LabelControl9 = New DevExpress.XtraEditors.LabelControl()
+        Me.txtTkThueNgamDinh = New DevExpress.XtraEditors.TextEdit()
         CType(Me._GroupControlObjectInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me._GroupControlObjectInfo.SuspendLayout()
         CType(Me.chkCHI_TIET.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,7 +103,6 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         CType(Me.txtMA_TK_CO_LQ.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtMA_TK_NO_LQ.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtMA_LOAI_CT.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cboTK_THUE_NGAMDINH.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.txtKHO_XUAT.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtPHIEU_XUAT.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,6 +132,7 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         CType(Me.grvMain, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.orderTHU_TU, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chk_CO_SU_DUNG, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtTkThueNgamDinh.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         '_GroupControlObjectInfo
@@ -141,32 +141,35 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         Me._GroupControlObjectInfo.Controls.Add(Me._panel1)
         Me._GroupControlObjectInfo.Controls.Add(Me.GroupBox2)
         Me._GroupControlObjectInfo.Controls.Add(Me.GroupBox1)
-        Me._GroupControlObjectInfo.Controls.Add(Me.chkSD_TK_THUE_NGAMDINH)
         Me._GroupControlObjectInfo.Controls.Add(Me.chkCO_SU_DUNG)
         Me._GroupControlObjectInfo.Dock = System.Windows.Forms.DockStyle.Fill
         Me._GroupControlObjectInfo.Location = New System.Drawing.Point(0, 0)
+        Me._GroupControlObjectInfo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me._GroupControlObjectInfo.Name = "_GroupControlObjectInfo"
-        Me._GroupControlObjectInfo.Padding = New System.Windows.Forms.Padding(4)
+        Me._GroupControlObjectInfo.Padding = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me._GroupControlObjectInfo.ShowCaption = False
-        Me._GroupControlObjectInfo.Size = New System.Drawing.Size(754, 351)
+        Me._GroupControlObjectInfo.Size = New System.Drawing.Size(881, 436)
         Me._GroupControlObjectInfo.TabIndex = 0
         Me._GroupControlObjectInfo.Text = "Thông tin Mã danh m?c t? do 2"
         '
         'chkCHI_TIET
         '
         Me.chkCHI_TIET.EditValue = True
-        Me.chkCHI_TIET.Location = New System.Drawing.Point(466, 315)
+        Me.chkCHI_TIET.Location = New System.Drawing.Point(542, 358)
+        Me.chkCHI_TIET.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkCHI_TIET.Name = "chkCHI_TIET"
         Me.chkCHI_TIET.Properties.Caption = "Chi tiết"
-        Me.chkCHI_TIET.Size = New System.Drawing.Size(108, 19)
+        Me.chkCHI_TIET.Size = New System.Drawing.Size(126, 22)
         Me.chkCHI_TIET.TabIndex = 5
         '
         '_panel1
         '
         Me._panel1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me._panel1.Controls.Add(Me.txtTkThueNgamDinh)
         Me._panel1.Controls.Add(Me.LabelControl9)
         Me._panel1.Controls.Add(Me.txtSO_CT_HIENTHI)
         Me._panel1.Controls.Add(Me.txtPREFIX_CT)
+        Me._panel1.Controls.Add(Me.chkSD_TK_THUE_NGAMDINH)
         Me._panel1.Controls.Add(Me.lblCarFarmily_Code)
         Me._panel1.Controls.Add(Me.LabelControl8)
         Me._panel1.Controls.Add(Me.lblValue)
@@ -188,64 +191,80 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         Me._panel1.Controls.Add(Me.LabelControl4)
         Me._panel1.Controls.Add(Me.labelControl14)
         Me._panel1.Controls.Add(Me.labelControl7)
-        Me._panel1.Controls.Add(Me.cboTK_THUE_NGAMDINH)
-        Me._panel1.Location = New System.Drawing.Point(7, 5)
+        Me._panel1.Location = New System.Drawing.Point(8, 6)
+        Me._panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me._panel1.Name = "_panel1"
-        Me._panel1.Size = New System.Drawing.Size(451, 333)
+        Me._panel1.Size = New System.Drawing.Size(526, 410)
         Me._panel1.TabIndex = 0
+        '
+        'LabelControl9
+        '
+        Me.LabelControl9.Appearance.ForeColor = System.Drawing.Color.Blue
+        Me.LabelControl9.Location = New System.Drawing.Point(381, 145)
+        Me.LabelControl9.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.LabelControl9.Name = "LabelControl9"
+        Me.LabelControl9.Size = New System.Drawing.Size(95, 16)
+        Me.LabelControl9.TabIndex = 49
+        Me.LabelControl9.Text = "xx-[yyyyMM]-{0}"
         '
         'txtSO_CT_HIENTHI
         '
         Me.txtSO_CT_HIENTHI.EnterMoveNextControl = True
-        Me.txtSO_CT_HIENTHI.Location = New System.Drawing.Point(121, 166)
+        Me.txtSO_CT_HIENTHI.Location = New System.Drawing.Point(141, 204)
+        Me.txtSO_CT_HIENTHI.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtSO_CT_HIENTHI.Name = "txtSO_CT_HIENTHI"
         Me.txtSO_CT_HIENTHI.Properties.Mask.EditMask = "[0-9]+"
         Me.txtSO_CT_HIENTHI.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
-        Me.txtSO_CT_HIENTHI.Size = New System.Drawing.Size(200, 20)
+        Me.txtSO_CT_HIENTHI.Size = New System.Drawing.Size(233, 22)
         Me.txtSO_CT_HIENTHI.TabIndex = 6
         '
         'txtPREFIX_CT
         '
         Me.txtPREFIX_CT.EnterMoveNextControl = True
-        Me.txtPREFIX_CT.Location = New System.Drawing.Point(121, 115)
+        Me.txtPREFIX_CT.Location = New System.Drawing.Point(141, 142)
+        Me.txtPREFIX_CT.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtPREFIX_CT.Name = "txtPREFIX_CT"
-        Me.txtPREFIX_CT.Size = New System.Drawing.Size(200, 20)
+        Me.txtPREFIX_CT.Size = New System.Drawing.Size(233, 22)
         Me.txtPREFIX_CT.TabIndex = 4
         '
         'lblCarFarmily_Code
         '
-        Me.lblCarFarmily_Code.Location = New System.Drawing.Point(63, 41)
+        Me.lblCarFarmily_Code.Location = New System.Drawing.Point(73, 50)
+        Me.lblCarFarmily_Code.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.lblCarFarmily_Code.Name = "lblCarFarmily_Code"
-        Me.lblCarFarmily_Code.Size = New System.Drawing.Size(35, 13)
+        Me.lblCarFarmily_Code.Size = New System.Drawing.Size(45, 17)
         Me.lblCarFarmily_Code.TabIndex = 22
         Me.lblCarFarmily_Code.Text = "Ký hiệu"
         '
         'LabelControl8
         '
-        Me.LabelControl8.Location = New System.Drawing.Point(42, 118)
+        Me.LabelControl8.Location = New System.Drawing.Point(49, 145)
+        Me.LabelControl8.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl8.Name = "LabelControl8"
-        Me.LabelControl8.Size = New System.Drawing.Size(56, 13)
+        Me.LabelControl8.Size = New System.Drawing.Size(72, 17)
         Me.LabelControl8.TabIndex = 48
         Me.LabelControl8.Text = "Ký hiệu đầu"
         '
         'lblValue
         '
-        Me.lblValue.Location = New System.Drawing.Point(14, 66)
+        Me.lblValue.Location = New System.Drawing.Point(16, 81)
+        Me.lblValue.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.lblValue.Name = "lblValue"
-        Me.lblValue.Size = New System.Drawing.Size(84, 13)
+        Me.lblValue.Size = New System.Drawing.Size(108, 17)
         Me.lblValue.TabIndex = 20
         Me.lblValue.Text = "Tên loại chứng từ"
         '
         'txtMAU_SO_CT
         '
         Me.txtMAU_SO_CT.EnterMoveNextControl = True
-        Me.txtMAU_SO_CT.Location = New System.Drawing.Point(121, 140)
+        Me.txtMAU_SO_CT.Location = New System.Drawing.Point(141, 172)
+        Me.txtMAU_SO_CT.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtMAU_SO_CT.Name = "txtMAU_SO_CT"
         Me.txtMAU_SO_CT.Properties.Appearance.Options.UseTextOptions = True
         Me.txtMAU_SO_CT.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
         Me.txtMAU_SO_CT.Properties.Mask.EditMask = "[1-9]{1}"
         Me.txtMAU_SO_CT.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
-        Me.txtMAU_SO_CT.Size = New System.Drawing.Size(200, 20)
+        Me.txtMAU_SO_CT.Size = New System.Drawing.Size(233, 22)
         Me.txtMAU_SO_CT.TabIndex = 5
         '
         'cboLOAI_CT_ID_CHA
@@ -253,7 +272,8 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         Me.cboLOAI_CT_ID_CHA.AllowDrop = True
         Me.cboLOAI_CT_ID_CHA.EditValue = "0"
         Me.cboLOAI_CT_ID_CHA.EnterMoveNextControl = True
-        Me.cboLOAI_CT_ID_CHA.Location = New System.Drawing.Point(121, 89)
+        Me.cboLOAI_CT_ID_CHA.Location = New System.Drawing.Point(141, 110)
+        Me.cboLOAI_CT_ID_CHA.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboLOAI_CT_ID_CHA.Name = "cboLOAI_CT_ID_CHA"
         Me.cboLOAI_CT_ID_CHA.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
         Me.cboLOAI_CT_ID_CHA.Properties.Appearance.BackColor = System.Drawing.Color.White
@@ -263,155 +283,152 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         Me.cboLOAI_CT_ID_CHA.Properties.ImmediatePopup = True
         Me.cboLOAI_CT_ID_CHA.Properties.NullText = ""
         Me.cboLOAI_CT_ID_CHA.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard
-        Me.cboLOAI_CT_ID_CHA.Size = New System.Drawing.Size(200, 20)
+        Me.cboLOAI_CT_ID_CHA.Size = New System.Drawing.Size(233, 22)
         Me.cboLOAI_CT_ID_CHA.TabIndex = 3
         '
         'labelControl6
         '
-        Me.labelControl6.Location = New System.Drawing.Point(17, 143)
+        Me.labelControl6.Location = New System.Drawing.Point(20, 176)
+        Me.labelControl6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.labelControl6.Name = "labelControl6"
-        Me.labelControl6.Size = New System.Drawing.Size(81, 13)
+        Me.labelControl6.Size = New System.Drawing.Size(105, 17)
         Me.labelControl6.TabIndex = 48
         Me.labelControl6.Text = "Mẫu số chứng từ"
         '
         'LabelControl17
         '
-        Me.LabelControl17.Location = New System.Drawing.Point(5, 92)
+        Me.LabelControl17.Location = New System.Drawing.Point(6, 113)
+        Me.LabelControl17.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl17.Name = "LabelControl17"
-        Me.LabelControl17.Size = New System.Drawing.Size(93, 13)
+        Me.LabelControl17.Size = New System.Drawing.Size(122, 17)
         Me.LabelControl17.TabIndex = 23
         Me.LabelControl17.Text = "Nhóm loại chứng từ"
         '
         'txtDUONG_DAN
         '
         Me.txtDUONG_DAN.EnterMoveNextControl = True
-        Me.txtDUONG_DAN.Location = New System.Drawing.Point(121, 230)
+        Me.txtDUONG_DAN.Location = New System.Drawing.Point(141, 283)
+        Me.txtDUONG_DAN.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtDUONG_DAN.Name = "txtDUONG_DAN"
-        Me.txtDUONG_DAN.Size = New System.Drawing.Size(200, 20)
+        Me.txtDUONG_DAN.Size = New System.Drawing.Size(233, 22)
         Me.txtDUONG_DAN.TabIndex = 8
         '
         'labelControl1
         '
-        Me.labelControl1.Location = New System.Drawing.Point(71, 195)
+        Me.labelControl1.Location = New System.Drawing.Point(83, 240)
+        Me.labelControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.labelControl1.Name = "labelControl1"
-        Me.labelControl1.Size = New System.Drawing.Size(27, 13)
+        Me.labelControl1.Size = New System.Drawing.Size(34, 17)
         Me.labelControl1.TabIndex = 25
         Me.labelControl1.Text = "Mô tả"
         '
         'LabelControl2
         '
-        Me.LabelControl2.Location = New System.Drawing.Point(44, 233)
+        Me.LabelControl2.Location = New System.Drawing.Point(51, 287)
+        Me.LabelControl2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl2.Name = "LabelControl2"
-        Me.LabelControl2.Size = New System.Drawing.Size(54, 13)
+        Me.LabelControl2.Size = New System.Drawing.Size(70, 17)
         Me.LabelControl2.TabIndex = 46
         Me.LabelControl2.Text = "Đường dẫn"
         '
         'txtTEN_LOAI_CT
         '
         Me.txtTEN_LOAI_CT.EnterMoveNextControl = True
-        Me.txtTEN_LOAI_CT.Location = New System.Drawing.Point(121, 63)
+        Me.txtTEN_LOAI_CT.Location = New System.Drawing.Point(141, 78)
+        Me.txtTEN_LOAI_CT.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtTEN_LOAI_CT.Name = "txtTEN_LOAI_CT"
-        Me.txtTEN_LOAI_CT.Size = New System.Drawing.Size(200, 20)
+        Me.txtTEN_LOAI_CT.Size = New System.Drawing.Size(233, 22)
         Me.txtTEN_LOAI_CT.TabIndex = 2
         '
         'txtKy_Hieu
         '
         Me.txtKy_Hieu.EnterMoveNextControl = True
-        Me.txtKy_Hieu.Location = New System.Drawing.Point(121, 38)
+        Me.txtKy_Hieu.Location = New System.Drawing.Point(141, 47)
+        Me.txtKy_Hieu.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtKy_Hieu.Name = "txtKy_Hieu"
-        Me.txtKy_Hieu.Size = New System.Drawing.Size(200, 20)
+        Me.txtKy_Hieu.Size = New System.Drawing.Size(233, 22)
         Me.txtKy_Hieu.TabIndex = 1
         '
         'txtMO_TA
         '
         Me.txtMO_TA.EnterMoveNextControl = True
-        Me.txtMO_TA.Location = New System.Drawing.Point(121, 192)
+        Me.txtMO_TA.Location = New System.Drawing.Point(141, 236)
+        Me.txtMO_TA.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtMO_TA.Name = "txtMO_TA"
-        Me.txtMO_TA.Size = New System.Drawing.Size(200, 32)
+        Me.txtMO_TA.Size = New System.Drawing.Size(233, 39)
         Me.txtMO_TA.TabIndex = 7
         '
         'txtMA_TK_CO_LQ
         '
         Me.txtMA_TK_CO_LQ.EnterMoveNextControl = True
-        Me.txtMA_TK_CO_LQ.Location = New System.Drawing.Point(121, 282)
+        Me.txtMA_TK_CO_LQ.Location = New System.Drawing.Point(141, 347)
+        Me.txtMA_TK_CO_LQ.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtMA_TK_CO_LQ.Name = "txtMA_TK_CO_LQ"
-        Me.txtMA_TK_CO_LQ.Size = New System.Drawing.Size(200, 20)
+        Me.txtMA_TK_CO_LQ.Size = New System.Drawing.Size(233, 22)
         Me.txtMA_TK_CO_LQ.TabIndex = 10
         '
         'labelControl3
         '
-        Me.labelControl3.Location = New System.Drawing.Point(25, 259)
+        Me.labelControl3.Location = New System.Drawing.Point(29, 319)
+        Me.labelControl3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.labelControl3.Name = "labelControl3"
-        Me.labelControl3.Size = New System.Drawing.Size(73, 13)
+        Me.labelControl3.Size = New System.Drawing.Size(94, 17)
         Me.labelControl3.TabIndex = 26
         Me.labelControl3.Text = "TK nợ liên quan"
         '
         'txtMA_TK_NO_LQ
         '
         Me.txtMA_TK_NO_LQ.EnterMoveNextControl = True
-        Me.txtMA_TK_NO_LQ.Location = New System.Drawing.Point(121, 256)
+        Me.txtMA_TK_NO_LQ.Location = New System.Drawing.Point(141, 315)
+        Me.txtMA_TK_NO_LQ.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtMA_TK_NO_LQ.Name = "txtMA_TK_NO_LQ"
-        Me.txtMA_TK_NO_LQ.Size = New System.Drawing.Size(200, 20)
+        Me.txtMA_TK_NO_LQ.Size = New System.Drawing.Size(233, 22)
         Me.txtMA_TK_NO_LQ.TabIndex = 9
         '
         'labelControl5
         '
-        Me.labelControl5.Location = New System.Drawing.Point(26, 289)
+        Me.labelControl5.Location = New System.Drawing.Point(30, 356)
+        Me.labelControl5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.labelControl5.Name = "labelControl5"
-        Me.labelControl5.Size = New System.Drawing.Size(72, 13)
+        Me.labelControl5.Size = New System.Drawing.Size(88, 16)
         Me.labelControl5.TabIndex = 27
         Me.labelControl5.Text = "TK có liên quan"
         '
         'txtMA_LOAI_CT
         '
         Me.txtMA_LOAI_CT.EnterMoveNextControl = True
-        Me.txtMA_LOAI_CT.Location = New System.Drawing.Point(121, 13)
+        Me.txtMA_LOAI_CT.Location = New System.Drawing.Point(141, 16)
+        Me.txtMA_LOAI_CT.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtMA_LOAI_CT.Name = "txtMA_LOAI_CT"
-        Me.txtMA_LOAI_CT.Size = New System.Drawing.Size(200, 20)
+        Me.txtMA_LOAI_CT.Size = New System.Drawing.Size(233, 22)
         Me.txtMA_LOAI_CT.TabIndex = 0
         '
         'LabelControl4
         '
-        Me.LabelControl4.Location = New System.Drawing.Point(10, 169)
+        Me.LabelControl4.Location = New System.Drawing.Point(12, 208)
+        Me.LabelControl4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl4.Name = "LabelControl4"
-        Me.LabelControl4.Size = New System.Drawing.Size(88, 13)
+        Me.LabelControl4.Size = New System.Drawing.Size(113, 17)
         Me.LabelControl4.TabIndex = 24
         Me.LabelControl4.Text = "Số bản ghi hiển thị"
         '
         'labelControl14
         '
-        Me.labelControl14.Location = New System.Drawing.Point(18, 16)
+        Me.labelControl14.Location = New System.Drawing.Point(21, 20)
+        Me.labelControl14.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.labelControl14.Name = "labelControl14"
-        Me.labelControl14.Size = New System.Drawing.Size(80, 13)
+        Me.labelControl14.Size = New System.Drawing.Size(102, 17)
         Me.labelControl14.TabIndex = 21
         Me.labelControl14.Text = "Mã loại chứng từ"
         '
         'labelControl7
         '
-        Me.labelControl7.Location = New System.Drawing.Point(15, 311)
+        Me.labelControl7.Location = New System.Drawing.Point(17, 383)
+        Me.labelControl7.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.labelControl7.Name = "labelControl7"
-        Me.labelControl7.Size = New System.Drawing.Size(83, 13)
+        Me.labelControl7.Size = New System.Drawing.Size(117, 17)
         Me.labelControl7.TabIndex = 28
-        Me.labelControl7.Text = "TK thu ngầm định"
-        '
-        'cboTK_THUE_NGAMDINH
-        '
-        Me.cboTK_THUE_NGAMDINH.AllowDrop = True
-        Me.cboTK_THUE_NGAMDINH.EditValue = "0"
-        Me.cboTK_THUE_NGAMDINH.Enabled = False
-        Me.cboTK_THUE_NGAMDINH.EnterMoveNextControl = True
-        Me.cboTK_THUE_NGAMDINH.Location = New System.Drawing.Point(121, 308)
-        Me.cboTK_THUE_NGAMDINH.Name = "cboTK_THUE_NGAMDINH"
-        Me.cboTK_THUE_NGAMDINH.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
-        Me.cboTK_THUE_NGAMDINH.Properties.Appearance.BackColor = System.Drawing.Color.White
-        Me.cboTK_THUE_NGAMDINH.Properties.Appearance.Options.UseBackColor = True
-        Me.cboTK_THUE_NGAMDINH.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit
-        Me.cboTK_THUE_NGAMDINH.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.cboTK_THUE_NGAMDINH.Properties.ImmediatePopup = True
-        Me.cboTK_THUE_NGAMDINH.Properties.NullText = ""
-        Me.cboTK_THUE_NGAMDINH.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard
-        Me.cboTK_THUE_NGAMDINH.Size = New System.Drawing.Size(200, 20)
-        Me.cboTK_THUE_NGAMDINH.TabIndex = 11
+        Me.labelControl7.Text = "TK thuế ngầm định"
         '
         'GroupBox2
         '
@@ -419,45 +436,51 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         Me.GroupBox2.Controls.Add(Me.txtPHIEU_XUAT)
         Me.GroupBox2.Controls.Add(Me.LabelControl19)
         Me.GroupBox2.Controls.Add(Me.LabelControl16)
-        Me.GroupBox2.Location = New System.Drawing.Point(465, 210)
+        Me.GroupBox2.Location = New System.Drawing.Point(542, 258)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(260, 76)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(303, 94)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         '
         'txtKHO_XUAT
         '
         Me.txtKHO_XUAT.EnterMoveNextControl = True
-        Me.txtKHO_XUAT.Location = New System.Drawing.Point(104, 44)
+        Me.txtKHO_XUAT.Location = New System.Drawing.Point(121, 54)
+        Me.txtKHO_XUAT.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtKHO_XUAT.Name = "txtKHO_XUAT"
         Me.txtKHO_XUAT.Properties.Mask.EditMask = "[0-9]+"
         Me.txtKHO_XUAT.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
-        Me.txtKHO_XUAT.Size = New System.Drawing.Size(141, 20)
+        Me.txtKHO_XUAT.Size = New System.Drawing.Size(164, 22)
         Me.txtKHO_XUAT.TabIndex = 1
         '
         'txtPHIEU_XUAT
         '
         Me.txtPHIEU_XUAT.EnterMoveNextControl = True
-        Me.txtPHIEU_XUAT.Location = New System.Drawing.Point(104, 18)
+        Me.txtPHIEU_XUAT.Location = New System.Drawing.Point(121, 22)
+        Me.txtPHIEU_XUAT.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtPHIEU_XUAT.Name = "txtPHIEU_XUAT"
         Me.txtPHIEU_XUAT.Properties.Mask.EditMask = "[0-9]+"
         Me.txtPHIEU_XUAT.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
-        Me.txtPHIEU_XUAT.Size = New System.Drawing.Size(141, 20)
+        Me.txtPHIEU_XUAT.Size = New System.Drawing.Size(164, 22)
         Me.txtPHIEU_XUAT.TabIndex = 0
         '
         'LabelControl19
         '
-        Me.LabelControl19.Location = New System.Drawing.Point(43, 47)
+        Me.LabelControl19.Location = New System.Drawing.Point(50, 58)
+        Me.LabelControl19.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl19.Name = "LabelControl19"
-        Me.LabelControl19.Size = New System.Drawing.Size(43, 13)
+        Me.LabelControl19.Size = New System.Drawing.Size(56, 17)
         Me.LabelControl19.TabIndex = 46
         Me.LabelControl19.Text = "Kho xuất"
         '
         'LabelControl16
         '
-        Me.LabelControl16.Location = New System.Drawing.Point(35, 21)
+        Me.LabelControl16.Location = New System.Drawing.Point(41, 26)
+        Me.LabelControl16.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl16.Name = "LabelControl16"
-        Me.LabelControl16.Size = New System.Drawing.Size(51, 13)
+        Me.LabelControl16.Size = New System.Drawing.Size(65, 17)
         Me.LabelControl16.TabIndex = 45
         Me.LabelControl16.Text = "Phiếu xuất"
         '
@@ -476,9 +499,11 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         Me.GroupBox1.Controls.Add(Me.chkDM_VUVIEC)
         Me.GroupBox1.Controls.Add(Me.chkDM_PHONGBAN)
         Me.GroupBox1.Controls.Add(Me.chkDM_TUDO4)
-        Me.GroupBox1.Location = New System.Drawing.Point(464, 5)
+        Me.GroupBox1.Location = New System.Drawing.Point(541, 6)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(262, 199)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(306, 245)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Danh mục"
@@ -486,136 +511,151 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         'chkDM_HOADON
         '
         Me.chkDM_HOADON.EditValue = True
-        Me.chkDM_HOADON.Location = New System.Drawing.Point(14, 171)
+        Me.chkDM_HOADON.Location = New System.Drawing.Point(16, 210)
+        Me.chkDM_HOADON.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkDM_HOADON.Name = "chkDM_HOADON"
         Me.chkDM_HOADON.Properties.Caption = "DM hóa đơn"
-        Me.chkDM_HOADON.Size = New System.Drawing.Size(95, 19)
+        Me.chkDM_HOADON.Size = New System.Drawing.Size(111, 21)
         Me.chkDM_HOADON.TabIndex = 5
         '
         'chkDM_KHANG
         '
         Me.chkDM_KHANG.EditValue = True
-        Me.chkDM_KHANG.Location = New System.Drawing.Point(14, 146)
+        Me.chkDM_KHANG.Location = New System.Drawing.Point(16, 180)
+        Me.chkDM_KHANG.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkDM_KHANG.Name = "chkDM_KHANG"
         Me.chkDM_KHANG.Properties.Caption = "DM khách hàng"
-        Me.chkDM_KHANG.Size = New System.Drawing.Size(95, 19)
+        Me.chkDM_KHANG.Size = New System.Drawing.Size(111, 21)
         Me.chkDM_KHANG.TabIndex = 5
         '
         'chkDM_CBNV
         '
         Me.chkDM_CBNV.EditValue = True
-        Me.chkDM_CBNV.Location = New System.Drawing.Point(132, 146)
+        Me.chkDM_CBNV.Location = New System.Drawing.Point(154, 180)
+        Me.chkDM_CBNV.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkDM_CBNV.Name = "chkDM_CBNV"
         Me.chkDM_CBNV.Properties.Caption = "DM CBNV"
-        Me.chkDM_CBNV.Size = New System.Drawing.Size(95, 19)
+        Me.chkDM_CBNV.Size = New System.Drawing.Size(111, 21)
         Me.chkDM_CBNV.TabIndex = 11
         '
         'chkDM_HOPDONG
         '
         Me.chkDM_HOPDONG.EditValue = True
-        Me.chkDM_HOPDONG.Location = New System.Drawing.Point(14, 45)
+        Me.chkDM_HOPDONG.Location = New System.Drawing.Point(16, 55)
+        Me.chkDM_HOPDONG.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkDM_HOPDONG.Name = "chkDM_HOPDONG"
         Me.chkDM_HOPDONG.Properties.Caption = "DM hợp đồng"
-        Me.chkDM_HOPDONG.Size = New System.Drawing.Size(95, 19)
+        Me.chkDM_HOPDONG.Size = New System.Drawing.Size(111, 22)
         Me.chkDM_HOPDONG.TabIndex = 1
         '
         'chkDM_KHOANPHI
         '
         Me.chkDM_KHOANPHI.EditValue = True
-        Me.chkDM_KHOANPHI.Location = New System.Drawing.Point(14, 96)
+        Me.chkDM_KHOANPHI.Location = New System.Drawing.Point(16, 118)
+        Me.chkDM_KHOANPHI.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkDM_KHOANPHI.Name = "chkDM_KHOANPHI"
         Me.chkDM_KHOANPHI.Properties.Caption = "DM khoản phí"
-        Me.chkDM_KHOANPHI.Size = New System.Drawing.Size(95, 19)
+        Me.chkDM_KHOANPHI.Size = New System.Drawing.Size(111, 22)
         Me.chkDM_KHOANPHI.TabIndex = 3
         '
         'chkDM_TUDO1
         '
         Me.chkDM_TUDO1.EditValue = True
-        Me.chkDM_TUDO1.Location = New System.Drawing.Point(132, 20)
+        Me.chkDM_TUDO1.Location = New System.Drawing.Point(154, 25)
+        Me.chkDM_TUDO1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkDM_TUDO1.Name = "chkDM_TUDO1"
         Me.chkDM_TUDO1.Properties.Caption = "DM tự do 1"
-        Me.chkDM_TUDO1.Size = New System.Drawing.Size(124, 19)
+        Me.chkDM_TUDO1.Size = New System.Drawing.Size(145, 22)
         Me.chkDM_TUDO1.TabIndex = 6
         '
         'chkDM_TUDO2
         '
         Me.chkDM_TUDO2.EditValue = True
-        Me.chkDM_TUDO2.Location = New System.Drawing.Point(132, 45)
+        Me.chkDM_TUDO2.Location = New System.Drawing.Point(154, 55)
+        Me.chkDM_TUDO2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkDM_TUDO2.Name = "chkDM_TUDO2"
         Me.chkDM_TUDO2.Properties.Caption = "DM tự do 2"
-        Me.chkDM_TUDO2.Size = New System.Drawing.Size(124, 19)
+        Me.chkDM_TUDO2.Size = New System.Drawing.Size(145, 22)
         Me.chkDM_TUDO2.TabIndex = 7
         '
         'chkDM_TUDO3
         '
         Me.chkDM_TUDO3.EditValue = True
-        Me.chkDM_TUDO3.Location = New System.Drawing.Point(132, 71)
+        Me.chkDM_TUDO3.Location = New System.Drawing.Point(154, 87)
+        Me.chkDM_TUDO3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkDM_TUDO3.Name = "chkDM_TUDO3"
         Me.chkDM_TUDO3.Properties.Caption = "DM tự do 3"
-        Me.chkDM_TUDO3.Size = New System.Drawing.Size(124, 19)
+        Me.chkDM_TUDO3.Size = New System.Drawing.Size(145, 22)
         Me.chkDM_TUDO3.TabIndex = 8
         '
         'chkDM_PTQT
         '
         Me.chkDM_PTQT.EditValue = True
-        Me.chkDM_PTQT.Location = New System.Drawing.Point(14, 20)
+        Me.chkDM_PTQT.Location = New System.Drawing.Point(16, 25)
+        Me.chkDM_PTQT.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkDM_PTQT.Name = "chkDM_PTQT"
         Me.chkDM_PTQT.Properties.Caption = "DM PTQT"
-        Me.chkDM_PTQT.Size = New System.Drawing.Size(95, 19)
+        Me.chkDM_PTQT.Size = New System.Drawing.Size(111, 21)
         Me.chkDM_PTQT.TabIndex = 0
         '
         'chkDM_TUDO5
         '
         Me.chkDM_TUDO5.EditValue = True
-        Me.chkDM_TUDO5.Location = New System.Drawing.Point(132, 121)
+        Me.chkDM_TUDO5.Location = New System.Drawing.Point(154, 149)
+        Me.chkDM_TUDO5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkDM_TUDO5.Name = "chkDM_TUDO5"
         Me.chkDM_TUDO5.Properties.Caption = "DM tự do 5"
-        Me.chkDM_TUDO5.Size = New System.Drawing.Size(124, 19)
+        Me.chkDM_TUDO5.Size = New System.Drawing.Size(145, 22)
         Me.chkDM_TUDO5.TabIndex = 10
         '
         'chkDM_VUVIEC
         '
         Me.chkDM_VUVIEC.EditValue = True
-        Me.chkDM_VUVIEC.Location = New System.Drawing.Point(14, 121)
+        Me.chkDM_VUVIEC.Location = New System.Drawing.Point(16, 149)
+        Me.chkDM_VUVIEC.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkDM_VUVIEC.Name = "chkDM_VUVIEC"
         Me.chkDM_VUVIEC.Properties.Caption = "DM vụ việc"
-        Me.chkDM_VUVIEC.Size = New System.Drawing.Size(95, 19)
+        Me.chkDM_VUVIEC.Size = New System.Drawing.Size(111, 22)
         Me.chkDM_VUVIEC.TabIndex = 4
         '
         'chkDM_PHONGBAN
         '
         Me.chkDM_PHONGBAN.EditValue = True
-        Me.chkDM_PHONGBAN.Location = New System.Drawing.Point(14, 71)
+        Me.chkDM_PHONGBAN.Location = New System.Drawing.Point(16, 87)
+        Me.chkDM_PHONGBAN.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkDM_PHONGBAN.Name = "chkDM_PHONGBAN"
         Me.chkDM_PHONGBAN.Properties.Caption = "DM phòng ban"
-        Me.chkDM_PHONGBAN.Size = New System.Drawing.Size(95, 19)
+        Me.chkDM_PHONGBAN.Size = New System.Drawing.Size(111, 21)
         Me.chkDM_PHONGBAN.TabIndex = 2
         '
         'chkDM_TUDO4
         '
         Me.chkDM_TUDO4.EditValue = True
-        Me.chkDM_TUDO4.Location = New System.Drawing.Point(132, 96)
+        Me.chkDM_TUDO4.Location = New System.Drawing.Point(154, 118)
+        Me.chkDM_TUDO4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkDM_TUDO4.Name = "chkDM_TUDO4"
         Me.chkDM_TUDO4.Properties.Caption = "DM tự do 4"
-        Me.chkDM_TUDO4.Size = New System.Drawing.Size(124, 19)
+        Me.chkDM_TUDO4.Size = New System.Drawing.Size(145, 22)
         Me.chkDM_TUDO4.TabIndex = 9
         '
         'chkSD_TK_THUE_NGAMDINH
         '
         Me.chkSD_TK_THUE_NGAMDINH.EditValue = True
-        Me.chkSD_TK_THUE_NGAMDINH.Location = New System.Drawing.Point(466, 290)
+        Me.chkSD_TK_THUE_NGAMDINH.Location = New System.Drawing.Point(379, 377)
+        Me.chkSD_TK_THUE_NGAMDINH.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkSD_TK_THUE_NGAMDINH.Name = "chkSD_TK_THUE_NGAMDINH"
         Me.chkSD_TK_THUE_NGAMDINH.Properties.Caption = "SD tài khoản thuế"
-        Me.chkSD_TK_THUE_NGAMDINH.Size = New System.Drawing.Size(118, 19)
+        Me.chkSD_TK_THUE_NGAMDINH.Size = New System.Drawing.Size(138, 22)
         Me.chkSD_TK_THUE_NGAMDINH.TabIndex = 3
         '
         'chkCO_SU_DUNG
         '
         Me.chkCO_SU_DUNG.EditValue = True
-        Me.chkCO_SU_DUNG.Location = New System.Drawing.Point(590, 291)
+        Me.chkCO_SU_DUNG.Location = New System.Drawing.Point(688, 358)
+        Me.chkCO_SU_DUNG.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.chkCO_SU_DUNG.Name = "chkCO_SU_DUNG"
         Me.chkCO_SU_DUNG.Properties.Caption = "Có sử dụng"
-        Me.chkCO_SU_DUNG.Size = New System.Drawing.Size(85, 19)
+        Me.chkCO_SU_DUNG.Size = New System.Drawing.Size(99, 22)
         Me.chkCO_SU_DUNG.TabIndex = 4
         '
         '_ActionPanel
@@ -626,19 +666,21 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         Me._ActionPanel.Controls.Add(Me.btnCancel)
         Me._ActionPanel.Controls.Add(Me.btnSave)
         Me._ActionPanel.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me._ActionPanel.Location = New System.Drawing.Point(4, 384)
+        Me._ActionPanel.Location = New System.Drawing.Point(5, 472)
+        Me._ActionPanel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me._ActionPanel.Name = "_ActionPanel"
-        Me._ActionPanel.Padding = New System.Windows.Forms.Padding(4)
-        Me._ActionPanel.Size = New System.Drawing.Size(761, 34)
+        Me._ActionPanel.Padding = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me._ActionPanel.Size = New System.Drawing.Size(887, 42)
         Me._ActionPanel.TabIndex = 0
         '
         'btnCancel
         '
         Me.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnCancel.ImageIndex = 24
-        Me.btnCancel.Location = New System.Drawing.Point(613, 3)
+        Me.btnCancel.Location = New System.Drawing.Point(714, 4)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(80, 30)
+        Me.btnCancel.Size = New System.Drawing.Size(93, 37)
         Me.btnCancel.TabIndex = 1
         Me.btnCancel.Text = "&Đóng"
         '
@@ -646,45 +688,51 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         '
         Me.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnSave.ImageIndex = 13
-        Me.btnSave.Location = New System.Drawing.Point(65, 3)
+        Me.btnSave.Location = New System.Drawing.Point(75, 4)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(80, 30)
+        Me.btnSave.Size = New System.Drawing.Size(93, 37)
         Me.btnSave.TabIndex = 0
         Me.btnSave.Text = "&Lưu"
         '
         'tabMain
         '
         Me.tabMain.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tabMain.Location = New System.Drawing.Point(4, 4)
+        Me.tabMain.Location = New System.Drawing.Point(5, 5)
+        Me.tabMain.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tabMain.Name = "tabMain"
         Me.tabMain.SelectedTabPage = Me.pageMain
-        Me.tabMain.Size = New System.Drawing.Size(761, 380)
+        Me.tabMain.Size = New System.Drawing.Size(887, 467)
         Me.tabMain.TabIndex = 0
         Me.tabMain.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.pageMain, Me.pageDM})
         '
         'pageMain
         '
         Me.pageMain.Controls.Add(Me._GroupControlObjectInfo)
+        Me.pageMain.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.pageMain.Name = "pageMain"
-        Me.pageMain.Size = New System.Drawing.Size(754, 351)
+        Me.pageMain.Size = New System.Drawing.Size(881, 436)
         Me.pageMain.Text = "Thông tin cơ bản"
         '
         'pageDM
         '
         Me.pageDM.Controls.Add(Me.grcMain)
+        Me.pageDM.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.pageDM.Name = "pageDM"
         Me.pageDM.PageVisible = False
-        Me.pageDM.Size = New System.Drawing.Size(624, 351)
+        Me.pageDM.Size = New System.Drawing.Size(882, 437)
         Me.pageDM.Text = "Danh mục"
         '
         'grcMain
         '
         Me.grcMain.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.grcMain.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.grcMain.Location = New System.Drawing.Point(0, 0)
         Me.grcMain.MainView = Me.grvMain
+        Me.grcMain.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.grcMain.Name = "grcMain"
         Me.grcMain.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.chk_CO_SU_DUNG, Me.orderTHU_TU})
-        Me.grcMain.Size = New System.Drawing.Size(624, 351)
+        Me.grcMain.Size = New System.Drawing.Size(882, 437)
         Me.grcMain.TabIndex = 0
         Me.grcMain.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.grvMain})
         '
@@ -852,28 +900,29 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         Me.chk_CO_SU_DUNG.ValueChecked = 1
         Me.chk_CO_SU_DUNG.ValueUnchecked = 0
         '
-        'LabelControl9
+        'txtTkThueNgamDinh
         '
-        Me.LabelControl9.Appearance.ForeColor = System.Drawing.Color.Blue
-        Me.LabelControl9.Location = New System.Drawing.Point(327, 118)
-        Me.LabelControl9.Name = "LabelControl9"
-        Me.LabelControl9.Size = New System.Drawing.Size(84, 13)
-        Me.LabelControl9.TabIndex = 49
-        Me.LabelControl9.Text = "xx-[yyyyMM]-{0}"
+        Me.txtTkThueNgamDinh.EnterMoveNextControl = True
+        Me.txtTkThueNgamDinh.Location = New System.Drawing.Point(141, 377)
+        Me.txtTkThueNgamDinh.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTkThueNgamDinh.Name = "txtTkThueNgamDinh"
+        Me.txtTkThueNgamDinh.Size = New System.Drawing.Size(233, 22)
+        Me.txtTkThueNgamDinh.TabIndex = 50
         '
         'frmDanhMucLoaiChungTu_ChiTiet
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(769, 422)
+        Me.ClientSize = New System.Drawing.Size(897, 519)
         Me.Controls.Add(Me.tabMain)
         Me.Controls.Add(Me._ActionPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmDanhMucLoaiChungTu_ChiTiet"
-        Me.Padding = New System.Windows.Forms.Padding(4)
+        Me.Padding = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Danh mục loại chứng từ"
         CType(Me._GroupControlObjectInfo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -893,7 +942,6 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         CType(Me.txtMA_TK_CO_LQ.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtMA_TK_NO_LQ.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtMA_LOAI_CT.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cboTK_THUE_NGAMDINH.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.txtKHO_XUAT.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -924,6 +972,7 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
         CType(Me.grvMain, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.orderTHU_TU, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chk_CO_SU_DUNG, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtTkThueNgamDinh.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -944,7 +993,6 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
     Private chkCHI_TIET As DevExpress.XtraEditors.CheckEdit
     Friend labelControl3 As DevExpress.XtraEditors.LabelControl
     Friend labelControl5 As DevExpress.XtraEditors.LabelControl
-    Friend cboTK_THUE_NGAMDINH As DevExpress.XtraEditors.LookUpEdit
     Friend labelControl7 As DevExpress.XtraEditors.LabelControl
     Private WithEvents chkSD_TK_THUE_NGAMDINH As DevExpress.XtraEditors.CheckEdit
     Private chkDM_TUDO1 As DevExpress.XtraEditors.CheckEdit
@@ -992,4 +1040,5 @@ Partial Public Class frmDanhMucLoaiChungTu_ChiTiet
     Friend WithEvents _panel1 As DevExpress.XtraEditors.PanelControl
     Private WithEvents chkDM_HOADON As DevExpress.XtraEditors.CheckEdit
     Friend WithEvents LabelControl9 As DevExpress.XtraEditors.LabelControl
+    Private WithEvents txtTkThueNgamDinh As DevExpress.XtraEditors.TextEdit
 End Class

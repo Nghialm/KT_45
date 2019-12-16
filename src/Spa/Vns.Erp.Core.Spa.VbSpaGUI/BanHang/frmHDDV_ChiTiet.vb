@@ -6,7 +6,7 @@ Imports Vns.Erp.Core.Admin.Service.Interface
 Imports Vns.Erp.Core.Spa.Service.Interface
 Imports Vns.Erp.Core.Accounting.Domain.Extend
 Imports DevExpress.XtraGrid.Views.Grid
-
+Imports Vns.Erp.Core.Controls.Commons
 
 Public Class frmHDDV_ChiTiet
 
@@ -144,7 +144,7 @@ Public Class frmHDDV_ChiTiet
         TNCommon.setIconControl(Me)
     End Sub
 
-    Public Function Show_Form(ByVal CTH_ID As Guid, ByVal MA_LOAI_CT As String, ByVal TEN_LOAI_CT As String, _
+    Public Function Show_Form(ByVal CTH_ID As Guid, ByVal MA_LOAI_CT As String, ByVal TEN_LOAI_CT As String,
                                ByVal lstCT_H_GInfo As List(Of CT_H_GInfo), ByVal eState As DataInputState) As CtHHddv
         Try
             Form_SetText(Me, TEN_LOAI_CT, DataInputState.NoCaption)
@@ -218,7 +218,7 @@ Public Class frmHDDV_ChiTiet
     End Sub
 
     Private Sub ControlSetState()
-       
+
         Select Case m_InputState
             Case DataInputState.AddMode
 
@@ -411,7 +411,7 @@ Public Class frmHDDV_ChiTiet
         cboNhanVien.EditValue = m_CT_HInfo.IdNhanVien
         cboGiuongDV.EditValue = m_CT_HInfo.IdGuongDichVu
         txtGhiChu.Text = m_CT_HInfo.DienGiai
-        
+
         m_TTTheKM = m_CT_HInfo.TheTienKm1
         m_TTTheThuc = m_CT_HInfo.TheTienThe1
         Dim objthe As SpaDmThe = _SpaDmTheService.GetById(m_CT_HInfo.SoThe1)

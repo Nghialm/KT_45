@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Domain" assembly="Vns.Erp.Core.Accounting.Domain">
 	<class name="Vns.Erp.Core.Accounting.Domain.CtDNx, Vns.Erp.Core.Accounting.Domain" table="CT_D_NX" lazy="false">
-		<id name="Id" column="CTD_NX_ID">
-			<generator class="guid" />
-		</id>
+		<id name="Id" column="CTD_NX_ID"/>
+			
     <property name="HanghoaId" column="HANGHOA_ID" type="Guid"  />
     <property name="MaHanghoa" column="MA_HANGHOA" type="String" length="32" />
     <property name="KyHieuHanghoa" column="KY_HIEU_HANGHOA" type="String" length="64" />
@@ -162,6 +161,13 @@
     <property name="PhanXuongXuatId" column="Phan_Xuong_Xuat_Id" type="Guid"  />
     <property name="MaPhanXuongXuat" column="Ma_Phan_Xuong_Xuat" type="String" length="255" />
     
+    <!--Shipping-->
+    <property name="MaVanChuyen" column="MA_VAN_CHUYEN" type="String" length="255" />
+    <property name="EtaDate" column="ETA_DATE" type="DateTime"  />
+    <property name="LsdDate" column="LSD_DATE" type="DateTime"  />
+    <property name="EtdDate" column="ETD_DATE" type="DateTime"  />
+    <property name="Cang" column="CANG" type="Int32"/>
+
     <many-to-one name="ObjCtHNx" column="CTH_NX_ID" class="CtHNx" insert="true" update="true" />
   </class>
 </hibernate-mapping>

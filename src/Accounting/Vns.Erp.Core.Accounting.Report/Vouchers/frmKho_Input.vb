@@ -15,6 +15,8 @@ Public Class frmKho_Input
     Public Property CtHNxService As ICtHNxService
     Public Property CtDNxService As ICtDNxService
     Public Property HtThamsoService As IHtThamsoService
+
+    Private NgayCt As DateTime
 #End Region
 
 #Region "Variable"
@@ -49,7 +51,11 @@ Public Class frmKho_Input
 
         txtTieude.EditValue = _ht.TenLoaiCt
         'If _ht.KhoXuat = 0 Then
-        txtNguoiNhan.EditValue = objCtH.NguoiGiaoNhanHang
+        If (String.IsNullOrEmpty(objCtH.NguoiGiaoNhanHang)) Then
+            txtNguoiNhan.EditValue = objCtH.TenKhang
+        Else
+            txtNguoiNhan.EditValue = objCtH.NguoiGiaoNhanHang
+        End If
         'Else
         'txtNguoiNhan.EditValue = objCtH.NguoiNhanNopTien
         'End If
@@ -124,14 +130,14 @@ Public Class frmKho_Input
         Dim obj As New DevExpress.XtraReports.Parameters.Parameter
         obj = New DevExpress.XtraReports.Parameters.Parameter
         obj.Name = "pNgayFooter"
-        obj.Value = "Ngày " + DateTime.Now.Day.ToString() + " tháng " + DateTime.Now.Month.ToString() + " năm " + DateTime.Now.Year.ToString()
+        obj.Value = "Ngày " + NgayCt.Day.ToString() + " tháng " + NgayCt.Month.ToString() + " năm " + NgayCt.Year.ToString()
         lst.Add(obj)
         obj = New DevExpress.XtraReports.Parameters.Parameter
         obj.Name = "pNgayHeader"
         obj.Value = "Ngày " + DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString()
         lst.Add(obj)
         obj = New DevExpress.XtraReports.Parameters.Parameter
-        obj.Name = "pNguoiLapPhieuKy"
+        obj.Name = "pNguoiLapPhieu"
         obj.Value = txtNguoiLapPhieu.Text
         lst.Add(obj)
         obj = New DevExpress.XtraReports.Parameters.Parameter
@@ -191,7 +197,7 @@ Public Class frmKho_Input
         'End If
         lst.Add(obj)
 
-        lst.AddRange(CommonClass.ConvertThamSoToParameter(_HtThamsoService.GetAll()))
+        lst.AddRange(CommonClass.ConvertThamSoToParameter(_HtThamsoService.GetByDonviId(Generals.DonviID)))
 
         Return lst
         'Return Nothing
@@ -201,6 +207,7 @@ Public Class frmKho_Input
         Dim list_obj As List(Of HtThamso) = HtThamsoService.GetByDonviId(Generals.DON_VI.Id)
         'Dim list_para As List(Of DevExpress.XtraReports.Parameters.Parameter) = ConvertListObjectToParamter(list_obj)
         Dim rp As New XtraReport
+        NgayCt = objCtH.NgayCt
         Dim lstHNx As IList(Of RpPhieuKeToanKhoHDTO) = New List(Of RpPhieuKeToanKhoHDTO)()
         lstHNx.Add(New RpPhieuKeToanKhoHDTO(objCtH))
         Dim dtH As DataTable = DataHelper.ToDataTable(Of RpPhieuKeToanKhoHDTO)(lstHNx)

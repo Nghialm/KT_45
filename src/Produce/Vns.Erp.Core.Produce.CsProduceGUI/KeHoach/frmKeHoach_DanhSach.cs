@@ -10,6 +10,7 @@ using Vns.Erp.Core.Produce.Service.Interface;
 using Vns.Erp.Core.Produce.Domain;
 using Vns.Erp.Core.Admin.Service.Interface;
 using Vns.Erp.Core.Admin.Domain;
+using static Vns.Erp.Core.Common.Controls.PagerControl;
 
 namespace Vns.Erp.Core.Produce.CsProduceGUI
 {
@@ -76,8 +77,16 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             if (obj_loaichungtu == null) return;
 
             lstDanhMuc = HtDanhmucService.GetByDoiTuong("LOAI_NVL");
+        }
+
+        protected void LoadGrid()
+        {
             IList<SxKehoachM> lstQuyTrinh = new List<SxKehoachM>();
-            lstQuyTrinh = SxKehoachMService.getByMaCt(obj_loaichungtu.MaLoaiCt, Generals.DonviID); 
+            int totalresult = 0;
+            lstQuyTrinh = SxKehoachMService.getByMaCt(CtlPagerControl.PageIndex, CtlPagerControl.PageSize,
+                obj_loaichungtu.MaLoaiCt, Generals.DonviID,
+                out totalresult);
+            CtlPagerControl.TotalResult = totalresult;
             grcDanhSach.DataSource = lstQuyTrinh;
         }
 
@@ -153,7 +162,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             SxKehoachM objReturn = frm.Show_Form(FormGlobals.DataInputState.EditMode, obj, obj_loaichungtu);
             if (objReturn != null)
             {
-                LoadData();
+                LoadGrid();
                 grvDanhSach.FocusedRowHandle = i;                
             }
         }
@@ -164,7 +173,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             SxKehoachM obj = frm.Show_Form(FormGlobals.DataInputState.AddMode, null, obj_loaichungtu);
             if (obj != null)
             {
-                LoadData();
+                LoadGrid();
             }
         }
 
@@ -180,7 +189,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             if (FormGlobals.Message_Confirm("Bạn có chắc chắn muốn xóa bản ghi này?"))
             {
                 SxKehoachMService.DeleteById(obj.Id);
-                LoadData();
+                LoadGrid();
             }
         }
 
@@ -193,6 +202,10 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             try
             {
                 LoadData();
+
+                LoadGrid();
+                CtlPagerControl.display += new DisplayResult(this.LoadGrid);
+                CtlPagerControl.RefreshPage();
             }
             catch (Exception ex)
             {
@@ -265,6 +278,29 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             Close();
         }
 
-        #endregion                
+        #endregion
+
+        private void frmKeHoach_DanhSach_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Escape:
+                        this.Close();
+                        break; // TODO: might not be correct. Was : Exit Select
+                    case Keys.F3:
+                        AddNew();
+                        break; // TODO: might not be correct. Was : Exit Select
+                    case Keys.F4:
+                        Edit();
+                        break; // TODO: might not be correct. Was : Exit Select
+                }
+            }
+            catch (Exception ex)
+            {
+                FormGlobals.Message_Error(ex);
+            }
+        }
     }
 }

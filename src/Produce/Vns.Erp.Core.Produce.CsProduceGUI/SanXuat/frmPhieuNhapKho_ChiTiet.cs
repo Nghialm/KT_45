@@ -534,7 +534,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             //Gfilter_MA_TKN_GIAVON.C_DATA_SOURCE = Ji_DATASOURE
             // Bind loại chứng từ
             List<HtLoaichungtu> listLCTu = new List<HtLoaichungtu>();
-            listLCTu.AddRange(_HtLoaichungtuService.GetAll());
+            listLCTu.AddRange(_HtLoaichungtuService.GetByDonvi(Generals.DonviID));
             grlLoaiPhieuNhap.Properties.DataSource = listLCTu;
             grlLoaiPhieuNhap.Properties.DisplayMember = "KyHieu";
             grlLoaiPhieuNhap.Properties.ValueMember = "MaLoaiCt";
@@ -717,7 +717,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             cboHopdong.Columns.Add(new LookUpColumnInfo("TenHopdong", "Tên hợp đồng"));
 
 
-            IList<SxLenhsanxuat> lstLenhSx = _SxLenhsanxuatService.GetAll();
+            IList<SxLenhsanxuat> lstLenhSx = _SxLenhsanxuatService.GetbyDonviId(Generals.DonviID);
             cboLenhSxNhap.DataSource = lstLenhSx;
             cboLenhSxXuat.DataSource = lstLenhSx;
 

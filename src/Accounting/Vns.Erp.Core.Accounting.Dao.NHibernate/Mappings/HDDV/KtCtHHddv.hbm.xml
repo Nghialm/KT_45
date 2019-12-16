@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Domain" assembly="Vns.Erp.Core.Accounting.Domain">
 	<class name="Vns.Erp.Core.Accounting.Domain.KtCtHHddv, Vns.Erp.Core.Accounting.Domain" table="KT_CT_H_HDDV" lazy="true">
-		<id name="Id" column="CTH_HDDV_ID">
-			<generator class="guid" />
-		</id>
+		<id name="Id" column="CTH_HDDV_ID"/>
+			
 		<property name="DonviId" column="DONVI_ID" type="Guid"/>
 		<property name="MaDonvi" column="MA_DONVI" type="String" length="64" />
 		<property name="IdLoaiCt" column="ID_LOAI_CT" type="Guid"/>
@@ -60,9 +59,14 @@
 		<property name="BxDiengiai3" column="BX_DIENGIAI_3" type="String" length="256"/>
 		<property name="SoSeriHd" column="SO_SERI_HD" type="String" length="64"/>
 		<property name="SoHd" column="SO_HD" type="String" length="64"/>
-		<property name="IdDoituongHoadon" column="ID_DOITUONG_HOADON" />
+		<property name="IdDoituongHoadon" type="Guid" column="ID_DOITUONG_HOADON" />
 		<property name="PrefixCt" column="PREFIX_CT" type="String" length="64"/>
 
+    <property name="SynDate" column="Syn_Date" type="DateTime" />
+    <property name="IsDeleted" type="Decimal" precision="4" scale="0">
+      <column name="Is_Deleted" default="0"/>
+    </property>
+    
     <bag name="LstCtDHddv" lazy="false" cascade="none" >
       <key column="CTH_HDDV_ID"></key>
       <one-to-many class="KtCtDHddv"></one-to-many>

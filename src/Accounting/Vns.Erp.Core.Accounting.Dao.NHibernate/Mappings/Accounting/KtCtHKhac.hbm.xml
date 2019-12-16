@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Domain" assembly="Vns.Erp.Core.Accounting.Domain">
+	<class name="Vns.Erp.Core.Accounting.Domain.KtCtHKhac, Vns.Erp.Core.Accounting.Domain" table="KT_CT_H_KHAC" lazy="true">
+		<id name="Id" column="CTH_ID" type="Guid"/>
+			
+		<property name="DonviId" column="DONVI_ID" type="System.Guid" />
+		<property name="MaDonvi" column="MA_DONVI" type="string" />
+		<property name="IdLoaiCt" column="ID_LOAI_CT" type="System.Guid" />
+		<property name="MaLoaiCt" column="MA_LOAI_CT" type="string" />
+		<property name="KyHieuLoaiCt" column="KY_HIEU_LOAI_CT" type="string" />
+		<property name="NgayGhi" column="NGAY_GHI" type="System.DateTime" />
+		<property name="CtSo" column="CT_SO" type="string" />
+		<property name="QuyenSo" column="QUYEN_SO" type="string" />
+		<property name="NgayCt" column="NGAY_CT" type="System.DateTime" />
+		<property name="NteId" column="NTE_ID" type="System.Guid" />
+		<property name="MaNte" column="MA_NTE" type="string" />
+		<property name="TyGia" column="TY_GIA" type="decimal" precision="18" scale="0"/>
+		<property name="SoTien" column="SO_TIEN" type="decimal" precision="18" scale="0"/>
+		<property name="SoTienNte" column="SO_TIEN_NTE" type="decimal" precision="18" scale="2"/>
+		<property name="NgayTao" column="NGAY_TAO" type="System.DateTime" />
+		<property name="NguoiTao" column="NGUOI_TAO" type="string" />
+		<property name="NguoiSua" column="NGUOI_SUA" type="string" />
+		<property name="NgaySua" column="NGAY_SUA" type="System.DateTime" />
+		<property name="NguoiPd" column="NGUOI_PD" type="string" />
+		<property name="NgayPd" column="NGAY_PD" type="System.DateTime" />
+		<property name="DienGiai" column="DIEN_GIAI" type="string" />
+		<property name="PhongbanId" column="PHONGBAN_ID" type="System.Guid" />
+		<property name="MaPhongban" column="MA_PHONGBAN" type="string" />
+		<property name="KyHieuPhongban" column="KY_HIEU_PHONGBAN" type="string" />
+		<property name="TenPhongban" column="TEN_PHONGBAN" type="string" />
+		<property name="NguoiNhanNopTien" column="NGUOI_NHAN_NOP_TIEN" type="string" />
+		<property name="NguoiGiaoNhanHang" column="NGUOI_GIAO_NHAN_HANG" type="string" />
+		<property name="KhangId" column="KHANG_ID" type="System.Guid" />
+		<property name="MaKhang" column="MA_KHANG" type="string" />
+		<property name="KyHieuKhang" column="KY_HIEU_KHANG" type="string" />
+		<property name="TenKhang" column="TEN_KHANG" type="string" />
+		<property name="MstKhang" column="MST_KHANG" type="string" />
+		<property name="DiaChi" column="DIA_CHI" type="string" />
+		<property name="CbnvId" column="CBNV_ID" type="System.Guid" />
+		<property name="KyHieuCbnv" column="KY_HIEU_CBNV" type="string" />
+		<property name="MaCbnv" column="MA_CBNV" type="string" />
+		<property name="TenCbnv" column="TEN_CBNV" type="string" />
+		<property name="GHI" column="GHI" type="decimal" precision="4" scale="0"/>
+		<property name="ATTACHFILE" column="ATTACHFILE" type="string" />
+		<property name="NgoaiTe" column="NGOAI_TE" type="decimal" precision="4" scale="0"/>
+		<property name="DonviCt" column="DONVI_CT" type="System.Guid" />
+		<property name="MaDonviCt" column="MA_DONVI_CT" type="string" />
+		<property name="DaKhoaSo" column="DA_KHOA_SO" type="decimal" precision="4" scale="0"/>
+		<property name="NgayKhoaSo" column="NGAY_KHOA_SO" type="System.DateTime" />
+		<property name="BtTudong" column="BT_TUDONG" type="decimal" precision="4" scale="0"/>
+		<property name="BxNgay1" column="BX_NGAY_1" type="System.DateTime" />
+		<property name="BxNgay2" column="BX_NGAY_2" type="System.DateTime" />
+		<property name="BxNgay3" column="BX_NGAY_3" type="System.DateTime" />
+		<property name="BxNumber1" column="BX_NUMBER_1" type="decimal" precision="4" scale="0"/>
+		<property name="BxNumber2" column="BX_NUMBER_2" type="decimal" precision="4" scale="0"/>
+		<property name="BxNumber3" column="BX_NUMBER_3" type="decimal" precision="4" scale="0"/>
+		<property name="BxDiengiai1" column="BX_DIENGIAI_1" type="string" />
+		<property name="BxDiengiai2" column="BX_DIENGIAI_2" type="string" />
+		<property name="BxDiengiai3" column="BX_DIENGIAI_3" type="string" />
+		<property name="SoDu" column="SO_DU" type="decimal" precision="4" scale="0"/>
+		<property name="PrefixCt" column="PREFIX_CT" type="string" />
+
+    <property name="SynDate" column="Syn_Date" type="DateTime" />
+    <property name="IsDeleted" type="Decimal" precision="4" scale="0">
+      <column name="Is_Deleted" default="0"/>
+    </property>
+    
+    <bag name="LstKtCtDKhac" lazy="false" cascade="none" >
+      <key column="CTH_ID"></key>
+      <one-to-many class="KtCtDKhac"></one-to-many>
+    </bag>
+	</class>
+</hibernate-mapping>

@@ -47,7 +47,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
         {
             try
             {
-                loadData((Guid)cboKeHoachSx.EditValue, dteTuNgay.DateTime, dteDenNgay.DateTime);
+                loadData((Guid)cboKeHoachSx.EditValue, dateTimeInput1.StartDate, dateTimeInput1.EndDate);
             }
             catch (Exception ex)
             {
@@ -57,15 +57,13 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
 
         private void frmBcKeHoachSanXuatTh_Load(object sender, EventArgs e)
         {
-            dteTuNgay.DateTime = new DateTime(DateTime.Now.Year, 1, 1);
-            dteDenNgay.DateTime = new DateTime(DateTime.Now.Year, 12, 31);
             bindDataToCbo();
-            loadData((Guid)cboKeHoachSx.EditValue, dteTuNgay.DateTime, dteDenNgay.DateTime);
+            loadData((Guid)cboKeHoachSx.EditValue, dateTimeInput1.StartDate, dateTimeInput1.EndDate);
         }
 
         private void bindDataToCbo()
         {
-            IList<SxKehoachM> lstKeHoach = SxKehoachMService.GetAll();
+            IList<SxKehoachM> lstKeHoach = SxKehoachMService.GetByDonviId(Generals.DonviID);
             cboKeHoachSx.Properties.DataSource = lstKeHoach;
             cboKeHoachSx.Properties.ValueMember = "Id";
             cboKeHoachSx.Properties.DisplayMember = "SoLenh";
@@ -85,6 +83,16 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             IList<SxRpQtSanXuatThDTO> lstData = new List<SxRpQtSanXuatThDTO>();
             lstData = ProduceReportService.GetDataTongHopSanXuat(p_tuNgay, p_denNgay, p_keHoachSanXuatId, new Guid(), new Guid(), new Guid(), new Guid(), Generals.DonviID, cboLoaiVatLieu.SelectedIndex);
             grcReport.DataSource = lstData;
+        }
+
+        private void frmBcKeHoachSanXuatTh_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    this.Close();
+                    break; // TODO: might not be correct. Was : Exit Select
+            }
         }
     }
 }

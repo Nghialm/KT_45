@@ -1,9 +1,12 @@
 using System;
 using System.ComponentModel;
+using System.Runtime.Serialization;
 using Vns.Erp.Core.Domain;
 
 namespace Vns.Erp.Core.Asset.Domain
 {
+    [Serializable]
+    [DataContract(Namespace = "http://Vns.Erp.Core.Asset.Domain", IsReference = true)]
     public partial class CtTscd : DomainObject<System.Guid>, INotifyPropertyChanged
     {
         #region Declarations
@@ -37,10 +40,10 @@ namespace Vns.Erp.Core.Asset.Domain
 		private decimal _LoaiNghiepvu = default(Decimal);
 		private decimal _TangTscd = default(Decimal);
 		private decimal _ThuTu = default(Decimal);
-		private System.DateTime? _NgayCt = null;
-		private System.DateTime? _NgayBdKh = null;
-		private System.DateTime? _NgayKtKh = null;
-		private decimal _SoNamSd = default(Decimal);
+		private System.DateTime? _NgayCt = Null.MIN_DATE;
+		private System.DateTime? _NgayBdKh = Null.MIN_DATE;
+        private System.DateTime? _NgayKtKh = Null.MIN_DATE;
+        private decimal _SoNamSd = default(Decimal);
 		private decimal _SoThangSd = default(Decimal);
 		private string _SoCt = String.Empty;
 		private System.Guid _CthId = new Guid();
@@ -158,6 +161,7 @@ namespace Vns.Erp.Core.Asset.Domain
 
         #region Properties
 
+        [DataMember]
 		public virtual string LoaiTaikhoan
         {
             get { return _LoaiTaikhoan; }
@@ -171,7 +175,8 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnLoaiTaikhoanChanging();
 		partial void OnLoaiTaikhoanChanged();
 		
-		public virtual System.Guid TaikhoanId
+        [DataMember]
+        public virtual System.Guid TaikhoanId
         {
             get { return _TaikhoanId; }
 			set
@@ -184,6 +189,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnTaikhoanIdChanging();
 		partial void OnTaikhoanIdChanged();
 		
+        [DataMember]
 		public virtual string MaTaikhoan
         {
             get { return _MaTaikhoan; }
@@ -197,6 +203,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnMaTaikhoanChanging();
 		partial void OnMaTaikhoanChanged();
 		
+        [DataMember]
 		public virtual System.Guid CtdId
         {
             get { return _CtdId; }
@@ -210,6 +217,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnCtdIdChanging();
 		partial void OnCtdIdChanged();
 		
+        [DataMember]
 		public virtual System.Guid TscdId
         {
             get { return _TscdId; }
@@ -223,6 +231,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnTscdIdChanging();
 		partial void OnTscdIdChanged();
 		
+        [DataMember]
 		public virtual string MaTscd
         {
             get { return _MaTscd; }
@@ -236,6 +245,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnMaTscdChanging();
 		partial void OnMaTscdChanged();
 		
+        [DataMember]
 		public virtual string KyHieuTscd
         {
             get { return _KyHieuTscd; }
@@ -249,6 +259,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnKyHieuTscdChanging();
 		partial void OnKyHieuTscdChanged();
 		
+        [DataMember]
 		public virtual string TenTscd
         {
             get { return _TenTscd; }
@@ -262,6 +273,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnTenTscdChanging();
 		partial void OnTenTscdChanged();
 		
+        [DataMember]
 		public virtual decimal SoTien
         {
             get { return _SoTien; }
@@ -275,6 +287,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnSoTienChanging();
 		partial void OnSoTienChanged();
 		
+        [DataMember]
 		public virtual decimal SoTienNte
         {
             get { return _SoTienNte; }
@@ -288,6 +301,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnSoTienNteChanging();
 		partial void OnSoTienNteChanged();
 		
+        [DataMember]
 		public virtual System.Guid KhangId
         {
             get { return _KhangId; }
@@ -301,6 +315,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnKhangIdChanging();
 		partial void OnKhangIdChanged();
 		
+        [DataMember]
 		public virtual string MaKhang
         {
             get { return _MaKhang; }
@@ -314,6 +329,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnMaKhangChanging();
 		partial void OnMaKhangChanged();
 		
+        [DataMember]
 		public virtual string KyHieuKhang
         {
             get { return _KyHieuKhang; }
@@ -327,6 +343,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnKyHieuKhangChanging();
 		partial void OnKyHieuKhangChanged();
 		
+        [DataMember]
 		public virtual string TenKhang
         {
             get { return _TenKhang; }
@@ -340,6 +357,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnTenKhangChanging();
 		partial void OnTenKhangChanged();
 		
+        [DataMember]
 		public virtual System.Guid LydoTanggiam
         {
             get { return _LydoTanggiam; }
@@ -353,6 +371,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnLydoTanggiamChanging();
 		partial void OnLydoTanggiamChanged();
 		
+        [DataMember]
 		public virtual string TenLydoTanggiam
         {
             get { return _TenLydoTanggiam; }
@@ -366,6 +385,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnTenLydoTanggiamChanging();
 		partial void OnTenLydoTanggiamChanged();
 		
+        [DataMember]
 		public virtual System.Guid DvtId
         {
             get { return _DvtId; }
@@ -379,6 +399,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnDvtIdChanging();
 		partial void OnDvtIdChanged();
 		
+        [DataMember]
 		public virtual string MaDvt
         {
             get { return _MaDvt; }
@@ -392,6 +413,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnMaDvtChanging();
 		partial void OnMaDvtChanged();
 		
+        [DataMember]
 		public virtual string TenDvt
         {
             get { return _TenDvt; }
@@ -405,6 +427,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnTenDvtChanging();
 		partial void OnTenDvtChanged();
 		
+        [DataMember]
 		public virtual System.Guid LoaitaisanId
         {
             get { return _LoaitaisanId; }
@@ -418,6 +441,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnLoaitaisanIdChanging();
 		partial void OnLoaitaisanIdChanged();
 		
+        [DataMember]
 		public virtual string MaLoaitaisan
         {
             get { return _MaLoaitaisan; }
@@ -431,6 +455,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnMaLoaitaisanChanging();
 		partial void OnMaLoaitaisanChanged();
 		
+        [DataMember]
 		public virtual decimal NguyenGia
         {
             get { return _NguyenGia; }
@@ -444,6 +469,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnNguyenGiaChanging();
 		partial void OnNguyenGiaChanged();
 		
+        [DataMember]
 		public virtual decimal GiaTriCl
         {
             get { return _GiaTriCl; }
@@ -457,6 +483,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnGiaTriClChanging();
 		partial void OnGiaTriClChanged();
 		
+        [DataMember]
 		public virtual decimal HaoMonLuyKe
         {
             get { return _HaoMonLuyKe; }
@@ -470,6 +497,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnHaoMonLuyKeChanging();
 		partial void OnHaoMonLuyKeChanged();
 		
+        [DataMember]
 		public virtual decimal TyLeHaomon
         {
             get { return _TyLeHaomon; }
@@ -483,6 +511,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnTyLeHaomonChanging();
 		partial void OnTyLeHaomonChanged();
 		
+        [DataMember]
 		public virtual decimal LoaiNghiepvu
         {
             get { return _LoaiNghiepvu; }
@@ -496,6 +525,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnLoaiNghiepvuChanging();
 		partial void OnLoaiNghiepvuChanged();
 		
+        [DataMember]
 		public virtual decimal TangTscd
         {
             get { return _TangTscd; }
@@ -509,6 +539,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnTangTscdChanging();
 		partial void OnTangTscdChanged();
 		
+        [DataMember]
 		public virtual decimal ThuTu
         {
             get { return _ThuTu; }
@@ -522,6 +553,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnThuTuChanging();
 		partial void OnThuTuChanged();
 		
+        [DataMember]
 		public virtual System.DateTime? NgayCt
         {
             get { return _NgayCt; }
@@ -535,6 +567,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnNgayCtChanging();
 		partial void OnNgayCtChanged();
 		
+        [DataMember]
 		public virtual System.DateTime? NgayBdKh
         {
             get { return _NgayBdKh; }
@@ -548,6 +581,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnNgayBdKhChanging();
 		partial void OnNgayBdKhChanged();
 		
+        [DataMember]
 		public virtual System.DateTime? NgayKtKh
         {
             get { return _NgayKtKh; }
@@ -561,6 +595,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnNgayKtKhChanging();
 		partial void OnNgayKtKhChanged();
 		
+        [DataMember]
 		public virtual decimal SoNamSd
         {
             get { return _SoNamSd; }
@@ -574,6 +609,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnSoNamSdChanging();
 		partial void OnSoNamSdChanged();
 		
+        [DataMember]
 		public virtual decimal SoThangSd
         {
             get { return _SoThangSd; }
@@ -587,6 +623,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnSoThangSdChanging();
 		partial void OnSoThangSdChanged();
 		
+        [DataMember]
 		public virtual string SoCt
         {
             get { return _SoCt; }
@@ -600,6 +637,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnSoCtChanging();
 		partial void OnSoCtChanged();
 		
+        [DataMember]
 		public virtual System.Guid CthId
         {
             get { return _CthId; }
@@ -613,6 +651,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnCthIdChanging();
 		partial void OnCthIdChanged();
 		
+        [DataMember]
 		public virtual System.Guid TkChiphi
         {
             get { return _TkChiphi; }
@@ -626,6 +665,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnTkChiphiChanging();
 		partial void OnTkChiphiChanged();
 		
+        [DataMember]
 		public virtual string MaTkChiphi
         {
             get { return _MaTkChiphi; }

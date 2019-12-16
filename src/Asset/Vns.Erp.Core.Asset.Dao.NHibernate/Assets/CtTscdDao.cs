@@ -8,9 +8,35 @@ using NHibernate;
 using System.Collections.Generic;
 namespace Vns.Erp.Core.Asset.Dao.NHibernate
 {
-	[Serializable]
-	public sealed class CtTscdDao:GenericDao<CtTscd,System.Guid>,ICtTscdDao
-	{
+    [Serializable]
+    public sealed class CtTscdDao : GenericDao<CtTscd, System.Guid>, ICtTscdDao
+    {
+        #region IDao
+        CtTscd IDao<CtTscd, Guid>.Merge(CtTscd entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Merge(entity);
+
+            return entity;
+        }
+
+        CtTscd IDao<CtTscd, Guid>.Save(CtTscd entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Save(entity);
+
+            return entity;
+        }
+
+        CtTscd IDao<CtTscd, Guid>.SaveOrUpdate(CtTscd entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.SaveOrUpdate(entity);
+
+            return entity;
+        }
+        #endregion
+
         public TsLsKhauhao KHAUHAO_VET_CUOI(Guid DmTscdId, DateTime Ngay)
         {
             string sql = "from TsLsKhauhao a where a.DmTscdId = :DmTscdId " +
@@ -40,5 +66,17 @@ namespace Vns.Erp.Core.Asset.Dao.NHibernate
 
             return true;
         }
-	}
+
+        public IList<CtTscd> GetByDmTscdId(Guid DmTscdId)
+        {
+            string sql = "Select a from CtTscd a where a.TscdId = :TscdId ";
+
+            IQuery q = NHibernateSession.CreateQuery(sql);
+            q.SetParameter("TscdId", DmTscdId);
+            IList<CtTscd> lst = q.List<CtTscd>();
+
+            return lst;
+        }
+
+    }
 }

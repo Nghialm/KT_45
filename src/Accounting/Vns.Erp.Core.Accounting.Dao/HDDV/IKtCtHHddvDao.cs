@@ -11,7 +11,10 @@ namespace Vns.Erp.Core.Accounting.Dao
 {
 	public interface IKtCtHHddvDao:IDao<KtCtHHddv,System.Guid>
 	{
-        IList<KtCtHHddv> GetByLoaiChungTu(Guid DonviId, string MaLoaiCt, int SoCTHienThi);
+        #region Syn data
+        void UpdateSynFlag(Guid id);
+        #endregion
+
         IList<KtCtHHddv> GetByLoaiChungTu(int PageIndex, int PageSize,Guid DonviId, string MaLoaiCt, int SoCTHienThi,out int TotalReslut);
         IList<KtCtHHddv> SearchChungTu(Guid DONVI_ID, string MA_LOAI_CT, string CT_SO, DateTime NGAY_CT_TU, DateTime NGAY_CT_DEN, decimal GHI, string TenKhachHang, string MA_TK_NO, string MA_TK_CO, string Ma_tk_thue,
                                    decimal SO_TIEN_TU, decimal SO_TIEN_DEN, string NOI_DUNG, Decimal So_Luong_Tu, Decimal So_Luong_Den, String TenHangHoa,

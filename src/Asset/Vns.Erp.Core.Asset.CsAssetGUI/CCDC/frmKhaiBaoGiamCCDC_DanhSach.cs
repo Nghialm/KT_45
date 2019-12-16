@@ -62,7 +62,7 @@ namespace Vns.Erp.Core.Asset.CsAssetGUI
         private void DoLoadData()
         {
             List<CcCtCcdc> lstCT_CCDC = new List<CcCtCcdc>();
-            lstCT_CCDC.AddRange(_CcCtCcdcService.GetByTrangThai(2));
+            lstCT_CCDC.AddRange(_CcCtCcdcService.GetByTrangThai(2, Generals.DonviID));
             _gridControl.DataSource = lstCT_CCDC;
         }
 

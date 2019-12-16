@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.Erp.Core.Admin.Domain.DmHopdong,Vns.Erp.Core.Admin.Domain" table="DM_HOPDONG" lazy="false">
+
+		<id name="Id" column="HOPDONG_ID" type="Guid"/>
+			
+		<property column="MA_HOPDONG" type="String" name="MaHopdong" not-null="true" length="32" />
+		<property column="KY_HIEU" type="String" name="KyHieu" length="64" />
+		<property column="TEN_HOPDONG" type="String" name="TenHopdong" length="128" />
+		<property column="MO_TA" type="String" name="MoTa" length="512" />
+		<property column="DONVI_ID" type="Guid" name="DonviId" not-null="true" />
+		<property column="MA_DONVI" type="String" name="MaDonvi" not-null="true" length="32" />
+		<property column="CHI_TIET" type="Decimal" precision="2" scale="0" name="ChiTiet" />
+		<property column="HOPDONG_ID_CHA" type="Guid" name="HopdongIdCha" />
+		<property column="CHO_PHEP_SUA" type="Decimal" precision="2" scale="0" name="ChoPhepSua" />
+		<property column="CO_SU_DUNG" type="Decimal" precision="2" scale="0" name="CoSuDung" />
+		<property column="TEN_LOAI_HOPDONG" type="String" name="TenLoaiHopdong" length="64" />
+		<property column="CAP" type="Decimal" precision="2" scale="0" name="Cap" />
+		<property column="LOAI_HOPDONG" type="Decimal" name="LoaiHopdong" />
+		<property column="NGUOI_TAO" type="Guid" name="NguoiTao" />
+		<property column="NGAY_TAO" type="DateTime" name="NgayTao" />
+		<property column="NGUOI_SUA" type="Guid" name="NguoiSua" />
+		<property column="NGAY_SUA" type="DateTime" name="NgaySua" />
+    <property column="Syn_Date" name="SynDate" not-null="false"  type="DateTime" />
+
+    <property column="NGAY_HOPDONG" name="NgayHopdong" not-null="false" type="DateTime" />
+    <property column="DIA_LY" type="Decimal" precision="2" scale="0" name="DiaLy" />
+    <property column="KHANG_ID" type="Guid" name="KhangId"/>
+    <property column="ETA" name="Eta" type="DateTime" />
+
+
+  </class>
+</hibernate-mapping>

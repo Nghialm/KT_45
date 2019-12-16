@@ -12,6 +12,7 @@ namespace Vns.Erp.Core.Produce.Service.Interface.Report
 {
     public interface IProduceReportService : IErpService<SxKehoachM, System.Guid>
     {
+        #region Report quan ly san xuat
         IList<SxRpQtSanXuatDTO> GetDataSanXuatNguyenVatLieu(DateTime TuNgay, DateTime DenNgay,
             Guid KeHoachId, Guid LenhSxId, Guid KhoId, Guid PhanXuongId, Guid HanghoaId,
             Guid DonviId);
@@ -39,5 +40,15 @@ namespace Vns.Erp.Core.Produce.Service.Interface.Report
         IList<SxBkVatLieuDTO> GetBangKeVatLieu(DateTime TuNgay, DateTime DenNgay,
             Guid KeHoachId, Guid LenhSxId, Guid KhoId, Guid PhanXuongId, Guid VatTuId,
             Guid DonviId);
+        #endregion
+
+        //IList<BangGiaD> GetBangGia(DateTime DenNgay, Guid DonviId);
+
+        #region Quan ly bang gia
+        BangGiaH GetBangGiaDaLuuNgay(DateTime DenNgay, Guid DonviId);
+        IList<BangGiaD> GetBangGiaTheoNgay(DateTime DenNgay, Guid DonviId);
+        IList<BcKeToanKhoDTO> GetBangKe(DateTime TuNgay, DateTime DenNgay, Guid DonviId);
+        BangGiaH GetBangGia(BangGiaH banggiaH);
+        #endregion
     }
 }

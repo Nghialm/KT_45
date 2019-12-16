@@ -243,7 +243,7 @@ Public Class frmPhieuKeToanKhac2_DanhSach
         If (Message_Confirm(ConstantMsgs.MSG_CONFIRM_FOR_DELETE)) Then
             Dim obj As CtH = New CtH
             obj.Id = CTHID
-            _CtHService.DeleteChungTu(obj, Nothing)
+            _CtHService.DeleteChungTuCTH(obj, Nothing, Nothing)
             _GridView.RefreshData()
             Me.LoadDanhSach()
             Me.LoadGRV(CTHID)

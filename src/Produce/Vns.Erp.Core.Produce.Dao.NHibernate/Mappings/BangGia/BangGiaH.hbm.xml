@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Produce.Domain" assembly="Vns.Erp.Core.Produce.Domain">
+	<class name="Vns.Erp.Core.Produce.Domain.BangGiaH, Vns.Erp.Core.Produce.Domain" table="BANG_GIA_H" lazy="true">
+		<id name="Id" column="BANG_GIA_H_ID">
+			<generator class="guid" />
+		</id>
+		<property name="NgayBangGia" column="NGAY_BANG_GIA" />
+		<property name="MoTa" column="MO_TA" />
+		<property name="NguoiLap" column="NGUOI_LAP" />
+		<property name="NguoiTao" column="NGUOI_TAO" />
+		<property name="NgayTao" column="NGAY_TAO" />
+		<property name="NguoiSua" column="NGUOI_SUA" />
+		<property name="NgaySua" column="NGAY_SUA" />
+		<property name="TrangThai" column="TRANG_THAI" />
+		<property name="DonviId" column="DONVI_ID" />
+	</class>
+</hibernate-mapping>

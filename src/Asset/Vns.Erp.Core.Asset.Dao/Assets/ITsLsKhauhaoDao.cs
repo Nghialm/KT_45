@@ -15,5 +15,7 @@ namespace Vns.Erp.Core.Asset.Dao
         void DeleteByThangNam_TscdId(Decimal Thang, Decimal Nam, Guid DmTscdId);
         void DeleteByThangNam(Guid DonviId, Decimal Thang, Decimal Nam);
         void DeleteByTscdId(Guid DmTscdId);
+
+        IList<TsLsKhauhao> GetByTscdId(Guid DmTscdId);
 	}
 }

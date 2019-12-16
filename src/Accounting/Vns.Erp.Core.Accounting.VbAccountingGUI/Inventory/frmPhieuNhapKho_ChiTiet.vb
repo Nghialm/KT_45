@@ -12,6 +12,7 @@ Imports Vns.Erp.Core.Admin.Domain
 Imports Vns.Erp.Core.Accounting.Service.Interface
 Imports Vns.Erp.Core.Admin.Service.Interface
 Imports DevExpress.Utils
+Imports Vns.Erp.Core.Controls.Commons
 
 Public Class frmPhieuNhapKho_ChiTiet
 
@@ -504,7 +505,7 @@ Public Class frmPhieuNhapKho_ChiTiet
 
         'Bind ngoai te
         Dim lstNgoaite As List(Of DmNgoaite) = New List(Of DmNgoaite)
-        lstNgoaite.AddRange(_DmNgoaiteService.GetAll())
+        lstNgoaite.AddRange(_DmNgoaiteService.GetAllByDonviID(Generals.DON_VI.Id))
         cboTyGia.Properties.DisplayMember = "KyHieu"
         cboTyGia.Properties.ValueMember = "Id"
         cboTyGia.Properties.DataSource = lstNgoaite
@@ -554,11 +555,8 @@ Public Class frmPhieuNhapKho_ChiTiet
         Dim objvuviec As DmVuviec = New DmVuviec
         lstVuviec.Add(objvuviec)
         lstVuviec.AddRange(lstVuViecTemp)
-        cboVuViec.DataSource = lstVuviec
-        cboVuViec.DisplayMember = "KyHieu"
-        cboVuViec.ValueMember = "Id"
-        cboVuViec.Columns.Add(New LookUpColumnInfo("KyHieu", "Ký hiệu"))
-        cboVuViec.Columns.Add(New LookUpColumnInfo("TenVuviec", "Tên vụ việc"))
+
+        rcboVuviecId.DataSource = lstVuviec
 
         'Bind PTQT
         Dim lstPTQTTemp As List(Of DmPtqt) = New List(Of DmPtqt)
@@ -984,7 +982,7 @@ Public Class frmPhieuNhapKho_ChiTiet
                 'Refesh Grid
                 mCTHNXID = obj_ct_h_nx.Id
                 Dim editObject As Extend.CT_H_GInfo = New Extend.CT_H_GInfo(obj_ct_h_nx)
-                Vns.Erp.Core.Accounting.VbAccountingGUI.GridHelper.RefreshLeftGrid(grvLPX_Hnx, lstobj_ct_h_gg, editObject, m_InputState)
+                GridHelper.RefreshLeftGrid(grvLPX_Hnx, lstobj_ct_h_gg, editObject, m_InputState)
 
                 m_InputState = DataInputState.ViewMode
                 DatTrangThaiControl()
@@ -1055,13 +1053,13 @@ Public Class frmPhieuNhapKho_ChiTiet
                 End If
 
                 'xet loai phieu de hien thi cot kho tren luoi
-                If obj_lct.PhieuXuat = 0 Then
+                If obj_lct.KhoXuat = 0 Then
                     'kiem tra gia tri null cua cot kho nhap
                     If VnsCheck.IsNullGuid(objctd.KhoNhapId) Then
                         Message_Warning("Bạn chưa lựa chọn kho nhập.")
                         Return False
                     End If
-                ElseIf obj_lct.PhieuXuat = 1 Then
+                ElseIf obj_lct.KhoXuat = 1 Then
                     'kiem tra gia tri null cua cot kho xuat
                     If VnsCheck.IsNullGuid(objctd.KhoXuatId) Then
                         Message_Warning("Bạn chưa lựa chọn kho xuất.")
@@ -1142,7 +1140,7 @@ Public Class frmPhieuNhapKho_ChiTiet
 
                 _CtHNxService.DeleteChungTu(obj_ct_h_nx)
 
-                mCTHNXID = Vns.Erp.Core.Accounting.VbAccountingGUI.GridHelper.RemoveLeftGrid(lstobj_ct_h_gg, mCTHNXID)
+                mCTHNXID = GridHelper.RemoveLeftGrid(lstobj_ct_h_gg, mCTHNXID)
                 If Not (mCTHNXID = Null.NullGuid) Then
                     SetObjectToControl()
                 End If

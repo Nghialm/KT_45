@@ -1,7 +1,7 @@
 Imports Vns.Erp.Core.Admin.Domain
 Imports Vns.Erp.Core.Admin.Service.Interface
 
-Public Class C_SoChungTu
+Public Class C_SoChungTuf
 
 #Region "Properties"
 

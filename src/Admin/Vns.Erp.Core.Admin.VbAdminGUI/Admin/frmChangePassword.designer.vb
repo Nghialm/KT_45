@@ -19,24 +19,24 @@ Partial Class frmChangePassword
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmChangePassword))
         Me.imgList = New System.Windows.Forms.ImageList(Me.components)
         Me.imglImporterEdit = New System.Windows.Forms.ImageList(Me.components)
-        Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl
-        Me.btnClose = New DevExpress.XtraEditors.SimpleButton
-        Me.btnSave = New DevExpress.XtraEditors.SimpleButton
-        Me.grpUserInfo = New DevExpress.XtraEditors.GroupControl
-        Me.txtOldPassword = New DevExpress.XtraEditors.TextEdit
-        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl
-        Me.txtRetype = New DevExpress.XtraEditors.TextEdit
-        Me.txtUserPassword = New DevExpress.XtraEditors.TextEdit
-        Me.txtFullName = New DevExpress.XtraEditors.TextEdit
-        Me.lblSeriesID = New DevExpress.XtraEditors.LabelControl
-        Me.lblCarFamilyID = New DevExpress.XtraEditors.LabelControl
-        Me.lblImporterSeriesName = New DevExpress.XtraEditors.LabelControl
-        Me.lblImporter = New DevExpress.XtraEditors.LabelControl
-        Me.txtUserName = New DevExpress.XtraEditors.TextEdit
+        Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.btnClose = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnSave = New DevExpress.XtraEditors.SimpleButton()
+        Me.grpUserInfo = New DevExpress.XtraEditors.GroupControl()
+        Me.txtOldPassword = New DevExpress.XtraEditors.TextEdit()
+        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
+        Me.txtRetype = New DevExpress.XtraEditors.TextEdit()
+        Me.txtUserPassword = New DevExpress.XtraEditors.TextEdit()
+        Me.txtFullName = New DevExpress.XtraEditors.TextEdit()
+        Me.lblSeriesID = New DevExpress.XtraEditors.LabelControl()
+        Me.lblCarFamilyID = New DevExpress.XtraEditors.LabelControl()
+        Me.lblImporterSeriesName = New DevExpress.XtraEditors.LabelControl()
+        Me.lblImporter = New DevExpress.XtraEditors.LabelControl()
+        Me.txtUserName = New DevExpress.XtraEditors.TextEdit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.grpUserInfo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,18 +92,20 @@ Partial Class frmChangePassword
         Me.PanelControl1.Controls.Add(Me.btnClose)
         Me.PanelControl1.Controls.Add(Me.btnSave)
         Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelControl1.Location = New System.Drawing.Point(8, 197)
+        Me.PanelControl1.Location = New System.Drawing.Point(9, 242)
+        Me.PanelControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(366, 38)
+        Me.PanelControl1.Size = New System.Drawing.Size(428, 47)
         Me.PanelControl1.TabIndex = 1
         '
         'btnClose
         '
         Me.btnClose.ImageIndex = 1
         Me.btnClose.ImageList = Me.imglImporterEdit
-        Me.btnClose.Location = New System.Drawing.Point(179, 8)
+        Me.btnClose.Location = New System.Drawing.Point(209, 10)
+        Me.btnClose.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(83, 29)
+        Me.btnClose.Size = New System.Drawing.Size(97, 36)
         Me.btnClose.TabIndex = 2
         Me.btnClose.Text = "&Close"
         '
@@ -111,9 +113,10 @@ Partial Class frmChangePassword
         '
         Me.btnSave.ImageIndex = 3
         Me.btnSave.ImageList = Me.imglImporterEdit
-        Me.btnSave.Location = New System.Drawing.Point(90, 8)
+        Me.btnSave.Location = New System.Drawing.Point(105, 10)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(83, 29)
+        Me.btnSave.Size = New System.Drawing.Size(97, 36)
         Me.btnSave.TabIndex = 0
         Me.btnSave.Text = "&Save"
         '
@@ -130,102 +133,114 @@ Partial Class frmChangePassword
         Me.grpUserInfo.Controls.Add(Me.lblImporter)
         Me.grpUserInfo.Controls.Add(Me.txtUserName)
         Me.grpUserInfo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.grpUserInfo.Location = New System.Drawing.Point(8, 8)
+        Me.grpUserInfo.Location = New System.Drawing.Point(9, 10)
+        Me.grpUserInfo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.grpUserInfo.Name = "grpUserInfo"
-        Me.grpUserInfo.Size = New System.Drawing.Size(366, 189)
+        Me.grpUserInfo.Size = New System.Drawing.Size(428, 232)
         Me.grpUserInfo.TabIndex = 0
         Me.grpUserInfo.Text = "User Information"
         '
         'txtOldPassword
         '
-        Me.txtOldPassword.Location = New System.Drawing.Point(119, 93)
+        Me.txtOldPassword.Location = New System.Drawing.Point(139, 114)
+        Me.txtOldPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtOldPassword.Name = "txtOldPassword"
         Me.txtOldPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtOldPassword.Size = New System.Drawing.Size(232, 20)
+        Me.txtOldPassword.Size = New System.Drawing.Size(271, 22)
         Me.txtOldPassword.TabIndex = 5
         '
         'LabelControl1
         '
-        Me.LabelControl1.Location = New System.Drawing.Point(35, 97)
+        Me.LabelControl1.Location = New System.Drawing.Point(41, 119)
+        Me.LabelControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(65, 13)
+        Me.LabelControl1.Size = New System.Drawing.Size(78, 16)
         Me.LabelControl1.TabIndex = 4
         Me.LabelControl1.Text = "Old Password"
         '
         'txtRetype
         '
-        Me.txtRetype.Location = New System.Drawing.Point(119, 151)
+        Me.txtRetype.Location = New System.Drawing.Point(139, 186)
+        Me.txtRetype.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtRetype.Name = "txtRetype"
         Me.txtRetype.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtRetype.Size = New System.Drawing.Size(232, 20)
+        Me.txtRetype.Size = New System.Drawing.Size(271, 22)
         Me.txtRetype.TabIndex = 9
         '
         'txtUserPassword
         '
-        Me.txtUserPassword.Location = New System.Drawing.Point(119, 122)
+        Me.txtUserPassword.Location = New System.Drawing.Point(139, 150)
+        Me.txtUserPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtUserPassword.Name = "txtUserPassword"
         Me.txtUserPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtUserPassword.Size = New System.Drawing.Size(232, 20)
+        Me.txtUserPassword.Size = New System.Drawing.Size(271, 22)
         Me.txtUserPassword.TabIndex = 7
         '
         'txtFullName
         '
-        Me.txtFullName.Location = New System.Drawing.Point(119, 64)
+        Me.txtFullName.Location = New System.Drawing.Point(139, 79)
+        Me.txtFullName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtFullName.Name = "txtFullName"
-        Me.txtFullName.Size = New System.Drawing.Size(232, 20)
+        Me.txtFullName.Size = New System.Drawing.Size(271, 22)
         Me.txtFullName.TabIndex = 3
         '
         'lblSeriesID
         '
-        Me.lblSeriesID.Location = New System.Drawing.Point(54, 126)
+        Me.lblSeriesID.Location = New System.Drawing.Point(63, 155)
+        Me.lblSeriesID.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.lblSeriesID.Name = "lblSeriesID"
-        Me.lblSeriesID.Size = New System.Drawing.Size(46, 13)
+        Me.lblSeriesID.Size = New System.Drawing.Size(55, 16)
         Me.lblSeriesID.TabIndex = 6
         Me.lblSeriesID.Text = "Password"
         '
         'lblCarFamilyID
         '
-        Me.lblCarFamilyID.Location = New System.Drawing.Point(54, 68)
+        Me.lblCarFamilyID.Location = New System.Drawing.Point(63, 84)
+        Me.lblCarFamilyID.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.lblCarFamilyID.Name = "lblCarFamilyID"
-        Me.lblCarFamilyID.Size = New System.Drawing.Size(46, 13)
+        Me.lblCarFamilyID.Size = New System.Drawing.Size(57, 16)
         Me.lblCarFamilyID.TabIndex = 2
         Me.lblCarFamilyID.Text = "Full Name"
         '
         'lblImporterSeriesName
         '
-        Me.lblImporterSeriesName.Location = New System.Drawing.Point(16, 155)
+        Me.lblImporterSeriesName.Location = New System.Drawing.Point(19, 191)
+        Me.lblImporterSeriesName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.lblImporterSeriesName.Name = "lblImporterSeriesName"
-        Me.lblImporterSeriesName.Size = New System.Drawing.Size(84, 13)
+        Me.lblImporterSeriesName.Size = New System.Drawing.Size(98, 16)
         Me.lblImporterSeriesName.TabIndex = 8
         Me.lblImporterSeriesName.Text = "Retype Password"
         '
         'lblImporter
         '
-        Me.lblImporter.Location = New System.Drawing.Point(48, 41)
+        Me.lblImporter.Location = New System.Drawing.Point(56, 50)
+        Me.lblImporter.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.lblImporter.Name = "lblImporter"
-        Me.lblImporter.Size = New System.Drawing.Size(52, 13)
+        Me.lblImporter.Size = New System.Drawing.Size(63, 16)
         Me.lblImporter.TabIndex = 0
         Me.lblImporter.Text = "User Name"
         '
         'txtUserName
         '
-        Me.txtUserName.Location = New System.Drawing.Point(119, 37)
+        Me.txtUserName.Location = New System.Drawing.Point(139, 46)
+        Me.txtUserName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtUserName.Name = "txtUserName"
-        Me.txtUserName.Size = New System.Drawing.Size(232, 20)
+        Me.txtUserName.Size = New System.Drawing.Size(271, 22)
         Me.txtUserName.TabIndex = 1
         '
         'frmChangePassword
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(382, 243)
+        Me.ClientSize = New System.Drawing.Size(446, 299)
         Me.Controls.Add(Me.grpUserInfo)
         Me.Controls.Add(Me.PanelControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmChangePassword"
-        Me.Padding = New System.Windows.Forms.Padding(8)
+        Me.Padding = New System.Windows.Forms.Padding(9, 10, 9, 10)
         Me.Text = "Change User Password"
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)

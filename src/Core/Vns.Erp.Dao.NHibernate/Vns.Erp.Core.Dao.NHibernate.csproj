@@ -41,45 +41,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Iesi.Collections">
-      <HintPath>..\..\References\Iesi.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\..\References\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="NHibernate">
-      <HintPath>..\..\References\NHibernate.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Nullables">
-      <HintPath>..\..\References\Nullables.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="nunit.core">
-      <HintPath>..\..\References\nunit.core.dll</HintPath>
+      <HintPath>..\..\..\References\NHibernate.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Spring.Aop">
-      <HintPath>..\..\References\Spring.Aop.dll</HintPath>
+      <HintPath>..\..\..\References\Spring.Aop.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Spring.Core">
-      <HintPath>..\..\References\Spring.Core.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\References\Spring.Core.dll</HintPath>
     </Reference>
     <Reference Include="Spring.Data">
-      <HintPath>..\..\References\Spring.Data.dll</HintPath>
+      <HintPath>..\..\..\References\Spring.Data.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Spring.Data.NHibernate32">
-      <HintPath>..\..\References\Spring.Data.NHibernate32.dll</HintPath>
+      <HintPath>..\..\..\References\Spring.Data.NHibernate32.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>

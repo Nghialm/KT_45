@@ -21,9 +21,9 @@ namespace Vns.Erp.Core.Produce.Service
 
         public ISxLenhsanxuatDDao SxLenhsanxuatDDao;
 
-        public IList<SxLenhsanxuat> LoadByPhanCongId(Guid PhanCongId)
+        public IList<SxLenhsanxuat> LoadByPhanCongId(int PageIndex, int PageSize, Guid PhanCongId, Guid DonviId, out int TotalResult)
         {
-            return SxLenhsanxuatDao.LoadByPhanCongId(PhanCongId);
+            return SxLenhsanxuatDao.LoadByPhanCongId(PageIndex, PageSize, PhanCongId, DonviId, out TotalResult);
         }
 
         public IList<SxLenhsanxuat> LoadByToSanXuat(Guid ToSanXuatId)
@@ -52,9 +52,14 @@ namespace Vns.Erp.Core.Produce.Service
             }
         }
 
+        public IList<SxLenhsanxuat> GetbyDonviId(int PageIndex, int PageSize, Guid DonviId, out int TotalResult)
+        {
+            return SxLenhsanxuatDao.GetbyDonviId(PageIndex, PageSize, DonviId, out TotalResult);
+        }
+
         public IList<SxLenhsanxuat> GetbyDonviId(Guid DonviId)
         {
             return SxLenhsanxuatDao.GetbyDonviId(DonviId);
         }
-	}
+    }
 }

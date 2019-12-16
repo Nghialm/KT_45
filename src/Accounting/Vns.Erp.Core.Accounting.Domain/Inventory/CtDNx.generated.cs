@@ -347,6 +347,7 @@ namespace Vns.Erp.Core.Accounting.Domain
             _noi_dung = String.Empty;
             _thue_id = new Guid();
             _ten_thue = String.Empty;
+
         }
         #endregion // End of Default ( Empty ) Class Constuctor
         public CtDNx Clone()

@@ -179,6 +179,8 @@ Public Class FrmBaseDmChiTiet
         End Set
     End Property
 
+    Public Property Parameter() As Int32
+
     Public Property Mode() As FormGlobals.DataInputState
         Get
             Return _Mode

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.Erp.Core.Admin.Domain.DmNgoaite,Vns.Erp.Core.Admin.Domain" table="DM_NGOAITE" lazy="false">
+
+		<id name="Id" column="NTE_ID" type="Guid"/>
+		
+		<property column="MA_NTE" type="String" name="MaNte" not-null="true" length="32" />
+		<property column="KY_HIEU" type="String" name="KyHieu" length="64" />
+		<property column="TEN_NTE" type="String" name="TenNte" not-null="true" length="64" />
+		<property column="TY_GIA" type="Decimal" precision="18" scale="2" name="TyGia" />
+		<property column="NGUOI_TAO" type="Guid" name="NguoiTao" />
+		<property column="NGAY_TAO" type="DateTime" name="NgayTao" />
+		<property column="NGUOI_SUA" type="Guid" name="NguoiSua" />
+		<property column="NGAY_SUA" type="DateTime" name="NgaySua" />
+    <property name="SynDate" not-null="false"  column="Syn_Date" type="DateTime" />
+
+    <property name="DonviId" column="DONVI_ID" type="Guid"/>
+    <property name="MaDonvi" column="MA_DONVI" type="String" length="32" />
+  </class>
+</hibernate-mapping>

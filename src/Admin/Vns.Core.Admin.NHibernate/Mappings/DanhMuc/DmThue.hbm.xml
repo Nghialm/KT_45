@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.Erp.Core.Admin.Domain.DmThue,Vns.Erp.Core.Admin.Domain" table="DM_THUE" lazy="false">
+
+		<id name="Id" column="THUE_ID" type="Guid"/>
+			
+		<property column="MA_THUE" type="String" name="MaThue" not-null="true" length="32" />
+		<property column="KY_HIEU" type="String" name="KyHieu" length="64" />
+		<property column="TEN_THUE" type="String" name="TenThue" length="128" />
+		<property column="TY_LE" type="Decimal" precision="5" scale="2" name="TyLe" />
+		<property column="THUE_ID_CHA" type="Guid" name="ThueIdCha" />
+		<property column="XUAT_KHAU" type="Decimal" precision="2" scale="0" name="XuatKhau" />
+		<property column="CHI_TIET" type="Decimal" precision="2" scale="0" name="ChiTiet" />
+		<property column="CHO_PHEP_SUA" type="Decimal" precision="2" scale="0" name="ChoPhepSua" />
+		<property column="CO_SU_DUNG" type="Decimal" precision="2" scale="0" name="CoSuDung" />
+		<property column="CAP" type="Decimal" precision="2" scale="0" name="Cap" />
+		<property column="NGUOI_TAO" type="Guid" name="NguoiTao" />
+		<property column="NGAY_TAO" type="DateTime" name="NgayTao" />
+		<property column="NGUOI_SUA" type="Guid" name="NguoiSua" />
+		<property column="NGAY_SUA" type="DateTime" name="NgaySua" />
+    <property column="MUA_HANG" type="Decimal" precision="2" scale="0" name="MuaHang" />
+    <property name="SynDate" not-null="false"  column="Syn_Date" type="DateTime" />
+  </class>
+</hibernate-mapping>

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraPivotGrid.PivotGridGroup pivotGridGroup1 = new DevExpress.XtraPivotGrid.PivotGridGroup();
+            DevExpress.XtraPivotGrid.PivotGridGroup pivotGridGroup2 = new DevExpress.XtraPivotGrid.PivotGridGroup();
             this.pvNgayChungTu = new DevExpress.XtraPivotGrid.PivotGridField();
             this.pvSoLuongNhap = new DevExpress.XtraPivotGrid.PivotGridField();
             this.pvSoLuongXuat = new DevExpress.XtraPivotGrid.PivotGridField();
@@ -43,26 +43,19 @@
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.dteDenNgay = new DevExpress.XtraEditors.DateEdit();
-            this.dteTuNgay = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.gvKeHoach = new DevExpress.XtraPivotGrid.PivotGridControl();
             this.pvTenHangHoa = new DevExpress.XtraPivotGrid.PivotGridField();
             this.pivotGridField1 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.pivotGridField2 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.cboPhanXuong = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.dateTimeInput1 = new Vns.Erp.Core.Controls.UserControl.DateTimeInput();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboLoaiVatLieu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboKeHoachSx.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteDenNgay.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteDenNgay.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteTuNgay.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteTuNgay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvKeHoach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboPhanXuong)).BeginInit();
             this.SuspendLayout();
@@ -126,43 +119,44 @@
             this.tableLayoutPanel1.Controls.Add(this.gvKeHoach, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(692, 406);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(807, 500);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.dateTimeInput1);
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.cboLoaiVatLieu);
             this.groupControl1.Controls.Add(this.btnSearch);
             this.groupControl1.Controls.Add(this.cboKeHoachSx);
-            this.groupControl1.Controls.Add(this.labelControl3);
-            this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.dteDenNgay);
-            this.groupControl1.Controls.Add(this.dteTuNgay);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(3, 3);
+            this.groupControl1.Location = new System.Drawing.Point(3, 4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(686, 94);
+            this.groupControl1.Size = new System.Drawing.Size(801, 145);
             this.groupControl1.TabIndex = 3;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(263, 34);
+            this.labelControl4.Location = new System.Drawing.Point(34, 75);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(77, 13);
+            this.labelControl4.Size = new System.Drawing.Size(98, 17);
             this.labelControl4.TabIndex = 7;
             this.labelControl4.Text = "Loại nguyên liệu";
             // 
             // cboLoaiVatLieu
             // 
             this.cboLoaiVatLieu.EnterMoveNextControl = true;
-            this.cboLoaiVatLieu.Location = new System.Drawing.Point(357, 31);
+            this.cboLoaiVatLieu.Location = new System.Drawing.Point(159, 72);
+            this.cboLoaiVatLieu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboLoaiVatLieu.Name = "cboLoaiVatLieu";
             this.cboLoaiVatLieu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -170,15 +164,16 @@
             "Tất cả",
             "Vật tư",
             "Nguyên vật liệu khác"});
-            this.cboLoaiVatLieu.Size = new System.Drawing.Size(153, 20);
+            this.cboLoaiVatLieu.Size = new System.Drawing.Size(178, 22);
             this.cboLoaiVatLieu.TabIndex = 3;
             // 
             // btnSearch
             // 
             this.btnSearch.ImageIndex = 20;
-            this.btnSearch.Location = new System.Drawing.Point(94, 57);
+            this.btnSearch.Location = new System.Drawing.Point(159, 102);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(80, 30);
+            this.btnSearch.Size = new System.Drawing.Size(93, 37);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "&Tìm kiếm";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -186,14 +181,15 @@
             // cboKeHoachSx
             // 
             this.cboKeHoachSx.EnterMoveNextControl = true;
-            this.cboKeHoachSx.Location = new System.Drawing.Point(94, 31);
+            this.cboKeHoachSx.Location = new System.Drawing.Point(159, 42);
+            this.cboKeHoachSx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboKeHoachSx.Name = "cboKeHoachSx";
             this.cboKeHoachSx.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.cboKeHoachSx.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboKeHoachSx.Properties.NullText = "";
             this.cboKeHoachSx.Properties.View = this.gridView1;
-            this.cboKeHoachSx.Size = new System.Drawing.Size(153, 20);
+            this.cboKeHoachSx.Size = new System.Drawing.Size(178, 22);
             this.cboKeHoachSx.TabIndex = 2;
             // 
             // gridView1
@@ -241,69 +237,12 @@
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 3;
             // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(290, 8);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(47, 13);
-            this.labelControl3.TabIndex = 2;
-            this.labelControl3.Text = "Đến ngày";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(29, 8);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(40, 13);
-            this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "Từ ngày";
-            // 
-            // dteDenNgay
-            // 
-            this.dteDenNgay.EditValue = null;
-            this.dteDenNgay.EnterMoveNextControl = true;
-            this.dteDenNgay.Location = new System.Drawing.Point(357, 5);
-            this.dteDenNgay.Name = "dteDenNgay";
-            this.dteDenNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteDenNgay.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
-            this.dteDenNgay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dteDenNgay.Properties.EditFormat.FormatString = "dd/MM/yyyy";
-            this.dteDenNgay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dteDenNgay.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dteDenNgay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.dteDenNgay.Properties.MaxValue = new System.DateTime(2999, 1, 1, 0, 0, 0, 0);
-            this.dteDenNgay.Properties.MinValue = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dteDenNgay.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dteDenNgay.Size = new System.Drawing.Size(153, 20);
-            this.dteDenNgay.TabIndex = 1;
-            // 
-            // dteTuNgay
-            // 
-            this.dteTuNgay.EditValue = null;
-            this.dteTuNgay.EnterMoveNextControl = true;
-            this.dteTuNgay.Location = new System.Drawing.Point(94, 5);
-            this.dteTuNgay.Name = "dteTuNgay";
-            this.dteTuNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dteTuNgay.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
-            this.dteTuNgay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dteTuNgay.Properties.EditFormat.FormatString = "dd/MM/yyyy";
-            this.dteTuNgay.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dteTuNgay.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dteTuNgay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.dteTuNgay.Properties.MaxValue = new System.DateTime(2999, 1, 1, 0, 0, 0, 0);
-            this.dteTuNgay.Properties.MinValue = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.dteTuNgay.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dteTuNgay.Size = new System.Drawing.Size(153, 20);
-            this.dteTuNgay.TabIndex = 0;
-            // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(29, 34);
+            this.labelControl1.Location = new System.Drawing.Point(34, 42);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(47, 13);
+            this.labelControl1.Size = new System.Drawing.Size(61, 17);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Kế hoạch ";
             // 
@@ -317,11 +256,12 @@
             this.pvTenHangHoa,
             this.pivotGridField1,
             this.pivotGridField2});
-            pivotGridGroup1.Fields.Add(this.pvNgayChungTu);
-            pivotGridGroup1.Hierarchy = null;
+            pivotGridGroup2.Fields.Add(this.pvNgayChungTu);
+            pivotGridGroup2.Hierarchy = null;
             this.gvKeHoach.Groups.AddRange(new DevExpress.XtraPivotGrid.PivotGridGroup[] {
-            pivotGridGroup1});
-            this.gvKeHoach.Location = new System.Drawing.Point(3, 103);
+            pivotGridGroup2});
+            this.gvKeHoach.Location = new System.Drawing.Point(3, 157);
+            this.gvKeHoach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gvKeHoach.Name = "gvKeHoach";
             this.gvKeHoach.OptionsView.GroupFieldsInCustomizationWindow = false;
             this.gvKeHoach.OptionsView.ShowColumnGrandTotalHeader = false;
@@ -335,7 +275,7 @@
             this.gvKeHoach.OptionsView.ShowRowTotals = false;
             this.gvKeHoach.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cboPhanXuong});
-            this.gvKeHoach.Size = new System.Drawing.Size(686, 300);
+            this.gvKeHoach.Size = new System.Drawing.Size(801, 339);
             this.gvKeHoach.TabIndex = 4;
             this.gvKeHoach.CustomCellDisplayText += new DevExpress.XtraPivotGrid.PivotCellDisplayTextEventHandler(this.gvKeHoach_CustomCellDisplayText);
             // 
@@ -382,15 +322,27 @@
             this.cboPhanXuong.NullText = "";
             this.cboPhanXuong.ValueMember = "Id";
             // 
+            // dateTimeInput1
+            // 
+            this.dateTimeInput1.EndDate = new System.DateTime(((long)(0)));
+            this.dateTimeInput1.Location = new System.Drawing.Point(34, 10);
+            this.dateTimeInput1.Name = "dateTimeInput1";
+            this.dateTimeInput1.Size = new System.Drawing.Size(520, 25);
+            this.dateTimeInput1.StartDate = new System.DateTime(((long)(0)));
+            this.dateTimeInput1.TabIndex = 8;
+            // 
             // frmBcKeHoachTheoNgay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 406);
+            this.ClientSize = new System.Drawing.Size(807, 500);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmBcKeHoachTheoNgay";
             this.Text = "Báo cáo tiến độ sản xuất";
             this.Load += new System.EventHandler(this.frmBcSanXuatTheoNgay_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmBcKeHoachTheoNgay_KeyDown);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -398,10 +350,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cboLoaiVatLieu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboKeHoachSx.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteDenNgay.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteDenNgay.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteTuNgay.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dteTuNgay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvKeHoach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboPhanXuong)).EndInit();
             this.ResumeLayout(false);
@@ -421,10 +369,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.DateEdit dteDenNgay;
-        private DevExpress.XtraEditors.DateEdit dteTuNgay;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraPivotGrid.PivotGridControl gvKeHoach;
         private DevExpress.XtraPivotGrid.PivotGridField pvSoLuongNhap;
@@ -434,5 +378,6 @@
         private DevExpress.XtraPivotGrid.PivotGridField pivotGridField1;
         private DevExpress.XtraPivotGrid.PivotGridField pivotGridField2;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit cboPhanXuong;
+        private Controls.UserControl.DateTimeInput dateTimeInput1;
     }
 }

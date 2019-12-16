@@ -354,7 +354,7 @@ public partial class PhieuDieuXuatDieuChuyen
 		TNCommon.SelectFirst(grlLoaiPhieuNhap);
 
 		//Bind ngoai te
-        List<DmNgoaite> lstNgoaite = new List<DmNgoaite>(_DmNgoaiteService.GetAll());
+        List<DmNgoaite> lstNgoaite = new List<DmNgoaite>(_DmNgoaiteService.GetAllByDonviID(Generals.DonviID));
 		cboTyGia.Properties.DisplayMember = "KyHieu";
 		cboTyGia.Properties.ValueMember = "Id";
 		cboTyGia.Properties.DataSource = lstNgoaite;
@@ -415,7 +415,7 @@ public partial class PhieuDieuXuatDieuChuyen
 		cboVuViec.Columns.Add(new LookUpColumnInfo("KyHieu", "Mã vụ việc"));
 		cboVuViec.Columns.Add(new LookUpColumnInfo("TenVuviec", "Tên vụ việc"));
 
-        IList<SxLenhsanxuat> lstLenhSx = _SxLenhsanxuatService.GetAll();
+        IList<SxLenhsanxuat> lstLenhSx = _SxLenhsanxuatService.GetbyDonviId(Generals.DonviID);
         cboLenhSanXuatNhapId.DataSource = lstLenhSx;
         cboLenhSanXuatXuatId.DataSource = lstLenhSx;
 

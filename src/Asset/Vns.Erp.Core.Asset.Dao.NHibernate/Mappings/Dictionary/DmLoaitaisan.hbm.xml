@@ -2,9 +2,8 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 	<class name="Vns.Erp.Core.Asset.Domain.DmLoaitaisan,Vns.Erp.Core.Asset.Domain" table="DM_LOAITAISAN" lazy="false">
 
-		<id name="Id" column="LOAITAISAN_ID" type="Guid">
-			<generator class="guid"/>
-		</id>
+		<id name="Id" column="LOAITAISAN_ID" type="Guid" />
+			
     <property name="MaLoaitaisan" column="MA_LOAITAISAN" type="String" length="32" />
     <property name="KyHieu" column="KY_HIEU" type="String" length="32" />
     <property name="TenLoaitaisan" column="TEN_LOAITAISAN" type="String" length="256" />
@@ -14,6 +13,7 @@
     <property name="ChoPhepSua" column="CHO_PHEP_SUA" type="Decimal" precision="4" scale="0" />
     <property name="CoSuDung" column="CO_SU_DUNG" type="Decimal" precision="4" scale="0" />
     <property name="Cap" column="CAP" type="Decimal" precision="4" scale="0" />
-		
-	</class>
+
+    <property name="SynDate" not-null="false"  column="Syn_Date" type="DateTime" />
+  </class>
 </hibernate-mapping>

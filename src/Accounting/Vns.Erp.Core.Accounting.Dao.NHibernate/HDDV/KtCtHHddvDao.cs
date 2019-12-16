@@ -13,22 +13,55 @@ namespace Vns.Erp.Core.Accounting.Dao.NHibernate
 	[Serializable]
 	public sealed class KtCtHHddvDao:GenericDao<KtCtHHddv,System.Guid>,IKtCtHHddvDao
 	{
-        public IList<KtCtHHddv> GetByLoaiChungTu(Guid DonviId, string MaLoaiCt, int SoCTHienThi)
+        #region IDao
+        KtCtHHddv IDao<KtCtHHddv, Guid>.Merge(KtCtHHddv entity)
         {
-            String nHQL = " Select h " +
-                                     " From KtCtHHddv h" +
-                                     " Where h.DonviId = :DonviId " +
-                                     " And h.MaLoaiCt like :MaLoaiCt " +
-                                     " Order by h.NgayCt Desc";
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Merge(entity);
 
-            IQuery query = NHibernateSession.CreateQuery(nHQL);
-            query.SetParameter("DonviId", DonviId);
-            query.SetParameter("MaLoaiCt", String.Format("{0}%", MaLoaiCt));
-            if (SoCTHienThi > 0)
-                query.SetMaxResults(SoCTHienThi);
-
-            return query.List<KtCtHHddv>();
+            return entity;
         }
+
+        KtCtHHddv IDao<KtCtHHddv, Guid>.Save(KtCtHHddv entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Save(entity);
+
+            return entity;
+        }
+
+        KtCtHHddv IDao<KtCtHHddv, Guid>.SaveOrUpdate(KtCtHHddv entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.SaveOrUpdate(entity);
+
+            return entity;
+        }
+
+        void IDao<KtCtHHddv, Guid>.DeleteById(Guid id)
+        {
+            String sql = " update KtCtHHddv set IsDeleted = 1, SynDate = :SynDate " +
+                         " where Id = :Id ";
+
+            IQuery q = NHibernateSession.CreateQuery(sql);
+            q.SetParameter("SynDate", Null.MIN_DATE);
+            q.SetParameter("Id", id);
+            int i = q.ExecuteUpdate();
+        }
+        #endregion
+
+        #region Syn data
+        public void UpdateSynFlag(Guid id)
+        {
+            String sql = " update KtCtHHddv set SynDate = :SynDate " +
+                         " where Id = :Id ";
+
+            IQuery q = NHibernateSession.CreateQuery(sql);
+            q.SetParameter("SynDate", Null.MIN_DATE);
+            q.SetParameter("Id", id);
+            int i = q.ExecuteUpdate();
+        }
+        #endregion
 
         public IList<KtCtHHddv> GetByLoaiChungTu(int PageIndex,int PageSize,Guid DonviId, string MaLoaiCt, int SoCTHienThi,out int TotalResult)
         {
@@ -36,11 +69,13 @@ namespace Vns.Erp.Core.Accounting.Dao.NHibernate
                                      " From KtCtHHddv h" +
                                      " Where h.DonviId = :DonviId " +
                                      " And h.MaLoaiCt like :MaLoaiCt " +
+                                     " And (h.IsDeleted <> 1 or h.IsDeleted is null) " +
                                      " Order by h.NgayCt Desc";
             String countHQL = " Select count(h) " +
                                      " From KtCtHHddv h" +
                                      " Where h.DonviId = :DonviId " +
                                      " And h.MaLoaiCt like :MaLoaiCt "+
+                                     " And (h.IsDeleted <> 1 or h.IsDeleted is null) " +
                                      " Order by h.NgayCt Desc";
                                      
 

@@ -1,9 +1,12 @@
 using System;
 using System.ComponentModel;
+using System.Runtime.Serialization;
 using Vns.Erp.Core.Domain;
 
 namespace Vns.Erp.Core.Asset.Domain
 {
+    [Serializable]
+    [DataContract(Namespace = "http://Vns.Erp.Core.Asset.Domain", IsReference = true)]
     public partial class TsTscdPtung : DomainObject<System.Guid>, INotifyPropertyChanged
     {
         #region Declarations
@@ -77,6 +80,7 @@ namespace Vns.Erp.Core.Asset.Domain
 
         #region Properties
 
+        [DataMember]
 		public virtual string TenPtung
         {
             get { return _TenPtung; }
@@ -90,6 +94,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnTenPtungChanging();
 		partial void OnTenPtungChanged();
 		
+        [DataMember]
 		public virtual string TenDvt
         {
             get { return _TenDvt; }
@@ -103,6 +108,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnTenDvtChanging();
 		partial void OnTenDvtChanged();
 		
+        [DataMember]
 		public virtual decimal SoLuong
         {
             get { return _SoLuong; }
@@ -116,6 +122,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnSoLuongChanging();
 		partial void OnSoLuongChanged();
 		
+        [DataMember]
 		public virtual decimal SoTien
         {
             get { return _SoTien; }
@@ -129,6 +136,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnSoTienChanging();
 		partial void OnSoTienChanged();
 		
+        [DataMember]
 		public virtual decimal SoTienNte
         {
             get { return _SoTienNte; }
@@ -142,6 +150,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnSoTienNteChanging();
 		partial void OnSoTienNteChanged();
 		
+        [DataMember]
 		public virtual string QuyCach
         {
             get { return _QuyCach; }
@@ -155,6 +164,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnQuyCachChanging();
 		partial void OnQuyCachChanged();
 		
+        [DataMember]
 		public virtual string DienGiai
         {
             get { return _DienGiai; }
@@ -168,6 +178,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnDienGiaiChanging();
 		partial void OnDienGiaiChanged();
 		
+        [DataMember]
 		public virtual System.Guid DonviId
         {
             get { return _DonviId; }
@@ -181,6 +192,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnDonviIdChanging();
 		partial void OnDonviIdChanged();
 		
+        [DataMember]
 		public virtual string MaDonvi
         {
             get { return _MaDonvi; }
@@ -194,6 +206,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnMaDonviChanging();
 		partial void OnMaDonviChanged();
 		
+        [DataMember]
 		public virtual System.Guid DmTscdId
         {
             get { return _DmTscdId; }

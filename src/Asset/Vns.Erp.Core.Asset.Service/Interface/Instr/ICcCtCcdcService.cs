@@ -14,7 +14,7 @@ namespace Vns.Erp.Core.Asset.Service.Interface
 	{
         IList<CcCtCcdc> GetByCCDCId(Guid CcdcId);
         Boolean DeleteByCcdcId(Guid CcdcId);
-        IList<CcCtCcdc> GetByTrangThai(decimal GiamCcdc);
+        IList<CcCtCcdc> GetByTrangThai(decimal GiamCcdc, Guid DonviId);
         Decimal GetThuTuMax(Guid CcdcId);
         Boolean DeleteByTrangThai(Guid CcdcId, Decimal GiamCcdc);
         IList<CcCtCcdc> GetByCcDcId_TrangThai(Guid CcdcId, decimal GiamCcdc);

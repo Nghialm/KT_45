@@ -34,6 +34,8 @@ Public Class Lookup_Tai_Khoan
         Catch ex As Exception
             Message_Error(ex)
         End Try
+        Value_info.ParameterValue = String.Empty
+        Value_info.Ten = String.Empty
     End Sub
 
     Private Sub c_TaiKhoan_AfterFilter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles c_TaiKhoan.AfterFilter
@@ -42,8 +44,8 @@ Public Class Lookup_Tai_Khoan
                 Value_info.ParameterValue = c_TaiKhoan.ListEditValue(1)
                 Value_info.Ten = c_TaiKhoan.ListEditValue(1) & " - " & c_TaiKhoan.ListEditValue(2)
             Else
-                Value_info.ParameterValue = Nothing
-                Value_info.Ten = Nothing
+                Value_info.ParameterValue = String.Empty
+                Value_info.Ten = String.Empty
             End If
             If c_TaiKhoan.IsNotTextChanged Then SendKeys.Send("{TAB}")
         Catch ex As Exception
@@ -53,8 +55,8 @@ Public Class Lookup_Tai_Khoan
 
     Private Sub c_TaiKhoan_ClearFilterData(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles c_TaiKhoan.ClearFilterData
         Try
-            Value_info.ParameterValue = Nothing
-            Value_info.Ten = Nothing
+            Value_info.ParameterValue = String.Empty
+            Value_info.Ten = String.Empty
         Catch ex As Exception
             Message_Error(ex)
         End Try

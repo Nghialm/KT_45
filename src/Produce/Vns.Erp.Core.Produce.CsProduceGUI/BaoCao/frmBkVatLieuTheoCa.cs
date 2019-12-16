@@ -52,7 +52,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI.BaoCao
         {
             try
             {
-                loadData(dteTuNgay.DateTime, dteDenNgay.DateTime);
+                loadData(dateTimeInput1.StartDate, dateTimeInput1.EndDate);
             }
             catch (Exception ex)
             {
@@ -62,9 +62,6 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI.BaoCao
 
         private void frmBcSanXuatTheoNgay_Load(object sender, EventArgs e)
         {
-            dteTuNgay.DateTime = new DateTime(DateTime.Now.Year, 1, 1);
-            dteDenNgay.DateTime = new DateTime(DateTime.Now.Year, 12, 31);
-
             bindDataToCbo();
         }
 
@@ -97,6 +94,16 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI.BaoCao
             IList<SxBkVatLieuDTO> lstData = new List<SxBkVatLieuDTO>();
             lstData = ProduceReportService.GetBangKeVatLieu(p_tuNgay, p_denNgay, Null.NullGuid, Null.NullGuid, Null.NullGuid, tmppb.Id, Null.NullGuid, Generals.DonviID);
             grcReport.DataSource = lstData;
+        }
+
+        private void frmBkVatLieuTheoCa_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    this.Close();
+                    break; // TODO: might not be correct. Was : Exit Select
+            }
         }
     }
 }

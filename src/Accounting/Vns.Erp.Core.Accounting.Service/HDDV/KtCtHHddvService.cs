@@ -17,6 +17,7 @@ namespace Vns.Erp.Core.Accounting.Service
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class KtCtHHddvService : GenericService<KtCtHHddv, System.Guid>, IKtCtHHddvService
     {
+        #region Property
         public IKtCtHHddvDao KtCtHHddvDao
         {
             get { return (IKtCtHHddvDao)Dao; }
@@ -50,6 +51,33 @@ namespace Vns.Erp.Core.Accounting.Service
             get { return _CtThueDao; }
             set { _CtThueDao = value; }
         }
+        #endregion
+
+        #region Syn function
+        [Transaction]
+        public void SaveData4Syn(KtCtHHddv _cth, List<KtCtDHddv> _lstctd)
+        {
+            //Xoa du lieu
+            //_cth. = null;
+            _cth.LstCtDHddv = null;
+            KtCtHHddvDao.SaveOrUpdate(_cth);
+
+            if (_cth.IsDeleted != 1)
+            {
+                _KtCtDHddvDao.DeleteByCtH(_cth.Id);
+                foreach (KtCtDHddv _tempctdnx in _lstctd)
+                {
+                    _KtCtDHddvDao.SaveOrUpdate(_tempctdnx);
+                }
+            }
+        }
+
+
+        public void UpdateSynFlag(Guid id)
+        {
+            KtCtHHddvDao.UpdateSynFlag(id);
+        }
+        #endregion
 
         public IList<KtCtHHddv> GetByDonviId(Guid DonviId)
         {
@@ -60,18 +88,6 @@ namespace Vns.Erp.Core.Accounting.Service
             return List(-1, -1, props, values, null);
         }
 
-        public IList<KtCtHHddv> GetByLoaiChungTu(Guid DonviId, string MaLoaiCt)
-        {
-            return GetByLoaiChungTu(DonviId, MaLoaiCt, -1);
-        }
-
-        public IList<KtCtHHddv> GetByLoaiChungTu(Guid DonviId, string MaLoaiCt, int SoCTHienThi)
-        {
-            if (SoCTHienThi <= 0)
-                SoCTHienThi = -1;
-
-            return KtCtHHddvDao.GetByLoaiChungTu(DonviId, MaLoaiCt, SoCTHienThi);
-        }
         public IList<KtCtHHddv> GetByLoaiChungTu(int PageIndex, int PageSize,Guid DonviId, string MaLoaiCt, int SoCTHienThi,out int TotalResult)
         {
             if (SoCTHienThi <= 0)
@@ -84,12 +100,8 @@ namespace Vns.Erp.Core.Accounting.Service
         public Boolean DeleteChungTu(KtCtHHddv objCtH, IList<KtCtDHddv> lstCtD)
         {
             _BcKetoanDao.DeleteByChungTu(objCtH.Id, new Guid());
-
-            _CtThueDao.DeleteByHoaDon(objCtH.IdDoituongHoadon);
             _CtHoadonDao.DeleteById(objCtH.IdDoituongHoadon);
-
-            _KtCtDHddvDao.DeleteByCtH(objCtH.Id);
-            Delete(objCtH);
+            DeleteById(objCtH.Id);
 
             return true;
         }
@@ -99,6 +111,9 @@ namespace Vns.Erp.Core.Accounting.Service
         {
             CtHoadon objctHoaDon = _ctHoaDonInfo;
             KtCtHHddv objcthHddv = _cthHddvInfo;
+
+            objcthHddv.SynDate = Null.MIN_DATE;
+            objctHoaDon.SynDate = Null.MIN_DATE;
 
             switch (IsInsert)
             {
@@ -191,5 +206,7 @@ namespace Vns.Erp.Core.Accounting.Service
                 Null.NullGuid, Null.NullGuid, Null.NullGuid, Null.NullGuid, Null.NullGuid,
                 Null.NullGuid, Null.NullGuid, Null.NullGuid, Null.NullGuid);
         }
+
+        
     }
 }

@@ -34,6 +34,8 @@
             this.btnModify = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddNew = new DevExpress.XtraEditors.SimpleButton();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.PagerControl = new DevExpress.XtraEditors.PanelControl();
+            this.CtlPagerControl = new Vns.Erp.Core.Common.Controls.PagerControl();
             this.gbQuyTrinh = new DevExpress.XtraEditors.GroupControl();
             this.grcDanhSach = new DevExpress.XtraGrid.GridControl();
             this.grvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -66,6 +68,8 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PagerControl)).BeginInit();
+            this.PagerControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbQuyTrinh)).BeginInit();
             this.gbQuyTrinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grcDanhSach)).BeginInit();
@@ -89,10 +93,11 @@
             this.groupControl1.Controls.Add(this.btnModify);
             this.groupControl1.Controls.Add(this.btnAddNew);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(4, 574);
+            this.groupControl1.Location = new System.Drawing.Point(5, 706);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(1000, 34);
+            this.groupControl1.Size = new System.Drawing.Size(1166, 42);
             this.groupControl1.TabIndex = 6;
             this.groupControl1.Text = "groupControl1";
             // 
@@ -100,9 +105,10 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.ImageIndex = 20;
-            this.btnClose.Location = new System.Drawing.Point(920, 3);
+            this.btnClose.Location = new System.Drawing.Point(1072, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(80, 30);
+            this.btnClose.Size = new System.Drawing.Size(93, 37);
             this.btnClose.TabIndex = 31;
             this.btnClose.Text = "&Đóng";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -110,9 +116,10 @@
             // btnDelete
             // 
             this.btnDelete.ImageIndex = 8;
-            this.btnDelete.Location = new System.Drawing.Point(172, 3);
+            this.btnDelete.Location = new System.Drawing.Point(201, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(80, 30);
+            this.btnDelete.Size = new System.Drawing.Size(93, 37);
             this.btnDelete.TabIndex = 30;
             this.btnDelete.Text = "&Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -120,9 +127,10 @@
             // btnModify
             // 
             this.btnModify.ImageIndex = 2;
-            this.btnModify.Location = new System.Drawing.Point(86, 3);
+            this.btnModify.Location = new System.Drawing.Point(100, 4);
+            this.btnModify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(80, 30);
+            this.btnModify.Size = new System.Drawing.Size(93, 37);
             this.btnModify.TabIndex = 29;
             this.btnModify.Text = "&Sửa";
             this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
@@ -130,9 +138,10 @@
             // btnAddNew
             // 
             this.btnAddNew.ImageIndex = 16;
-            this.btnAddNew.Location = new System.Drawing.Point(0, 3);
+            this.btnAddNew.Location = new System.Drawing.Point(0, 4);
+            this.btnAddNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(80, 30);
+            this.btnAddNew.Size = new System.Drawing.Size(93, 37);
             this.btnAddNew.TabIndex = 28;
             this.btnAddNew.Text = "&Thêm";
             this.btnAddNew.ToolTip = "Phím tắt Ctrl R";
@@ -143,38 +152,66 @@
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Horizontal = false;
-            this.splitContainerControl1.Location = new System.Drawing.Point(4, 4);
+            this.splitContainerControl1.Location = new System.Drawing.Point(5, 5);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Panel1.Controls.Add(this.PagerControl);
             this.splitContainerControl1.Panel1.Controls.Add(this.gbQuyTrinh);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.groupControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1000, 570);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1166, 701);
             this.splitContainerControl1.SplitterPosition = 285;
             this.splitContainerControl1.TabIndex = 7;
             this.splitContainerControl1.Text = "splitContainerControl1";
+            // 
+            // PagerControl
+            // 
+            this.PagerControl.Controls.Add(this.CtlPagerControl);
+            this.PagerControl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PagerControl.Location = new System.Drawing.Point(0, 228);
+            this.PagerControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PagerControl.Name = "PagerControl";
+            this.PagerControl.Size = new System.Drawing.Size(1166, 57);
+            this.PagerControl.TabIndex = 7;
+            // 
+            // CtlPagerControl
+            // 
+            this.CtlPagerControl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CtlPagerControl.Location = new System.Drawing.Point(601, 2);
+            this.CtlPagerControl.Margin = new System.Windows.Forms.Padding(5);
+            this.CtlPagerControl.Name = "CtlPagerControl";
+            this.CtlPagerControl.PageIndex = 1;
+            this.CtlPagerControl.PageSize = 10;
+            this.CtlPagerControl.Size = new System.Drawing.Size(563, 53);
+            this.CtlPagerControl.TabIndex = 0;
+            this.CtlPagerControl.TotalPage = 0;
+            this.CtlPagerControl.TotalResult = 0;
             // 
             // gbQuyTrinh
             // 
             this.gbQuyTrinh.Controls.Add(this.grcDanhSach);
             this.gbQuyTrinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbQuyTrinh.Location = new System.Drawing.Point(0, 0);
+            this.gbQuyTrinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbQuyTrinh.Name = "gbQuyTrinh";
-            this.gbQuyTrinh.Size = new System.Drawing.Size(1000, 285);
+            this.gbQuyTrinh.Size = new System.Drawing.Size(1166, 285);
             this.gbQuyTrinh.TabIndex = 6;
             this.gbQuyTrinh.Text = "Danh sách lệnh sản xuất";
             // 
             // grcDanhSach
             // 
             this.grcDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grcDanhSach.Location = new System.Drawing.Point(2, 22);
+            this.grcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grcDanhSach.Location = new System.Drawing.Point(2, 24);
             this.grcDanhSach.MainView = this.grvDanhSach;
+            this.grcDanhSach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grcDanhSach.Name = "grcDanhSach";
             this.grcDanhSach.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1,
             this.cboTrangThaiLenh,
             this.cboQuyTrinh});
-            this.grcDanhSach.Size = new System.Drawing.Size(996, 261);
+            this.grcDanhSach.Size = new System.Drawing.Size(1162, 259);
             this.grcDanhSach.TabIndex = 0;
             this.grcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvDanhSach});
@@ -377,21 +414,24 @@
             this.groupControl2.Controls.Add(this.grcChiTiet);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1000, 280);
+            this.groupControl2.Size = new System.Drawing.Size(1166, 411);
             this.groupControl2.TabIndex = 7;
             this.groupControl2.Text = "Chi tiết lệnh sản xuất";
             // 
             // grcChiTiet
             // 
             this.grcChiTiet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grcChiTiet.Location = new System.Drawing.Point(2, 22);
+            this.grcChiTiet.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grcChiTiet.Location = new System.Drawing.Point(2, 24);
             this.grcChiTiet.MainView = this.grvChiTiet;
+            this.grcChiTiet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grcChiTiet.Name = "grcChiTiet";
             this.grcChiTiet.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit2,
             this.repositoryItemTextEdit1});
-            this.grcChiTiet.Size = new System.Drawing.Size(996, 256);
+            this.grcChiTiet.Size = new System.Drawing.Size(1162, 385);
             this.grcChiTiet.TabIndex = 0;
             this.grcChiTiet.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvChiTiet});
@@ -541,20 +581,25 @@
             // 
             // frmLenhSanXuat_DanhSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 612);
+            this.ClientSize = new System.Drawing.Size(1176, 753);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.groupControl1);
+            this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLenhSanXuat_DanhSach";
-            this.Padding = new System.Windows.Forms.Padding(4);
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách lệnh sản xuất";
             this.Load += new System.EventHandler(this.frmKeHoach_DanhSach_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLenhSanXuat_DanhSach_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PagerControl)).EndInit();
+            this.PagerControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gbQuyTrinh)).EndInit();
             this.gbQuyTrinh.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grcDanhSach)).EndInit();
@@ -608,5 +653,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit cboTrangThaiLenh;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit cboQuyTrinh;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        internal DevExpress.XtraEditors.PanelControl PagerControl;
+        internal Core.Common.Controls.PagerControl CtlPagerControl;
     }
 }

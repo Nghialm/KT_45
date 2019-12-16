@@ -130,6 +130,10 @@ Partial Public Class frmDanhMucKho_ChiTiet
             info.CoSuDung = TNCommon.ParseDecimal(chkCO_SU_DUNG.Checked)
             info.XuatAm = TNCommon.ParseDecimal(chkXUAT_AM.Checked)
             info.ChoPhepSua = TNCommon.ParseDecimal(chkCHO_PHEP_SUA.Checked)
+            info.SynDate = Null.MIN_DATE
+
+            info.DiaLy = cboDiaLy.EditValue
+            info.LoaiKho = cboLOAI_KHO.EditValue
             MyBase.ResultObject = info
             Return info
         End Get
@@ -147,6 +151,9 @@ Partial Public Class frmDanhMucKho_ChiTiet
                 chkCHO_PHEP_SUA.Checked = TNCommon.ParseBool(obj.ChoPhepSua)
                 chkXUAT_AM.Checked = TNCommon.ParseBool(obj.XuatAm)
                 chkCO_SU_DUNG.Checked = TNCommon.ParseBool(obj.CoSuDung)
+
+                cboDiaLy.EditValue = Convert.ToInt32(obj.DiaLy)
+                cboLOAI_KHO.EditValue = Convert.ToInt32(obj.LoaiKho)
             End If
         End Set
     End Property
@@ -159,6 +166,7 @@ Partial Public Class frmDanhMucKho_ChiTiet
             'Bind loại kho
             Dim dr As DataRow
             Dim dtLK As IList(Of HtDanhmuc) = HtDanhmucService.GetByDoiTuong("LOAI_KHO")
+            Dim dtDiaLy As IList(Of HtDanhmuc) = HtDanhmucService.GetByDoiTuong("DIA_LY")
             'Dim dtLK As DataTable = New DataTable()
             'If (Not dsLK Is Nothing) AndAlso (dsLK.Tables.Count > 0) Then
             '    dtLK = dsLK.Tables(0)
@@ -166,8 +174,11 @@ Partial Public Class frmDanhMucKho_ChiTiet
 
             Dim LoaiKhoColumnDefine As ArrayList = New ArrayList()
             LoaiKhoColumnDefine.Add(New ColumnInfo("TenDanhmuc", "Tên loại kho", 0, True, ""))
-            'dr = dtLK.Add(root)
             TNCommon.BindData_LookupEdit(cboLOAI_KHO, dtLK, "TenDanhmuc", "GiaTri", LoaiKhoColumnDefine, True, True)
+
+            Dim DiaLyColumnDefine As ArrayList = New ArrayList()
+            DiaLyColumnDefine.Add(New ColumnInfo("TenDanhmuc", "Địa lý", 0, True, ""))
+            TNCommon.BindData_LookupEdit(cboDiaLy, dtDiaLy, "TenDanhmuc", "GiaTri", DiaLyColumnDefine, True, True)
         Catch ex As Exception
             Message_Error(ex)
         End Try

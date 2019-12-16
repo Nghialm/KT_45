@@ -59,194 +59,123 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Apache.NMS">
-      <HintPath>..\..\..\References\Apache.NMS.dll</HintPath>
-    </Reference>
-    <Reference Include="Apache.NMS.ActiveMQ">
-      <HintPath>..\..\..\References\Apache.NMS.ActiveMQ.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Logging">
-      <HintPath>..\..\..\References\Common.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Logging.Log4Net">
-      <HintPath>..\..\..\References\Common.Logging.Log4Net.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.BonusSkins.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.BonusSkins.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.BonusSkins.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v10.2, Version=10.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.Data.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.OfficeSkins.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.OfficeSkins.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.Utils.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Xpo.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpo.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.Xpo.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraBars.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraBars.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraBars.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraEditors.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraGrid.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraGrid.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraLayout.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraLayout.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraLayout.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraNavBar.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraNavBar.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraNavBar.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraNavBar.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraNavBar.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraNavBar.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPrinting.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraPrinting.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPrinting.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraPrinting.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Charts.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraReports.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraRichEdit.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.PivotGrid.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraRichEdit.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v10.2.Extensions, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraRichEdit.v10.2.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Reports.v12.1.Designer, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v10.2.Core, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v12.1.Extensions, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraScheduler.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraTreeList.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraRichEdit.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraTreeList.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraVerticalGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraRichEdit.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraVerticalGrid.v10.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraVerticalGrid.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraRichEdit.v12.1.Extensions, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\DevEx10\DevExpress.XtraVerticalGrid.v10.2.Design.dll</HintPath>
     </Reference>
-    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v12.1.Reporting.Extensions, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\Iesi.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="Ionic.Zlib, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\Ionic.Zlib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v12.1.Core, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v12.1, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v12.1.Design, Version=12.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="LoadingCircle, Version=1.0.2804.24934, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\LoadingCircle.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="MacroScope">
-      <HintPath>..\..\..\References\MacroScope.dll</HintPath>
-    </Reference>
-    <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\NHibernate.dll</HintPath>
-    </Reference>
     <Reference Include="Nullables, Version=1.2.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\References\Nullables.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.core, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\nunit.core.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.core.interfaces, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\nunit.core.interfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Aop">
-      <HintPath>..\..\..\References\Spring.Aop.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Core">
-      <HintPath>..\..\..\References\Spring.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Data">
-      <HintPath>..\..\..\References\Spring.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Data.NHibernate32">
-      <HintPath>..\..\..\References\Spring.Data.NHibernate32.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Services">
-      <HintPath>..\..\..\References\Spring.Services.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Testing.NUnit">
-      <HintPath>..\..\..\References\Spring.Testing.NUnit.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Web">
-      <HintPath>..\..\..\References\Spring.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Web.Extensions">
-      <HintPath>..\..\References\System.Web.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -304,6 +233,42 @@
       <DependentUpon>frmPhieuKeToanKhac3_DanhSach.vb</DependentUpon>
     </Compile>
     <Compile Include="KeToan\frmPhieuKeToanKhac3_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opec\frmOpecPhieuBanHang_ChiTiet.Designer.vb">
+      <DependentUpon>frmOpecPhieuBanHang_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Opec\frmOpecPhieuBanHang_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opec\frmOpecPhieuBanHang_DanhSach.Designer.vb">
+      <DependentUpon>frmOpecPhieuBanHang_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Opec\frmOpecPhieuBanHang_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opec\frmOpecPhieuMuaHang_Danhsach.designer.vb">
+      <DependentUpon>frmOpecPhieuMuaHang_Danhsach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Opec\frmOpecPhieuMuaHang_Danhsach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opec\frmOpecPhieuMuaHang_ChiTiet.Designer.vb">
+      <DependentUpon>frmOpecPhieuMuaHang_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Opec\frmOpecPhieuMuaHang_ChiTiet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opec\frmOpecPhieuNhapXuat_DanhSach.designer.vb">
+      <DependentUpon>frmOpecPhieuNhapXuat_DanhSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Opec\frmOpecPhieuNhapXuat_DanhSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opec\frmOpecPhieuNhapXuat_ChiTiet.designer.vb">
+      <DependentUpon>frmOpecPhieuNhapXuat_ChiTiet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Opec\frmOpecPhieuNhapXuat_ChiTiet.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Thue\frmChungTuThue3.Designer.vb">
@@ -432,18 +397,6 @@
     <Compile Include="KeToan\frmCT_H_DanhSach.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KeToan\frmPhieuKeToanKhac2_ChiTiet.Designer.vb">
-      <DependentUpon>frmPhieuKeToanKhac2_ChiTiet.vb</DependentUpon>
-    </Compile>
-    <Compile Include="KeToan\frmPhieuKeToanKhac2_ChiTiet.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KeToan\frmPhieuKeToanKhac2_DanhSach.designer.vb">
-      <DependentUpon>frmPhieuKeToanKhac2_DanhSach.vb</DependentUpon>
-    </Compile>
-    <Compile Include="KeToan\frmPhieuKeToanKhac2_DanhSach.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -489,12 +442,6 @@
     <Compile Include="Thue\frmChungTuThue.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Thue\frmChungTuThue2.Designer.vb">
-      <DependentUpon>frmChungTuThue2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Thue\frmChungTuThue2.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TimKiem\frmTimKiemChungTuKeToan.designer.vb">
       <DependentUpon>frmTimKiemChungTuKeToan.vb</DependentUpon>
     </Compile>
@@ -531,18 +478,6 @@
     <Compile Include="TongHop\frmKhoaSoThang.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControl\C_SoChungTu.designer.vb">
-      <DependentUpon>C_SoChungTu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\C_SoChungTu.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\Status_LoaiCT.Designer.vb">
-      <DependentUpon>Status_LoaiCT.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\Status_LoaiCT.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -563,6 +498,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KeToan\frmPhieuKeToanKhac3_DanhSach.resx">
       <DependentUpon>frmPhieuKeToanKhac3_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opec\frmOpecPhieuBanHang_ChiTiet.resx">
+      <DependentUpon>frmOpecPhieuBanHang_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opec\frmOpecPhieuBanHang_DanhSach.resx">
+      <DependentUpon>frmOpecPhieuBanHang_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opec\frmOpecPhieuMuaHang_Danhsach.resx">
+      <DependentUpon>frmOpecPhieuMuaHang_Danhsach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opec\frmOpecPhieuMuaHang_ChiTiet.resx">
+      <DependentUpon>frmOpecPhieuMuaHang_ChiTiet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opec\frmOpecPhieuNhapXuat_DanhSach.resx">
+      <DependentUpon>frmOpecPhieuNhapXuat_DanhSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opec\frmOpecPhieuNhapXuat_ChiTiet.resx">
+      <DependentUpon>frmOpecPhieuNhapXuat_ChiTiet.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Thue\frmChungTuThue3.resx">
       <DependentUpon>frmChungTuThue3.vb</DependentUpon>
@@ -627,12 +580,6 @@
     <EmbeddedResource Include="KeToan\frmCT_H_DanhSach.resx">
       <DependentUpon>frmCT_H_DanhSach.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KeToan\frmPhieuKeToanKhac2_ChiTiet.resx">
-      <DependentUpon>frmPhieuKeToanKhac2_ChiTiet.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KeToan\frmPhieuKeToanKhac2_DanhSach.resx">
-      <DependentUpon>frmPhieuKeToanKhac2_DanhSach.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -655,9 +602,6 @@
     <EmbeddedResource Include="Thue\frmChungTuThue.resx">
       <DependentUpon>frmChungTuThue.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Thue\frmChungTuThue2.resx">
-      <DependentUpon>frmChungTuThue2.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TimKiem\frmTimKiemChungTuKeToan.resx">
       <DependentUpon>frmTimKiemChungTuKeToan.vb</DependentUpon>
     </EmbeddedResource>
@@ -675,12 +619,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TongHop\frmKhoaSoThang.resx">
       <DependentUpon>frmKhoaSoThang.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\C_SoChungTu.resx">
-      <DependentUpon>C_SoChungTu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\Status_LoaiCT.resx">
-      <DependentUpon>Status_LoaiCT.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -720,9 +658,9 @@
       <Project>{5D8ECB2E-1739-47CD-8BEF-EFE3D3856563}</Project>
       <Name>Vns.Erp.Core.Admin.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Core\Vns.Erp.Core.ClientApp\Vns.Erp.Core.ClientApp.2010.csproj">
-      <Project>{EB8C9D41-F059-4D9D-B656-390C0931FB04}</Project>
-      <Name>Vns.Erp.Core.ClientApp.2010</Name>
+    <ProjectReference Include="..\..\Controls\Vns.Erp.Core.Controls\Vns.Erp.Core.Controls.csproj">
+      <Project>{fbc6edb3-9a36-4e9d-9bef-7498631cd479}</Project>
+      <Name>Vns.Erp.Core.Controls</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\Vns.Erp.Core.Domain\Vns.Erp.Core.Domain.csproj">
       <Project>{E1963453-DE64-423D-8821-5DA53E540A52}</Project>
@@ -752,6 +690,7 @@
   <ItemGroup>
     <Folder Include="Asset\" />
     <Folder Include="CCDC\" />
+    <Folder Include="UserControl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,6 +11,7 @@ using Vns.Erp.Core.Produce.Service.Interface;
 using Vns.Erp.Core.Admin.Service.Interface;
 using Vns.Erp.Core.Admin.Domain;
 using Vns.Erp.Core.Produce.Common;
+using Vns.Erp.Core.Controls.Commons;
 
 namespace Vns.Erp.Core.Produce.CsProduceGUI
 {
@@ -515,8 +516,17 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             }            
         }
 
-        #endregion               
 
-        
+        #endregion
+
+        private void frmKiemKe_SanLuong_ChiTiet_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    this.Close();
+                    break; // TODO: might not be correct. Was : Exit Select
+            }
+        }
     }
 }

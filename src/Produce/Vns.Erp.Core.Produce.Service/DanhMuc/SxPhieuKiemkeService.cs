@@ -27,6 +27,11 @@ namespace Vns.Erp.Core.Produce.Service
             return SxPhieuKiemkeDao.getByMaCt(MaLoaiCt, DonviId);
         }
 
+        public IList<SxPhieuKiemke> getByMaCt(int PageIndex, int PageSize, string MaLoaiCt, Guid DonviId, out int TotalResult)
+        {
+            return SxPhieuKiemkeDao.getByMaCt(PageIndex, PageSize, MaLoaiCt, DonviId, out TotalResult);
+        }
+
         public void saveKiemKe(SxPhieuKiemke objKiemKe, IList<SxPhieuKiemkeSlD> lstKiemKeSl, IList<SxPhieuKiemkeVtD> lstKiemKeVt, IList<SxPhieuKiemkeSlD> lstDelKiemKeSl, IList<SxPhieuKiemkeVtD> lstDelKiemKeVt)
         {
             objKiemKe = SxPhieuKiemkeDao.SaveOrUpdate(objKiemKe);

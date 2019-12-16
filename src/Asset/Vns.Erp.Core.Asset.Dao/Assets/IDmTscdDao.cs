@@ -12,5 +12,8 @@ namespace Vns.Erp.Core.Asset.Dao
 	public interface IDmTscdDao:IDao<DmTscd,System.Guid>
 	{
         IList<DmTscd> GetbyParameter(DateTime TuNgay, DateTime DenNgay, String TenTscd, Guid LoaitaisanId, Guid DonviId);
-	}
+
+        void UpdateSynFlag(Guid id);
+
+    }
 }

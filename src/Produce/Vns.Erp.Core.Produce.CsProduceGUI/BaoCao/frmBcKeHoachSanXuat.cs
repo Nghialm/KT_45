@@ -46,15 +46,15 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
 
         private void frmBcKeHoachSanXuat_Load(object sender, EventArgs e)
         {
-            dteTuNgay.DateTime = new DateTime(DateTime.Now.Year, 1, 1);
-            dteDenNgay.DateTime = new DateTime(DateTime.Now.Year, 12, 31);
+            //dteTuNgay.DateTime = new DateTime(DateTime.Now.Year, 1, 1);
+            //dteDenNgay.DateTime = new DateTime(DateTime.Now.Year, 12, 31);
             bindDataToCbo();
-            loadData((Guid)cboKeHoachSx.EditValue, dteTuNgay.DateTime, dteDenNgay.DateTime);
+            loadData((Guid)cboKeHoachSx.EditValue, dateTimeInput1.StartDate, dateTimeInput1.EndDate);
         }
 
         private void bindDataToCbo()
         {
-            IList<SxKehoachM> lstKeHoach = SxKehoachMService.GetAll();
+            IList<SxKehoachM> lstKeHoach = SxKehoachMService.GetByDonviId(Generals.DonviID);
             cboKeHoachSx.Properties.DataSource = lstKeHoach;
             cboKeHoachSx.Properties.ValueMember = "Id";
             cboKeHoachSx.Properties.DisplayMember = "SoLenh";
@@ -78,11 +78,21 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
         {
             try
             {
-                loadData((Guid)cboKeHoachSx.EditValue, dteTuNgay.DateTime, dteDenNgay.DateTime);
+                loadData((Guid)cboKeHoachSx.EditValue, dateTimeInput1.StartDate, dateTimeInput1.EndDate);
             }
             catch (Exception ex)
             {
                 FormGlobals.Message_Error(ex);
+            }
+        }
+
+        private void frmBcKeHoachSanXuat_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    this.Close();
+                    break; // TODO: might not be correct. Was : Exit Select
             }
         }
 

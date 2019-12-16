@@ -13,6 +13,7 @@ Imports DevExpress.XtraTreeList.Nodes
 Imports System.Collections
 Imports Vns.Erp.Core.Admin.Domain
 Imports Vns.Erp.Core.Admin.Service.Interface
+Imports Vns.Erp.Core.Controls.Commons
 
 Partial Public Class frmDanhMucHopDong_DanhSach
     Inherits FrmBaseDmDanhSach
@@ -144,6 +145,8 @@ Partial Public Class frmDanhMucHopDong_DanhSach
             'CommonInit()
             'Me.InitSearchEvent()
             TNCommon.setIconControl(Me)
+
+            'GridHelper.FormatGridView(_GridView:=)
         Catch ex As Exception
             Message_Error(ex)
         End Try

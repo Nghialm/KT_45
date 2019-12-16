@@ -12,6 +12,7 @@ using Vns.Erp.Core.Admin.Service.Interface;
 using Vns.Erp.Core;
 using System.Windows.Forms;
 using Vns.Erp.Core.Accounting.Domain.Extend;
+using static Vns.Erp.Core.Common.Controls.PagerControl;
 //using Vns.Erp.Core.Common.Controls.PagerControl;
 
 namespace Vns.Erp.Core.Produce.CsProduceGUI
@@ -92,32 +93,10 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
         {
             try
             {
-                //InitializeComponent();
-                TNCommon.setIconControl(this);
+                LoadData();
 
-                grvLPX_Hnx.Columns["Ghi"].Visible = Generals.Ts_PheDuyetChungTu;
-                string para_str = this.AccessibleDescription;
-                List<ParamInfo> lst_para = DataMining.GetParams(para_str);
-                //
-                if (lst_para.Count > 0)
-                {
-                    obj_loaichungtu.MaLoaiCt = lst_para[0].PARAMVALUE;
-                }
-                //
-                obj_loaichungtu = _HtLoaichungtuService.GetByMA_LOAI_CT(obj_loaichungtu.MaLoaiCt, Generals.DON_VI.Id);
-                if (obj_loaichungtu != null)
-                {
-                    if (obj_loaichungtu.SoCtHienthi == 0)
-                    {
-                        SO_CT_HIENTHI = int.MinValue;
-                    }
-                    else
-                    {
-                        SO_CT_HIENTHI = Convert.ToInt32(obj_loaichungtu.SoCtHienthi);
-                    }
-                }
-                this.Text = obj_loaichungtu.TenLoaiCt;
-                Load_Grid();
+                CtlPagerControl.display = new DisplayResult(this.LoadGrid);
+                CtlPagerControl.RefreshPage();
             }
             catch (Exception ex)
             {
@@ -130,13 +109,46 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
         #region "Private Function and Procedures"
         IList<CtHNx> phieukhoData = new List<CtHNx>();
 
-        private void Load_Grid()
+        private void LoadData()
         {
-            phieukhoData = _CtHNxService.GetByLoaiChungTu(Generals.DON_VI.Id, obj_loaichungtu.MaLoaiCt, SO_CT_HIENTHI);
+            //InitializeComponent();
+            TNCommon.setIconControl(this);
+
+            grvLPX_Hnx.Columns["Ghi"].Visible = Generals.Ts_PheDuyetChungTu;
+            string para_str = this.AccessibleDescription;
+            List<ParamInfo> lst_para = DataMining.GetParams(para_str);
+            //
+            if (lst_para.Count > 0)
+            {
+                obj_loaichungtu.MaLoaiCt = lst_para[0].PARAMVALUE;
+            }
+            //
+            obj_loaichungtu = _HtLoaichungtuService.GetByMA_LOAI_CT(obj_loaichungtu.MaLoaiCt, Generals.DON_VI.Id);
+            if (obj_loaichungtu != null)
+            {
+                if (obj_loaichungtu.SoCtHienthi == 0)
+                {
+                    SO_CT_HIENTHI = int.MinValue;
+                }
+                else
+                {
+                    SO_CT_HIENTHI = Convert.ToInt32(obj_loaichungtu.SoCtHienthi);
+                }
+            }
+            this.Text = obj_loaichungtu.TenLoaiCt;
+        }
+
+        private void LoadGrid()
+        {
+            int totalresult = 0;
+
+            phieukhoData = _CtHNxService.GetByLoaiChungTu(CtlPagerControl.PageIndex, CtlPagerControl.PageSize,
+                Generals.DON_VI.Id, obj_loaichungtu.MaLoaiCt, -1,
+                out totalresult);
+            CtlPagerControl.TotalResult = totalresult;
+
             // load du lieu len grid
-            //Grid_LoadData(grvLPX_Hnx, phieukhoData)
             grvLPX_Hnx.GridControl.DataSource = phieukhoData;
-            //grcLPN_Hnx.DataSource = lstobj_ct_h_nx
 
             if (grvLPX_Hnx.RowCount != 0)
             {
@@ -240,7 +252,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             List<CT_H_GInfo> lstCTHG = Vns.Erp.Core.Controls.Commons.DataAccHelper.ConvertToCTHG(phieukhoData);
             if (f.Show_Form(Null.NullGuid, obj_loaichungtu.MaLoaiCt, obj_loaichungtu.TenLoaiCt, lstCTHG, Vns.Erp.Core.FormGlobals.DataInputState.AddMode))
             {
-                this.Load_Grid();
+                this.LoadGrid();
                 if (grvLPX_Hnx.RowCount > 0)
                 {
                     CtHNx tmp = (CtHNx)grvLPX_Hnx.GetRow(grvLPX_Hnx.FocusedRowHandle);
@@ -276,7 +288,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
                 List<CT_H_GInfo> lstCTHG = Vns.Erp.Core.Controls.Commons.DataAccHelper.ConvertToCTHG(phieukhoData);
                 if (f.Show_Form(CTHNXID, obj_loaichungtu.MaLoaiCt, obj_loaichungtu.TenLoaiCt, lstCTHG, Vns.Erp.Core.FormGlobals.DataInputState.EditMode))
                 {
-                    this.Load_Grid();
+                    this.LoadGrid();
                     if (grvLPX_Hnx.RowCount > 0)
                     {
                         CtHNx tmp = (CtHNx)grvLPX_Hnx.GetRow(grvLPX_Hnx.FocusedRowHandle);

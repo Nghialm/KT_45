@@ -106,6 +106,7 @@ Partial Public Class frmDanhMucHangHoa_ChiTiet
             info.MdTkGiaban = txtMD_TK_GIABAN.Text
             info.MdTkHbTralai = txtMD_TK_HB_TRALAI.Text
             info.MdTkSpDd = txtMD_TK_SP_DD.Text
+            info.MdTkDiduong = txtMdTkDiduong.Text
             '--------------------------
             info.LoaiHangHoa = VnsConvert.CDecimal(cboLOAI_HANG_HOA.EditValue)
             '--------------------------
@@ -116,7 +117,7 @@ Partial Public Class frmDanhMucHangHoa_ChiTiet
                     info.ChiTiet = _temp.ChiTiet
             End Select
             info.ChiTiet = TNCommon.ParseDecimal(chkChiTiet.Checked)
-
+            info.SynDate = Null.MIN_DATE
             MyBase.ResultObject = info
             Return info
         End Get
@@ -148,6 +149,7 @@ Partial Public Class frmDanhMucHangHoa_ChiTiet
                 txtMD_TK_GIABAN.Text = _temp.MdTkGiaban
                 txtMD_TK_HB_TRALAI.Text = _temp.MdTkHbTralai
                 txtMD_TK_SP_DD.Text = _temp.MdTkSpDd
+                txtMdTkDiduong.Text = _temp.MdTkDiduong
 
                 'Add more here
                 grlDVT_ID.EditValue = obj.DvtId
@@ -188,7 +190,7 @@ Partial Public Class frmDanhMucHangHoa_ChiTiet
 
     Public Overrides Sub BindLookUpEdit()
         '//Bind Đon v? tính
-        Dim dtDonViTinh As IList(Of DmDvt) = DmDvtService().GetAll()
+        Dim dtDonViTinh As IList(Of DmDvt) = DmDvtService().GetAllByDonviID(Generals.DonviID)
         Dim _DonViTinhColumnDefine As ArrayList = New ArrayList()
         _DonViTinhColumnDefine.Add(New ColumnInfo("TenDvt", "Tên đơn vị tính", 0, True, ""))
         TNCommon.BindData_GridLookUp(grlDVT_ID, dtDonViTinh, "TenDvt", "Id", _DonViTinhColumnDefine, True, True)

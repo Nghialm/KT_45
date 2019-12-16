@@ -135,8 +135,8 @@ namespace Vns.Erp.Core.Accounting.Domain.Extend
             _DA_KHOA_SO = obj.DaKhoaSo;
             _GHI = obj.Ghi;
             _MA_LOAI_CT = obj.MaLoaiCt;
-            _NGAY_CT = obj.NgayCt == null ? DateTime.Now.Date : obj.NgayCt.Value;
-            _NGAY_GHI = obj.NgayGhi == null ? DateTime.Now.Date : obj.NgayGhi.Value;
+            _NGAY_CT = obj.NgayCt == null ? DateTime.Now.Date : obj.NgayCt;
+            _NGAY_GHI = obj.NgayGhi == null ? DateTime.Now.Date : obj.NgayGhi;
             //_NGAY_CT = obj.NgayCt;
             //_NGAY_GHI = obj.NgayGhi;
             _SO_TIEN = obj.SoTien;

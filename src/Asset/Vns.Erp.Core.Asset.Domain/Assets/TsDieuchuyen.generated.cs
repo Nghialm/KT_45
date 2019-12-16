@@ -1,9 +1,12 @@
 using System;
 using System.ComponentModel;
+using System.Runtime.Serialization;
 using Vns.Erp.Core.Domain;
 
 namespace Vns.Erp.Core.Asset.Domain
 {
+    [Serializable]
+    [DataContract(Namespace = "http://Vns.Erp.Core.Asset.Domain", IsReference = true)]
     public partial class TsDieuchuyen : DomainObject<System.Guid>, INotifyPropertyChanged
     {
         #region Declarations
@@ -14,12 +17,12 @@ namespace Vns.Erp.Core.Asset.Domain
         private string _KyHieuTscd = "";
         private string _TenTscd = "";
 		private System.Guid _BoPhanDcId = new Guid();       
-		private System.DateTime? _NgayDc = null;
+		private System.DateTime? _NgayDc = Null.MIN_DATE;
         private string _LyDoDc = "";
 		private decimal _ThuTu = 0;
-		private System.DateTime? _NgayTao = null;
+		private System.DateTime? _NgayTao = Null.MIN_DATE;
         private Guid _NguoiTao = Guid.Empty;
-		private System.DateTime? _NgaySua = null;
+		private System.DateTime? _NgaySua = Null.MIN_DATE;
         private Guid _NguoiSua = Guid.Empty;
 		
 		
@@ -83,6 +86,7 @@ namespace Vns.Erp.Core.Asset.Domain
 
         #region Properties
 
+        [DataMember]
 		public virtual System.Guid TscdId
         {
             get { return _TscdId; }
@@ -96,6 +100,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnTscdIdChanging();
 		partial void OnTscdIdChanged();
 		
+        [DataMember]
 		public virtual string MaTscd
         {
             get { return _MaTscd; }
@@ -109,6 +114,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnMaTscdChanging();
 		partial void OnMaTscdChanged();
 		
+        [DataMember]
 		public virtual string KyHieuTscd
         {
             get { return _KyHieuTscd; }
@@ -122,6 +128,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnKyHieuTscdChanging();
 		partial void OnKyHieuTscdChanged();
 		
+        [DataMember]
 		public virtual string TenTscd
         {
             get { return _TenTscd; }
@@ -135,6 +142,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnTenTscdChanging();
 		partial void OnTenTscdChanged();
 		
+        [DataMember]
 		public virtual System.Guid BoPhanDcId
         {
             get { return _BoPhanDcId; }
@@ -148,6 +156,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnBoPhanDcIdChanging();
 		partial void OnBoPhanDcIdChanged();
 		
+        [DataMember]
 		public virtual System.DateTime? NgayDc
         {
             get { return _NgayDc; }
@@ -161,6 +170,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnNgayDcChanging();
 		partial void OnNgayDcChanged();
 		
+        [DataMember]
 		public virtual string LyDoDc
         {
             get { return _LyDoDc; }
@@ -174,6 +184,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnLyDoDcChanging();
 		partial void OnLyDoDcChanged();
 		
+        [DataMember]
 		public virtual decimal ThuTu
         {
             get { return _ThuTu; }
@@ -187,6 +198,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnThuTuChanging();
 		partial void OnThuTuChanged();
 		
+        [DataMember]
 		public virtual System.DateTime? NgayTao
         {
             get { return _NgayTao; }
@@ -200,6 +212,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnNgayTaoChanging();
 		partial void OnNgayTaoChanged();
 
+        [DataMember]
         public virtual Guid NguoiTao
         {
             get { return _NguoiTao; }
@@ -213,6 +226,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnNguoiTaoChanging();
 		partial void OnNguoiTaoChanged();
 		
+        [DataMember]
 		public virtual System.DateTime? NgaySua
         {
             get { return _NgaySua; }
@@ -226,6 +240,7 @@ namespace Vns.Erp.Core.Asset.Domain
 		partial void OnNgaySuaChanging();
 		partial void OnNgaySuaChanged();
 
+        [DataMember]
         public virtual Guid NguoiSua
         {
             get { return _NguoiSua; }

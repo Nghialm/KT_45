@@ -48,6 +48,7 @@ Partial Public Class frmDanhMucDonViTinh_ChiTiet
             info.NguoiSua = Generals.USER.Id
             info.DonviId = Generals.DonviID
 
+            info.SynDate = Null.MIN_DATE
             MyBase.ResultObject = info
             Return info
         End Get

@@ -25,5 +25,11 @@ namespace Vns.Erp.Core.Asset.Service
         {
             return TsDieuchuyenDao.GetObjectByTSCD_ID(TscdId);
         }
-	}
+
+        public IList<TsDieuchuyen> GetByDmTscdId(Guid DmTscdId)
+        {
+            return TsDieuchuyenDao.GetByDmTscdId(DmTscdId);
+        }
+        
+    }
 }

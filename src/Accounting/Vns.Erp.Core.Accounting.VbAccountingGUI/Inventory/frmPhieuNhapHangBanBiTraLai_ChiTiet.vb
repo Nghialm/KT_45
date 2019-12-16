@@ -11,6 +11,7 @@ Imports Vns.Erp.Core.Admin.Domain
 Imports Vns.Erp.Core.Accounting.Service.Interface
 Imports Vns.Erp.Core.Admin.Service.Interface
 Imports DevExpress.Utils
+Imports Vns.Erp.Core.Controls.Commons
 
 Public Class frmPhieuNhapHangBanBiTraLai_ChiTiet
 
@@ -515,7 +516,7 @@ Public Class frmPhieuNhapHangBanBiTraLai_ChiTiet
 
             'Bind danh muc ngoai te
             Dim lstNgoaite As List(Of DmNgoaite) = New List(Of DmNgoaite)
-            lstNgoaite.AddRange(_DmNgoaiteService.GetAll())
+            lstNgoaite.AddRange(_DmNgoaiteService.GetAllByDonviID(Generals.DonviID))
             'Dim listNgoaite As List(Of DM_NgoaiteInfo) = New List(Of DM_NgoaiteInfo)
             cboNgoaiTe.Properties.DataSource = lstNgoaite
             cboNgoaiTe.Properties.DisplayMember = "KyHieu"
@@ -681,9 +682,9 @@ Public Class frmPhieuNhapHangBanBiTraLai_ChiTiet
         Next
         Dim matk As String
         For Each matk In tkFilter.Split(New Char() {";"c})
-            ListTKFilter.AddRange(From i As DmTaikhoan In ListTK _
-                                 Where i.MaTaikhoan.StartsWith(matk) _
-                                 Select i)
+            ListTKFilter.AddRange(From i As DmTaikhoan In ListTK
+                                  Where i.MaTaikhoan.StartsWith(matk)
+                                  Select i)
         Next
         If ListTKFilter.Count > 0 Then
             Return ListTKFilter

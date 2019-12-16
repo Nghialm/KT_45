@@ -10,6 +10,7 @@ using Vns.Erp.Core.Produce.Service.Interface;
 using Vns.Erp.Core.Produce.Domain;
 using Vns.Erp.Core.Admin.Service.Interface;
 using Vns.Erp.Core.Admin.Domain;
+using static Vns.Erp.Core.Common.Controls.PagerControl;
 
 namespace Vns.Erp.Core.Produce.CsProduceGUI
 {
@@ -109,11 +110,23 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             IList<HtDanhmuc> lstTrangThaiLenh = HtDanhmucService.GetByDoiTuong("TT_KEHOACH");
             cboTrangThaiLenh.DataSource = lstTrangThaiLenh;
 
+            
+        }
+
+        protected void LoadGrid()
+        {
             IList<SxLenhsanxuat> lstLenhSx = new List<SxLenhsanxuat>();
+            int totalresult = 0;
+
             if (IsMenu)
-                lstLenhSx = SxLenhsanxuatService.GetbyDonviId(Generals.DonviID);
+                lstLenhSx = SxLenhsanxuatService.GetbyDonviId(CtlPagerControl.PageIndex, CtlPagerControl.PageSize, 
+                    Generals.DonviID, out totalresult);
             else
-                lstLenhSx = SxLenhsanxuatService.LoadByPhanCongId(PhanCongId);
+                lstLenhSx = SxLenhsanxuatService.LoadByPhanCongId(CtlPagerControl.PageIndex, CtlPagerControl.PageSize, 
+                    PhanCongId, Generals.DonviID,
+                    out totalresult);
+            CtlPagerControl.TotalResult = totalresult;
+
             grcDanhSach.DataSource = lstLenhSx;
         }
 
@@ -189,7 +202,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             SxLenhsanxuat objReturn = frm.Show_Form(obj, FormGlobals.DataInputState.EditMode);
             if (objReturn != null)
             {
-                LoadData();
+                LoadGrid();
                 grvDanhSach.FocusedRowHandle = i;
             }
         }
@@ -200,7 +213,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             SxLenhsanxuat obj = frm.Show_Form(new SxLenhsanxuat(), FormGlobals.DataInputState.AddMode);
             if (obj != null)
             {
-                LoadData();
+                LoadGrid();
             }
         }
 
@@ -216,7 +229,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             if (FormGlobals.Message_Confirm("Bạn có chắc chắn muốn xóa bản ghi này?"))
             {
                 SxLenhsanxuatService.DeleteById(obj.Id);
-                LoadData();
+                LoadGrid();
             }
         }
 
@@ -229,6 +242,10 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             try
             {
                 LoadData();
+
+                LoadGrid();
+                CtlPagerControl.display += new DisplayResult(this.LoadGrid);
+                CtlPagerControl.RefreshPage();
             }
             catch (Exception ex)
             {
@@ -302,5 +319,28 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
         }
 
         #endregion
+
+        private void frmLenhSanXuat_DanhSach_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.Escape:
+                        this.Close();
+                        break; // TODO: might not be correct. Was : Exit Select
+                    case Keys.F3:
+                        AddNew();
+                        break; // TODO: might not be correct. Was : Exit Select
+                    case Keys.F4:
+                        Edit();
+                        break; // TODO: might not be correct. Was : Exit Select
+                }
+            }
+            catch (Exception ex)
+            {
+                FormGlobals.Message_Error(ex);
+            }
+        }
     }
 }

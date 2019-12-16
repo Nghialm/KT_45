@@ -38,5 +38,11 @@ namespace Vns.Erp.Core.Asset.Service
             values.Add(DonviId);
             return List(-1, -1, props, values, null);
         }
+
+        public IList<TsCtTscdNvon> GetByDmTscdId(Guid DmTscdId)
+        {
+            return TsCtTscdNvonDao.GetByDmTscdId(DmTscdId);
+        }
+        
     }
 }

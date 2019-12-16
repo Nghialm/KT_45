@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.Erp.Core.Accounting.Domain" assembly="Vns.Erp.Core.Accounting.Domain">
 	<class name="Vns.Erp.Core.Accounting.Domain.CtHNx, Vns.Erp.Core.Accounting.Domain" table="CT_H_NX" lazy="false">
-		<id name="Id" column="CTH_NX_ID">
-			<generator class="guid" />
-		</id>
+		<id name="Id" column="CTH_NX_ID"/>
+			
     <property name="DonviId" column="DONVI_ID" type="Guid"  />
     <property name="MaDonvi" column="MA_DONVI" type="String" length="64" />
     <property name="IdLoaiCt" column="ID_LOAI_CT" type="Guid"  />
@@ -65,6 +64,13 @@
     <property name="IdDoituongHoadon" column="ID_DOITUONG_HOADON" type="Guid"  />
     <property name="PrefixCt" column="PREFIX_CT" type="String" length="64" />
 
+    <property name="SynDate" column="Syn_Date" type="DateTime" />
+    <property name="IsDeleted" type="Decimal" precision="4" scale="0">
+      <column name="Is_Deleted" default="0"/>
+    </property>
+    
+    <property name="PpThanhtoan" column="PP_THANHTOAN" type="Int32"/>
+      
     <bag name="LstCtDNx" lazy="false" cascade="none" >
       <key column="CTH_NX_ID"></key>
       <one-to-many class="CtDNx"></one-to-many>

@@ -74,6 +74,7 @@ Public Class frmDanhMucDonVi_ChiTietOnline
         obj.SoTaikhoanNh = Me.txtSO_TAIKHOAN_NH.Text
         obj.TenNganhang = Me.txtTEN_NGANHANG.Text
         obj.DiaChiNh = Me.txtDIA_CHI_NH.Text
+        obj.SynDate = Null.MIN_DATE
     End Sub
 
     Private Sub SetObject()

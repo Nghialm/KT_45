@@ -12,5 +12,7 @@ namespace Vns.Erp.Core.Produce.Dao
     public interface ISxPhieuKiemkeDao : IDao<SxPhieuKiemke, System.Guid>
     {
         IList<SxPhieuKiemke> getByMaCt(string MaLoaiCt, Guid DonviId);
+
+        IList<SxPhieuKiemke> getByMaCt(int PageIndex, int PageSize, string MaLoaiCt, Guid DonviId, out int TotalResult);
     }    
 }

@@ -12,6 +12,32 @@ namespace Vns.Erp.Core.Accounting.Dao.NHibernate
     [Serializable]
     public sealed class BcKetoanKhoDao : GenericDao<BcKetoanKho, System.Guid>, IBcKetoanKhoDao
     {
+        #region IDao
+        BcKetoanKho IDao<BcKetoanKho, Guid>.Merge(BcKetoanKho entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Merge(entity);
+
+            return entity;
+        }
+
+        BcKetoanKho IDao<BcKetoanKho, Guid>.Save(BcKetoanKho entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.Save(entity);
+
+            return entity;
+        }
+
+        BcKetoanKho IDao<BcKetoanKho, Guid>.SaveOrUpdate(BcKetoanKho entity)
+        {
+            if (VnsCheck.IsNullGuid(entity.Id)) entity.Id = Guid.NewGuid();
+            HibernateTemplate.SaveOrUpdate(entity);
+
+            return entity;
+        }
+        #endregion
+
         /// <summary>
         /// Delete BcKetoanKho by Chung tu kho
         /// </summary>

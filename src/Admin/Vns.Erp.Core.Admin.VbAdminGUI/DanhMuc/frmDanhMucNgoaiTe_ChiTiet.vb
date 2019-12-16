@@ -67,7 +67,7 @@ Partial Public Class frmDanhMucNgoaiTe_ChiTiet
                         End If
                 End Select
 
-                If DmNgoaiteService.GetAllByKyHieu(kh).Count <> 0 Then
+                If DmNgoaiteService.GetAllByKyHieu(Generals.DonviID, kh).Count <> 0 Then
                     ErrorProvider.SetError(txtKY_HIEU, "Ký hiệu này đã tồn tại!")
                     ErrorProvider.SetIconAlignment(txtKY_HIEU, ErrorIconAlignment.MiddleLeft)
                     e.Cancel = True
@@ -121,6 +121,8 @@ Partial Public Class frmDanhMucNgoaiTe_ChiTiet
             info.NguoiTao = Generals.USER.Id
             info.NguoiSua = Generals.USER.Id
             info.TenNte = Me.txtTEN_NTE.Text
+            info.DonviId = Generals.DonviID
+            info.MaDonvi = Generals.DON_VI.MaDonvi
             Select Case Mode
                 Case FormGlobals.DataInputState.AddMode
                     info.MaNte = "0"
@@ -128,6 +130,7 @@ Partial Public Class frmDanhMucNgoaiTe_ChiTiet
                 Case FormGlobals.DataInputState.EditMode
                     info.MaNte = temp.MaNte
             End Select
+            info.SynDate = Null.MIN_DATE
 
             MyBase.ResultObject = info
             Return info

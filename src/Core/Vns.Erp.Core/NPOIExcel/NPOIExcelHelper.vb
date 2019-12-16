@@ -1,5 +1,4 @@
-﻿Imports NPOI.XSSF.UserModel
-Imports System.IO
+﻿Imports System.IO
 Imports NPOI.SS.UserModel
 Imports NPOI.HSSF.UserModel
 Imports NPOI.POIFS.FileSystem
@@ -8,7 +7,7 @@ Imports System.Windows.Forms
 Public Class NPOIExcelHelper
 
     Public Shared Function ReadDicFile(ByVal filename As String) As DataTable
-        Dim hssfwb As XSSFWorkbook
+        Dim hssfwb As IWorkbook
         Dim file As FileStream = New FileStream(filename, FileMode.Open, FileAccess.Read)
 
         Dim workbook As IWorkbook = New HSSFWorkbook(New POIFSFileSystem(file))
@@ -18,7 +17,7 @@ Public Class NPOIExcelHelper
             Dim sheet As ISheet = workbook.GetSheet("SO_LIEU")
             Dim numberRows As Integer = sheet.PhysicalNumberOfRows
             Dim number As Integer = sheet.LastRowNum
-            Dim startCol As Integer = 1
+            Dim startCol As Integer = 0
             Dim headerRow As Integer = 0
             Dim startRow As Integer = 1
 

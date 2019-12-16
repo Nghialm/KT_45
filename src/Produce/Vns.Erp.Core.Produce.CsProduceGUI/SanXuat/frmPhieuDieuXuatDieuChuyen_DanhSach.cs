@@ -125,8 +125,8 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
 
                 //goi ham xu ly load form
                 Load_Grid();
-                PagerControl1.display = new Vns.Erp.Core.Common.Controls.PagerControl.DisplayResult(Load_Grid);
-                PagerControl1.RefreshPage();
+                CtlPagerControl.display = new Vns.Erp.Core.Common.Controls.PagerControl.DisplayResult(Load_Grid);
+                CtlPagerControl.RefreshPage();
             }
             catch (Exception ex)
             {
@@ -147,8 +147,8 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
         {
             // Lay thong tin he so nop thue
             int dem = 0;
-            phieudieuchuyenData = _CtHNxService.GetByLoaiChungTu(this.PagerControl1.PageIndex, this.PagerControl1.PageSize, Generals.DON_VI.Id, obj_loaichungtu.MaLoaiCt, SO_CT_HIENTHI, out dem );
-            PagerControl1.TotalResult = dem;
+            phieudieuchuyenData = _CtHNxService.GetByLoaiChungTu(this.CtlPagerControl.PageIndex, this.CtlPagerControl.PageSize, Generals.DON_VI.Id, obj_loaichungtu.MaLoaiCt, SO_CT_HIENTHI, out dem );
+            CtlPagerControl.TotalResult = dem;
             // load du lieu len grid
             FormGlobals.Grid_LoadData(grvLPX_Hnx, phieudieuchuyenData);
 

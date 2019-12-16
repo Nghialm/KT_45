@@ -47,9 +47,6 @@
     <Reference Include="Spring.Data.NHibernate32">
       <HintPath>..\..\..\References\Spring.Data.NHibernate32.dll</HintPath>
     </Reference>
-    <Reference Include="Spring.Services">
-      <HintPath>..\..\..\References\Spring.Services.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

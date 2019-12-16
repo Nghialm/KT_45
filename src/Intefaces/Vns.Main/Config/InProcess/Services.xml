@@ -9,156 +9,156 @@
 	</description>
 
 	<!-- Property placeholder configurer for database settings -->
-	<object id="AppGroupsService" type="Vns.Erp.Core.Admin.Service.AppGroupsService, Vns.Core.Admin.Service">
+  <object id="AppGroupsService" type="Vns.Erp.Core.Admin.Service.AppGroupsService, Vns.Erp.Core.Admin.Service">
 		<property name="AppGroupsDao" ref="AppGroupsDao"/>
 	</object>
-	<object id="AppUsersService" type="Vns.Erp.Core.Admin.Service.AppUsersService, Vns.Core.Admin.Service">
+	<object id="AppUsersService" type="Vns.Erp.Core.Admin.Service.AppUsersService, Vns.Erp.Core.Admin.Service">
 		<property name="AppUsersDao" ref="AppUsersDao"/>
 	</object>
-	<object id="DmDonviService" type="Vns.Erp.Core.Admin.Service.DmDonviService, Vns.Core.Admin.Service">
+	<object id="DmDonviService" type="Vns.Erp.Core.Admin.Service.DmDonviService, Vns.Erp.Core.Admin.Service">
 		<property name="DmDonviDao" ref="DmDonviDao"/>
 	</object>
-	<object id="AppDvGroupUserService" type="Vns.Erp.Core.Admin.Service.AppDvGroupUserService, Vns.Core.Admin.Service">
+	<object id="AppDvGroupUserService" type="Vns.Erp.Core.Admin.Service.AppDvGroupUserService, Vns.Erp.Core.Admin.Service">
 		<property name="AppDvGroupUserDao" ref="AppDvGroupUserDao"/>
 	</object>
-	<object id="HtThamsoService" type="Vns.Erp.Core.Admin.Service.HtThamsoService, Vns.Core.Admin.Service">
+	<object id="HtThamsoService" type="Vns.Erp.Core.Admin.Service.HtThamsoService, Vns.Erp.Core.Admin.Service">
 		<property name="HtThamsoDao" ref="HtThamsoDao"/>
 	</object>
-	<object id="AppFormsService" type="Vns.Erp.Core.Admin.Service.AppFormsService, Vns.Core.Admin.Service">
+	<object id="AppFormsService" type="Vns.Erp.Core.Admin.Service.AppFormsService, Vns.Erp.Core.Admin.Service">
 		<property name="AppFormsDao" ref="AppFormsDao"/>
 
 	</object>
-	<object id="AppUsergroupService" type="Vns.Erp.Core.Admin.Service.AppUsergroupService, Vns.Core.Admin.Service">
+	<object id="AppUsergroupService" type="Vns.Erp.Core.Admin.Service.AppUsergroupService, Vns.Erp.Core.Admin.Service">
 		<property name="AppUsergroupDao" ref="AppUsergroupDao"/>
 	</object>
-	<object id="AppDvFormService" type="Vns.Erp.Core.Admin.Service.AppDvFormService, Vns.Core.Admin.Service">
+	<object id="AppDvFormService" type="Vns.Erp.Core.Admin.Service.AppDvFormService, Vns.Erp.Core.Admin.Service">
 		<property name="AppDvFormDao" ref="AppDvFormDao"/>
 	</object>
-	<object id="AppHGroupFormService" type="Vns.Erp.Core.Admin.Service.AppHGroupFormService, Vns.Core.Admin.Service">
+	<object id="AppHGroupFormService" type="Vns.Erp.Core.Admin.Service.AppHGroupFormService, Vns.Erp.Core.Admin.Service">
 		<property name="AppHGroupFormDao" ref="AppHGroupFormDao"/>
 	</object>
-	<object id="AppUgFormService" type="Vns.Erp.Core.Admin.Service.AppUgFormService, Vns.Core.Admin.Service">
+	<object id="AppUgFormService" type="Vns.Erp.Core.Admin.Service.AppUgFormService, Vns.Erp.Core.Admin.Service">
 		<property name="AppUgFormDao" ref="AppUgFormDao"/>
 	</object>
-	<object id="AppHGroupFunctService" type="Vns.Erp.Core.Admin.Service.AppHGroupFunctService, Vns.Core.Admin.Service">
+	<object id="AppHGroupFunctService" type="Vns.Erp.Core.Admin.Service.AppHGroupFunctService, Vns.Erp.Core.Admin.Service">
 		<property name="AppHGroupFunctDao" ref="AppHGroupFunctDao"/>
 	</object>
-	<object id="AppGroupFormsService" type="Vns.Erp.Core.Admin.Service.AppGroupFormsService, Vns.Core.Admin.Service">
+	<object id="AppGroupFormsService" type="Vns.Erp.Core.Admin.Service.AppGroupFormsService, Vns.Erp.Core.Admin.Service">
 		<property name="AppGroupFormsDao" ref="AppGroupFormsDao"/>
 	</object>
-	<object id="AppGroupFunctionService" type="Vns.Erp.Core.Admin.Service.AppGroupFunctionService, Vns.Core.Admin.Service">
+	<object id="AppGroupFunctionService" type="Vns.Erp.Core.Admin.Service.AppGroupFunctionService, Vns.Erp.Core.Admin.Service">
 		<property name="AppGroupFunctionDao" ref="AppGroupFunctionDao"/>
 	</object>
-	<object id="AppDvBcService" type="Vns.Erp.Core.Admin.Service.AppDvBcService, Vns.Core.Admin.Service">
+	<object id="AppDvBcService" type="Vns.Erp.Core.Admin.Service.AppDvBcService, Vns.Erp.Core.Admin.Service">
 		<property name="AppDvBcDao" ref="AppDvBcDao"/>
 	</object>
-	<object id="AppDvGroupBcService" type="Vns.Erp.Core.Admin.Service.AppDvGroupBcService, Vns.Core.Admin.Service">
+	<object id="AppDvGroupBcService" type="Vns.Erp.Core.Admin.Service.AppDvGroupBcService, Vns.Erp.Core.Admin.Service">
 		<property name="AppDvGroupBcDao" ref="AppDvGroupBcDao"/>
 	</object>
-	<object id="HtBaocaoService" type="Vns.Erp.Core.Admin.Service.HtBaocaoService, Vns.Core.Admin.Service">
+	<object id="HtBaocaoService" type="Vns.Erp.Core.Admin.Service.HtBaocaoService, Vns.Erp.Core.Admin.Service">
 		<property name="HtBaocaoDao" ref="HtBaocaoDao"/>
 	</object>
-	<object id="AppCtStatusService" type="Vns.Erp.Core.Admin.Service.AppCtStatusService, Vns.Core.Admin.Service">
+	<object id="AppCtStatusService" type="Vns.Erp.Core.Admin.Service.AppCtStatusService, Vns.Erp.Core.Admin.Service">
 		<property name="AppCtStatusDao" ref="AppCtStatusDao"/>
 	</object>
-	<object id="HtLoaichungtuService" type="Vns.Erp.Core.Admin.Service.HtLoaichungtuService, Vns.Core.Admin.Service">
+	<object id="HtLoaichungtuService" type="Vns.Erp.Core.Admin.Service.HtLoaichungtuService, Vns.Erp.Core.Admin.Service">
 		<property name="HtLoaichungtuDao" ref="HtLoaichungtuDao"/>
 		<property name="HtSoChungtuMaxDao" ref="HtSoChungtuMaxDao"/>
 	</object>
-	<object id="AppDvGroupFormService" type="Vns.Erp.Core.Admin.Service.AppDvGroupFormService, Vns.Core.Admin.Service">
+	<object id="AppDvGroupFormService" type="Vns.Erp.Core.Admin.Service.AppDvGroupFormService, Vns.Erp.Core.Admin.Service">
 		<property name="AppDvGroupFormDao" ref="AppDvGroupFormDao"/>
 	</object>
-	<object id="AppDvGroupService" type="Vns.Erp.Core.Admin.Service.AppDvGroupService, Vns.Core.Admin.Service">
+	<object id="AppDvGroupService" type="Vns.Erp.Core.Admin.Service.AppDvGroupService, Vns.Erp.Core.Admin.Service">
 		<property name="AppDvGroupDao" ref="AppDvGroupDao"/>
 	</object>
-	<object id="DmTaikhoanService" type="Vns.Erp.Core.Admin.Service.DmTaikhoanService, Vns.Core.Admin.Service">
+	<object id="DmTaikhoanService" type="Vns.Erp.Core.Admin.Service.DmTaikhoanService, Vns.Erp.Core.Admin.Service">
 		<property name="DmTaikhoanDao" ref="DmTaikhoanDao"/>
 	</object>
-	<object id="HtFileBaocaoService" type="Vns.Erp.Core.Admin.Service.HtFileBaocaoService, Vns.Core.Admin.Service">
+	<object id="HtFileBaocaoService" type="Vns.Erp.Core.Admin.Service.HtFileBaocaoService, Vns.Erp.Core.Admin.Service">
 		<property name="HtFileBaocaoDao" ref="HtFileBaocaoDao"/>
 	</object>
-	<object id="HtBienBaocaoService" type="Vns.Erp.Core.Admin.Service.HtBienBaocaoService, Vns.Core.Admin.Service">
+	<object id="HtBienBaocaoService" type="Vns.Erp.Core.Admin.Service.HtBienBaocaoService, Vns.Erp.Core.Admin.Service">
 		<property name="HtBienBaocaoDao" ref="HtBienBaocaoDao"/>
 	</object>
 
-	<object id="DmTkChitietService" type="Vns.Erp.Core.Admin.Service.DmTkChitietService, Vns.Core.Admin.Service">
+	<object id="DmTkChitietService" type="Vns.Erp.Core.Admin.Service.DmTkChitietService, Vns.Erp.Core.Admin.Service">
 		<property name="DmTkChitietDao" ref="DmTkChitietDao"/>
 	</object>
-	<object id="DmPhongbanService" type="Vns.Erp.Core.Admin.Service.DmPhongbanService, Vns.Core.Admin.Service">
+	<object id="DmPhongbanService" type="Vns.Erp.Core.Admin.Service.DmPhongbanService, Vns.Erp.Core.Admin.Service">
 		<property name="DmPhongbanDao" ref="DmPhongbanDao"/>
 	</object>
 
-	<object id="DmKhangService" type="Vns.Erp.Core.Admin.Service.DmKhangService, Vns.Core.Admin.Service">
+	<object id="DmKhangService" type="Vns.Erp.Core.Admin.Service.DmKhangService, Vns.Erp.Core.Admin.Service">
 		<property name="DmKhangDao" ref="DmKhangDao"/>
 	</object>
-	<object id="HtDanhmucService" type="Vns.Erp.Core.Admin.Service.HtDanhmucService, Vns.Core.Admin.Service">
+	<object id="HtDanhmucService" type="Vns.Erp.Core.Admin.Service.HtDanhmucService, Vns.Erp.Core.Admin.Service">
 		<property name="HtDanhmucDao" ref="HtDanhmucDao"/>
 	</object>
-	<object id="DmNhomKhangService" type="Vns.Erp.Core.Admin.Service.DmNhomKhangService, Vns.Core.Admin.Service">
+	<object id="DmNhomKhangService" type="Vns.Erp.Core.Admin.Service.DmNhomKhangService, Vns.Erp.Core.Admin.Service">
 		<property name="DmNhomKhangDao" ref="DmNhomKhangDao"/>
 	</object>
-	<object id="DmNhomvattu1Service" type="Vns.Erp.Core.Admin.Service.DmNhomvattu1Service, Vns.Core.Admin.Service">
+	<object id="DmNhomvattu1Service" type="Vns.Erp.Core.Admin.Service.DmNhomvattu1Service, Vns.Erp.Core.Admin.Service">
 		<property name="DmNhomvattu1Dao" ref="DmNhomvattu1Dao"/>
 	</object>
-	<object id="DmDvtService" type="Vns.Erp.Core.Admin.Service.DmDvtService, Vns.Core.Admin.Service">
+	<object id="DmDvtService" type="Vns.Erp.Core.Admin.Service.DmDvtService, Vns.Erp.Core.Admin.Service">
 		<property name="DmDvtDao" ref="DmDvtDao"/>
 	</object>
-	<object id="DmHanghoaService" type="Vns.Erp.Core.Admin.Service.DmHanghoaService, Vns.Core.Admin.Service">
+	<object id="DmHanghoaService" type="Vns.Erp.Core.Admin.Service.DmHanghoaService, Vns.Erp.Core.Admin.Service">
 		<property name="DmHanghoaDao" ref="DmHanghoaDao"/>
 	</object>
-	<object id="DmTudo1Service" type="Vns.Erp.Core.Admin.Service.DmTudo1Service, Vns.Core.Admin.Service">
+	<object id="DmTudo1Service" type="Vns.Erp.Core.Admin.Service.DmTudo1Service, Vns.Erp.Core.Admin.Service">
 		<property name="DmTudo1Dao" ref="DmTudo1Dao"/>
 	</object>
-	<object id="DmTudo2Service" type="Vns.Erp.Core.Admin.Service.DmTudo2Service, Vns.Core.Admin.Service">
+	<object id="DmTudo2Service" type="Vns.Erp.Core.Admin.Service.DmTudo2Service, Vns.Erp.Core.Admin.Service">
 		<property name="DmTudo2Dao" ref="DmTudo2Dao"/>
 	</object>
-	<object id="DmTudo3Service" type="Vns.Erp.Core.Admin.Service.DmTudo3Service, Vns.Core.Admin.Service">
+	<object id="DmTudo3Service" type="Vns.Erp.Core.Admin.Service.DmTudo3Service, Vns.Erp.Core.Admin.Service">
 		<property name="DmTudo3Dao" ref="DmTudo3Dao"/>
 	</object>
-	<object id="DmTudo4Service" type="Vns.Erp.Core.Admin.Service.DmTudo4Service, Vns.Core.Admin.Service">
+	<object id="DmTudo4Service" type="Vns.Erp.Core.Admin.Service.DmTudo4Service, Vns.Erp.Core.Admin.Service">
 		<property name="DmTudo4Dao" ref="DmTudo4Dao"/>
 	</object>
-	<object id="DmTudo5Service" type="Vns.Erp.Core.Admin.Service.DmTudo5Service, Vns.Core.Admin.Service">
+	<object id="DmTudo5Service" type="Vns.Erp.Core.Admin.Service.DmTudo5Service, Vns.Erp.Core.Admin.Service">
 		<property name="DmTudo5Dao" ref="DmTudo5Dao"/>
 	</object>
-	<object id="DmKhoService" type="Vns.Erp.Core.Admin.Service.DmKhoService, Vns.Core.Admin.Service">
+	<object id="DmKhoService" type="Vns.Erp.Core.Admin.Service.DmKhoService, Vns.Erp.Core.Admin.Service">
 		<property name="DmKhoDao" ref="DmKhoDao"/>
 	</object>
 
 
-	<object id="DmBtKetchuyenService" type="Vns.Erp.Core.Admin.Service.DmBtKetchuyenService, Vns.Core.Admin.Service">
+	<object id="DmBtKetchuyenService" type="Vns.Erp.Core.Admin.Service.DmBtKetchuyenService, Vns.Erp.Core.Admin.Service">
 		<property name="DmBtKetchuyenDao" ref="DmBtKetchuyenDao"/>
 	</object>
-	<object id="DmKhoanphiService" type="Vns.Erp.Core.Admin.Service.DmKhoanphiService, Vns.Core.Admin.Service">
+	<object id="DmKhoanphiService" type="Vns.Erp.Core.Admin.Service.DmKhoanphiService, Vns.Erp.Core.Admin.Service">
 		<property name="DmKhoanphiDao" ref="DmKhoanphiDao"/>
 	</object>
-	<object id="DmVuviecService" type="Vns.Erp.Core.Admin.Service.DmVuviecService, Vns.Core.Admin.Service">
+	<object id="DmVuviecService" type="Vns.Erp.Core.Admin.Service.DmVuviecService, Vns.Erp.Core.Admin.Service">
 		<property name="DmVuviecDao" ref="DmVuviecDao"/>
 	</object>
-	<object id="DmHopdongService" type="Vns.Erp.Core.Admin.Service.DmHopdongService, Vns.Core.Admin.Service">
+	<object id="DmHopdongService" type="Vns.Erp.Core.Admin.Service.DmHopdongService, Vns.Erp.Core.Admin.Service">
 		<property name="DmHopdongDao" ref="DmHopdongDao"/>
 	</object>
 
-	<object id="LsTygiaService" type="Vns.Erp.Core.Admin.Service.LsTygiaService, Vns.Core.Admin.Service">
+	<object id="LsTygiaService" type="Vns.Erp.Core.Admin.Service.LsTygiaService, Vns.Erp.Core.Admin.Service">
 		<property name="LsTygiaDao" ref="LsTygiaDao"/>
 	</object>
-	<object id="DmNgoaiteService" type="Vns.Erp.Core.Admin.Service.DmNgoaiteService, Vns.Core.Admin.Service">
+	<object id="DmNgoaiteService" type="Vns.Erp.Core.Admin.Service.DmNgoaiteService, Vns.Erp.Core.Admin.Service">
 		<property name="DmNgoaiteDao" ref="DmNgoaiteDao"/>
 	</object>
-	<object id="DmThueService" type="Vns.Erp.Core.Admin.Service.DmThueService, Vns.Core.Admin.Service">
+	<object id="DmThueService" type="Vns.Erp.Core.Admin.Service.DmThueService, Vns.Erp.Core.Admin.Service">
 		<property name="DmThueDao" ref="DmThueDao"/>
 	</object>
-	<object id="DmPtqtService" type="Vns.Erp.Core.Admin.Service.DmPtqtService, Vns.Core.Admin.Service">
+	<object id="DmPtqtService" type="Vns.Erp.Core.Admin.Service.DmPtqtService, Vns.Erp.Core.Admin.Service">
 		<property name="DmPtqtDao" ref="DmPtqtDao"/>
 	</object>
-	<object id="KtKhoasoThangService" type="Vns.Erp.Core.Admin.Service.KtKhoasoThangService, Vns.Core.Admin.Service">
+	<object id="KtKhoasoThangService" type="Vns.Erp.Core.Admin.Service.KtKhoasoThangService, Vns.Erp.Core.Admin.Service">
 		<property name="KtKhoasoThangDao" ref="KtKhoasoThangDao"/>
 		<property name="KtKhoaSoNgayDao" ref="KtKhoaSoNgayDao"/>
 	</object>
-	<object id="KtStatusCtService" type="Vns.Erp.Core.Admin.Service.KtStatusCtService, Vns.Core.Admin.Service">
+	<object id="KtStatusCtService" type="Vns.Erp.Core.Admin.Service.KtStatusCtService, Vns.Erp.Core.Admin.Service">
 		<property name="KtStatusCtDao" ref="KtStatusCtDao"/>
 	</object>
-	<object id="HtSoChungtuMaxService" type="Vns.Erp.Core.Admin.Service.HtSoChungtuMaxService, Vns.Core.Admin.Service">
+	<object id="HtSoChungtuMaxService" type="Vns.Erp.Core.Admin.Service.HtSoChungtuMaxService, Vns.Erp.Core.Admin.Service">
 		<property name="HtSoChungtuMaxDao" ref="HtSoChungtuMaxDao"/>
 	</object>
 
@@ -225,16 +225,16 @@
 
 
 	<!--Thiet lap bao cao-->
-	<object id="KtDieukienBcService" type="Vns.Erp.Core.Admin.Service.KtDieukienBcService, Vns.Core.Admin.Service">
+	<object id="KtDieukienBcService" type="Vns.Erp.Core.Admin.Service.KtDieukienBcService, Vns.Erp.Core.Admin.Service">
 		<property name="KtDieukienBcDao" ref="KtDieukienBcDao"/>
 	</object>
-	<object id="KtHBaocaoService" type="Vns.Erp.Core.Admin.Service.KtHBaocaoService, Vns.Core.Admin.Service">
+	<object id="KtHBaocaoService" type="Vns.Erp.Core.Admin.Service.KtHBaocaoService, Vns.Erp.Core.Admin.Service">
 		<property name="KtHBaocaoDao" ref="KtHBaocaoDao"/>
 	</object>
-	<object id="KtHCotService" type="Vns.Erp.Core.Admin.Service.KtHCotService, Vns.Core.Admin.Service">
+	<object id="KtHCotService" type="Vns.Erp.Core.Admin.Service.KtHCotService, Vns.Erp.Core.Admin.Service">
 		<property name="KtHCotDao" ref="KtHCotDao"/>
 	</object>
-	<object id="KtHDongService" type="Vns.Erp.Core.Admin.Service.KtHDongService, Vns.Core.Admin.Service">
+	<object id="KtHDongService" type="Vns.Erp.Core.Admin.Service.KtHDongService, Vns.Erp.Core.Admin.Service">
 		<property name="KtHDongDao" ref="KtHDongDao"/>
 	</object>
 	<object id="KtDmBtPhanboService" type="Vns.Erp.Core.Accounting.Service.KtDmBtPhanboService, Vns.Erp.Core.Accounting.Service">
@@ -363,10 +363,10 @@
 		<property name="KtCtDHddvDao" ref="KtCtDHddvDao"/>
 	</object>
 	<!--Hoa don dich vu ke toan-->
-	<object id="KtKhoaSoNgayService" type="Vns.Erp.Core.Admin.Service.KtKhoaSoNgayService, Vns.Core.Admin.Service">
+	<object id="KtKhoaSoNgayService" type="Vns.Erp.Core.Admin.Service.KtKhoaSoNgayService, Vns.Erp.Core.Admin.Service">
 		<property name="KtKhoaSoNgayDao" ref="KtKhoaSoNgayDao"/>
 	</object>
-	<object id="HtTaikhoanMauService" type="Vns.Erp.Core.Admin.Service.HtTaikhoanMauService, Vns.Core.Admin.Service">
+	<object id="HtTaikhoanMauService" type="Vns.Erp.Core.Admin.Service.HtTaikhoanMauService, Vns.Erp.Core.Admin.Service">
 		<property name="HtTaikhoanMauDao" ref="HtTaikhoanMauDao"/>
 		<property name="DmTaikhoanDao" ref="DmTaikhoanDao"/>
 	</object>
@@ -399,7 +399,10 @@
 	<object id="DmTscdService" type="Vns.Erp.Core.Asset.Service.DmTscdService, Vns.Erp.Core.Asset.Service">
 		<property name="DmTscdDao" ref="DmTscdDao"/>
 		<property name="TsLsKhauhaoDao" ref="TsLsKhauhaoDao"/>
-		<property name="CtTscdDao" ref="CtTscdDao"/>
+    <property name="CtTscdDao" ref="CtTscdDao"/>
+    <property name="TsTscdPtungDao" ref="TsTscdPtungDao"/>
+    <property name="TsDieuchuyenDao" ref="TsDieuchuyenDao"/>
+    <property name="TsCtTscdNvonDao" ref="TsCtTscdNvonDao"/>
 	</object>
 	<object id="TsCtTscdNvonService" type="Vns.Erp.Core.Asset.Service.TsCtTscdNvonService, Vns.Erp.Core.Asset.Service">
 		<property name="TsCtTscdNvonDao" ref="TsCtTscdNvonDao"/>
@@ -469,10 +472,28 @@
   
   <object id="ProduceReportService" type="Vns.Erp.Core.Produce.Service.Report.ProduceReportService, Vns.Erp.Core.Produce.Service">
     <property name="ProduceReportDao" ref="ProduceReportDao"/>
+    <property name="DmKhoDao" ref="DmKhoDao"/>
+    <property name="DmHanghoaDao" ref="DmHanghoaDao"/>
+    <property name="DmNhomvattu1Dao" ref="DmNhomvattu1Dao"/>
+    <property name="DmHopdongDao" ref="DmHopdongDao"/>
+    <property name="HtDanhmucDao" ref="HtDanhmucDao"/>
+    <property name="BangGiaHDao" ref="BangGiaHDao"/>
+    <property name="BangGiaDDao" ref="BangGiaDDao"/>
   </object>
 
   <object id="RpAdminLedgerService" type="Vns.Erp.Core.Accounting.Report.Service.RpAdminLedgerService, Vns.Erp.Core.Accounting.Report.Service">
     <property name="RpLedgerAccountDao" ref="RpLedgerAccountDao"/>
   </object>
+
+  <!--Bang gia opec-->
+  <object id="BangGiaDService" type="Vns.Erp.Core.Produce.Service.BangGiaDService, Vns.Erp.Core.Produce.Service">
+    <property name="BangGiaDDao" ref="BangGiaDDao"/>
+  </object>
+
+  <object id="BangGiaHService" type="Vns.Erp.Core.Produce.Service.BangGiaHService, Vns.Erp.Core.Produce.Service">
+    <property name="BangGiaHDao" ref="BangGiaHDao"/>
+    <property name="BangGiaDDao" ref="BangGiaDDao"/>
+  </object>
+  <!--Bang gia opec-->
   
 </objects>

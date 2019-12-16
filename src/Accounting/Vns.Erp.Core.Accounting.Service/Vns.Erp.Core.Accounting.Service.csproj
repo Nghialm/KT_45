@@ -41,17 +41,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Spring.Aop">
+      <HintPath>..\..\..\References\Spring.Aop.dll</HintPath>
+    </Reference>
     <Reference Include="Spring.Core">
-      <HintPath>..\..\References\Spring.Core.dll</HintPath>
+      <HintPath>..\..\..\References\Spring.Core.dll</HintPath>
     </Reference>
     <Reference Include="Spring.Data">
-      <HintPath>..\..\References\Spring.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Data.NHibernate32">
-      <HintPath>..\..\References\Spring.Data.NHibernate32.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Services">
-      <HintPath>..\..\References\Spring.Services.dll</HintPath>
+      <HintPath>..\..\..\References\Spring.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -63,20 +60,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BcKetoanService.cs" />
-    <Compile Include="CtDService.cs" />
-    <Compile Include="CtHoadonService.cs" />
-    <Compile Include="CtHService.cs" />
-    <Compile Include="CtThueService.cs" />
+    <Compile Include="Accounting\BcKetoanService.cs" />
+    <Compile Include="Accounting\CtDService.cs" />
+    <Compile Include="Accounting\CtHoadonService.cs" />
+    <Compile Include="Accounting\CtHService.cs" />
+    <Compile Include="Accounting\CtThueService.cs" />
     <Compile Include="HDDV\KtCtDHddvService.cs" />
     <Compile Include="HDDV\KtCtHHddvService.cs" />
-    <Compile Include="IBcKetoanService.cs" />
-    <Compile Include="ICtDService.cs" />
-    <Compile Include="ICtHoadonService.cs" />
-    <Compile Include="ICtHService.cs" />
-    <Compile Include="ICtThueService.cs" />
-    <Compile Include="IKtCtDKhacService.cs" />
-    <Compile Include="IKtCtHKhacService.cs" />
+    <Compile Include="Interface\Accounting\IBcKetoanService.cs" />
+    <Compile Include="Interface\Accounting\ICtDService.cs" />
+    <Compile Include="Interface\Accounting\ICtHoadonService.cs" />
+    <Compile Include="Interface\Accounting\ICtHService.cs" />
+    <Compile Include="Interface\Accounting\ICtThueService.cs" />
+    <Compile Include="Interface\Accounting\IKtCtDKhacService.cs" />
+    <Compile Include="Interface\Accounting\IKtCtHKhacService.cs" />
     <Compile Include="Interface\HDDV\IKtCtDHddvService.cs" />
     <Compile Include="Interface\HDDV\IKtCtHHddvService.cs" />
     <Compile Include="Interface\Inventory\IBcKetoanKhoService.cs" />
@@ -91,8 +88,8 @@
     <Compile Include="Inventory\CtHNxService.cs" />
     <Compile Include="Inventory\KtDuluongDaukyService.cs" />
     <Compile Include="Inventory\KtGiaxuatDaukyService.cs" />
-    <Compile Include="KtCtDKhacService.cs" />
-    <Compile Include="KtCtHKhacService.cs" />
+    <Compile Include="Accounting\KtCtDKhacService.cs" />
+    <Compile Include="Accounting\KtCtHKhacService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TongHop\KtDmBtPhanboService.cs" />
     <Compile Include="TongHop\KtThBtPhanboService.cs" />

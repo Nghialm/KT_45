@@ -1,2 +1,1 @@
-Can xem lai 1 so truong IDENTITY cu the :
-Bang [APP_DV_GROUP]
+Change spring 2.0.1 & NHibernate 4

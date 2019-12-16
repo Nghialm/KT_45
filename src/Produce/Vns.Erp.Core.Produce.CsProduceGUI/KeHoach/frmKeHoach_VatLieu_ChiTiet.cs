@@ -11,6 +11,7 @@ using Vns.Erp.Core.Produce.Service.Interface;
 using Vns.Erp.Core.Admin.Service.Interface;
 using Vns.Erp.Core.Admin.Domain;
 using Vns.Erp.Core.Produce.Common;
+using Vns.Erp.Core.Controls.Commons;
 
 namespace Vns.Erp.Core.Produce.CsProduceGUI
 {
@@ -186,6 +187,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             }
             C_SoChungTu_RP.Text = _objKeHoach.SoLenh;
             _objKeHoach.MoTa = txtMoTa.Text;
+            _objKeHoach.DonviId = Generals.DonviID;
 
             SxKehoachMService.SaveKeHoach(_objKeHoach, lstSanXuat, lstVatTu, lstKeHoach, lstDelSanXuat, lstDelVatTu, lstDelKeHoach);
         }
@@ -230,7 +232,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
 
         private void BindDataToCbo()
         {
-            IList<DmHanghoa> lstHangHoa = DmHanghoaService.GetAll();
+            IList<DmHanghoa> lstHangHoa = DmHanghoaService.GetAllByDonviID(Generals.DonviID);
             //grlCtSanPham.DataSource = lstHangHoa;
             //grlSanPham.DataSource = lstHangHoa;
             grlVatTu.DataSource = lstHangHoa;
@@ -242,7 +244,7 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             IList<HtDanhmuc> lstThamSo = HtDanhmucService.GetByDoiTuong("LOAI_NVL");
             cboLoaiVatTu.DataSource = lstThamSo;
 
-            IList<DmDvt> lstDvt = DmDvtService.GetAll();
+            IList<DmDvt> lstDvt = DmDvtService.GetAllByDonviID(Generals.DonviID);
             //cboDvt.DataSource = lstDvt;
             cboDvt1.DataSource = lstDvt;
             //cboCtDvt.DataSource = lstDvt;
@@ -257,15 +259,15 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
                 cboLoaiChungTu.EditValue = _objLoaiCt.Id;
             }
 
-            IList<DmKhang> lstKhachHang = DmKhangService.GetAll();
+            IList<DmKhang> lstKhachHang = DmKhangService.GetAllByDonviID(Generals.DonviID);
             cboKhachHang.Properties.DataSource = lstKhachHang;
             cboKhachHang.Properties.ValueMember = "Id";
             cboKhachHang.Properties.DisplayMember = "TenKhang";
 
-            IList<DmPhongban> lstPhongBan = DmPhongbanService.GetAll();
+            IList<DmPhongban> lstPhongBan = DmPhongbanService.GetAllByDonviID(Generals.DonviID);
             //grlToPhanCong.DataSource = lstPhongBan;
 
-            IList<SxDmQuytrinh> lstQuytrinh = SxDmQuytrinhService.GetAll();
+            IList<SxDmQuytrinh> lstQuytrinh = SxDmQuytrinhService.GetByDonviId(Generals.DonviID);
             //grlQuyTrinh.DataSource = lstQuytrinh;
         }
 
@@ -604,6 +606,15 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
         {
 
         }
-               
+
+        private void frmKeHoach_VatLieu_ChiTiet_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    this.Close();
+                    break; // TODO: might not be correct. Was : Exit Select
+            }
+        }
     }
 }

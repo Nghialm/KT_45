@@ -32,7 +32,7 @@ namespace Vns.Erp.Core.Accounting.Report.Domain
 
         public RpPhieuKeToanKhoDDTO(CtDNx objCtDNx)
         {
-            CtHId = objCtDNx.CthNxId;
+            CtHId = objCtDNx.ObjCtHNx.Id;
             CtDId = objCtDNx.Id;
             KyHieuDvt = objCtDNx.MaDvt;
             HanghoaId = objCtDNx.HanghoaId;

@@ -10,6 +10,7 @@ using Vns.Erp.Core.Produce.Service.Interface;
 using Vns.Erp.Core.Produce.Domain;
 using Vns.Erp.Core.Admin.Domain;
 using Vns.Erp.Core.Admin.Service.Interface;
+using Vns.Erp.Core.Controls.Commons;
 
 namespace Vns.Erp.Core.Produce.CsProduceGUI
 {
@@ -163,7 +164,11 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             {
                 _objLenhSanXuat.TrangThai = objTrangThai.GiaTri;
             }
-            _objLenhSanXuat.SoNhanCong = int.Parse(txtSoNhanCong.Text);
+
+            if (txtSoNhanCong.Text == "")
+                _objLenhSanXuat.SoNhanCong = 0;
+            else
+                _objLenhSanXuat.SoNhanCong = int.Parse(txtSoNhanCong.Text);
 
             SxKehoachM objKeHoachSx = (SxKehoachM)ComboHelper.GetSelectData(cboKeHoachSx);
             if (objKeHoachSx != null)
@@ -479,6 +484,16 @@ namespace Vns.Erp.Core.Produce.CsProduceGUI
             }
         }
 
-        #endregion        
+        #endregion
+
+        private void frmLenhSanXuat_ChiTiet_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Escape:
+                    this.Close();
+                    break; // TODO: might not be correct. Was : Exit Select
+            }
+        }
     }
 }

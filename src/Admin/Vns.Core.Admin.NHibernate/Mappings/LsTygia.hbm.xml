@@ -2,9 +2,8 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 	<class name="Vns.Erp.Core.Admin.Domain.LsTygia,Vns.Erp.Core.Admin.Domain" table="LS_TYGIA" lazy="false">
 
-		<id name="Id" column="LS_TYGIA_ID" type="Guid">
-			<generator class="guid"/>
-		</id>
+		<id name="Id" column="LS_TYGIA_ID" type="Guid" />
+			
 		<property column="NGOAITE_ID" type="Guid" name="NgoaiteId" />
 		<property column="TEN_NGOAITE" type="String" name="TenNgoaite" length="128" />
 		<property column="SO_TIEN_QUYDOI" type="Decimal" precision="18" scale="2" name="SoTienQuydoi" />

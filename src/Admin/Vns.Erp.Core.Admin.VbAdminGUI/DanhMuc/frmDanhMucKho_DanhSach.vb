@@ -13,7 +13,7 @@ Imports System.Collections
 Imports DevExpress.XtraGrid.Views.Grid
 Imports Vns.Erp.Core.Admin.Domain
 Imports Vns.Erp.Core.Admin.Service.Interface
-
+Imports Vns.Erp.Core.Controls.Commons
 
 Partial Public Class frmDanhMucKho_DanhSach
     Inherits FrmBaseDmDanhSach
@@ -73,6 +73,7 @@ Partial Public Class frmDanhMucKho_DanhSach
 
         FieldChooser = _FieldChooser
         SearchHelper = _SearchHelper
+        GridHelper.FormatGridView(_GridView)
     End Sub
 
     'Private _FormChiTiet As BaseDanhMucChiTiet(Of DmKho, Guid)

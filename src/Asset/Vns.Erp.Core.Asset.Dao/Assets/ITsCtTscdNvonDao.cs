@@ -11,5 +11,8 @@ namespace Vns.Erp.Core.Asset.Dao
 {
 	public interface ITsCtTscdNvonDao:IDao<TsCtTscdNvon,System.Guid>
 	{
-	}
+        Boolean DeleteByDmTscdId(Guid TscdId);
+
+        IList<TsCtTscdNvon> GetByDmTscdId(Guid DmTscdId);
+    }
 }
